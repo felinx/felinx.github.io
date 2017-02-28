@@ -1,0 +1,6 @@
+pelican-plugins/
+pelican-themes/
+publishconf-preview.py
+output/
+*.pyc
+*.DS_Store
