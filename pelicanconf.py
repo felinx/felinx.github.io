@@ -8,8 +8,8 @@ SITENAME = "Felinx"
 SITETITLE = SITENAME
 SITESUBTITLE = "Nice speech, but what are you going to do."
 SITEDESCRIPTION = "飞龙博客 - felinx's blog"
-SITELOGO = '/images/feilong.jpg'
-FAVICON = '/images/favicon.ico'
+SITELOGO = '/static/feilong.jpg'
+FAVICON = '/static/favicon.ico'
 BROWSER_COLOR = '#333333'
 PYGMENTS_STYLE = 'monokai'
 
@@ -24,6 +24,7 @@ LOCALE = 'en_US'
 
 DATE_FORMATS = {
     'en': '%B %d, %Y',
+    # "zh": "%Y-%m-%d %H:%M:%S"
 }
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -75,7 +76,7 @@ SITEMAP = {
 DISQUS_SITENAME = "feilong"
 GOOGLE_ANALYTICS = "UA-9694421-8"
 
-STATIC_PATHS = ['images', 'CNAME']
+STATIC_PATHS = ['static', 'CNAME']
 
 # EXTRA_PATH_METADATA = {
 #     'extra/custom.css': {'path': 'static/custom.css'},
