@@ -11,7 +11,7 @@ SITEDESCRIPTION = "飞龙札记 - felinx's blog"
 SITELOGO = '/static/feilong.jpg'
 FAVICON = '/static/favicon.ico'
 BROWSER_COLOR = '#333333'
-PYGMENTS_STYLE = 'monokai'
+PYGMENTS_STYLE = 'friendly'
 
 ROBOTS = 'index, follow'
 

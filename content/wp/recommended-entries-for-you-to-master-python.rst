@@ -3,14 +3,14 @@
 :date: 2011-01-12 12:02
 :author: 飞龙
 :category: Python
+:tags: Python
 :slug: recommended-entries-for-you-to-master-python
 :status: published
 
 作为脚本语言Python上手容易，但要学好Python能写出一手漂亮的、Pythonic的Python代码并非一日之功，本文的目的在于推荐一些优秀的Python相关的文章(至于书大家可以看dip、learning
 python和官方手册去)，让你在成长为一名Python高手的路上少走一点弯路。注：文章都是英文的，学好Python读懂英文资料这是必须的了。
 
-**`1. PEP8 Style Guide for Python
-Code <http://www.python.org/dev/peps/pep-0008/>`__**
+`1. PEP8 Style Guide for Python Code <http://www.python.org/dev/peps/pep-0008/>`__
 
 排第一的当属Python的编码规范PEP8，这个就不用我多说吧，无论是初学还是高手PEP8都是必须烂熟于胸的。在遵循里面讲述的规则的同时，大家也要记住两句比较特殊的话，不过这两句话千万别滥用了:）
 
@@ -27,32 +27,32 @@ Code <http://www.python.org/dev/peps/pep-0008/>`__**
 
 如果要写Python的C扩展库，你还必须好好学习下\ `PEP7 <http://www.python.org/dev/peps/pep-0007/>`__\ 。
 
-**`2. Code Like a Pythonista: Idiomatic
-Python <http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html>`__**
+`2. Code Like a Pythonista: Idiomatic
+Python <http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html>`__
 
 文如其名，本文篇幅较长，但非常非常实用。本文介绍了一系列Python约定俗成的用法和技巧，学习本文能让你写出来的Python代码马上上一个档次，让你成为一个真正的Pythoneer。
 
-**`3. PEP318 Decorators for Functions and
-Methods <http://www.python.org/dev/peps/pep-0318/>`__**
+`3. PEP318 Decorators for Functions and
+Methods <http://www.python.org/dev/peps/pep-0318/>`__
 
 在Python的世界里decorator是非常常见的，常见的比如auth、cache都会提供decorator，decorator所实现的功能就是修改紧接
 decorator之后定义的函数和方法，你可以根据自己的需要给一个已有的函数和方法添油加醋。
 
-**`4. Python regular expression documentation <http://docs.python.org/library/re.html>`__**
+`4. Python regular expression documentation <http://docs.python.org/library/re.html>`__
 
 掌握正则表达式是编程人员的必备技能，这是re模块的官方文档，用到正则表达式的时候要常来翻翻。Python的正则表达式跟别的语言函数用法有点
 不一样，因此也有人抱怨说Python的re模块不好用，文章开头关于正则表达式规则部分可以当正则表达式的入门教材，如果你还不知道正则表达式是个什么
 东西的话。个人觉得Python的re模块非常强大的，举个有点意思的例子，比如VERBOSE的正则表达式还支持在正则表达式中间加注释说明正则表达式
 的具体含义，因为正则表达式通常都象天书一样比较难懂，因此这个功能显得非常有用。
 
-::
+.. code-block:: python
 
     a = re.compile(r"""\d +  # the integral part
                        \.    # the decimal point
                        \d *  # some fractional digits""", re.X)
 
-**`5. PEP333 Python Web Server Gateway Interface
-v1.0 <http://www.python.org/dev/peps/pep-0333/>`__**
+`5. PEP333 Python Web Server Gateway Interface
+v1.0 <http://www.python.org/dev/peps/pep-0333/>`__
 
 如果你要用Python来做Web相关的开发（对大多说人来说主要就是指Web运用）WSGI是必读的，WSGI是Python
 web server、application、middleware之间的官方规范标准，现在主流的Python
@@ -63,12 +63,12 @@ application交互的。WSGI有两个为人诟病的地方，一是不支持异�
 server，但是若要在上面运行WSGI的framework如Django，则Tornado的异步特性完全用不上；二是WSGI
 v1.0不支持Python3.x，为了支持Python3.x，有两篇还在Draft状态的PEP文档\ `PEP3333 <http://www.python.org/dev/peps/pep-3333/>`__\ 和\ `PEP444 <http://www.python.org/dev/peps/pep-0444/>`__\ 可供参考。
 
-**`6. How To Use Linux epoll with
-Python <http://scotdoyle.com/python-epoll-howto.html>`__**
+`6. How To Use Linux epoll with
+Python <http://scotdoyle.com/python-epoll-howto.html>`__
 
 更深入一点，如果你要做服务器端的编程的话，此文可以让你深入理解Python的同步、异步socket编程模式。假如你觉得Tornado的源码比较费解的话，读读这篇文章对你会很有大的帮助。
 
-**7.另外还有一些比较重要的文档，这里不做详解，有兴趣的同学可以去看看：**
+7.另外还有一些比较重要的文档，这里不做详解，有兴趣的同学可以去看看：
 
 -  `Python Tips, Tricks, and Hacks <http://www.siafoo.net/article/52>`__
 -  `Python Docstring <http://www.python.org/dev/peps/pep-0257/>`__
@@ -87,6 +87,4 @@ Python <http://scotdoyle.com/python-epoll-howto.html>`__**
    example <http://artifex.org/~hblanks/talks/2011/pep20_by_example.py.txt>`__
 -  `Google Python
    Guide <http://google-styleguide.googlecode.com/svn/trunk/pyguide.html>`__
--  **待补充..，欢迎大家推荐。**
-
-转载请注明出处：\ http://feilong.me/2011/01/recommended-entries-for-you-to-master-python
+-  待补充..，欢迎大家推荐。

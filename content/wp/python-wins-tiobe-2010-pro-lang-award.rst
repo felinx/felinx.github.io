@@ -2,7 +2,8 @@
 #####################################
 :date: 2011-01-10 18:36
 :author: 飞龙
-:category: Python, 互联网络
+:category: Python
+:tags: Python, 编程语言
 :slug: python-wins-tiobe-2010-pro-lang-award
 :status: published
 
@@ -38,8 +39,6 @@ web
 framework的发展、成熟，Python依然有很大的上涨空间，我认为将来（最多5年吧）超过PHP是很有可能的，祝Python一路走好。
 
 另外，我新注册了域名\ `chinapy.org <http://www.chinapy.org>`__\ （现在还不能访问），准备弄一个开放一点的中国的Python社区，给Python在中国的推广运用做点自己的贡献。
-
-转载请注明出处：\ http://feilong.me/2011/01/python-wins-tiobe-2010-pro-lang-award
 
 .. |image0| image:: /static/2011/01/python_tiobe_index_2010_winner.jpg
    :class: size-full wp-image-118 aligncenter
