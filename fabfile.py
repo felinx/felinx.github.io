@@ -26,23 +26,28 @@ env.github_pages_branch = "master"
 # Port for `serve`
 PORT = 8000
 
+
 def clean():
     """Remove generated files"""
     if os.path.isdir(DEPLOY_PATH):
         shutil.rmtree(DEPLOY_PATH)
         os.makedirs(DEPLOY_PATH)
 
+
 def build():
     """Build local version of site"""
     local('pelican -s pelicanconf.py')
+
 
 def rebuild():
     """`build` with the delete switch"""
     local('pelican -d -s pelicanconf.py')
 
+
 def regenerate():
     """Automatically regenerate site upon file modification"""
     local('pelican -r -s pelicanconf.py')
+
 
 def serve():
     """Serve site at http://localhost:8000/"""
@@ -56,6 +61,7 @@ def serve():
     sys.stderr.write('Serving on port {0} ...\n'.format(PORT))
     server.serve_forever()
 
+
 def reserve():
     """`build`, then `serve`"""
     build()
@@ -65,6 +71,7 @@ def reserve():
 #     """Build production version of site"""
 #     local('pelican -s publishconf.py')
 
+
 def cf_upload():
     """Publish to Rackspace Cloud Files"""
     rebuild()
@@ -73,6 +80,7 @@ def cf_upload():
               '-U {cloudfiles_username} '
               '-K {cloudfiles_api_key} '
               'upload -c {cloudfiles_container} .'.format(**env))
+
 
 @hosts(production)
 def preview():
@@ -85,6 +93,7 @@ def preview():
         delete=True,
         extra_opts='-c',
     )
+
 
 def publish():
     """Publish to GitHub Pages"""

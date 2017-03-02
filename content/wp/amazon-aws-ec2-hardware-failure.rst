@@ -2,8 +2,8 @@
 ##########################
 :date: 2011-03-06 12:44
 :author: 飞龙
-:category: 系统相关
-:slug: amazon-aws-ec2-hardware-failure
+:category: IT
+:slug: 2011/03/amazon-aws-ec2-hardware-failure
 :status: published
 
 今天早上起来开Gmail又收到一封来自Amazon的邮件，这次不是新功能的Annoucement邮件也不是Billing邮件，而是一封Notice邮件，惊了我一声冷汗，邮件内容如下（部分内容打了马赛克）：
@@ -43,5 +43,3 @@ volume的话，只需要Attach进备份的snapshot，再过一下步骤3、4就O
 
 PS:
 做好备份很重要，虽然EC2出硬件故障这事很少见，但做好备份是必须的，有备份的snapshot，在AWS上恢复数据是件非常简单的事情。
-
-转载请注明出处：\ http://feilong.me/2011/03/amazon-aws-ec2-hardware-failure

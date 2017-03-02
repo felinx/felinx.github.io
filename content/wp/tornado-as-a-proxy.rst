@@ -3,7 +3,7 @@
 :date: 2011-09-10 23:13
 :author: 飞龙
 :category: Python
-:slug: tornado-as-a-proxy
+:slug: 2011/09/tornado-as-a-proxy
 :status: published
 
 实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如\ http://www.tornadoweb.cn\ 用的就是nginx的代理功能做的tornadoweb官网的镜像。

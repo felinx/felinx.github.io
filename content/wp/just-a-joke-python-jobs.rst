@@ -1,9 +1,10 @@
-[OT] JustAJoke长期招聘Python初级工程师(内附薪资)
+JustAJoke长期招聘Python初级工程师(内附薪资)
 ################################################
 :date: 2011-05-06 08:51
 :author: 飞龙
-:category: Python, 编程开发, 杂谈
-:slug: just-a-joke-python-jobs
+:category: 杂谈
+:tags: Python, 编程, 招聘
+:slug: 2011/05/just-a-joke-python-jobs
 :status: published
 
 JustAJoke研发团队主要从事娱乐浮云业务，因业务发展迅猛，现长期招聘靠谱Python初级技术人员，要求如下：
@@ -23,5 +24,3 @@ JustAJoke研发团队主要从事娱乐浮云业务，因业务发展迅猛，�
 | 公司地址：我朝某个犄角旮旯
 | 薪资水平：视个人能力5k－2000k
 | 联系方式：hr@JustAJoke.com
-
-转载请注明出处：\ http://feilong.me/2011/05/just-a-joke-python-jobs

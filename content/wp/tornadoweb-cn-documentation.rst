@@ -3,7 +3,8 @@ tornadoweb.cn现提供Tornado中译文档
 :date: 2011-06-20 15:14
 :author: 飞龙
 :category: Python
-:slug: tornadoweb-cn-documentation
+:tags: Python, Tornado
+:slug: 2011/06/tornadoweb-cn-documentation
 :status: published
 
 2011/07/06最新补充：tornado发布2.0后文档组织有较大更新，现 \ `http://www.tornadoweb.cn <http://www.tornadoweb.cn/>`__
@@ -29,5 +30,3 @@ tornadoweb.cn现提供Tornado中译文档
 大家发现有待优化的地方，可以参与进来进行改进，翻译的文件在
 https://github.com/breezemind/tornado/tree/master/website/templates/cn\ ，给发我一个pull
 request即可。
-
-转载请注明出处：\ http://feilong.me/2011/06/tornadoweb-cn-documentation

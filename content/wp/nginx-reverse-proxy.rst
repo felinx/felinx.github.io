@@ -2,20 +2,13 @@ nginx反向代理配置(附：tornadoweb.cn的nginx配置)
 ###############################################
 :date: 2011-06-11 11:41
 :author: 飞龙
-:category: 系统相关
-:slug: nginx-reverse-proxy
+:category: tips
+:tags: nginx, 反向代理
+:slug: 2011/06/nginx-reverse-proxy
 :status: published
-
-.. raw:: html
-
-   <div>
 
 GAE的Hosting站点
 `appspot.com <http://appspot.com/>`__\ 在国内被墙，因此架设在GAE上的运用没法直接访问，需要曲线救国，其中一招比较有效的方式即是通过nginx反向代理来实现，不过这个要求你在国外有一个可用的nginx。下面以\ `tornadoweb.cn <http://www.tornadoweb.cn>`__\ 为例讲述如何用nginx配置反向代理(注：tornadoweb.cn为\ `tornadoweb.org <http://www.tornadoweb.org/>`__\ 的镜像站点，原站就是在GAE上，因此国内无法直接访问)。关于nginx的基本配置部分请参考我在poweredsites上的博客\ `how-to-setup-nginx <http://blog.poweredsites.org/entry/how-to-setup-nginx>`__\ ，本文只讨论如何配置tornadoweb.cn这个站点，配置说明详见配置中的注释。
-
-.. raw:: html
-
-   </div>
 
 ::
 
@@ -62,5 +55,3 @@ GAE的Hosting站点
     }
 
 配置好后reload/restart一下nginx就妥了，本例的结果即是访问tornadoweb.cn将看到tornadoweb.org一样网站，除了采用了本地文件的那个LOGO不同外。
-
-转载请注明出处：\ http://feilong.me/2011/06/nginx-reverse-proxy

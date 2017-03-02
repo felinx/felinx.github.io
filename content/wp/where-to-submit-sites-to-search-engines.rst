@@ -2,8 +2,9 @@
 ######################################
 :date: 2011-05-23 17:41
 :author: 飞龙
-:category: 互联网络
-:slug: where-to-submit-sites-to-search-engines
+:category: Web
+:tags: tips
+:slug: 2011/05/where-to-submit-sites-to-search-engines
 :status: published
 
 | **网站建设**\ 、\ **网站推广**\ 必不可少的步骤之一\ **，各大搜索引擎网站登录入口**\ ：
