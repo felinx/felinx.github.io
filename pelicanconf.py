@@ -4,10 +4,10 @@ from __future__ import unicode_literals
 
 AUTHOR = "felinx"
 SITEURL = "http://feilong.me"
-SITENAME = "Felinx"
+SITENAME = "飞龙"
 SITETITLE = SITENAME
 SITESUBTITLE = "Nice speech, but what are you going to do."
-SITEDESCRIPTION = "飞龙博客 - felinx's blog"
+SITEDESCRIPTION = "飞龙札记 - felinx's blog"
 SITELOGO = '/static/feilong.jpg'
 FAVICON = '/static/favicon.ico'
 BROWSER_COLOR = '#333333'
