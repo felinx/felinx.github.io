@@ -2,7 +2,8 @@
 ######################
 :date: 2011-01-01 21:54
 :author: 飞龙
-:category: 编程开发
+:category: 编程
+:tags: aws, 云计算
 :slug: amazon-aws-ec2-guide
 :status: published
 
@@ -14,7 +15,7 @@ Tier <http://aws.amazon.com/free/>`__\ 体验活动，相当于613
 MB的VPS，可以免费（部分超额的使用还是要收费的）使用一年。
 
 在国外AWS居领导地位，很多大站、新站都用了AWS的服务，比如\ `Twitter <http://twitter.com>`__\ 、\ `Bitbucket <http://bitbucket.org>`__\ 、\ `Quora <http://www.quora.com>`__\ ，而在国内可能知道的、用过AWS的人并不多。我也是在\ `James
-Zhang <http://www.andapponline.com>`__\ 同学不停的鼓动下最终用上了AWS的，\ `飞龙日志 <http://feilong.me>`__\ 和我的\ http://poweredsites.org\ 就是部署在AWS上，下面是我收集的一些关于AWS的资源汇总：
+Zhang <http://www.andapponline.com>`__\ 同学不停的鼓动下最终用上了AWS的，\ `飞龙札记 <http://feilong.me>`__\ 和我的\ http://poweredsites.org\ 就是部署在AWS上，下面是我收集的一些关于AWS的资源汇总：
 
 AWS官方的文档入口
 
@@ -56,5 +57,3 @@ instance其实跟玩一般的VPS没什么两样，可以参考slicehost上面的
 Zhang <http://www.andapponline.com>`__\ 同学的\ `Amazon AWS introduction
 by James
 Zhang </static/2010/12/Amazon-AWS-introduction-by-James-Zhang.pdf>`__\ 的英文PPT（方便阅读已转成PDF），版权归James同学，这里已征得James同学本人同意贴到本篇博客里，PDF文件地址：\ `/static/2010/12/Amazon-AWS-introduction-by-James-Zhang.pdf </static/2010/12/Amazon-AWS-introduction-by-James-Zhang.pdf>`__\ 。
-
-转载请注明出处：\ http://feilong.me/2011/01/amazon-aws-ec2-guide

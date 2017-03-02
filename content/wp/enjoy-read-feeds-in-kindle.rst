@@ -2,7 +2,8 @@
 ############################
 :date: 2010-12-31 13:09
 :author: 飞龙
-:category: 数码装备
+:category: 读书
+:tags: Kindle
 :slug: enjoy-read-feeds-in-kindle
 :status: published
 

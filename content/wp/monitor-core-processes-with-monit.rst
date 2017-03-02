@@ -38,7 +38,7 @@
 ::
 
     ##
-    ## 飞龙日志 示例monit配置文件，说明：
+    ## 飞龙札记 示例monit配置文件，说明：
     ## 1. 域名以example.com为例。
     ## 2. 后面带xxx的均是举例用的名字，需要根据自己的需要修改。
     ##
@@ -189,5 +189,3 @@ Bad Gateway之类错误说拜拜吧。
 
 附件：\ `monit示例配置文件 </static/2011/02/monitrc.txt>`__
 (注：下载后请去掉.txt文件后缀)
-
-转载请注明出处：\ http://feilong.me/2011/02/monitor-core-processes-with-monit

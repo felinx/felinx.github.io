@@ -45,8 +45,6 @@ BTW：
 #. 有个别文档打印到文件时会出现异常无法打印全部页面的情况，比如共600页，打印出来（生成）的PDF文件只有400页，解决办法就是选择打印页面重新打印后面一部分内容（401－600页），然后用Adobe
    Acrobat Pro将两个文件重新合成为一个文件。
 
-转载请注明出处：\ http://feilong.me/2011/01/solve-kindle-cn-encoding-problem
-
 .. |image0| image:: /static/2011/01/pdf_print-265x300.jpg
    :class: alignnone size-medium wp-image-100
    :width: 265px

@@ -3,6 +3,7 @@
 :date: 2010-12-27 16:28
 :author: 飞龙
 :category: Web
+:tags: Wordpress
 :slug: recommended-wordpress-plugins
 :status: published
 
@@ -32,7 +33,7 @@ Key才行，到WordPress.Com注册一个账号就有了。James同学开始没�
    10 <http://ajaydsouza.com/wordpress/plugins/top-10/>`__\ 。
 -  社会化分享，如果是针对国外用户的网站，这个首选的当然是\ `Sociable <http://wordpress.org/extend/plugins/sociable/>`__\ ，另外要支持Buzz的分享需要装另外一个插件\ `Google
    Buzz for
-   Sociable <http://wordpress.org/extend/plugins/google-buzz-for-sociable/>`__\ 。但是Sociable对中文社区的支持不够好，比如新浪微博等。明河共影的\ `wp-share-list <http://www.36ria.com/2217>`__\ 对中文社区的支持非常给力，基本主流的都支持，另外这个不向bShare之类需要依赖于第三方网站，最后一点这个插件还非常酷。飞龙日志文章最下面的分享功能用的就是wp-share-list这个插件。
+   Sociable <http://wordpress.org/extend/plugins/google-buzz-for-sociable/>`__\ 。但是Sociable对中文社区的支持不够好，比如新浪微博等。明河共影的\ `wp-share-list <http://www.36ria.com/2217>`__\ 对中文社区的支持非常给力，基本主流的都支持，另外这个不向bShare之类需要依赖于第三方网站，最后一点这个插件还非常酷。飞龙札记文章最下面的分享功能用的就是wp-share-list这个插件。
 -  `随机文章 － Random Posts
    widget <http://www.romantika.name/v2/2007/05/02/wordpress-plugin-random-posts-widget/>`__\ ，
    这个不用过多解释，就是帮你生成随机的文章列表。
