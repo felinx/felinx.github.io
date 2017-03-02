@@ -2,7 +2,8 @@
 #####################
 :date: 2010-12-31 12:14
 :author: 飞龙
-:category: Web2.0, 互联网络, 杂谈
+:category: 杂谈
+:tags: Google, buzz
 :slug: google-buzz-top-8-defects
 :status: published
 
@@ -24,8 +25,6 @@ Buzz在2010各大网站、机构评出的失败的产品列表中均排名前列
 附图：如何捞回评论，感谢屁民同学提供图片\ http://goo.gl/UN9M4
 
 |image1|
-
-转载请注明出处：\ http://feilong.me/2010/12/google-buzz-top-8-defects
 
 .. |image0| image:: /static/2010/12/googlebuzz.jpg
    :class: size-full wp-image-211 aligncenter

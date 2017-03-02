@@ -2,7 +2,7 @@
 ####################################
 :date: 2011-02-10 11:32
 :author: 飞龙
-:category: 互联网络
+:category: Web
 :slug: quick-find-your-oldest-buzz
 :status: published
 

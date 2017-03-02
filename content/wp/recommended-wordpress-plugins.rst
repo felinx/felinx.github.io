@@ -2,7 +2,7 @@
 ###############################
 :date: 2010-12-27 16:28
 :author: 飞龙
-:category:
+:category: Web
 :slug: recommended-wordpress-plugins
 :status: published
 
