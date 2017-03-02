@@ -1,7 +1,7 @@
 教你一招，让你快速找到自己最早的Buzz
 ####################################
 :date: 2011-02-10 11:32
-:author: 飞龙非龙
+:author: 飞龙
 :category: 互联网络
 :slug: quick-find-your-oldest-buzz
 :status: published

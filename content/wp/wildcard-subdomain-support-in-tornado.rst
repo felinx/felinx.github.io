@@ -1,7 +1,7 @@
 Tornado对子域名和泛域名的支持
 #############################
 :date: 2012-08-20 12:42
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: wildcard-subdomain-support-in-tornado
 :status: published

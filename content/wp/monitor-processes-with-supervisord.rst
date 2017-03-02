@@ -1,7 +1,7 @@
 用Supervisord管理Python进程
 ###########################
 :date: 2011-03-29 11:51
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python, 系统相关
 :slug: monitor-processes-with-supervisord
 :status: published

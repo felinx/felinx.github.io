@@ -1,7 +1,7 @@
 用monit监控系统关键进程
 #######################
 :date: 2011-02-24 17:36
-:author: 飞龙非龙
+:author: 飞龙
 :category: 系统相关, 编程开发
 :slug: monitor-core-processes-with-monit
 :status: published

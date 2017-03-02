@@ -1,7 +1,7 @@
 囧，Amazon AWS EC2硬件故障
 ##########################
 :date: 2011-03-06 12:44
-:author: 飞龙非龙
+:author: 飞龙
 :category: 系统相关
 :slug: amazon-aws-ec2-hardware-failure
 :status: published

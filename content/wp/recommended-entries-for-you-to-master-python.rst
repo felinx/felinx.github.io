@@ -1,7 +1,7 @@
 学好Python必读的几篇文章
 ########################
 :date: 2011-01-12 12:02
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: recommended-entries-for-you-to-master-python
 :status: published

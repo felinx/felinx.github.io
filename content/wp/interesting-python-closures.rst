@@ -1,7 +1,7 @@
 有趣的Python闭包(Closures)
 ##########################
 :date: 2012-06-03 13:23
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: interesting-python-closures
 :status: published

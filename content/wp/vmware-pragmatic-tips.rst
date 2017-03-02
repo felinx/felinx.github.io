@@ -1,7 +1,7 @@
 VMware几个实用技巧
 ##################
 :date: 2011-01-17 13:41
-:author: 飞龙非龙
+:author: 飞龙
 :category: 编程开发
 :slug: vmware-pragmatic-tips
 :status: published

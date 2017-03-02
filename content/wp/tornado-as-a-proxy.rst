@@ -1,7 +1,7 @@
 用Tornado实现简单的在线代理
 ###########################
 :date: 2011-09-10 23:13
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: tornado-as-a-proxy
 :status: published

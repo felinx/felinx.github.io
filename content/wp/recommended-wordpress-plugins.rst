@@ -1,8 +1,8 @@
 打造完美博客，WordPress插件推荐
 ###############################
 :date: 2010-12-27 16:28
-:author: 飞龙非龙
-:category: PHP, 互联网络
+:author: 飞龙
+:category:
 :slug: recommended-wordpress-plugins
 :status: published
 
@@ -25,11 +25,7 @@ Key才行，到WordPress.Com注册一个账号就有了。James同学开始没�
    Comments <http://blog.jodies.de/2004/11/recent-comments/>`__\ ，
    WordPress默认的最新评论比较难看不能列出评论内容（有些主题会定制强化这个功能，这里不讨论），而这个插件可以定制最新评论的显示方式，比如我采用的是
    <li>%gravatar %comment\_author: <a href="%comment\_link"
-   title="%post\_title">%comment\_excerpt</a></li> 这个格式， 效果如下：
-
-|image0| 飞龙在天: `太有才了。
-|:mrgreen:| <http://17weiguan.com/2010/12/10249#comment-314>`__\ ` <http://17weiguan.com/2010/12/10249#comment-314>`__
-
+   title="%post\_title">%comment\_excerpt</a></li> 这个格式
 -  `访问统计 －
    WP-PostViews <http://lesterchan.net/portfolio/programming/php/>`__\ ，
    WP-PostViews是一个文章计数统计插件，可以在文章中显示浏览数，还提供了一些统计功能，比如一定时间内浏览最多的文章，你所看到的用WordPress做的网站上提供日排行、周排行、月排行、总排行之类的功能都是居于这个插件来做的。类似的有另外一个插件叫\ `Top
@@ -49,7 +45,7 @@ Key才行，到WordPress.Com注册一个账号就有了。James同学开始没�
    up <http://wordpress.org/extend/plugins/vote-it-up/>`__\ 就够了，具体看你自己的需求了。
 -  页面导航（翻页），一般主题都会带页面导航功能的，如果不能让你满意的话，就上\ `WP-PageNavi <http://wordpress.org/extend/plugins/wp-pagenavi/>`__\ 吧，一般主题也都会推荐你用这个插件的。
 -  联系页面，\ `Contact Form
-   7 <http://contactform7.com/>`__\ ，帮你做一个联系XX页面的，不用多解释，看一下\ `联系飞龙 <http://feilong.me/contact>`__\ 就明白了。另外这个也可以用来做其它用途，比如投稿页面。
+   7 <http://contactform7.com/>`__\ ，帮你做一个联系XX页面的，不用多解释，看一下\ `联系飞龙 <http://feilong.me/contact.html>`__\ 就明白了。另外这个也可以用来做其它用途，比如投稿页面。
 -  标签云，标签云的插件非常多，这里介绍一个非常酷的用Flash做的标签云插件\ `WP-Cumulus <http://wordpress.org/extend/plugins/wp-cumulus/>`__\ ，标签云生成后看起来象一个3D的球，你在上面移动鼠标时，这个球会跟着转，就像玩地球仪一样，挺吸引眼球的。不过原生的WP-Cumulus是不支持中文的，你可以下载\ http://feilong.me/wp-content/plugins/wp-cumulus/tagcloud.swf\ 替换默认的这个文件就可以完美支持中文了，下面这张图是围观网上的例子。
 
 |image2|
@@ -93,9 +89,7 @@ Key才行，到WordPress.Com注册一个账号就有了。James同学开始没�
    User Email
    Setup <http://wordpress.org/extend/plugins/new-user-email-set-up/>`__\ 是用来自定义注册、找回密码等系统邮件内容的。
 
-希望上面的这些插件介绍能够对你有所帮助，助你打造一个属于自己的完美的WordPress博客。这里介绍的插件我都用过，如果有任何问题或疑问可以直接回帖或\ `联系飞龙 <http://feilong.me/contact>`__\ 。
-
-转载请注明出处：\ http://feilong.me/2010/12/recommended-wordpress-plugins
+希望上面的这些插件介绍能够对你有所帮助，助你打造一个属于自己的完美的WordPress博客。这里介绍的插件我都用过，如果有任何问题或疑问可以直接回帖或\ `联系飞龙 <http://feilong.me/contact.html>`__\ 。
 
 .. |image0| image:: http://www.gravatar.com/avatar.php?gravatar_id=f34dec9007a004876f7a6c47c100524d&size=20&rating=G
    :class: alignnone

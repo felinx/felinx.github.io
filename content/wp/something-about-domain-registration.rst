@@ -1,7 +1,7 @@
 域名注册的那点事
 ################
 :date: 2011-01-10 14:04
-:author: 飞龙非龙
+:author: 飞龙
 :category: 互联网络
 :slug: something-about-domain-registration
 :status: published

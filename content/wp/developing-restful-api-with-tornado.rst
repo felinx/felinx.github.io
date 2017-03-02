@@ -1,7 +1,7 @@
 用Tornado开发RESTful API运用
 ############################
 :date: 2012-10-22 11:56
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python, Web2.0, 移动互联
 :slug: developing-restful-api-with-tornado
 :status: published

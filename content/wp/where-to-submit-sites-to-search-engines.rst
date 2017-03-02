@@ -1,7 +1,7 @@
 [ZT]各大搜索引擎的网站登录入口地址大全
 ######################################
 :date: 2011-05-23 17:41
-:author: 飞龙非龙
+:author: 飞龙
 :category: 互联网络
 :slug: where-to-submit-sites-to-search-engines
 :status: published

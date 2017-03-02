@@ -1,7 +1,7 @@
 发布Tornado镜像站点tornadoweb.cn
 ################################
 :date: 2011-05-19 15:06
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: tornadoweb-cn-mirror
 :status: published

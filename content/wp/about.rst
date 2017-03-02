@@ -1,12 +1,11 @@
 关于飞龙
 ########
 :date: 2010-12-25 04:29
-:author: 飞龙非龙
+:author: 飞龙
 :slug: about
 :status: published
 
-关于\ `飞龙非龙 <http://weibo.com/felinx>`__\ (Felinx Lee, aka. Pisla
-Li)
+飞龙 (Felinx Lee)
 
 | 出身农家，泥中长大。
 | 学在一中，考入武大。
@@ -16,7 +15,7 @@ Li)
 | 英雄无敌，星际争霸。
 | 六考四级，系史笑话。
 | 病入膏肓，无法自拔。
-
+|
 | 上天做媒，结识班花。
 | 唤醒恶梦，胸怀天下。
 | 一鼓作气，斩断乱麻。
@@ -26,18 +25,18 @@ Li)
 | 进欧特克，再自动化。
 | 下班回家，网站开花。
 | 人生变化，我自惊讶。
-
+|
 | 补充：
 | 无学无位，枉谈文化。
 | 无权无势，莫议国家。
 | 有妻有娃，生活融洽。
 | 有鳞有翼，龙行天下。
-
+|
 | 自勉：
 | 少立志，立长志。
 | 多读书，读好书。
 | 少说话，说真话。
 | 多做事，做实事。
-
+|
 | What can change the nature of a man?(Planescape Torment)
 | http://en.wikipedia.org/wiki/Planescape:_Torment

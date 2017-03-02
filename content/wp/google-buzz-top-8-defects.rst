@@ -1,8 +1,8 @@
 历数Google Buzz八宗罪
 #####################
 :date: 2010-12-31 12:14
-:author: 飞龙非龙
-:category: Web2.0, 互联网络, 飞龙杂谈
+:author: 飞龙
+:category: Web2.0, 互联网络, 杂谈
 :slug: google-buzz-top-8-defects
 :status: published
 

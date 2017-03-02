@@ -1,8 +1,8 @@
 谈提问 - 如何有效的提问
 #######################
 :date: 2011-08-30 17:56
-:author: 飞龙非龙
-:category: 飞龙杂谈
+:author: 飞龙
+:category: 杂谈
 :slug: how-to-ask-for-help
 :status: published
 

@@ -1,7 +1,7 @@
 基于UI Automation的自动化测试工具设计指南
 #########################################
 :date: 2011-01-20 17:17
-:author: 飞龙非龙
+:author: 飞龙
 :category: 编程开发
 :slug: ms-ui-automation-tool-design-guide
 :status: published

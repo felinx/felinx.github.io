@@ -1,8 +1,8 @@
 [OT] JustAJoke长期招聘Python初级工程师(内附薪资)
 ################################################
 :date: 2011-05-06 08:51
-:author: 飞龙非龙
-:category: Python, 编程开发, 飞龙杂谈
+:author: 飞龙
+:category: Python, 编程开发, 杂谈
 :slug: just-a-joke-python-jobs
 :status: published
 

@@ -1,8 +1,8 @@
-Contact Felinx
+联系飞龙
 ##############
 :date: 2010-12-25 19:15
-:author: 飞龙非龙
+:author: 飞龙
 :slug: contact
 :status: published
 
-[contact-form 1 "Contact Felinx"]
+Email: felinx.lee#gmail.com (# -> @)

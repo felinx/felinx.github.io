@@ -1,8 +1,8 @@
 那些年我们一起被偷的东西
 ########################
 :date: 2012-06-03 10:18
-:author: 飞龙非龙
-:category: 飞龙杂谈
+:author: 飞龙
+:category: 杂谈
 :slug: things-have-been-stolen-in-those-years
 :status: published
 

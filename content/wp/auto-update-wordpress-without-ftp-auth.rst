@@ -1,7 +1,7 @@
 免输入FTP信息自动升级WordPress
 ##############################
 :date: 2010-12-31 21:04
-:author: 飞龙非龙
+:author: 飞龙
 :category: PHP, 编程开发
 :slug: auto-update-wordpress-without-ftp-auth
 :status: published

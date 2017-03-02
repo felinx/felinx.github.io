@@ -1,8 +1,8 @@
 谈读书 - 多读书，读好书
 #######################
 :date: 2011-08-30 16:36
-:author: 飞龙非龙
-:category: 飞龙杂谈
+:author: 飞龙
+:category: 杂谈
 :slug: talk-about-reading-books
 :status: published
 

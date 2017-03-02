@@ -1,7 +1,7 @@
-Pycon2011精彩视频分享 
+Pycon2011精彩视频分享
 ######################
 :date: 2011-03-21 10:58
-:author: 飞龙非龙
+:author: 飞龙
 :category: 编程开发
 :slug: pycon2011-videos-sharing
 :status: published
@@ -15,7 +15,7 @@ Python大会上的精彩视频，这些视频很大而且在墙外，因此我�
    Python在Dropbox的运用。
 -  `Using Coroutines to Create Efficient, High-Concurrency Web
    Applications <http://goo.gl/W759t>`__ 介绍Python协程的。
--  
+-
 
    .. raw:: html
 

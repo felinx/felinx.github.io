@@ -1,7 +1,7 @@
 tornadoweb.cn现提供Tornado中译文档
 ##################################
 :date: 2011-06-20 15:14
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: tornadoweb-cn-documentation
 :status: published

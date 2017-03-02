@@ -1,7 +1,7 @@
 [小技巧]如何在开发测试和生产环境下跑同一套Python代码
 ####################################################
 :date: 2011-03-14 13:27
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python, 系统相关
 :slug: run-some-code-in-testing-and-deploying-server
 :status: published

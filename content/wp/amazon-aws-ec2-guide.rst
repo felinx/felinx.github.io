@@ -1,7 +1,7 @@
 亚马逊AWS(EC2)资源汇总
 ######################
 :date: 2011-01-01 21:54
-:author: 飞龙非龙
+:author: 飞龙
 :category: 编程开发
 :slug: amazon-aws-ec2-guide
 :status: published

@@ -1,8 +1,8 @@
 9月1日入职盛大创新院
 ####################
 :date: 2011-09-01 07:34
-:author: 飞龙非龙
-:category: 飞龙杂谈
+:author: 飞龙
+:category: 杂谈
 :slug: join-shanda-innovations
 :status: published
 

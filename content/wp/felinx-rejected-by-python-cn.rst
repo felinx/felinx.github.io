@@ -1,8 +1,8 @@
 当Felinx遭遇python-cn
 #####################
 :date: 2010-12-27 23:51
-:author: 飞龙非龙
-:category: Python, 编程开发, 飞龙杂谈
+:author: 飞龙
+:category: Python, 编程开发, 杂谈
 :slug: felinx-rejected-by-python-cn
 :status: published
 

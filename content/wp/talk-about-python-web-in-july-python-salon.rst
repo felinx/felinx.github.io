@@ -1,7 +1,7 @@
 Python web开发吐槽
 ##################
 :date: 2011-08-03 13:30
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python, Web2.0
 :slug: talk-about-python-web-in-july-python-salon
 :status: published

@@ -1,7 +1,7 @@
 浅析轮询(Polling)和推送(Long-Polling)服务
 #########################################
 :date: 2011-07-13 13:42
-:author: 飞龙非龙
+:author: 飞龙
 :category: Web2.0
 :slug: talk-about-polling-and-long-polling
 :status: published

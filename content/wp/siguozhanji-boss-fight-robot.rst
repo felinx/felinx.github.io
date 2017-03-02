@@ -1,7 +1,7 @@
 四国战记外挂(四国助手)
 ######################
 :date: 2013-08-14 23:50
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: siguozhanji-boss-fight-robot
 :status: published

@@ -1,7 +1,7 @@
 浅谈Python web框架
 ##################
 :date: 2011-01-25 19:01
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python, Web2.0
 :slug: talk-about-python-web-framework
 :status: published

@@ -1,7 +1,7 @@
 Python兼容性编程
 ################
 :date: 2011-02-21 18:17
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: learning-python-follow-felinx-part-one
 :status: published

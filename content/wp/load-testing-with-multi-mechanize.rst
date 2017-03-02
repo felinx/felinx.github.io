@@ -1,7 +1,7 @@
 介绍一款Web Performance & Load 测试工具multi-mechanize
 ######################################################
 :date: 2013-02-19 19:21
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: load-testing-with-multi-mechanize
 :status: published

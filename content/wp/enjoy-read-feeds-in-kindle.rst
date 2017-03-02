@@ -1,7 +1,7 @@
 让你的Kindle成为离线阅读利器
 ############################
 :date: 2010-12-31 13:09
-:author: 飞龙非龙
+:author: 飞龙
 :category: 数码装备
 :slug: enjoy-read-feeds-in-kindle
 :status: published

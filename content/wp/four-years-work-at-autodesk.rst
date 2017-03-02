@@ -1,8 +1,8 @@
 弹指一挥间，四载欧特克
 ######################
 :date: 2011-08-31 11:24
-:author: 飞龙非龙
-:category: 飞龙杂谈
+:author: 飞龙
+:category: 杂谈
 :slug: four-years-work-at-autodesk
 :status: published
 

@@ -1,7 +1,7 @@
 说说Python获年度Tiobe编程语言大奖这事
 #####################################
 :date: 2011-01-10 18:36
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python, 互联网络
 :slug: python-wins-tiobe-2010-pro-lang-award
 :status: published

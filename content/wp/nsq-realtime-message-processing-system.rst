@@ -1,7 +1,7 @@
 实时消息处理系统NSQ & Python Worker
 ###################################
 :date: 2013-05-18 18:43
-:author: 飞龙非龙
+:author: 飞龙
 :category: Python
 :slug: nsq-realtime-message-processing-system
 :status: published
@@ -22,7 +22,7 @@ worker <http://www.slideshare.net/FelinxLee/nsq-python-worker>`__** from
 
    </div>
 
-| 
+|
 | 分享过程视频，因为是支支用手机录的屏幕比较晃，大家凑合下。
 | 另外更正讲解过程中的一个口误，不是Go的作者之一follow了我的nsqworker项目而是nsq的主要作者。
 

@@ -1,7 +1,7 @@
 我玩游戏这些年，无基友，不游戏
 ##############################
 :date: 2014-08-02 18:15
-:author: 飞龙非龙
+:author: 飞龙
 :category: 游戏
 :slug: no-gyou-no-game
 :status: published

@@ -1,7 +1,7 @@
 Kindle中文乱码问题(TXT、PDF)解决办法
 ####################################
 :date: 2011-01-08 11:46
-:author: 飞龙非龙
+:author: 飞龙
 :category: 数码装备
 :slug: solve-kindle-cn-encoding-problem
 :status: published
