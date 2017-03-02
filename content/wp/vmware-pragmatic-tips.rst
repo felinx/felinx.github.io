@@ -2,7 +2,8 @@ VMware几个实用技巧
 ##################
 :date: 2011-01-17 13:41
 :author: 飞龙
-:category: 编程开发
+:category: IT
+:tags: vmware
 :slug: vmware-pragmatic-tips
 :status: published
 
@@ -27,13 +28,7 @@ Hu <http://www.google.com/profiles/104231231256400902165>`__\ 同学刚碰到一
 Files\\VMware\\VMware
 Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下：
 
-    .. raw:: html
-
-       <div>
-
-    .. raw:: html
-
-       <div>
+::
 
     VMware Virtual Disk Manager - build 34685.
     Usage: vmware-vdiskmanager.exe OPTIONS diskName \| drive-letter:
@@ -73,45 +68,16 @@ Workstation，有些安装版本可能不自带这个，如果没有就去下一
     (A virtual disk first needs to be mounted at m:
     using the VMware Diskmount Utility.)
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   <div>
-
 示例ex
 4就是一个扩大硬盘分区的例子，找到对应的你要扩大的.vmdk文件照着做就可以了，比如下面是将我的一个VM的D盘扩大到20G（文件路径有空格得用引号“”括一下）：
 
-.. raw:: html
-
-   </div>
-
-    .. raw:: html
-
-       <div>
+::
 
     vmware-vdiskmanager.exe -x 20Gb
     “D:\\09.VM\\build\_vm\\vm\_40\\Windows XP Professional-000001.vmdk”
 
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   <div>
-
 对于Windows系统的VM来说，新增的这部分磁盘空间在VM里暂时是看不到的，需要到系统管理工具里的磁盘管理工具里去分配一下就OK了。
 
-.. raw:: html
-
-   </div>
 
 3.释放硬盘空间
 --------------
@@ -167,8 +133,6 @@ shrink之后）效果更佳。
     start vmware -X “D:\\09.VM\\build\_vm\\vm\_40\\winxppro.vmx”
 
 你还可以在VM的启动项（如：windows的startup，linux的init.d等）里面预先加入一些自定义的任务，这样就可以自动控制一些VM去做一些事情，完成一些自动化的任务了。
-
-转载请注明出处：\ http://feilong.me/2011/01/vmware-pragmatic-tips
 
 .. |image0| image:: /static/2011/01/vm-take-snapshot.jpg
    :class: size-full wp-image-181 aligncenter

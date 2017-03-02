@@ -3,6 +3,7 @@ Python兼容性编程
 :date: 2011-02-21 18:17
 :author: 飞龙
 :category: Python
+:tags: Python
 :slug: learning-python-follow-felinx-part-one
 :status: published
 
@@ -31,7 +32,7 @@ Python和许多具有虚拟机的语言一样，支持跨平台，基本可以�
 
 如果你要实现的功能跟系统强相关或在不同的系统中实现是完全不一样的，那就需要考虑这个问题了，这个时候一般是把相关的API封装成一致，然后根据系统信息来选择不同的实现模块，Tornado示例代码如下（模块和代码行数见第一行注释，注：代码行可能会随着Tornado的升级而稍有变化，后面不再做特别说明）：
 
-::
+.. code-block:: python
 
     # tornado.httpserver line 32
     try:
@@ -44,7 +45,7 @@ Python和许多具有虚拟机的语言一样，支持跨平台，基本可以�
 
 在windows上运行和在linux下运行，导入的fcntl模块是不同的，windows下导入的是Tornado的win32\_support这个实验性质的模块，当然API接口做的跟fcntl是一致的，而在具体用到fcntl的部分就不再需要考虑系统兼容性的问题了，更复杂一点的一个例子见：
 
-::
+.. code-block:: python
 
     # tornado.ioloop line 539
     # Choose a poll implementation. Use epoll if it is available, fall back to
@@ -81,7 +82,7 @@ Python和许多具有虚拟机的语言一样，支持跨平台，基本可以�
 
 这类最常见的就是用try、import、except三者组成的黄金搭档，Tornado代码举例如下：
 
-::
+.. code-block:: python
 
     # tornado.escape line 24
     # json module is in the standard library as of python 2.6; fall back to
@@ -112,7 +113,7 @@ Python和许多具有虚拟机的语言一样，支持跨平台，基本可以�
 这段这么长的代码的目的其实只有一个，就是导入可用的json模块，分别尝试用Python2.6+自带的json模块、simplejson第三方包、django环境里的simplejson（其实和前面的simplejson是一个东西，不过django把它集成到它自己的utils里去了），若都缺的话最后会抛一个常用来表功能未实现的异常（NotImplementedError）。有了这段代码，在Python2.6+、Python2.5+simplejson、Python2.5+django的Python环境下，Tornado的json编解码的功能都能够正常使用。
 更常见一点的例子，如：
 
-::
+.. code-block:: python
 
     # tornado.httpserver line 40
     try:
@@ -127,7 +128,7 @@ Python和许多具有虚拟机的语言一样，支持跨平台，基本可以�
 
 然后后面一般会有针对性的处理，如：
 
-::
+.. code-block:: python
 
     if multiprocessing is not None:
         # do something
@@ -143,7 +144,7 @@ Python <http://python.net/%7Egoodger/projects/pycon/2007/idiomatic/handout.html>
 
 这个问题通常变得异常的简单，Tornado示例如下：
 
-::
+.. code-block:: python
 
     # tornado.httpclient line 367
     # For backwards compatibility: Tornado 1.0 included a new implementation of
@@ -158,7 +159,7 @@ Tornado最早的版本就有一个AsyncHTTPClient实现，但是在中间又引�
 
 这一解决方案非常实用的，许多地方都可以看到它的影子，再给大家举个例子，旧的多线程模块threading的实现其命名规范是不符合现在的PEP8标准的，而它提供符合PEP8标准的API的方式也很简单，示例代码片段如下：
 
-::
+.. code-block:: python
 
     # python2.6 threading line 799
     # Global API functions
@@ -185,14 +186,14 @@ Tornado最早的版本就有一个AsyncHTTPClient实现，但是在中间又引�
 
 向上兼容这个可能少有人听过，但在Python这奇妙的世界里，还真有这事，这就是神秘的\_\_future\_\_模块，你可能看到过下面这样的代码：
 
-::
+.. code-block:: python
 
     # tornado.httpclient line 19
     from __future__ import with_statement
 
 这就是在消费Python未来的成果（将来或说较新的版本才有的特性），在较低的版本里就可以使用较高版本里才会正式成为Python一部分的新特性，这里是后面的代码有用到with表达式（关于它将来会另外写博客介绍），深入进\_\_future\_\_模块的代码，里面有这么几行：
 
-::
+.. code-block:: python
 
     with_statement = _Feature((2, 5, 0, "alpha", 1),
                               (2, 6, 0, "alpha", 0),
@@ -202,8 +203,6 @@ Tornado最早的版本就有一个AsyncHTTPClient实现，但是在中间又引�
 \_\_future\_\_里引入的特性都将成为未来版本里实事上的标准，但是在一些实验性引入该特性的低版本里通过\_\_future\_\_也可以用，将来升级了Python版本，用了新特性的代码也不会有兼容性的问题了。
 
 总之，Python很容易写出兼容性很好的程序，可是杯具的是Python3.x不完全兼容2.x，导致Python3.x推出来这么久了迟迟没有得到大规模的运用。
-
-转载请注明出处：\ http://feilong.me/2011/02/learning-python-follow-felinx-part-one
 
 .. |image0| image:: /static/2011/02/ab2tag.jpg
    :width: 153px

@@ -2,7 +2,8 @@
 #########################################
 :date: 2011-01-20 17:17
 :author: 飞龙
-:category: 编程开发
+:category: 编程
+:tags: UIAutomation, 自动化测试
 :slug: ms-ui-automation-tool-design-guide
 :status: published
 
@@ -96,7 +97,7 @@ Condition的，查找控件需要定义一个查找范围和过滤条件。
 下面是一个最简单的示例，在RootElement桌面下查找子结点里Name属性是“Simple
 App”的一个控件，因为是在桌面的子结点（一级），它会是一个Application:
 
-::
+.. code-block:: csharp
 
     Condition winNameCond = new PropertyCondition(AutomationElement.NameProperty, "Simple App");
 
@@ -108,7 +109,7 @@ App”的一个控件，因为是在桌面的子结点（一级），它会是�
 通过上面的Find
 Controls找到一个控件后，接下来就是如何操作它实现UI自动化的问题了，比如：点击一个Button，选择一个TreeViewItem等等。下面是一个已做好封装的UITextBox这个控件类里获取TextBox的文字的参考实现：
 
-::
+.. code-block:: csharp
 
     public virtual string GetText()
     {
@@ -168,12 +169,10 @@ ControlType里定义的30几种控件中最常用的控件基本操作都实现�
 
 总之，通过UIA实现一套自己的强大的UI自动化测试工具不是不可能，希望本文对一些从事UI自动化测试的同学有所帮助。
 
-扩展资料：\ ` <http://blogs.msdn.com/b/lixiong/archive/2009/12/05/ui-automation-under-the-hood.aspx>`__
+扩展资料：
 
 -  http://en.wikipedia.org/wiki/Microsoft_UI_Automation
 -  http://blogs.msdn.com/b/lixiong/archive/2009/12/05/ui-automation-under-the-hood.aspx
-
-转载请注明出处：\ http://feilong.me/2011/01/ms-ui-automation-tool-design-guide
 
 .. |image0| image:: /static/2011/01/UI_Automation.jpg
    :width: 804px

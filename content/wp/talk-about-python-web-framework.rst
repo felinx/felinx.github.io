@@ -2,7 +2,8 @@
 ##################
 :date: 2011-01-25 19:01
 :author: 飞龙
-:category: Python, Web2.0
+:category: Python
+:tags: Python, Web框架, web framework, Django, Tornado
 :slug: talk-about-python-web-framework
 :status: published
 
@@ -101,7 +102,7 @@ powerful），总共就没多少行代码，也不像Pylons那样依赖大量的
 
 Bottle和Flask作为新生一代Python框架的代表，挺有意思的是都采用了decorator的方式配置URL路由，如：
 
-::
+.. code-block:: python
 
     from bottle import route, run
 
@@ -138,8 +139,6 @@ Bottle、Flask跟web.py一样，都非常精简，Bottle甚至所有的代码都
    Framework一样有大站，如：digg.com；常被人说有性能问题的Ruby和Rails，不是照样可以开发出twitter吗？再者现在的硬件、带宽成本其实是很低的，特别有了云计算平台后，人力成本才是最贵的，没有上万的IP根本就不用太在意性能问题，流量上去了花点钱买点服务器空间好了，简单快速的解决性能问题。
 
 注：前面有网友质疑我“Quora是用Pylons开发的”这样的说法不客观，特说明一下，这里所说的某个网站A是用B开发的，只是指A主要或部分是由B开发的，大家就不要再去纠结A还用C了。
-
-转载请注明出处：\ http://feilong.me/2011/01/talk-about-python-web-framework
 
 .. |image0| image:: /static/2011/01/hdr_logo.gif
    :class: alignnone size-full wp-image-225

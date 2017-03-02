@@ -2,7 +2,8 @@
 ####################################
 :date: 2011-02-10 11:32
 :author: 飞龙
-:category: Web
+:category: 杂谈
+:tags: Google, buzz
 :slug: quick-find-your-oldest-buzz
 :status: published
 
@@ -27,8 +28,6 @@ Buzz要做到这一点还真不容易，在个人的Buzz页面你只能一步步
 接下来就是点右上角或左下角的Older链接不停的翻旧的Buzz就可以了，翻到最后一页就是你最早的Buzz记录了（这个是可以一直翻到底的哦）。
 
 我就是这样把最早的一条Buzz给翻出来的，你还不赶紧按此法把自己的处女Buzz挖出来顶顶。
-
-转载请注明出处：\ http://feilong.me/2011/02/quick-find-your-oldest-buzz
 
 .. |image0| image:: /static/2011/02/buzz_load_more.jpg
    :class: alignnone size-full wp-image-235

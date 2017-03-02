@@ -3,6 +3,7 @@ Python一大好消息PEP 3333 Accepted
 :date: 2011-01-14 08:47
 :author: 飞龙
 :category: Python
+:tags: Python, pep
 :slug: pep-3333-accepted
 :status: published
 

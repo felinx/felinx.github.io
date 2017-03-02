@@ -2,11 +2,12 @@
 ###########################
 :date: 2011-03-29 11:51
 :author: 飞龙
-:category: Python, 系统相关
+:category: Python
+:tags: Python, supervisord
 :slug: monitor-processes-with-supervisord
 :status: published
 
-Supervisord是用Python实现的一款非常实用的进程管理工具，类似于\ `monit <http://mmonit.com/monit/>`__\ (关于monit见我的博客:`用monit监控系统关键进程 <http://feilong.me/2011/02/monitor-core-processes-with-monit>`__)，monit和supervisord的一个比较大的差异是supervisord管理的进程必须由supervisord来启动，monit可以管理已经在运行的程序；supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon
+Supervisord是用Python实现的一款非常实用的进程管理工具，类似于\ `monit <http://mmonit.com/monit/>`__\ (关于monit见我的博客:`用monit监控系统关键进程 <http://feilong.me/2011/02/monitor-core-processes-with-monit.html>`__)，monit和supervisord的一个比较大的差异是supervisord管理的进程必须由supervisord来启动，monit可以管理已经在运行的程序；supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon
 off让nginx以非daemon方式启动。
 
 Supervisord安装
@@ -95,5 +96,3 @@ Supervisord安装完成后有两个可用的命令行supervisor和supervisorctl�
 -  supervisorctl
    update，根据最新的配置文件，启动新配置或有改动的进程，配置没有改动的进程不会受影响而重启。
 -  注意：显示用stop停止掉的进程，用reload或者update都不会自动重启。
-
-转载请注明出处：\ http://feilong.me/2011/03/monitor-processes-with-supervisord

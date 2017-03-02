@@ -2,7 +2,8 @@
 #######################
 :date: 2011-02-24 17:36
 :author: 飞龙
-:category: 系统相关, 编程开发
+:category: IT
+:tags: monit
 :slug: monitor-core-processes-with-monit
 :status: published
 
