@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: 杂谈
 :tags: Google, buzz
-:slug: quick-find-your-oldest-buzz
+:slug: 2011/02/quick-find-your-oldest-buzz
 :status: published
 
 Google

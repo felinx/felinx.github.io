@@ -2,9 +2,9 @@
 ######################
 :date: 2011-01-01 21:54
 :author: 飞龙
-:category: 编程
+:category: IT
 :tags: aws, 云计算
-:slug: amazon-aws-ec2-guide
+:slug: 2011/01/amazon-aws-ec2-guide
 :status: published
 
 亚马逊AWS全称Amazon Web

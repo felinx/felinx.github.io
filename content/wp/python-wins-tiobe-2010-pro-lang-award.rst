@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: Python
 :tags: Python, 编程语言
-:slug: python-wins-tiobe-2010-pro-lang-award
+:slug: 2011/01/python-wins-tiobe-2010-pro-lang-award
 :status: published
 
 今天在reddit的feed里看到了Python获得了2010年编程语言大奖，国外也有不少朋友在讨论这事，我也顺带来说几句。

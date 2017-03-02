@@ -2,7 +2,7 @@ nginx反向代理配置(附：tornadoweb.cn的nginx配置)
 ###############################################
 :date: 2011-06-11 11:41
 :author: 飞龙
-:category: tips
+:category: IT
 :tags: nginx, 反向代理
 :slug: 2011/06/nginx-reverse-proxy
 :status: published

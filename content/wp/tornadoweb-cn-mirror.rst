@@ -3,7 +3,7 @@
 :date: 2011-05-19 15:06
 :author: 飞龙
 :category: Python
-:slug: tornadoweb-cn-mirror
+:slug: 2010/05/tornadoweb-cn-mirror
 :status: published
 
 鉴于\ `Tornado官网 <http://www.tornadoweb.org>`__\ 架设在GAE上，而GAE在国内被墙，如果不爬墙大家访问不了Tornado官网，这个让很多国内Tornado用户不爽，也影响了Tornado在国内的推广。而我手头一直持有\ `tornadoweb.cn <http://www.tornadoweb.cn>`__\ 和tornadoweb.com.cn两个域名，之前是想开发个Tornado的中文站的，但在目前闲置的情况下，还不如先做一个官方网站的镜像，故今天特配置了一下我EC2上的nginx，做了一个Tornado官方网站的镜像站点\ `tornadoweb.cn <http://www.tornadoweb.cn>`__\ ，以造福国内Tornado用户，以后国内用户就可以直接通过\ `tornadoweb.cn <http://www.tornadoweb.cn/>`__\ 查阅Tornado的文档了。

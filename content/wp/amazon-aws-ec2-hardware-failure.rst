@@ -3,6 +3,7 @@
 :date: 2011-03-06 12:44
 :author: 飞龙
 :category: IT
+:tags: aws
 :slug: 2011/03/amazon-aws-ec2-hardware-failure
 :status: published
 

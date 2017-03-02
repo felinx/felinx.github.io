@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: Web
 :tags: 域名
-:slug: something-about-domain-registration
+:slug: 2011/01/something-about-domain-registration
 :status: published
 
 要架设一个商业网站、个人博客，首要的即是要注册一个好的域名（大家也都知道kaixin001.com和kaixin.com那点事），而要注册一个好的域名特别是

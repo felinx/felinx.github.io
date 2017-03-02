@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: Python
 :tags: Python, python-cn, 邮件群组
-:slug: felinx-rejected-by-python-cn
+:slug: 2010/12/felinx-rejected-by-python-cn
 :status: published
 
 今日下班前，我再一次翻墙去申请加入\ http://groups.google.com/group/python-cn\ 即CPyUG华蟒用户组，等回到家打开邮箱时发现又一次被拒了，管理员效率还真是高啊！我已不记得这是我第几次申请被拒了，估计不小于5次了。这次我为了壮壮胆气，在申请的备注里还把我的python开源网站\ http://poweredsites.org\ 给抬了出来，仍然是不管用啊。

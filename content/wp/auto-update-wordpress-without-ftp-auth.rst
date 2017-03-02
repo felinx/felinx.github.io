@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: 编程
 :tags: Wordpress
-:slug: auto-update-wordpress-without-ftp-auth
+:slug: 2010/12/auto-update-wordpress-without-ftp-auth
 :status: published
 
 WordPress的3.0.4

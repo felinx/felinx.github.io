@@ -3,7 +3,7 @@
 :date: 2010-12-26 00:00
 :author: 飞龙
 :category: 杂谈
-:slug: start-blogging
+:slug: 2010/12/start-blogging
 :status: published
 
 很早就有弄个博客的念头，可一直未能成行，理由很多但都不能当合理的借口。

@@ -2,8 +2,9 @@ Kindle中文乱码问题(TXT、PDF)解决办法
 ####################################
 :date: 2011-01-08 11:46
 :author: 飞龙
-:category: 数码装备
-:slug: solve-kindle-cn-encoding-problem
+:category: 读书
+:tags: Kindle
+:slug: 2011/01/solve-kindle-cn-encoding-problem
 :status: published
 
 **问题一：文件名、TXT文档、上网等中文变成一个个“口”字问题**\ （已解决的请直接跳到第二条，我这主要记录一下给自己留个底，这部分的内容主要来自网络）

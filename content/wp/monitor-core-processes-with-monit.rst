@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: IT
 :tags: monit
-:slug: monitor-core-processes-with-monit
+:slug: 2011/02/monitor-core-processes-with-monit
 :status: published
 
 `monit <http://mmonit.com/monit/>`__\ 是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于\*nix平台，

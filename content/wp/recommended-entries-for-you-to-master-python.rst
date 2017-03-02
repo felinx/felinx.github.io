@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: Python
 :tags: Python
-:slug: recommended-entries-for-you-to-master-python
+:slug: 2011/01/recommended-entries-for-you-to-master-python
 :status: published
 
 作为脚本语言Python上手容易，但要学好Python能写出一手漂亮的、Pythonic的Python代码并非一日之功，本文的目的在于推荐一些优秀的Python相关的文章(至于书大家可以看dip、learning

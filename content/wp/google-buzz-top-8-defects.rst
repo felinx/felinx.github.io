@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: 杂谈
 :tags: Google, buzz
-:slug: google-buzz-top-8-defects
+:slug: 2010/12/google-buzz-top-8-defects
 :status: published
 
 Buzz在2010各大网站、机构评出的失败的产品列表中均排名前列，原因很简单，Buzz从2月推出至今一直问题不断，特别是开始的隐私泄漏问题和最近的掉评论问题，让很多用户无法忍受，虽然我是Buzz的忠忠忠忠忠实粉丝，但骂你一顿是必须的，恨Buzz你不是李刚啊！下面历数一下Buzz推出以来大大小小、莫名其妙、让人头疼的八宗罪（七宗罪再加一等，最后一等就是这掉评论了）。

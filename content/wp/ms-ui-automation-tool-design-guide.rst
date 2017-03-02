@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: 编程
 :tags: UIAutomation, 自动化测试
-:slug: ms-ui-automation-tool-design-guide
+:slug: 2011/01/ms-ui-automation-tool-design-guide
 :status: published
 
 说明：以下内容是根据2010年我在公司的一次关于UI

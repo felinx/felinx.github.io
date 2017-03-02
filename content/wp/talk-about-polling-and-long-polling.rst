@@ -2,7 +2,7 @@
 #########################################
 :date: 2011-07-13 13:42
 :author: 飞龙
-:category: Tech
+:category: IT
 :tags: Polling, Long-Polling
 :slug: 2011/07/talk-about-polling-and-long-polling
 :status: published

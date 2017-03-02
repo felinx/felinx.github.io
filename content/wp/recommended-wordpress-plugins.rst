@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: Web
 :tags: Wordpress
-:slug: recommended-wordpress-plugins
+:slug: 2010/12/recommended-wordpress-plugins
 :status: published
 
 拜\ `James <http://netwiser.blogspot.com/>`__\ 所托，今年给洋人写一个小的商用插件\ `ROMI-Calculator <http://www.marketet.com/romi-calculator/>`__\ ，为此研究了下WordPress，之后趁热打铁用WordPress搭建了\ `围观网 <http://17weiguan.com>`__\ ，期间围观网经过两次改版，前后这么一择腾，可以说现在对WordPress算是小有了解了。

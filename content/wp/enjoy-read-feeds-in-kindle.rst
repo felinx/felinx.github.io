@@ -4,7 +4,7 @@
 :author: 飞龙
 :category: 读书
 :tags: Kindle
-:slug: enjoy-read-feeds-in-kindle
+:slug: 2010/12/enjoy-read-feeds-in-kindle
 :status: published
 
 Kindle用来看书很爽，这个无需多说大家都知道，但是用Kindle来看订阅的新闻、博客，当离线的Google

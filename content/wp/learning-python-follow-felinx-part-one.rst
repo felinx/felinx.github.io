@@ -4,7 +4,7 @@ Python兼容性编程
 :author: 飞龙
 :category: Python
 :tags: Python
-:slug: learning-python-follow-felinx-part-one
+:slug: 2011/02/learning-python-follow-felinx-part-one
 :status: published
 
 鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家\ **讨论、拍砖、献花**\ ！

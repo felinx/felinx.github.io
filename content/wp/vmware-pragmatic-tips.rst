@@ -4,7 +4,7 @@ VMware几个实用技巧
 :author: 飞龙
 :category: IT
 :tags: vmware
-:slug: vmware-pragmatic-tips
+:slug: 2011/01/vmware-pragmatic-tips
 :status: published
 
 近日Buzz好友\ `Kyle

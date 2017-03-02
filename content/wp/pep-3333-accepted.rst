@@ -4,7 +4,7 @@ Python一大好消息PEP 3333 Accepted
 :author: 飞龙
 :category: Python
 :tags: Python, pep
-:slug: pep-3333-accepted
+:slug: 2011/01/pep-3333-accepted
 :status: published
 
 不日前我在\ `“学好Python必读的几篇文章” <http://feilong.me/2011/01/recommended-entries-for-you-to-master-python>`__\ 中提到的尚在草案状态的\ `PEP
