@@ -3,7 +3,8 @@
 :date: 2013-08-14 23:50
 :author: 飞龙
 :category: Python
-:slug: siguozhanji-boss-fight-robot
+:tags: 四国战记
+:slug: 2013/08/siguozhanji-boss-fight-robot
 :status: published
 
 `四国战记 <http://sgzj.muhegame.com/>`__\ 是我最近玩过的比较不错的一款卡牌手游，玩四国依稀有点当年大学时代玩英雄无敌的感觉，我先无节操的推荐一下这款手游，邀请码就不放了，以免纯广告之嫌，我的号二区水源精华“灰太龙”，有兴趣的可以游戏里来找我(目测四国GM第一个来找我了，杯具鸟)。
@@ -27,7 +28,7 @@ http://cc2046.taobao.com/index.htm
 
 挂机程序原理很简单，只需要抓包抓到魔神战的HTTP请求URL地址和用户的Cookie，再在魔神战这个时间点启动程序模拟砍魔神的HTTP请求即可。最简单的其实用CURL就可以实现这个功能，不过为了测试并发和加入一些随机因子让机器人更像真人在玩，我后来用Python写了个简单的程序来做这件事。处于xxx考虑，这里我暂且把部分代码用xxx替代，Python代码如下：
 
-::
+.. code-block:: python
 
     # -*- coding: utf-8 -*-
     #
@@ -112,8 +113,6 @@ http://cc2046.taobao.com/index.htm
 附：写博客的这个时间机器人砍魔神的结果图
 
 |image0|
-
-转载请注明出处：\ http://feilong.me/2013/08/siguozhanji-boss-fight-robot
 
 .. |image0| image:: /static/2013/08/IMG_1490.png
    :class: alignnone size-full wp-image-833

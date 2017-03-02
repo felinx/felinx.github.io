@@ -3,8 +3,8 @@
 :date: 2011-01-25 19:01
 :author: 飞龙
 :category: Python
-:tags: Python, Web框架, web framework, Django, Tornado
-:slug: talk-about-python-web-framework
+:tags: Python, web framework, Django, Tornado
+:slug: 2011/01/talk-about-python-web-framework
 :status: published
 
 说到web

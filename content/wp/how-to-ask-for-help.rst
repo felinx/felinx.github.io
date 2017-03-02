@@ -3,7 +3,8 @@
 :date: 2011-08-30 17:56
 :author: 飞龙
 :category: 杂谈
-:slug: how-to-ask-for-help
+:tags: 提问
+:slug: 2011/08/how-to-ask-for-help
 :status: published
 
 说明：接上篇“\ `谈读书 <http://feilong.me/2011/08/talk-about-reading-books>`__\ ”，本篇博客也来自于昨天我在公司的分享。
@@ -14,52 +15,19 @@
 
 **提问前**
 
-.. raw:: html
-
-   <div id="_mcePaste">
-
 -  请确认自己已经过努力思考，确实解决不了。
 -  查找是否已有类似的问题存在，以尽量避免不必要的重复。
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div id="_mcePaste">
-
 **提问时**
-
-.. raw:: html
-
-   </p>
 
 -  态度诚恳，虚心求教。
 -  提供详细的信息，以便别人能够快速准确的帮助你解决问题。
 
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   <div id="_mcePaste">
-
 **提问后**
-
-.. raw:: html
-
-   </p>
 
 -  尊重、感谢给你答案的人，特别是给你正确答案帮你解决了棘手问题的人。
 
-.. raw:: html
-
-   </div>
 
 上面这部分其实只适合个人在社区求助，并不完全适合在公司用。从公司的角度来讲，有员工遇到问题时要的是最快的把问题解决掉，而最快解决问题的方式往往就是直接问最熟悉此问题的相关的人，而不是遇到问题的人自己在那里先研究择腾半天最后还是搞不定再去求助，对个人来讲这样不太有利于成长，但对公司来说往往这样简单粗暴的方式解决问题却是最有利的。
 
 更多的关于如何智慧的提问，前人已有很详尽的总结，我不再多啰唆，大家可以去参考：\ `http <http://wiki.woodpecker.org.cn/moin/AskForHelp>`__\ `:// <http://wiki.woodpecker.org.cn/moin/AskForHelp>`__\ `wiki.woodpecker.org.cn/moin/AskForHelp <http://wiki.woodpecker.org.cn/moin/AskForHelp>`__
-
-转载请注明出处：\ http://feilong.me/2011/08/how-to-ask-for-help

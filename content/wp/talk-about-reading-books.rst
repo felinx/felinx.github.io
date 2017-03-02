@@ -3,7 +3,8 @@
 :date: 2011-08-30 16:36
 :author: 飞龙
 :category: 杂谈
-:slug: talk-about-reading-books
+:tags: 读书
+:slug: 2011/08/talk-about-reading-books
 :status: published
 
 说明：此博客源于我昨天在公司做的一次分享，整个分享虽然有PPT和录音，但不便于完全公开，我将将其中的部分内容整理后以博客的形式分享给大家，谈读书是其中之一。
@@ -28,104 +29,13 @@
 为什么这里面会有一本经济学的书籍呢？请看下面这段摘自《软件随想录》(More
 Joel on Software)中的话：
 
-.. raw:: html
-
-   <div id="_mcePaste">
-
-.. raw:: html
-
-   <div>
-
-    .. raw:: html
-
-       <div>
-
-    Why should CS majors learneconomic? Because a programmer who
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
-
+    Why should CS majors learn economic? Because a programmer who
     understands the fundamentals of business is going to be a more
-    valuable
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    programmer, to a business, than a programmer who doesn’t. That’s all
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    there is to it. I can’t tell you how many times I’ve been frustrated
-    by programmers
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    with crazy ideas that make sense in code but don’t make sense
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    in capitalism. If you understand this stuff, you’re a more valuable
-
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
-
+    valuable programmer, to a business, than a programmer who doesn’t. That’s all there is to it. I can’t tell you how many times I’ve been frustrated
+    by programmers with crazy ideas that make sense in code but don’t make sense in capitalism. If you understand this stuff, you’re a more valuable
     programmer, and you’ll get rewarded for it, for reasons that you’ll
-    also
+    also learn in microeconomics.
 
-    .. raw:: html
-
-       </div>
-
-    .. raw:: html
-
-       <div>
-
-    learn in microeconomics.
-
-    .. raw:: html
-
-       </div>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </div>
 
 所以我在这里强烈推荐大家去读点经济学书籍，我自己也在重新学习经济学中。
 

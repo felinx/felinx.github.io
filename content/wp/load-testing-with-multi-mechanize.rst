@@ -1,9 +1,10 @@
-介绍一款Web Performance & Load 测试工具multi-mechanize
+Web Performance & Load 测试工具multi-mechanize
 ######################################################
 :date: 2013-02-19 19:21
 :author: 飞龙
 :category: Python
-:slug: load-testing-with-multi-mechanize
+:tags: multi-mechanize
+:slug: 2013/02/load-testing-with-multi-mechanize
 :status: published
 
 对Web服务做Performance & Load测试，最常见的工具有\ `Apache
@@ -40,7 +41,7 @@ pip install multi-mechanize mechanize numpy matplotlib
 
 -  脚本编写，借用官方的一个简单例子：
 
-::
+.. code-block:: python
 
     #
     #  Copyright (c) 2010 Corey Goldberg (corey@goldb.org)
@@ -102,8 +103,6 @@ br.\_ua\_handlers["\_cookies"].cookieja
 -  自定义统计数据：你可以往self.custom\_timers这个内建的字典里塞任意的自定义统计数据，他们在报表中都能够得到体现。
 
 更多的文档和一手资料请参考文档\ http://testutils.org/multi-mechanize/\ 和git代码库\ `https://github.com/cgoldberg/multi-mechanize <https://github.com/cgoldberg/multi-mechanize%20>`__\ 。最后multi-mechanize还不是很好用，一是使用过程中发现有一些情况会抛异常，导致不能正确生成报表，另一个别扭的是case的编写不是unittest那一套，是作者自创Transaction流:)
-
-转载请注明出处：\ http://feilong.me/2013/02/load-testing-with-multi-mechanize
 
 .. |image0| image:: /static/2013/02/multi-mechanize-report.jpg
    :width: 881px

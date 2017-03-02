@@ -3,14 +3,15 @@
 :date: 2012-06-03 13:23
 :author: 飞龙
 :category: Python
-:slug: interesting-python-closures
+:tags: 闭包, closure
+:slug: 2012/06/interesting-python-closures
 :status: published
 
 写下这篇博客，起源于Tornado邮件群组的这个问题 `how to use outer variable
 in inner
 method <http://groups.google.com/group/python-tornado/browse_thread/thread/d10165015eb293c1>`__\ ，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子:
 
-::
+.. code-block:: python
 
     def foo():
         a = 1
@@ -49,7 +50,7 @@ method <http://groups.google.com/group/python-tornado/browse_thread/thread/d1016
 #. 用别名替代比如b = a + 1，内部函数bar内只引用外部函数foo里的a。
 #. 将foo里的a设成一个容器，如list
 
-   ::
+   .. code-block:: python
 
        def foo():
            a = [1, ]
@@ -65,16 +66,16 @@ a即可，即显式的指定a不是内部函数bar内的本地变量，这样就
 
 在搜索Python闭包相关的材料中，我在StackOverflow上发现一个有趣的有关Python闭包的问题，有兴趣的可以思考思考做做看，结果应该是什么？你预期的结果是什么，若不一致，如果要得到你预期的结果应该怎么改？
 
-::
+.. code-block:: python
 
     flist = []
 
     for i in xrange(3):
-        def func(x): return x * i
-        flist.append(func)
+        def func(x): return x * i
+        flist.append(func)
 
     for f in flist:
-        print f(2)
+        print f(2)
 
 扩展阅读：
 
@@ -84,5 +85,3 @@ a即可，即显式的指定a不是内部函数bar内的本地变量，这样就
    Scopes <http://www.python.org/dev/peps/pep-3104/>`__
 #. `Lexical closures in
    Python <http://stackoverflow.com/questions/233673/lexical-closures-in-python>`__
-
-转载请注明出处：\ http://feilong.me/2012/06/interesting-python-closures

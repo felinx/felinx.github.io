@@ -3,7 +3,8 @@
 :date: 2012-06-03 10:18
 :author: 飞龙
 :category: 杂谈
-:slug: things-have-been-stolen-in-those-years
+:tags: iPhone, 小偷
+:slug: 2012/06/things-have-been-stolen-in-those-years
 :status: published
 
 2012年5月30日，我用了仅3个月的白色iPhone

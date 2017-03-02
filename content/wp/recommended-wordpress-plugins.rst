@@ -46,7 +46,7 @@ Key才行，到WordPress.Com注册一个账号就有了。James同学开始没�
    up <http://wordpress.org/extend/plugins/vote-it-up/>`__\ 就够了，具体看你自己的需求了。
 -  页面导航（翻页），一般主题都会带页面导航功能的，如果不能让你满意的话，就上\ `WP-PageNavi <http://wordpress.org/extend/plugins/wp-pagenavi/>`__\ 吧，一般主题也都会推荐你用这个插件的。
 -  联系页面，\ `Contact Form
-   7 <http://contactform7.com/>`__\ ，帮你做一个联系XX页面的，不用多解释，看一下\ `联系飞龙 <http://feilong.me/contact.html>`__\ 就明白了。另外这个也可以用来做其它用途，比如投稿页面。
+   7 <http://contactform7.com/>`__\ ，帮你做一个联系XX页面的，不用多解释，看一下\ `联系飞龙 <http://feilong.me/contact>`__\ 就明白了。另外这个也可以用来做其它用途，比如投稿页面。
 -  标签云，标签云的插件非常多，这里介绍一个非常酷的用Flash做的标签云插件\ `WP-Cumulus <http://wordpress.org/extend/plugins/wp-cumulus/>`__\ ，标签云生成后看起来象一个3D的球，你在上面移动鼠标时，这个球会跟着转，就像玩地球仪一样，挺吸引眼球的。不过原生的WP-Cumulus是不支持中文的，你可以搜索下支持中文版的替换默认的这个文件就可以完美支持中文了，下面这张图是围观网上的例子。
 
 |image2|
@@ -90,7 +90,7 @@ Key才行，到WordPress.Com注册一个账号就有了。James同学开始没�
    User Email
    Setup <http://wordpress.org/extend/plugins/new-user-email-set-up/>`__\ 是用来自定义注册、找回密码等系统邮件内容的。
 
-希望上面的这些插件介绍能够对你有所帮助，助你打造一个属于自己的完美的WordPress博客。这里介绍的插件我都用过，如果有任何问题或疑问可以直接回帖或\ `联系飞龙 <http://feilong.me/contact.html>`__\ 。
+希望上面的这些插件介绍能够对你有所帮助，助你打造一个属于自己的完美的WordPress博客。这里介绍的插件我都用过，如果有任何问题或疑问可以直接回帖或\ `联系飞龙 <http://feilong.me/contact>`__\ 。
 
 .. |image0| image:: http://www.gravatar.com/avatar.php?gravatar_id=f34dec9007a004876f7a6c47c100524d&size=20&rating=G
    :class: alignnone

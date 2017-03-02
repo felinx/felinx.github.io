@@ -2,8 +2,9 @@
 ##############################
 :date: 2014-08-02 18:15
 :author: 飞龙
-:category: 游戏
-:slug: no-gyou-no-game
+:category: 杂谈
+:tags: 游戏
+:slug: 2014/08/no-gyou-no-game
 :status: published
 
 1999年的五一长假，我在寝室基友的的怂恿下开始玩星际争霸，从此一发不可收拾，与游戏结下了不解之缘，其实怨也是有的，事见\ `关于飞龙 <http://feilong.me/about>`__\ 。

@@ -3,7 +3,8 @@
 :date: 2011-08-31 11:24
 :author: 飞龙
 :category: 杂谈
-:slug: four-years-work-at-autodesk
+:tags: 工作, Autodesk
+:slug: 2011/08/four-years-work-at-autodesk
 :status: published
 
 弹指一挥间，我在欧特克(Autodesk)已工作了四年零两个月，今天是我在Autodesk的最后一天，看着下面这张工牌上的自己，不得不承认自己老了。
@@ -17,8 +18,6 @@
 再见，Autodesk！
 
 再见，Autodesk的朋友们！
-
-转载请注明出处：\ http://feilong.me/2011/08/four-years-work-at-autodesk
 
 .. |image0| image:: /static/2011/08/pisla-li-191x300.jpg
    :class: aligncenter
