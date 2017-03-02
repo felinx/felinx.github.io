@@ -46,7 +46,7 @@ Key才行，到WordPress.Com注册一个账号就有了。James同学开始没�
 -  页面导航（翻页），一般主题都会带页面导航功能的，如果不能让你满意的话，就上\ `WP-PageNavi <http://wordpress.org/extend/plugins/wp-pagenavi/>`__\ 吧，一般主题也都会推荐你用这个插件的。
 -  联系页面，\ `Contact Form
    7 <http://contactform7.com/>`__\ ，帮你做一个联系XX页面的，不用多解释，看一下\ `联系飞龙 <http://feilong.me/contact.html>`__\ 就明白了。另外这个也可以用来做其它用途，比如投稿页面。
--  标签云，标签云的插件非常多，这里介绍一个非常酷的用Flash做的标签云插件\ `WP-Cumulus <http://wordpress.org/extend/plugins/wp-cumulus/>`__\ ，标签云生成后看起来象一个3D的球，你在上面移动鼠标时，这个球会跟着转，就像玩地球仪一样，挺吸引眼球的。不过原生的WP-Cumulus是不支持中文的，你可以下载\ http://feilong.me/wp-content/plugins/wp-cumulus/tagcloud.swf\ 替换默认的这个文件就可以完美支持中文了，下面这张图是围观网上的例子。
+-  标签云，标签云的插件非常多，这里介绍一个非常酷的用Flash做的标签云插件\ `WP-Cumulus <http://wordpress.org/extend/plugins/wp-cumulus/>`__\ ，标签云生成后看起来象一个3D的球，你在上面移动鼠标时，这个球会跟着转，就像玩地球仪一样，挺吸引眼球的。不过原生的WP-Cumulus是不支持中文的，你可以搜索下支持中文版的替换默认的这个文件就可以完美支持中文了，下面这张图是围观网上的例子。
 
 |image2|
 
