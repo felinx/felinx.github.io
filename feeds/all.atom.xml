@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙札记</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/all.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2017-03-03T16:20:00+08:00</updated><entry><title>一封来自丁香园robbin的招(la)聘(ji)邮件</title><link href="http://feilong.me/2017/03/dxy-robbin-email.html" rel="alternate"></link><published>2017-03-02T10:20:00+08:00</published><updated>2017-03-02T10:20:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-02:/2017/03/dxy-robbin-email.html</id><summary type="html">&lt;p&gt;我从来没有用过丁香园的产品，今天我的Gmail邮箱却收到了以robbin的名义dxy的邮件地址发的丁香园招聘邮件，如下图：&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙札记</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/all.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2017-03-03T17:40:00+08:00</updated><entry><title>博客复活</title><link href="http://feilong.me/2017/03/blog-resurrection.html" rel="alternate"></link><published>2017-03-03T17:40:00+08:00</published><updated>2017-03-03T17:40:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-03:/2017/03/blog-resurrection.html</id><summary type="html">&lt;p&gt;本博客最初于2010年用WordPress搭建开博，初期主要写Python相关的技术为主，逐步演变成变记录工作、生活、学习的碎碎念的地方。WordPress虽然强大但实在太慢，我的vps上还跑了一些站点和服务，后来访问站点经常卡死就想弃用，只一直在线挂着，之后转移到微信公共账号上写了一段时间，不大喜欢微信公共账号相对封闭的体系，陈浩在&lt;a href="http://coolshell.cn/articles/17391.html"&gt;为什么我不在微信公众号上写文章&lt;/a&gt;有相似的观点，微信公共号在2016年以后我也停更了，但是我用博客的方式记录的需求一直很强烈，受不了WordPress系统，今天我终于用用Python开发的&lt;a href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt;静态博客系统和&lt;a href="https://pages.github.com"&gt;Github Pages&lt;/a&gt;替代了原来的WordPress，博客站点变得清爽和轻量级多了，因为是静态站点了访问速度非常快，重要的是以后的文章可以直接用markdown格式在sublime txt里写，然后提交到github用版本库管理起来，正式发布则只需要一句fabric指令，彻底告别臃肿的WordPress管理后台。&lt;/p&gt;
+&lt;p&gt;Pelican可以直接导入WordPress站点的文章，迁移到Pelican我只花了少量时间来修复部分文章里面的标签、关键字和文档格式等，几乎是无缝迁移，这也是Pelican的强大之处，目前我已把原站点的所有文章迁移过来并保持了原链接不变。&lt;/p&gt;
+&lt;p&gt;同时我也把原来在微信公共账号写的一些文章转成了markdown格式迁移了过来，将老的站点文章和微信公共账号的文章合二为一，从此本博客复活，或勤或懒我将继续保持更新。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于Pelican请参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.wengweitao.com/shi-yong-pelican-github-pagesda-jian-ge-ren-bo-ke.html"&gt;使用Pelican + Github Pages搭建个人博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/"&gt;Pelican Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://russell.ballestrini.net/migrating-from-wordpress-to-pelican/"&gt;Migrating from WordPress to …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;本博客最初于2010年用WordPress搭建开博，初期主要写Python相关的技术为主，逐步演变成变记录工作、生活、学习的碎碎念的地方。WordPress虽然强大但实在太慢，我的vps上还跑了一些站点和服务，后来访问站点经常卡死就想弃用，只一直在线挂着，之后转移到微信公共账号上写了一段时间，不大喜欢微信公共账号相对封闭的体系，陈浩在&lt;a href="http://coolshell.cn/articles/17391.html"&gt;为什么我不在微信公众号上写文章&lt;/a&gt;有相似的观点，微信公共号在2016年以后我也停更了，但是我用博客的方式记录的需求一直很强烈，受不了WordPress系统，今天我终于用用Python开发的&lt;a href="https://github.com/getpelican/pelican"&gt;Pelican&lt;/a&gt;静态博客系统和&lt;a href="https://pages.github.com"&gt;Github Pages&lt;/a&gt;替代了原来的WordPress，博客站点变得清爽和轻量级多了，因为是静态站点了访问速度非常快，重要的是以后的文章可以直接用markdown格式在sublime txt里写，然后提交到github用版本库管理起来，正式发布则只需要一句fabric指令，彻底告别臃肿的WordPress管理后台。&lt;/p&gt;
+&lt;p&gt;Pelican可以直接导入WordPress站点的文章，迁移到Pelican我只花了少量时间来修复部分文章里面的标签、关键字和文档格式等，几乎是无缝迁移，这也是Pelican的强大之处，目前我已把原站点的所有文章迁移过来并保持了原链接不变。&lt;/p&gt;
+&lt;p&gt;同时我也把原来在微信公共账号写的一些文章转成了markdown格式迁移了过来，将老的站点文章和微信公共账号的文章合二为一，从此本博客复活，或勤或懒我将继续保持更新。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于Pelican请参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.wengweitao.com/shi-yong-pelican-github-pagesda-jian-ge-ren-bo-ke.html"&gt;使用Pelican + Github Pages搭建个人博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/"&gt;Pelican Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://russell.ballestrini.net/migrating-from-wordpress-to-pelican/"&gt;Migrating from WordPress to Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="杂谈"></category><category term="WordPress"></category><category term="Pelican"></category></entry><entry><title>一封来自丁香园robbin的招(la)聘(ji)邮件</title><link href="http://feilong.me/2017/03/dxy-robbin-email.html" rel="alternate"></link><published>2017-03-02T10:20:00+08:00</published><updated>2017-03-02T10:20:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-02:/2017/03/dxy-robbin-email.html</id><summary type="html">&lt;p&gt;我从来没有用过丁香园的产品，今天我的Gmail邮箱却收到了以robbin的名义dxy的邮件地址发的丁香园招聘邮件，如下图：&lt;/p&gt;
 &lt;p&gt;&lt;img alt="dxy-robbin-email" src="/static/2017/03-02-dxy-robbin-email.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;本质上这是一封spam邮件，邮件以robbin个人的名义发出，简历接收地址留的是robbin的个人Gmail而不是他在公司邮箱，邮件中的“和robbin一起工作、弹性工作时间、舒适的办公环境并附照片”等内容刻意将招聘广告包装的温馨、高大上，但这改变不了这封邮件的spam本质。对于未订阅渠道来的垃圾邮件，作为多少有点代码洁癖的程序员心理我是抵触的，针对程序员群体发这样的招聘邮件效果我个人持怀疑态度，robbin本身是一位高水平的程序员，发送这封邮件之前应该是经过深思熟虑的，个人不负责任的猜想丁香园在去年和Fenng撕了一番之后，招聘程序员变得不如以前顺利了，robbin所以才会出此下策。虽然像我这样反感这封邮件的人有之，但也一定会有人正好命中其换工作的需求投递简历给robbin的，招到了员工和丢了丁香园在一部分心中的口碑，个中得失只有让robbin去品了。&lt;/p&gt;
 &lt;p&gt;另外，邮件开头就特意提到robbin自己的JavaEye创始人身份，丁香园并没有我的任何足迹，这里我冒昧猜这是拉了JavaEye的用户数据给JavaEye的一批老用户发的，如果真是如此就牵出另一个有意思的问题，JavaEye已被CSDN收购更名成了ITeye，在丁香园工作的robbin用JavaEye的数据貌似也不合适(如果他们之间有协议另说)。&lt;/p&gt;
@@ -2449,7 +2466,7 @@ chown -R fastcgi-username
 &lt;div id="_mcePaste"
 style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"&gt;&lt;/p&gt;&lt;p class="r rubric" id="wordpress3-0-4"&gt;&lt;a class="reference external" href="http://geekfiles.altervista.org/zh/wordpress-3-0-4-risolve-un-grave-bug-di-sicurezza/"&gt;*WordPress*的*3.0.4*
 修复了一个严重的*安全漏洞*&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/div&gt;</content><category term="Wordpress"></category></entry><entry><title>让你的Kindle成为离线阅读利器</title><link href="http://feilong.me/2010/12/enjoy-read-feeds-in-kindle.html" rel="alternate"></link><published>2010-12-31T13:09:00+08:00</published><updated>2010-12-31T13:09:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-31:/2010/12/enjoy-read-feeds-in-kindle.html</id><summary type="html">&lt;p&gt;Kindle用来看书很爽，这个无需多说大家都知道，但是用Kindle来看订阅的新闻、博客，当离线的Google
+&lt;p&gt;&lt;/div&gt;</content><category term="WordPress"></category></entry><entry><title>让你的Kindle成为离线阅读利器</title><link href="http://feilong.me/2010/12/enjoy-read-feeds-in-kindle.html" rel="alternate"></link><published>2010-12-31T13:09:00+08:00</published><updated>2010-12-31T13:09:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-31:/2010/12/enjoy-read-feeds-in-kindle.html</id><summary type="html">&lt;p&gt;Kindle用来看书很爽，这个无需多说大家都知道，但是用Kindle来看订阅的新闻、博客，当离线的Google
 Reader来用，这个估计知道的人并不多，我这就给大家介绍一个网站，让你轻松实现这一功能，在Kindle上尽情的享受离线阅读订阅内容的快乐吧！&lt;/p&gt;
 &lt;p&gt;我现在几乎所有的RSS订阅都是在每天上下班的路上（无WIFI、3G的情况下）用Kindle3来看的，基本脱离Google
 Reader的怀抱。&lt;/p&gt;
@@ -2588,7 +2605,7 @@ User Email
 Setup&lt;/a&gt;是用来自定义注册、找回密码等系统邮件内容的。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;希望上面的这些插件介绍能够对你有所帮助，助你打造一个属于自己的完美的WordPress博客。这里介绍的插件我都用过，如果有任何问题或疑问可以直接回帖或&lt;a class="reference external" href="http://feilong.me/contact"&gt;联系飞龙&lt;/a&gt;。&lt;/p&gt;
-</content><category term="Wordpress"></category></entry><entry><title>博客开张</title><link href="http://feilong.me/2010/12/start-blogging.html" rel="alternate"></link><published>2010-12-26T00:00:00+08:00</published><updated>2010-12-26T00:00:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-26:/2010/12/start-blogging.html</id><summary type="html">&lt;p&gt;很早就有弄个博客的念头，可一直未能成行，理由很多但都不能当合理的借口。&lt;/p&gt;
+</content><category term="WordPress"></category></entry><entry><title>博客开张</title><link href="http://feilong.me/2010/12/start-blogging.html" rel="alternate"></link><published>2010-12-26T00:00:00+08:00</published><updated>2010-12-26T00:00:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-26:/2010/12/start-blogging.html</id><summary type="html">&lt;p&gt;很早就有弄个博客的念头，可一直未能成行，理由很多但都不能当合理的借口。&lt;/p&gt;
 &lt;p&gt;算来网站已做了好几个，博客却一直寄人篱下，说来就觉得心酸，特别是那个什么Javaeye，我都被气死好几回了，再也不去了。&lt;/p&gt;
 &lt;p&gt;好了，最近为了开发了一个小的插件赚了点零花钱，花了些时间研究Wordpress，顺带弄了个&lt;a class="reference external" href="http://17weiguan.com/"&gt;围观网&lt;/a&gt;，现在干脆乘热打铁再弄一个自己的博客。&lt;/p&gt;
 &lt;p&gt;虽然现在微博横行，为什么还是要开博了，我觉得主要有几点：&lt;/p&gt;

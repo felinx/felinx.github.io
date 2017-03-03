@@ -87,6 +87,43 @@
 
 <article>
   <header>
+    <h2><a href="http://feilong.me/2011/01/vmware-pragmatic-tips.html#2011/01/vmware-pragmatic-tips">VMware几个实用技巧</a></h2>
+    <p>
+          Posted on Mon 17 January 2011 in <a href="http://feilong.me/category/it.html">IT</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/vmware.html">vmware</a>
+        &#8226; 2 min read
+    </p>
+  </header>
+  <div>
+      <p>近日Buzz好友<a class="reference external" href="http://www.google.com/profiles/104231231256400902165">Kyle
+Hu</a>同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。</p>
+<div class="section" id="vm">
+<h2>1.VM快照管理</h2>
+<p>这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。</p>
+<p><img alt="image0" class="size-full wp-image-181 aligncenter" src="/static/2011/01/vm-take-snapshot.jpg" style="width: 675px; height: 249px;" /></p>
+</div>
+<div class="section" id="id1">
+<h2>2.扩大硬盘容量</h2>
+<p>有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。</p>
+<p><img alt="image1" class="size-full wp-image-182 aligncenter" src="/static/2011/01/vm-add-hd.jpg" style="width: 659px; height: 474px;" /></p>
+<p>但是有时候可能必须要扩大某个已有的硬盘分区（比如原来D盘只有10G，现在必须把D盘扩大到20G），这个时候就需要用到vmware-vdiskmanager.exe（位于VMware安装路径根目录，如：C:\Program
+Files\VMware\VMware
+Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下：</p>
+<pre class="literal-block">
+VMware&nbsp;Virtual&nbsp;Disk&nbsp;Manager&nbsp;-&nbsp;build&nbsp;34685.
+Usage …</pre></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/01/vmware-pragmatic-tips.html#2011/01/vmware-pragmatic-tips">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://feilong.me/2011/01/pep-3333-accepted.html#2011/01/pep-3333-accepted">Python一大好消息PEP 3333 Accepted</a></h2>
     <p>
           Posted on Fri 14 January 2011 in <a href="http://feilong.me/category/python.html">Python</a>
@@ -279,7 +316,7 @@ Zhang</a>同学不停的鼓动下最终用上了AWS的，<a class="reference ext
 
           &#8226;     Tagged with
 
-              <a href="http://feilong.me/tag/wordpress.html">Wordpress</a>
+              <a href="http://feilong.me/tag/wordpress.html">WordPress</a>
         &#8226; 1 min read
     </p>
   </header>
@@ -355,30 +392,6 @@ Reader的怀抱。</p>
 <li>转帖问题，Buzz转帖尊重原帖，这是对的，但却不尊重中间转的人，再转的人的帖子里只有原帖和原作者信息，没有中间转的那位的一点信息，中转的那位的再创作也就没了。举例，A发原帖，B转A的贴，C转B转A的贴，C转的贴里根本跟没B什么事 …</li></ol>
       <br>
       <a class="btn" href="http://feilong.me/2010/12/google-buzz-top-8-defects.html#2010/12/google-buzz-top-8-defects">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/12/felinx-rejected-by-python-cn.html#2010/12/felinx-rejected-by-python-cn">当飞龙遭遇python-cn邮件群组</a></h2>
-    <p>
-          Posted on Mon 27 December 2010 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/python-cn.html">python-cn</a>,              <a href="http://feilong.me/tag/you-jian-qun-zu.html">邮件群组</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>今日下班前，我再一次翻墙去申请加入<a class="reference external" href="http://groups.google.com/group/python-cn">http://groups.google.com/group/python-cn</a>即CPyUG华蟒用户组，等回到家打开邮箱时发现又一次被拒了，管理员效率还真是高啊！我已不记得这是我第几次申请被拒了，估计不小于5次了。这次我为了壮壮胆气，在申请的备注里还把我的python开源网站<a class="reference external" href="http://poweredsites.org">http://poweredsites.org</a>给抬了出来，仍然是不管用啊。</p>
-<p>为什么我一直会被拒呢？我是百思不得其解，之前申请的时候我有备注过Python爱好者，或Pythoneer，先不说我的Python水平到底如何，至少我也是一位狂热的Python爱好者，就冲我多次申请这群组的权限这热情，管理员也该批了。</p>
-<p>我不知道有多少想加入python-cn的人被拒了，有多少人受过python-cn管理员的打击。我想有些可能刚对python有点兴趣的人，被这一拒说不定对python的热情就大减了，毕竟这是一个较有影响力的中文python群组，这不应是python-cn对python爱好者的态度。</p>
-<p>我加入了很多国外的python群组，特别tornado的群组我是经常会说点话的，除了python-cn我还没见过哪个群组是要审批的，更别提申请被拒了。我不知道python-cn的管理员把这个群组搞得这么封闭是为了什么？可能这样一定程度上能防止一些不良人士跑去发垃圾邮件，但这个同时也阻碍了很多对python有兴趣的同学加入，这个得与失应该好好把握。另外像国外的django-user是开放的，里面的用户也很多，我也没看到有多少垃圾邮件在里面横行，即使有垃圾邮件，用户也会让它自动沉淀下去的，python-cn何必搞得这么闭塞？python是open的，python-cn却是close的 …</p>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/12/felinx-rejected-by-python-cn.html#2010/12/felinx-rejected-by-python-cn">    Continue reading
 </a>
   </div>
 </article>
