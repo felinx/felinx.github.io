@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="author" content="飞龙" />
+<meta name="description" content="monit是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台， 它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是supervisor，后续会另外撰文介绍。 下面分别介绍monit的安装、配置和启动。 安装 在debian或ubuntu上安装monit非常方便，通过下面的命令 sudo apt-get install monit 即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。 ./configure make make install 安装后，默认的配置文件为/etc/monit/monitrc。 配置 添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。 ## ## 飞龙札记 示例monit配置文件，说明： ## 1. 域名以example.com为例 …" />
+<meta name="keywords" content="monit">
+<meta property="og:site_name" content="飞龙"/>
+<meta property="og:title" content="用monit监控系统关键进程"/>
+<meta property="og:description" content="monit是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台， 它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是supervisor，后续会另外撰文介绍。 下面分别介绍monit的安装、配置和启动。 安装 在debian或ubuntu上安装monit非常方便，通过下面的命令 sudo apt-get install monit 即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。 ./configure make make install 安装后，默认的配置文件为/etc/monit/monitrc。 配置 添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。 ## ## 飞龙札记 示例monit配置文件，说明： ## 1. 域名以example.com为例 …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://feilong.me/2011/02/monitor-core-processes-with-monit.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2011-02-24 17:36:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://feilong.me/author/fei-long.html">
+<meta property="article:section" content="IT"/>
+<meta property="article:tag" content="monit"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙 &ndash; 用monit监控系统关键进程</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+      </a>
+      <h1><a href="http://feilong.me">飞龙</a></h1>
+
+<p>Nice speech, but what are you going to do.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/about.html" target="_blank">About</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://feilong.me">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="2011/02/monitor-core-processes-with-monit">用monit监控系统关键进程</h1>
+    <p>
+          Posted on Thu 24 February 2011 in <a href="http://feilong.me/category/it.html">IT</a>
+
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p><a class="reference external" href="http://mmonit.com/monit/">monit</a>是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台，
+它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是<a class="reference external" href="http://supervisord.org/">supervisor</a>，后续会另外撰文介绍。</p>
+<p>下面分别介绍monit的安装、配置和启动。</p>
+<div class="section" id="id1">
+<h2>安装</h2>
+<p>在debian或ubuntu上安装monit非常方便，通过下面的命令</p>
+<pre class="literal-block">
+sudo apt-get install monit
+</pre>
+<p>即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。</p>
+<pre class="literal-block">
+./configure
+make
+make install
+</pre>
+<p>安装后，默认的配置文件为/etc/monit/monitrc。</p>
+</div>
+<div class="section" id="id2">
+<h2>配置</h2>
+<p>添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。</p>
+<pre class="literal-block">
+##
+## 飞龙札记 示例monit配置文件，说明：
+## 1. 域名以example.com为例。
+## 2. 后面带xxx的均是举例用的名字，需要根据自己的需要修改。
+##
+###############################################################################
+## Monit control file
+###############################################################################
+#
+# 检查周期，默认为2分钟，对于网站来说有点长，可以根据需要自行调节，这改成30秒。
+set daemon  30
+
+# 日志文件
+set logfile /var/log/monit.log
+
+#
+# 邮件通知服务器
+#
+#set mailserver mail.example.com
+set mailserver localhost
+
+#
+# 通知邮件的格式设置，下面是默认格式供参考
+#
+## Monit by default uses the following alert mail format:
+##
+## --8&lt;--
+## From: monit&#64;$HOST                         # sender
+## Subject: monit alert --  $EVENT $SERVICE  # subject
+##
+## $EVENT Service $SERVICE                   #
+##                                           #
+##  Date:        $DATE                   #
+##  Action:      $ACTION                 #
+##  Host:        $HOST                   # body
+##  Description: $DESCRIPTION            #
+##                                           #
+## Your faithful employee,                   #
+## monit                                     #
+## --8&lt;--
+##
+## You can override the alert message format or its parts such as subject
+## or sender using the MAIL-FORMAT statement. Macros such as $DATE, etc.
+## are expanded on runtime. For example to override the sender:
+#
+# 简单的，这只改了一下发送人，有需要可以自己修改其它内容。
+set mail-format { from: webmaster&#64;example.com }
+
+# 设置邮件通知接收者。建议发到gmail，方便邮件过滤。
+set alert userxxx&#64;gmail.com
+
+set httpd port 2812 and            # 设置http监控页面的端口
+     use address www.example.com   # http监控页面的IP或域名
+     allow localhost               # 允许本地访问
+     allow 58.68.78.0/24           # 允许此IP段访问
+     ##allow 0.0.0.0/0.0.0.0       # 允许任何IP段，不建议这样干
+     allow userxxx:passwordxxx     # 访问用户名密码
+
+###############################################################################
+## Services
+###############################################################################
+#
+# 系统整体运行状况监控，默认的就可以，可以自己去微调
+#
+# 系统名称，可以是IP或域名
+check system www.example.com
+    if loadavg (1min) &gt; 4 then alert
+    if loadavg (5min) &gt; 2 then alert
+    if memory usage &gt; 75% then alert
+    if cpu usage (user) &gt; 70% then alert
+    if cpu usage (system) &gt; 30% then alert
+    if cpu usage (wait) &gt; 20% then alert
+
+#
+# 监控nginx
+#
+# 需要提供进程pid文件信息
+check process nginx with pidfile /var/run/nginx.pid
+    # 进程启动命令行，注：必须是命令全路径
+    start program = &quot;/etc/init.d/nginx start&quot;
+    # 进程关闭命令行
+    stop program  = &quot;/etc/init.d/nginx stop&quot;
+    # nginx进程状态测试，监测到nginx连不上了，则自动重启
+    if failed host www.example.com port 80 protocol http then restart
+    # 多次重启失败将不再尝试重启，这种就是系统出现严重错误的情况
+    if 3 restarts within 5 cycles then timeout
+    # 可选，设置分组信息
+    group server
+
+#   可选的ssl端口的监控，如果有的话
+#    if failed port 443 type tcpssl protocol http
+#       with timeout 15 seconds
+#       then restart
+
+#
+# 监控apache
+#
+check process apache with pidfile /var/run/apache2.pid
+    start program = &quot;/etc/init.d/apache2 start&quot;
+    stop program  = &quot;/etc/init.d/apache2 stop&quot;
+    # apache吃cpu和内存比较厉害，额外添加一些关于这方面的监控设置
+    if cpu &gt; 50% for 2 cycles then alert
+    if cpu &gt; 70% for 5 cycles then restart
+    if totalmem &gt; 1500 MB for 10 cycles then restart
+    if children &gt; 250 then restart
+    if loadavg(5min) greater than 10 for 20 cycles then stop
+    if failed host www.example.com port 8080 protocol http then restart
+    if 3 restarts within 5 cycles then timeout
+    group server
+    # 可选，依赖于nginx
+    depends on nginx
+
+#
+# 监控spawn-fcgi进程(其实就是fast-cgi进程)
+#
+check process spawn-fcgi with pidfile /var/run/spawn-fcgi.pid
+    # spawn-fcgi一定要带-P参数才会生成pid文件，默认是没有的
+    start program = &quot;/usr/bin/spawn-fcgi -a 127.0.0.1 -p 8081 -C 10 -u userxxx -g groupxxx -P /var/run/spawn-fcgi.pid -f /usr/bin/php-cgi&quot;
+    stop program = &quot;/usr/bin/killall /usr/bin/php-cgi&quot;
+    # fast-cgi走的不是http协议，monit的protocol参数也没有cgi对应的设置，这里去掉protocol http即可。
+    if failed host 127.0.0.1 port 8081 then restart
+    if 3 restarts within 5 cycles then timeout
+    group server
+    depends on nginx
+</pre>
+<p>虽然在注释里有详细说明，但是我还是要再强调说明几点：</p>
+<ol class="arabic simple">
+<li>start和stop的program参数里的命令必须是全路径，否则monit不能正常启动，比如killall应该是/usr/bin/killall。</li>
+<li>对于spawn-fcgi，很多人会用它来管理PHP的fast-cgi进程，但spawn-fcgi本身也是有可能挂掉的，所以还是需要用monit来监控spawn-fcgi。spawn-fcgi必须带-P参数才会有pid文件，而且fast-cgi走的不是http协议，monit的protocol参数也没有cgi对应的设置，一定要去掉protocol
+http这项设置才管用。</li>
+<li>进程多次重启失败monit将不再尝试重启，收到这样的通知邮件表明系统出现了严重的问题，要引起足够的重视，需要赶紧人工处理。</li>
+</ol>
+<p>当然monit除了管理进程之外，还可以监控文件、目录、设备等，本文不做讨论，具体配置方式可以去参考<a class="reference external" href="http://mmonit.com/monit/documentation/monit.html">monit的官方文档</a>。</p>
+</div>
+<div class="section" id="id3">
+<h2>启动、停止、重启</h2>
+<p>标准的start、stop、restart</p>
+<pre class="literal-block">
+sudo /etc/init.d/monit start
+sudo /etc/init.d/monit stop
+sudo /etc/init.d/monit restart
+</pre>
+<p>看到正确的提示信息即可，若遇到问题可以去查看配置里指定的日志文件，如/var/log/monit.log。</p>
+<p>从我的服务器这几年的运行情况（monit发了的通知邮件）来看，nginx挂掉的事几乎没有，但apache或fast-cgi出问题的情况还是比较多见，赶快用上monit来管理你的服务器以提高服务器稳定性，跟502
+Bad Gateway之类错误说拜拜吧。</p>
+<p>附件：<a class="reference external" href="/static/2011/02/monitrc.txt">monit示例配置文件</a>
+(注：下载后请去掉.txt文件后缀)</p>
+</div>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://feilong.me/tag/monit.html">monit</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'feilong';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>
+  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙 ",
+  "url" : "http://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>

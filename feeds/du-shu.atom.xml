@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙 - 读书</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/du-shu.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2011-01-08T11:46:00+08:00</updated><entry><title>Kindle中文乱码问题(TXT、PDF)解决办法</title><link href="http://feilong.me/2011/01/solve-kindle-cn-encoding-problem.html" rel="alternate"></link><published>2011-01-08T11:46:00+08:00</published><updated>2011-01-08T11:46:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-08:/2011/01/solve-kindle-cn-encoding-problem.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;问题一：文件名、TXT文档、上网等中文变成一个个“口”字问题&lt;/strong&gt;（已解决的请直接跳到第二条，我这主要记录一下给自己留个底，这部分的内容主要来自网络）&lt;/p&gt;
+&lt;p&gt;Amazon官方说kindle支持简体中文和繁体中文，事实上也算支持了，但中文支持还是很差，简体中文却大部分无法正常显示，变成“口”字了。这个是因为语言设置（locale）的问题，解决办法很简单，就是改变默认的语言设置，输入以下命令即可：&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;;debugOn&lt;/div&gt;
+&lt;div class="line"&gt;~changeLocale zh-CN&lt;/div&gt;
+&lt;div class="line"&gt;;debugOff&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;输入时要注意大小写，具体输入步骤是：在home页面，先按下回车（也就是方向键旁边那个弯弯箭头键），会出现一个输入框，输入第一条命令后，回车，再输入第二条，再回车，再第3条回车。这样就设置成功了，然后重启kindle。&lt;/p&gt;
+&lt;p&gt;重启步骤：home -&amp;gt; Menu -&amp;gt; Settings -&amp;gt; Menu -&amp;gt; Restart&lt;/p&gt;
+&lt;p&gt;也就是进入设置那里再按MENU选择restart重启，或者直接滑动那个关机键按住15秒左右就重启了。&lt;/p&gt;
+&lt;p&gt;重启之后没问题的话，中文显示应该没问题了，不过txt文件支持还是会有些问题 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;问题一：文件名、TXT文档、上网等中文变成一个个“口”字问题&lt;/strong&gt;（已解决的请直接跳到第二条，我这主要记录一下给自己留个底，这部分的内容主要来自网络）&lt;/p&gt;
+&lt;p&gt;Amazon官方说kindle支持简体中文和繁体中文，事实上也算支持了，但中文支持还是很差，简体中文却大部分无法正常显示，变成“口”字了。这个是因为语言设置（locale）的问题，解决办法很简单，就是改变默认的语言设置，输入以下命令即可：&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;;debugOn&lt;/div&gt;
+&lt;div class="line"&gt;~changeLocale zh-CN&lt;/div&gt;
+&lt;div class="line"&gt;;debugOff&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;输入时要注意大小写，具体输入步骤是：在home页面，先按下回车（也就是方向键旁边那个弯弯箭头键），会出现一个输入框，输入第一条命令后，回车，再输入第二条，再回车，再第3条回车。这样就设置成功了，然后重启kindle。&lt;/p&gt;
+&lt;p&gt;重启步骤：home -&amp;gt; Menu -&amp;gt; Settings -&amp;gt; Menu -&amp;gt; Restart&lt;/p&gt;
+&lt;p&gt;也就是进入设置那里再按MENU选择restart重启，或者直接滑动那个关机键按住15秒左右就重启了。&lt;/p&gt;
+&lt;p&gt;重启之后没问题的话，中文显示应该没问题了，不过txt文件支持还是会有些问题，只有utf-8编码的文件能正常显示并打开，但读了几页后就又出现乱码了，这个问题似乎没能够解决。只能发送邮件到name&amp;#64;kindle.com（name是你的kindle账号）来转换格式了，或者用calibre等转换工具转换成MOBI格式了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问题二：部分中文PDF文档乱码或是空白&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个则是因为Kindle里缺少该PDF文件所采用的字体，解决的办法是加入软字体重新打印生成新PDF文件，具体做法如下：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;打开PDF文档后选择打印，注意要选择选择&lt;strong&gt;打印到PDF而不是打印机&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="image0" class="alignnone size-medium wp-image-100" src="/static/2011/01/pdf_print-265x300.jpg" style="width: 265px; height: 300px;" /&gt;&lt;/p&gt;
+&lt;p&gt;2.打印选项设置(进打印后选择属性)，然后在纸张/质量（Paper/Quality）里选择高级选项（Advanced），再选择下载软字体，如下：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="alignnone size-medium wp-image-101" src="/static/2011/01/224_59455_0478d4526e287dc-288x300.jpg" style="width: 288px; height: 300px;" /&gt;&lt;/p&gt;
+&lt;p&gt;3.
+开始打印，选择保存文件的路径，打印开始后会有打印页面进度显示，打印生成新的PDF文件就OK了，新的文件传Kindle里就不再乱码了。&lt;/p&gt;
+&lt;p&gt;BTW：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;如果PDF文档锁定了，不允许打印（打印按钮是灰的），这个时候你需要用工具将PDF文件解锁，SysTools
+PDF
+Unlocker（&lt;a class="reference external" href="http://www.piaoxu.net/12949.html"&gt;http://www.piaoxu.net/12949.html&lt;/a&gt;）可以解决这个问题。&lt;/li&gt;
+&lt;li&gt;有个别文档打印到文件时会出现异常无法打印全部页面的情况，比如共600页，打印出来（生成）的PDF文件只有400页，解决办法就是选择打印页面重新打印后面一部分内容（401－600页），然后用Adobe
+Acrobat Pro将两个文件重新合成为一个文件。&lt;/li&gt;
+&lt;/ol&gt;
+</content><category term="Kindle"></category></entry><entry><title>让你的Kindle成为离线阅读利器</title><link href="http://feilong.me/2010/12/enjoy-read-feeds-in-kindle.html" rel="alternate"></link><published>2010-12-31T13:09:00+08:00</published><updated>2010-12-31T13:09:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-31:/2010/12/enjoy-read-feeds-in-kindle.html</id><summary type="html">&lt;p&gt;Kindle用来看书很爽，这个无需多说大家都知道，但是用Kindle来看订阅的新闻、博客，当离线的Google
+Reader来用，这个估计知道的人并不多，我这就给大家介绍一个网站，让你轻松实现这一功能，在Kindle上尽情的享受离线阅读订阅内容的快乐吧！&lt;/p&gt;
+&lt;p&gt;我现在几乎所有的RSS订阅都是在每天上下班的路上（无WIFI、3G的情况下）用Kindle3来看的，基本脱离Google
+Reader的怀抱。&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;在亚马逊上也是可以订阅Feeds的，不过那是要钱的，略过不谈。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.kindlefeeder.com"&gt;http://www.kindlefeeder.com&lt;/a&gt;
+这个是老外的网站，可以订阅Feeds发到你的Kindle上，但是定时发送是要收钱的，再略过。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://dogear.mobi/"&gt;http://dogear.mobi/&lt;/a&gt;
+要重点介绍的是这个，国人做的。其实在我发现这个网站以前，我是想自己做一个这样的网站的，域名都买好了叫feedkindle.com，不过dogear已经很成熟了，我就不用再去择腾了。dogear可以自订阅多个Feed源，然后在管理页面去设置一个时间，让dogear每天定时将订阅内容发送到你的Kindle上，只要每天在定时发送的这个时间后开一次Kindle的WIFI(对于3G版的，因为流量亚马逊要收费，请慎重)就OK了，注意&lt;strong&gt;添加一下&amp;#64;dogear.mobi这个email地址到你Kindle受信任的邮件表里 …&lt;/strong&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;Kindle用来看书很爽，这个无需多说大家都知道，但是用Kindle来看订阅的新闻、博客，当离线的Google
+Reader来用，这个估计知道的人并不多，我这就给大家介绍一个网站，让你轻松实现这一功能，在Kindle上尽情的享受离线阅读订阅内容的快乐吧！&lt;/p&gt;
+&lt;p&gt;我现在几乎所有的RSS订阅都是在每天上下班的路上（无WIFI、3G的情况下）用Kindle3来看的，基本脱离Google
+Reader的怀抱。&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;在亚马逊上也是可以订阅Feeds的，不过那是要钱的，略过不谈。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.kindlefeeder.com"&gt;http://www.kindlefeeder.com&lt;/a&gt;
+这个是老外的网站，可以订阅Feeds发到你的Kindle上，但是定时发送是要收钱的，再略过。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://dogear.mobi/"&gt;http://dogear.mobi/&lt;/a&gt;
+要重点介绍的是这个，国人做的。其实在我发现这个网站以前，我是想自己做一个这样的网站的，域名都买好了叫feedkindle.com，不过dogear已经很成熟了，我就不用再去择腾了。dogear可以自订阅多个Feed源，然后在管理页面去设置一个时间，让dogear每天定时将订阅内容发送到你的Kindle上，只要每天在定时发送的这个时间后开一次Kindle的WIFI(对于3G版的，因为流量亚马逊要收费，请慎重)就OK了，注意&lt;strong&gt;添加一下&amp;#64;dogear.mobi这个email地址到你Kindle受信任的邮件表里&lt;/strong&gt;即可，dogear网站上也有说明。另外定时发来的是不带图的版本，适合订阅以文字为主的Feed，带图的则要上dogear手动下载。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;BTW：
+dogear开源了部分较核心的功能，开源项目分别见&lt;a class="reference external" href="http://code.google.com/p/feed2mobi/"&gt;http://code.google.com/p/feed2mobi/&lt;/a&gt;
+和&lt;a class="reference external" href="https://bitbucket.org/jiedan/kindlereader"&gt;https://bitbucket.org/jiedan/kindlereader&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a class="reference external" href="http://feilong.me/2010/12/enjoy-read-feeds-in-kindle"&gt;http://feilong.me/2010/12/enjoy-read-feeds-in-kindle&lt;/a&gt;&lt;/p&gt;
+</content><category term="Kindle"></category></entry></feed>

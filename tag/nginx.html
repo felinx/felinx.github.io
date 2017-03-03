@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="author" content="felinx" />
+    <meta name="description" content="飞龙札记 - felinx's blog" />
+<meta property="og:site_name" content="飞龙"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="飞龙"/>
+<meta property="og:description" content="飞龙札记 - felinx's blog"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://feilong.me"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙 &ndash; Tag nginx</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+      </a>
+      <h1><a href="http://feilong.me">飞龙</a></h1>
+
+<p>Nice speech, but what are you going to do.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/about.html" target="_blank">About</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://feilong.me">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/06/nginx-reverse-proxy.html#2011/06/nginx-reverse-proxy">nginx反向代理配置(附：tornadoweb.cn的nginx配置)</a></h2>
+    <p>
+          Posted on Sat 11 June 2011 in <a href="http://feilong.me/category/it.html">IT</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/nginx.html">nginx</a>,              <a href="http://feilong.me/tag/fan-xiang-dai-li.html">反向代理</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>GAE的Hosting站点
+<a class="reference external" href="http://appspot.com/">appspot.com</a>在国内被墙，因此架设在GAE上的运用没法直接访问，需要曲线救国，其中一招比较有效的方式即是通过nginx反向代理来实现，不过这个要求你在国外有一个可用的nginx。下面以<a class="reference external" href="http://www.tornadoweb.cn">tornadoweb.cn</a>为例讲述如何用nginx配置反向代理(注：tornadoweb.cn为<a class="reference external" href="http://www.tornadoweb.org/">tornadoweb.org</a>的镜像站点，原站就是在GAE上，因此国内无法直接访问)。关于nginx的基本配置部分请参考我在poweredsites上的博客<a class="reference external" href="http://blog.poweredsites.org/entry/how-to-setup-nginx">how-to-setup-nginx</a>，本文只讨论如何配置tornadoweb.cn这个站点，配置说明详见配置中的注释。</p>
+<pre class="literal-block">
+server {
+　  # 监听80端口，通常可以省略。
+    listen   80;
+
+　  # 要配置的站点域名，即用来曲线访问GAE上的原站点的域名。
+    server_name  www.tornadoweb.cn;
+
+    # Ben老大要求tornadoweb.cn有说明是镜像站点以区别于原站tornadoweb.org，
+    # 因此我走巧将头上的LOGO采用修改过的本地文件，在原logo上加了mirror的声明
+    location /static/tornado.png {
+        # LOGO文件tornado.png所在文件夹目录
+        root /mnt/ebs …</pre>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/06/nginx-reverse-proxy.html#2011/06/nginx-reverse-proxy">    Continue reading
+</a>
+  </div>
+</article>
+
+  <div class="pagination">
+  </div>
+
+
+
+
+    <footer>
+<p>
+  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙 ",
+  "url" : "http://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>

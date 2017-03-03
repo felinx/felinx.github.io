@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙 - IT</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/it.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2011-07-13T13:42:00+08:00</updated><entry><title>浅析轮询(Polling)和推送(Long-Polling)服务</title><link href="http://feilong.me/2011/07/talk-about-polling-and-long-polling.html" rel="alternate"></link><published>2011-07-13T13:42:00+08:00</published><updated>2011-07-13T13:42:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-07-13:/2011/07/talk-about-polling-and-long-polling.html</id><summary type="html">&lt;p&gt;说明：此博客源自我在python-cn邮件群组中对网友关于Comet的问题的回答，特整理下供更多需要了解的人参考。&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;轮询(Polling)是指不管服务器端有没有更新，客户端(通常是指浏览器)都定时的发送请求进行查询，轮询的结果可能是服务器端有新的更新过来，也可能什么也没有，只是返回个空的信息。不管结果如何，客户端处理完后到下一个定时时间点将继续下一轮的轮询。&lt;/li&gt;
+&lt;li&gt;推送或叫长连接(Long-Polling)的服务其客户端是不做轮询的，客户端在发起一次请求后立即挂起，一直到服务器端有更新的时候，服务器才会主动推送信息到客户端。&amp;nbsp;在服务器端有更新并推送信息过来之前这个周期内，客户端不会有新的多余的请求发生，服务器端对此客户端也啥都不用干，只保留最基本的连接信息，一旦服务器有更新将推送给客户端，客户端将相应的做出处理，处理完后再重新发起下一轮请求。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;举个例子说明下就很清楚了：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;轮询模式，假设是客户端每2秒轮询一次，那么客户端每2秒就会发送一次请求，相应的服务器端每2秒就要响应这个客户端的一次请求。而实际上服务器端可能1秒钟后就有更新，也可能1分钟后才有更新。对于1秒钟就有更新的，客户端至少会有1秒钟的延时；而1分钟后才有更新的，只有最后一次查询有意义，这一分钟内的轮询其实都是没有必要的，服务器端和客户端均有资源的浪费。&lt;/li&gt;
+&lt;li&gt;推送模式，客户端发送一次请求后马上挂起等待服务器端响应，可能1秒，也可能10秒钟，也可能1分钟。如果服务器端是1秒就有更新，那么到1秒钟时客户端马上就收到更新了，如果是1分钟才有更新，那么整个一分钟客户端也只请求一次，服务器也只会相应一次 …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;说明：此博客源自我在python-cn邮件群组中对网友关于Comet的问题的回答，特整理下供更多需要了解的人参考。&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;轮询(Polling)是指不管服务器端有没有更新，客户端(通常是指浏览器)都定时的发送请求进行查询，轮询的结果可能是服务器端有新的更新过来，也可能什么也没有，只是返回个空的信息。不管结果如何，客户端处理完后到下一个定时时间点将继续下一轮的轮询。&lt;/li&gt;
+&lt;li&gt;推送或叫长连接(Long-Polling)的服务其客户端是不做轮询的，客户端在发起一次请求后立即挂起，一直到服务器端有更新的时候，服务器才会主动推送信息到客户端。&amp;nbsp;在服务器端有更新并推送信息过来之前这个周期内，客户端不会有新的多余的请求发生，服务器端对此客户端也啥都不用干，只保留最基本的连接信息，一旦服务器有更新将推送给客户端，客户端将相应的做出处理，处理完后再重新发起下一轮请求。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;举个例子说明下就很清楚了：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;轮询模式，假设是客户端每2秒轮询一次，那么客户端每2秒就会发送一次请求，相应的服务器端每2秒就要响应这个客户端的一次请求。而实际上服务器端可能1秒钟后就有更新，也可能1分钟后才有更新。对于1秒钟就有更新的，客户端至少会有1秒钟的延时；而1分钟后才有更新的，只有最后一次查询有意义，这一分钟内的轮询其实都是没有必要的，服务器端和客户端均有资源的浪费。&lt;/li&gt;
+&lt;li&gt;推送模式，客户端发送一次请求后马上挂起等待服务器端响应，可能1秒，也可能10秒钟，也可能1分钟。如果服务器端是1秒就有更新，那么到1秒钟时客户端马上就收到更新了，如果是1分钟才有更新，那么整个一分钟客户端也只请求一次，服务器也只会相应一次，这个跟轮询的区别是不是已经很清楚了。&lt;/li&gt;
+&lt;/ol&gt;
+</content><category term="Polling"></category><category term="Long-Polling"></category></entry><entry><title>nginx反向代理配置(附：tornadoweb.cn的nginx配置)</title><link href="http://feilong.me/2011/06/nginx-reverse-proxy.html" rel="alternate"></link><published>2011-06-11T11:41:00+08:00</published><updated>2011-06-11T11:41:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-06-11:/2011/06/nginx-reverse-proxy.html</id><summary type="html">&lt;p&gt;GAE的Hosting站点
+&lt;a class="reference external" href="http://appspot.com/"&gt;appspot.com&lt;/a&gt;在国内被墙，因此架设在GAE上的运用没法直接访问，需要曲线救国，其中一招比较有效的方式即是通过nginx反向代理来实现，不过这个要求你在国外有一个可用的nginx。下面以&lt;a class="reference external" href="http://www.tornadoweb.cn"&gt;tornadoweb.cn&lt;/a&gt;为例讲述如何用nginx配置反向代理(注：tornadoweb.cn为&lt;a class="reference external" href="http://www.tornadoweb.org/"&gt;tornadoweb.org&lt;/a&gt;的镜像站点，原站就是在GAE上，因此国内无法直接访问)。关于nginx的基本配置部分请参考我在poweredsites上的博客&lt;a class="reference external" href="http://blog.poweredsites.org/entry/how-to-setup-nginx"&gt;how-to-setup-nginx&lt;/a&gt;，本文只讨论如何配置tornadoweb.cn这个站点，配置说明详见配置中的注释。&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+server {
+　  # 监听80端口，通常可以省略。
+    listen   80;
+
+　  # 要配置的站点域名，即用来曲线访问GAE上的原站点的域名。
+    server_name  www.tornadoweb.cn;
+
+    # Ben老大要求tornadoweb.cn有说明是镜像站点以区别于原站tornadoweb.org，
+    # 因此我走巧将头上的LOGO采用修改过的本地文件，在原logo上加了mirror的声明
+    location /static/tornado.png {
+        # LOGO文件tornado.png所在文件夹目录
+        root /mnt/ebs …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;GAE的Hosting站点
+&lt;a class="reference external" href="http://appspot.com/"&gt;appspot.com&lt;/a&gt;在国内被墙，因此架设在GAE上的运用没法直接访问，需要曲线救国，其中一招比较有效的方式即是通过nginx反向代理来实现，不过这个要求你在国外有一个可用的nginx。下面以&lt;a class="reference external" href="http://www.tornadoweb.cn"&gt;tornadoweb.cn&lt;/a&gt;为例讲述如何用nginx配置反向代理(注：tornadoweb.cn为&lt;a class="reference external" href="http://www.tornadoweb.org/"&gt;tornadoweb.org&lt;/a&gt;的镜像站点，原站就是在GAE上，因此国内无法直接访问)。关于nginx的基本配置部分请参考我在poweredsites上的博客&lt;a class="reference external" href="http://blog.poweredsites.org/entry/how-to-setup-nginx"&gt;how-to-setup-nginx&lt;/a&gt;，本文只讨论如何配置tornadoweb.cn这个站点，配置说明详见配置中的注释。&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+server {
+　  # 监听80端口，通常可以省略。
+    listen   80;
+
+　  # 要配置的站点域名，即用来曲线访问GAE上的原站点的域名。
+    server_name  www.tornadoweb.cn;
+
+    # Ben老大要求tornadoweb.cn有说明是镜像站点以区别于原站tornadoweb.org，
+    # 因此我走巧将头上的LOGO采用修改过的本地文件，在原logo上加了mirror的声明
+    location /static/tornado.png {
+        # LOGO文件tornado.png所在文件夹目录
+        root /mnt/ebs/sites/tornadoweb;
+    }
+
+    location / {
+        # 配置反向代理到 www.tornadoweb.org，对于没有绑定域名的GAE运用来说，会是http://python-tornado.appspot.com这样的。
+        proxy_pass http://www.tornadoweb.org;
+        # 关闭重定向跳转
+        proxy_redirect off;
+        # 转发IP等HTTP头信息
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+# 下面几个是将www.tornadoweb.com.cn也跳转到www.tornadoweb.cn，并且将域名根目录tornadoweb.cn这样的访问也跳转到www下，
+# 这个反之亦然(现在多是这种，即www跳转到域名根目录)。
+server {
+    server_name  tornadoweb.com.cn;
+    rewrite ^(.*)$ http://www.tornadoweb.cn$1 permanent;
+}
+
+server {
+    server_name  www.tornadoweb.com.cn;
+    rewrite ^(.*)$ http://www.tornadoweb.cn$1 permanent;
+}
+
+server {
+    server_name  tornadoweb.cn;
+    rewrite ^(.*)$ http://www.tornadoweb.cn$1 permanent;
+}
+&lt;/pre&gt;
+&lt;p&gt;配置好后reload/restart一下nginx就妥了，本例的结果即是访问tornadoweb.cn将看到tornadoweb.org一样网站，除了采用了本地文件的那个LOGO不同外。&lt;/p&gt;
+</content><category term="nginx"></category><category term="反向代理"></category></entry><entry><title>囧，Amazon AWS EC2硬件故障</title><link href="http://feilong.me/2011/03/amazon-aws-ec2-hardware-failure.html" rel="alternate"></link><published>2011-03-06T12:44:00+08:00</published><updated>2011-03-06T12:44:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-03-06:/2011/03/amazon-aws-ec2-hardware-failure.html</id><summary type="html">&lt;p&gt;今天早上起来开Gmail又收到一封来自Amazon的邮件，这次不是新功能的Annoucement邮件也不是Billing邮件，而是一封Notice邮件，惊了我一声冷汗，邮件内容如下（部分内容打了马赛克）：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Hello,
+
+ We have noticed that one or more of your instances are running on a host degraded due to hardware failure.
+
+ i-221bdxxx
+
+ The risk of your instances failing is increased at this point. We cannot  determine the health of any applications running on the …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;今天早上起来开Gmail又收到一封来自Amazon的邮件，这次不是新功能的Annoucement邮件也不是Billing邮件，而是一封Notice邮件，惊了我一声冷汗，邮件内容如下（部分内容打了马赛克）：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Hello,
+
+ We have noticed that one or more of your instances are running on a host degraded due to hardware failure.
+
+ i-221bdxxx
+
+ The risk of your instances failing is increased at this point. We cannot  determine the health of any applications running on the instances. We  recommend that you launch replacement instances and start migrating to  them.
+
+ Feel free to terminate the instances with the ec2-terminate-instance API when you are done with them.
+
+ Sincerely,
+
+ The Amazon EC2 Team
+
+ Reference: d3941eb8-xxxx-4caa-abc8-db9ae774xxxx
+&lt;/pre&gt;
+&lt;p&gt;果然，访问我的博客出现502 Bad
+Gateway错误，只有nginx还工作正常，我的EC2中的MySQL、mongodb和代码等全部部署在mount进来的一个ebs
+volume上，而这个ebs volume居然硬件故障挂了，赶紧进行修复，修复过程如下：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;新建一个ebs volume（主要是顺便扩大一下容量，准备给
+&lt;a class="reference external" href="http://www.chinapy.org/"&gt;http://www.chinapy.org&lt;/a&gt; 留空间）&lt;/li&gt;
+&lt;li&gt;Attach进来一个备份的snapshot，然后连文件带属性把所有的文件拷贝到新的ebs
+volume里（跟旧的保持一模一样的文件路径和属性）&lt;/li&gt;
+&lt;li&gt;mongodb因为是异常中断的，需要跑--repair修复一下&lt;/li&gt;
+&lt;li&gt;再重启一下所有相关的进程如MySQL、Python、Fast-CGI进程等&lt;/li&gt;
+&lt;li&gt;OK，一切恢复如初。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果不是要新建一个ebs
+volume的话，只需要Attach进备份的snapshot，再过一下步骤3、4就OK了。&lt;/p&gt;
+&lt;p&gt;PS:
+做好备份很重要，虽然EC2出硬件故障这事很少见，但做好备份是必须的，有备份的snapshot，在AWS上恢复数据是件非常简单的事情。&lt;/p&gt;
+</content><category term="aws"></category></entry><entry><title>用monit监控系统关键进程</title><link href="http://feilong.me/2011/02/monitor-core-processes-with-monit.html" rel="alternate"></link><published>2011-02-24T17:36:00+08:00</published><updated>2011-02-24T17:36:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-02-24:/2011/02/monitor-core-processes-with-monit.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://mmonit.com/monit/"&gt;monit&lt;/a&gt;是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台，
+它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是&lt;a class="reference external" href="http://supervisord.org/"&gt;supervisor&lt;/a&gt;，后续会另外撰文介绍。&lt;/p&gt;
+&lt;p&gt;下面分别介绍monit的安装、配置和启动。&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;安装&lt;/h2&gt;
+&lt;p&gt;在debian或ubuntu上安装monit非常方便，通过下面的命令&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+sudo apt-get install monit
+&lt;/pre&gt;
+&lt;p&gt;即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure
+make
+make install
+&lt;/pre&gt;
+&lt;p&gt;安装后，默认的配置文件为/etc/monit/monitrc。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;配置&lt;/h2&gt;
+&lt;p&gt;添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+##
+## 飞龙札记 示例monit配置文件，说明：
+## 1. 域名以example.com为例 …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://mmonit.com/monit/"&gt;monit&lt;/a&gt;是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台，
+它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是&lt;a class="reference external" href="http://supervisord.org/"&gt;supervisor&lt;/a&gt;，后续会另外撰文介绍。&lt;/p&gt;
+&lt;p&gt;下面分别介绍monit的安装、配置和启动。&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;安装&lt;/h2&gt;
+&lt;p&gt;在debian或ubuntu上安装monit非常方便，通过下面的命令&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+sudo apt-get install monit
+&lt;/pre&gt;
+&lt;p&gt;即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure
+make
+make install
+&lt;/pre&gt;
+&lt;p&gt;安装后，默认的配置文件为/etc/monit/monitrc。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;配置&lt;/h2&gt;
+&lt;p&gt;添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+##
+## 飞龙札记 示例monit配置文件，说明：
+## 1. 域名以example.com为例。
+## 2. 后面带xxx的均是举例用的名字，需要根据自己的需要修改。
+##
+###############################################################################
+## Monit control file
+###############################################################################
+#
+# 检查周期，默认为2分钟，对于网站来说有点长，可以根据需要自行调节，这改成30秒。
+set daemon  30
+
+# 日志文件
+set logfile /var/log/monit.log
+
+#
+# 邮件通知服务器
+#
+#set mailserver mail.example.com
+set mailserver localhost
+
+#
+# 通知邮件的格式设置，下面是默认格式供参考
+#
+## Monit by default uses the following alert mail format:
+##
+## --8&amp;lt;--
+## From: monit&amp;#64;$HOST                         # sender
+## Subject: monit alert --  $EVENT $SERVICE  # subject
+##
+## $EVENT Service $SERVICE                   #
+##                                           #
+##  Date:        $DATE                   #
+##  Action:      $ACTION                 #
+##  Host:        $HOST                   # body
+##  Description: $DESCRIPTION            #
+##                                           #
+## Your faithful employee,                   #
+## monit                                     #
+## --8&amp;lt;--
+##
+## You can override the alert message format or its parts such as subject
+## or sender using the MAIL-FORMAT statement. Macros such as $DATE, etc.
+## are expanded on runtime. For example to override the sender:
+#
+# 简单的，这只改了一下发送人，有需要可以自己修改其它内容。
+set mail-format { from: webmaster&amp;#64;example.com }
+
+# 设置邮件通知接收者。建议发到gmail，方便邮件过滤。
+set alert userxxx&amp;#64;gmail.com
+
+set httpd port 2812 and            # 设置http监控页面的端口
+     use address www.example.com   # http监控页面的IP或域名
+     allow localhost               # 允许本地访问
+     allow 58.68.78.0/24           # 允许此IP段访问
+     ##allow 0.0.0.0/0.0.0.0       # 允许任何IP段，不建议这样干
+     allow userxxx:passwordxxx     # 访问用户名密码
+
+###############################################################################
+## Services
+###############################################################################
+#
+# 系统整体运行状况监控，默认的就可以，可以自己去微调
+#
+# 系统名称，可以是IP或域名
+check system www.example.com
+    if loadavg (1min) &amp;gt; 4 then alert
+    if loadavg (5min) &amp;gt; 2 then alert
+    if memory usage &amp;gt; 75% then alert
+    if cpu usage (user) &amp;gt; 70% then alert
+    if cpu usage (system) &amp;gt; 30% then alert
+    if cpu usage (wait) &amp;gt; 20% then alert
+
+#
+# 监控nginx
+#
+# 需要提供进程pid文件信息
+check process nginx with pidfile /var/run/nginx.pid
+    # 进程启动命令行，注：必须是命令全路径
+    start program = &amp;quot;/etc/init.d/nginx start&amp;quot;
+    # 进程关闭命令行
+    stop program  = &amp;quot;/etc/init.d/nginx stop&amp;quot;
+    # nginx进程状态测试，监测到nginx连不上了，则自动重启
+    if failed host www.example.com port 80 protocol http then restart
+    # 多次重启失败将不再尝试重启，这种就是系统出现严重错误的情况
+    if 3 restarts within 5 cycles then timeout
+    # 可选，设置分组信息
+    group server
+
+#   可选的ssl端口的监控，如果有的话
+#    if failed port 443 type tcpssl protocol http
+#       with timeout 15 seconds
+#       then restart
+
+#
+# 监控apache
+#
+check process apache with pidfile /var/run/apache2.pid
+    start program = &amp;quot;/etc/init.d/apache2 start&amp;quot;
+    stop program  = &amp;quot;/etc/init.d/apache2 stop&amp;quot;
+    # apache吃cpu和内存比较厉害，额外添加一些关于这方面的监控设置
+    if cpu &amp;gt; 50% for 2 cycles then alert
+    if cpu &amp;gt; 70% for 5 cycles then restart
+    if totalmem &amp;gt; 1500 MB for 10 cycles then restart
+    if children &amp;gt; 250 then restart
+    if loadavg(5min) greater than 10 for 20 cycles then stop
+    if failed host www.example.com port 8080 protocol http then restart
+    if 3 restarts within 5 cycles then timeout
+    group server
+    # 可选，依赖于nginx
+    depends on nginx
+
+#
+# 监控spawn-fcgi进程(其实就是fast-cgi进程)
+#
+check process spawn-fcgi with pidfile /var/run/spawn-fcgi.pid
+    # spawn-fcgi一定要带-P参数才会生成pid文件，默认是没有的
+    start program = &amp;quot;/usr/bin/spawn-fcgi -a 127.0.0.1 -p 8081 -C 10 -u userxxx -g groupxxx -P /var/run/spawn-fcgi.pid -f /usr/bin/php-cgi&amp;quot;
+    stop program = &amp;quot;/usr/bin/killall /usr/bin/php-cgi&amp;quot;
+    # fast-cgi走的不是http协议，monit的protocol参数也没有cgi对应的设置，这里去掉protocol http即可。
+    if failed host 127.0.0.1 port 8081 then restart
+    if 3 restarts within 5 cycles then timeout
+    group server
+    depends on nginx
+&lt;/pre&gt;
+&lt;p&gt;虽然在注释里有详细说明，但是我还是要再强调说明几点：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;start和stop的program参数里的命令必须是全路径，否则monit不能正常启动，比如killall应该是/usr/bin/killall。&lt;/li&gt;
+&lt;li&gt;对于spawn-fcgi，很多人会用它来管理PHP的fast-cgi进程，但spawn-fcgi本身也是有可能挂掉的，所以还是需要用monit来监控spawn-fcgi。spawn-fcgi必须带-P参数才会有pid文件，而且fast-cgi走的不是http协议，monit的protocol参数也没有cgi对应的设置，一定要去掉protocol
+http这项设置才管用。&lt;/li&gt;
+&lt;li&gt;进程多次重启失败monit将不再尝试重启，收到这样的通知邮件表明系统出现了严重的问题，要引起足够的重视，需要赶紧人工处理。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当然monit除了管理进程之外，还可以监控文件、目录、设备等，本文不做讨论，具体配置方式可以去参考&lt;a class="reference external" href="http://mmonit.com/monit/documentation/monit.html"&gt;monit的官方文档&lt;/a&gt;。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;启动、停止、重启&lt;/h2&gt;
+&lt;p&gt;标准的start、stop、restart&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+sudo /etc/init.d/monit start
+sudo /etc/init.d/monit stop
+sudo /etc/init.d/monit restart
+&lt;/pre&gt;
+&lt;p&gt;看到正确的提示信息即可，若遇到问题可以去查看配置里指定的日志文件，如/var/log/monit.log。&lt;/p&gt;
+&lt;p&gt;从我的服务器这几年的运行情况（monit发了的通知邮件）来看，nginx挂掉的事几乎没有，但apache或fast-cgi出问题的情况还是比较多见，赶快用上monit来管理你的服务器以提高服务器稳定性，跟502
+Bad Gateway之类错误说拜拜吧。&lt;/p&gt;
+&lt;p&gt;附件：&lt;a class="reference external" href="/static/2011/02/monitrc.txt"&gt;monit示例配置文件&lt;/a&gt;
+(注：下载后请去掉.txt文件后缀)&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="monit"></category></entry><entry><title>VMware几个实用技巧</title><link href="http://feilong.me/2011/01/vmware-pragmatic-tips.html" rel="alternate"></link><published>2011-01-17T13:41:00+08:00</published><updated>2011-01-17T13:41:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-17:/2011/01/vmware-pragmatic-tips.html</id><summary type="html">&lt;p&gt;近日Buzz好友&lt;a class="reference external" href="http://www.google.com/profiles/104231231256400902165"&gt;Kyle
+Hu&lt;/a&gt;同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。&lt;/p&gt;
+&lt;div class="section" id="vm"&gt;
+&lt;h2&gt;1.VM快照管理&lt;/h2&gt;
+&lt;p&gt;这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-181 aligncenter" src="/static/2011/01/vm-take-snapshot.jpg" style="width: 675px; height: 249px;" /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;2.扩大硬盘容量&lt;/h2&gt;
+&lt;p&gt;有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="size-full wp-image-182 aligncenter" src="/static/2011/01/vm-add-hd.jpg" style="width: 659px; height: 474px;" /&gt;&lt;/p&gt;
+&lt;p&gt;但是有时候可能必须要扩大某个已有的硬盘分区（比如原来D盘只有10G，现在必须把D盘扩大到20G），这个时候就需要用到vmware-vdiskmanager.exe（位于VMware安装路径根目录，如：C:\Program
+Files\VMware\VMware
+Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+VMware&amp;nbsp;Virtual&amp;nbsp;Disk&amp;nbsp;Manager&amp;nbsp;-&amp;nbsp;build&amp;nbsp;34685.
+Usage …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;近日Buzz好友&lt;a class="reference external" href="http://www.google.com/profiles/104231231256400902165"&gt;Kyle
+Hu&lt;/a&gt;同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。&lt;/p&gt;
+&lt;div class="section" id="vm"&gt;
+&lt;h2&gt;1.VM快照管理&lt;/h2&gt;
+&lt;p&gt;这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-181 aligncenter" src="/static/2011/01/vm-take-snapshot.jpg" style="width: 675px; height: 249px;" /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;2.扩大硬盘容量&lt;/h2&gt;
+&lt;p&gt;有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="size-full wp-image-182 aligncenter" src="/static/2011/01/vm-add-hd.jpg" style="width: 659px; height: 474px;" /&gt;&lt;/p&gt;
+&lt;p&gt;但是有时候可能必须要扩大某个已有的硬盘分区（比如原来D盘只有10G，现在必须把D盘扩大到20G），这个时候就需要用到vmware-vdiskmanager.exe（位于VMware安装路径根目录，如：C:\Program
+Files\VMware\VMware
+Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+VMware&amp;nbsp;Virtual&amp;nbsp;Disk&amp;nbsp;Manager&amp;nbsp;-&amp;nbsp;build&amp;nbsp;34685.
+Usage:&amp;nbsp;vmware-vdiskmanager.exe&amp;nbsp;OPTIONS&amp;nbsp;diskName&amp;nbsp;\|&amp;nbsp;drive-letter:
+Offline&amp;nbsp;disk&amp;nbsp;manipulation&amp;nbsp;utility
+Options:
+-c&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;create&amp;nbsp;disk;&amp;nbsp;need&amp;nbsp;to&amp;nbsp;specify&amp;nbsp;other&amp;nbsp;create&amp;nbsp;options
+-d&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;defragment&amp;nbsp;the&amp;nbsp;specified&amp;nbsp;virtual&amp;nbsp;disk
+-k&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;shrink&amp;nbsp;the&amp;nbsp;specified&amp;nbsp;virtual&amp;nbsp;disk
+-n&amp;nbsp;&amp;lt;source-disk&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;rename&amp;nbsp;the&amp;nbsp;specified&amp;nbsp;virtual&amp;nbsp;disk;&amp;nbsp;need&amp;nbsp;to
+specify&amp;nbsp;destination&amp;nbsp;disk-name
+-p&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;prepare&amp;nbsp;the&amp;nbsp;mounted&amp;nbsp;virtual&amp;nbsp;disk&amp;nbsp;specified&amp;nbsp;by
+the&amp;nbsp;drive-letter&amp;nbsp;for&amp;nbsp;shrinking
+-q&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;do&amp;nbsp;not&amp;nbsp;log&amp;nbsp;messages
+-r&amp;nbsp;&amp;lt;source-disk&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;convert&amp;nbsp;the&amp;nbsp;specified&amp;nbsp;disk;&amp;nbsp;need&amp;nbsp;to&amp;nbsp;specify
+destination&amp;nbsp;disk-type
+-x&amp;nbsp;&amp;lt;new-capacity&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;expand&amp;nbsp;the&amp;nbsp;disk&amp;nbsp;to&amp;nbsp;the&amp;nbsp;specified&amp;nbsp;capacity
+Additional&amp;nbsp;options&amp;nbsp;for&amp;nbsp;create&amp;nbsp;and&amp;nbsp;convert:
+-a&amp;nbsp;&amp;lt;adapter&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;(for&amp;nbsp;use&amp;nbsp;with&amp;nbsp;-c&amp;nbsp;only)&amp;nbsp;adapter&amp;nbsp;type&amp;nbsp;(ide,&amp;nbsp;buslogic&amp;nbsp;or&amp;nbsp;lsilogic)
+-s&amp;nbsp;&amp;lt;size&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;capacity&amp;nbsp;of&amp;nbsp;the&amp;nbsp;virtual&amp;nbsp;disk
+-t&amp;nbsp;&amp;lt;disk-type&amp;gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;disk&amp;nbsp;type&amp;nbsp;id
+Disk&amp;nbsp;types:
+0&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;single&amp;nbsp;growable&amp;nbsp;virtual&amp;nbsp;disk
+1&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;growable&amp;nbsp;virtual&amp;nbsp;disk&amp;nbsp;split&amp;nbsp;in&amp;nbsp;2Gb&amp;nbsp;files
+2&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;preallocated&amp;nbsp;virtual&amp;nbsp;disk
+3&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;preallocated&amp;nbsp;virtual&amp;nbsp;disk&amp;nbsp;split&amp;nbsp;in&amp;nbsp;2Gb&amp;nbsp;files
+The&amp;nbsp;capacity&amp;nbsp;can&amp;nbsp;be&amp;nbsp;specified&amp;nbsp;in&amp;nbsp;sectors,&amp;nbsp;Kb,&amp;nbsp;Mb&amp;nbsp;or&amp;nbsp;Gb.
+The&amp;nbsp;acceptable&amp;nbsp;ranges:
+ide&amp;nbsp;adapter&amp;nbsp;:&amp;nbsp;[100.0Mb,&amp;nbsp;950.0Gb]
+scsi&amp;nbsp;adapter:&amp;nbsp;[100.0Mb,&amp;nbsp;950.0Gb]
+ex&amp;nbsp;1:&amp;nbsp;vmware-vdiskmanager.exe&amp;nbsp;-c&amp;nbsp;-s&amp;nbsp;850Mb&amp;nbsp;-a&amp;nbsp;ide&amp;nbsp;-t&amp;nbsp;0&amp;nbsp;myIdeDisk.vmdk
+ex&amp;nbsp;2:&amp;nbsp;vmware-vdiskmanager.exe&amp;nbsp;-d&amp;nbsp;myDisk.vmdk
+ex&amp;nbsp;3:&amp;nbsp;vmware-vdiskmanager.exe&amp;nbsp;-r&amp;nbsp;sourceDisk.vmdk&amp;nbsp;-t&amp;nbsp;0&amp;nbsp;destinationDisk.vmdk
+ex&amp;nbsp;4:&amp;nbsp;vmware-vdiskmanager.exe&amp;nbsp;-x&amp;nbsp;36Gb&amp;nbsp;myDisk.vmdk
+ex&amp;nbsp;5:&amp;nbsp;vmware-vdiskmanager.exe&amp;nbsp;-n&amp;nbsp;sourceName.vmdk&amp;nbsp;destinationName.vmdk
+ex&amp;nbsp;6:&amp;nbsp;vmware-vdiskmanager.exe&amp;nbsp;-k&amp;nbsp;myDisk.vmdk
+ex&amp;nbsp;7:&amp;nbsp;vmware-vdiskmanager.exe&amp;nbsp;-p&amp;nbsp;m:
+(A&amp;nbsp;virtual&amp;nbsp;disk&amp;nbsp;first&amp;nbsp;needs&amp;nbsp;to&amp;nbsp;be&amp;nbsp;mounted&amp;nbsp;at&amp;nbsp;m:
+using&amp;nbsp;the&amp;nbsp;VMware&amp;nbsp;Diskmount&amp;nbsp;Utility.)
+&lt;/pre&gt;
+&lt;p&gt;示例ex
+4就是一个扩大硬盘分区的例子，找到对应的你要扩大的.vmdk文件照着做就可以了，比如下面是将我的一个VM的D盘扩大到20G（文件路径有空格得用引号“”括一下）：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+vmware-vdiskmanager.exe -x 20Gb
+“D:\\09.VM\\build\_vm\\vm\_40\\Windows XP Professional-000001.vmdk”
+&lt;/pre&gt;
+&lt;p&gt;对于Windows系统的VM来说，新增的这部分磁盘空间在VM里暂时是看不到的，需要到系统管理工具里的磁盘管理工具里去分配一下就OK了。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;3.释放硬盘空间&lt;/h2&gt;
+&lt;p&gt;VM用的时间一长，有个大毛病就是占用的文件空间越来越大，而实际使用的空间并没有那么多（比如Kyle
+Hu遇到的问题：VM分区大小是80GB，使用27GB，虚拟机文件夹为41.9GB，困惑！）。具体原因未明，我的理解可能是因为虚拟硬盘在占用某块空间后，即使这块空间后面被释放了（如：文件删除），VM占用的空间也不能完全缩回去。对于这种情况，如果硬盘吃紧心疼这些被吃掉的空间，就需要用到VM的disk
+shrink功能来释放这些空间，关于disk
+shrink具体见官方的文档：&lt;a class="reference external" href="http://www.vmware.com/support/ws5/doc/ws_disk_shrink.html"&gt;http://www.vmware.com/support/ws5/doc/ws_disk_shrink.html&lt;/a&gt;，不过disk
+shrink有很多限制条件，比如不能有快照、空间不能被预分配等。要使用disk
+shrink需要先安装VMware Tools，安装VMware
+Tools需要先将你的VM打开，然后按下图选择安装VMware Tools，&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" class="size-full wp-image-184 aligncenter" src="/static/2011/01/vm-install-vm-tools.jpg" style="width: 449px; height: 293px;" /&gt;&lt;/p&gt;
+&lt;p&gt;这样在VM里面就会自动插入一张VMware
+Tools的安装盘，VM是Windows系统的话进入光盘安装即可，如果是linux的话，操作步骤大致如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;# 到光驱目录&lt;/div&gt;
+&lt;div class="line"&gt;cd /media/cdrom0&lt;/div&gt;
+&lt;div class="line"&gt;# 找到VMware Tools压缩文件&lt;/div&gt;
+&lt;div class="line"&gt;ls&lt;/div&gt;
+&lt;div class="line"&gt;# 解压到TMP文件夹下&lt;/div&gt;
+&lt;div class="line"&gt;tar xvfz VMwareTools-8.1.3-203739.tar.gz -C /tmp&lt;/div&gt;
+&lt;div class="line"&gt;cd /tmp&lt;/div&gt;
+&lt;div class="line"&gt;# 找到VMwareTools安装文件夹&lt;/div&gt;
+&lt;div class="line"&gt;ls&lt;/div&gt;
+&lt;div class="line"&gt;cd vmware-tools-distrib&lt;/div&gt;
+&lt;div class="line"&gt;# 用root权限安装&lt;/div&gt;
+&lt;div class="line"&gt;sudo ./vmware-install.pl&lt;/div&gt;
+&lt;div class="line"&gt;# 输入密码，一路回车，然后就安装完毕了。&lt;/div&gt;
+&lt;div class="line"&gt;#
+这个时候应该有&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;vmware-toolbox这个命令了，&lt;/span&gt;&lt;/tt&gt;如果还没有再运行一下vmware-tools-config.pl就OK了。&lt;/div&gt;
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;VMware Tools 安装完成后就可以在VM里按上面提供的链接里讲的那样进行disk
+shrink了，做完disk
+shrink后VM的使用空间和VM文件实际占用的空间基本能保持一致了。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;4.磁盘碎片整理&lt;/h2&gt;
+&lt;p&gt;跟真机一样，VM使用时间一长，就会产生很多磁盘碎片，VM的性能会有所下降，这个时候可以通过VM的Defragment来整理磁盘碎片。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image3" class="size-full wp-image-186 aligncenter" src="/static/2011/01/vm-defragment.jpg" style="width: 644px; height: 555px;" /&gt;&lt;/p&gt;
+&lt;p&gt;磁盘碎片整理结合上面介绍的disk shrink来使用（在disk
+shrink之后）效果更佳。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;5.命令行启动VM&lt;/h2&gt;
+&lt;p&gt;除了通过界面来操作VM，其实也是可以通过命令行来启动一个VM的（这个可能很少有人用到），比如下面的批处理命令能启动并全屏vm-40这个VM：&lt;/p&gt;
+&lt;blockquote&gt;
+start vmware -X “D:\09.VM\build_vm\vm_40\winxppro.vmx”&lt;/blockquote&gt;
+&lt;p&gt;你还可以在VM的启动项（如：windows的startup，linux的init.d等）里面预先加入一些自定义的任务，这样就可以自动控制一些VM去做一些事情，完成一些自动化的任务了。&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="vmware"></category></entry><entry><title>亚马逊AWS(EC2)资源汇总</title><link href="http://feilong.me/2011/01/amazon-aws-ec2-guide.html" rel="alternate"></link><published>2011-01-01T21:54:00+08:00</published><updated>2011-01-01T21:54:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-01:/2011/01/amazon-aws-ec2-guide.html</id><summary type="html">&lt;p&gt;亚马逊AWS全称Amazon Web
+Services，即亚马逊于2006年推出的云计算服务，核心产品包括EC2、S3、EBS、CloudFront、SimpleDB等，全部产品列表见：&lt;a class="reference external" href="http://aws.amazon.com/products/"&gt;http://aws.amazon.com/products/&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;从2010年11月1日开始，亚马逊还推出了一个免费&lt;a class="reference external" href="http://aws.amazon.com/free/"&gt;AWS Free Usage
+Tier&lt;/a&gt;体验活动，相当于613
+MB的VPS，可以免费（部分超额的使用还是要收费的）使用一年。&lt;/p&gt;
+&lt;p&gt;在国外AWS居领导地位，很多大站、新站都用了AWS的服务，比如&lt;a class="reference external" href="http://twitter.com"&gt;Twitter&lt;/a&gt;、&lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;、&lt;a class="reference external" href="http://www.quora.com"&gt;Quora&lt;/a&gt;，而在国内可能知道的、用过AWS的人并不多。我也是在&lt;a class="reference external" href="http://www.andapponline.com"&gt;James
+Zhang&lt;/a&gt;同学不停的鼓动下最终用上了AWS的，&lt;a class="reference external" href="http://feilong.me"&gt;飞龙札记&lt;/a&gt;和我的&lt;a class="reference external" href="http://poweredsites.org"&gt;http://poweredsites.org&lt;/a&gt;就是部署在AWS上，下面是我收集的一些关于AWS的资源汇总：&lt;/p&gt;
+&lt;p&gt;AWS官方的文档入口&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://aws.amazon.com/documentation/"&gt;http://aws …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;亚马逊AWS全称Amazon Web
+Services，即亚马逊于2006年推出的云计算服务，核心产品包括EC2、S3、EBS、CloudFront、SimpleDB等，全部产品列表见：&lt;a class="reference external" href="http://aws.amazon.com/products/"&gt;http://aws.amazon.com/products/&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;从2010年11月1日开始，亚马逊还推出了一个免费&lt;a class="reference external" href="http://aws.amazon.com/free/"&gt;AWS Free Usage
+Tier&lt;/a&gt;体验活动，相当于613
+MB的VPS，可以免费（部分超额的使用还是要收费的）使用一年。&lt;/p&gt;
+&lt;p&gt;在国外AWS居领导地位，很多大站、新站都用了AWS的服务，比如&lt;a class="reference external" href="http://twitter.com"&gt;Twitter&lt;/a&gt;、&lt;a class="reference external" href="http://bitbucket.org"&gt;Bitbucket&lt;/a&gt;、&lt;a class="reference external" href="http://www.quora.com"&gt;Quora&lt;/a&gt;，而在国内可能知道的、用过AWS的人并不多。我也是在&lt;a class="reference external" href="http://www.andapponline.com"&gt;James
+Zhang&lt;/a&gt;同学不停的鼓动下最终用上了AWS的，&lt;a class="reference external" href="http://feilong.me"&gt;飞龙札记&lt;/a&gt;和我的&lt;a class="reference external" href="http://poweredsites.org"&gt;http://poweredsites.org&lt;/a&gt;就是部署在AWS上，下面是我收集的一些关于AWS的资源汇总：&lt;/p&gt;
+&lt;p&gt;AWS官方的文档入口&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://aws.amazon.com/documentation/"&gt;http://aws.amazon.com/documentation/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;EC2入门文档&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Amazon官方的（有这个基本就够了）：&lt;a class="reference external" href="http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide/"&gt;http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ubuntu官方上的：&lt;a class="reference external" href="https://help.ubuntu.com/community/EC2StartersGuide"&gt;https://help.ubuntu.com/community/EC2StartersGuide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;EC2使用价格表：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://aws.amazon.com/ec2/pricing/"&gt;http://aws.amazon.com/ec2/pricing/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ubuntu官方的EC2 AMI&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Ubuntu AMI入口：&lt;a class="reference external" href="http://uec-images.ubuntu.com/releases"&gt;http://uec-images.ubuntu.com/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ubuntu 9.10：&lt;a class="reference external" href="http://uec-images.ubuntu.com/releases/9.10/release/"&gt;http://uec-images.ubuntu.com/releases/9.10/release/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ubuntu 10.10：&lt;a class="reference external" href="http://uec-images.ubuntu.com/releases/10.10/release/"&gt;http://uec-images.ubuntu.com/releases/10.10/release/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;EC2的firefox插件（可管理你的EC2，非常好用、方便）&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://sourceforge.net/projects/elasticfox/"&gt;http://sourceforge.net/projects/elasticfox/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;AWS的Python工具boto&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://boto.cloudhackers.com/"&gt;http://boto.cloudhackers.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;另外提供一些中文资料&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.5558.biz/a/jianzhanjishu/tuwenjiaocheng/Amazon-freeVPS.html"&gt;http://www.5558.biz/a/jianzhanjishu/tuwenjiaocheng/Amazon-freeVPS.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://blog.csdn.net/lkhdmail/archive/2008/12/08/3477597.aspx"&gt;http://blog.csdn.net/lkhdmail/archive/2008/12/08/3477597.aspx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.chinacloud.cn/show.aspx?id=2347&amp;amp;cid=12"&gt;http://www.chinacloud.cn/show.aspx?id=2347&amp;amp;cid=12&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;至于如何玩转一个EC2
+instance其实跟玩一般的VPS没什么两样，可以参考slicehost上面的相关文档（slicehost的文档非常全且浅显易懂），如：&lt;a class="reference external" href="http://articles.slicehost.com/2010/10/18/ubuntu-maverick-setup-part-1"&gt;http://articles.slicehost.com/2010/10/18/ubuntu-maverick-setup-part-1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;最后附上一重磅级的材料，&lt;a class="reference external" href="http://www.andapponline.com"&gt;James
+Zhang&lt;/a&gt;同学的&lt;a class="reference external" href="/static/2010/12/Amazon-AWS-introduction-by-James-Zhang.pdf"&gt;Amazon AWS introduction
+by James
+Zhang&lt;/a&gt;的英文PPT（方便阅读已转成PDF），版权归James同学，这里已征得James同学本人同意贴到本篇博客里，PDF文件地址：&lt;a class="reference external" href="/static/2010/12/Amazon-AWS-introduction-by-James-Zhang.pdf"&gt;/static/2010/12/Amazon-AWS-introduction-by-James-Zhang.pdf&lt;/a&gt;。&lt;/p&gt;
+</content><category term="aws"></category><category term="云计算"></category></entry></feed>

@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙 - Python</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/python.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2013-08-14T23:50:00+08:00</updated><entry><title>四国战记外挂(四国助手)</title><link href="http://feilong.me/2013/08/siguozhanji-boss-fight-robot.html" rel="alternate"></link><published>2013-08-14T23:50:00+08:00</published><updated>2013-08-14T23:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2013-08-14:/2013/08/siguozhanji-boss-fight-robot.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://sgzj.muhegame.com/"&gt;四国战记&lt;/a&gt;是我最近玩过的比较不错的一款卡牌手游，玩四国依稀有点当年大学时代玩英雄无敌的感觉，我先无节操的推荐一下这款手游，邀请码就不放了，以免纯广告之嫌，我的号二区水源精华“灰太龙”，有兴趣的可以游戏里来找我(目测四国GM第一个来找我了，杯具鸟)。&lt;/p&gt;
+&lt;p&gt;2013/08/31更新:
+我开发的外挂已实现自动打魔神、CD一到自动找合适的贼打、自动送和获取好友给的行动力、自动刷塔等辅助功能。&lt;/p&gt;
+&lt;p&gt;2014/02/07更新: 目前功能已非常齐全，且已正式对外服务，请见:
+&lt;a class="reference external" href="%20http://sgzj.shouyouqu.com/"&gt;四国助手&lt;/a&gt;
+&lt;a class="reference external" href="%20http://sgzj.shouyouqu.com/"&gt;http://sgzj.shouyouqu.com/&lt;/a&gt;
+和对应的&lt;a class="reference external" href="http://cc2046.taobao.com/index.htm"&gt;淘宝店&lt;/a&gt;
+&lt;a class="reference external" href="http://cc2046.taobao.com/index.htm"&gt;http://cc2046.taobao.com/index.htm&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;挂机起因&lt;/h2&gt;
+&lt;p&gt;玩四国的除了大RMB玩家外可能都比较缺钱强化卡牌，而游戏里面一个重要的来钱手段就是7月18号开启的魔神战，全服务器的玩家共同砍魔神获得金币或者卡牌奖励，魔神战每天下午1点和晚9点开始持续2小时(除非魔神提前被砍死)，打魔神战有个要命的CD(俗称冷却时间)，CD根据卡组的COST值有些微小差异，COST越低CD越短，但最少差不多也要1分钟，也就是说为了获得较高的金币奖励，玩家不得不开着四国 …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://sgzj.muhegame.com/"&gt;四国战记&lt;/a&gt;是我最近玩过的比较不错的一款卡牌手游，玩四国依稀有点当年大学时代玩英雄无敌的感觉，我先无节操的推荐一下这款手游，邀请码就不放了，以免纯广告之嫌，我的号二区水源精华“灰太龙”，有兴趣的可以游戏里来找我(目测四国GM第一个来找我了，杯具鸟)。&lt;/p&gt;
+&lt;p&gt;2013/08/31更新:
+我开发的外挂已实现自动打魔神、CD一到自动找合适的贼打、自动送和获取好友给的行动力、自动刷塔等辅助功能。&lt;/p&gt;
+&lt;p&gt;2014/02/07更新: 目前功能已非常齐全，且已正式对外服务，请见:
+&lt;a class="reference external" href="%20http://sgzj.shouyouqu.com/"&gt;四国助手&lt;/a&gt;
+&lt;a class="reference external" href="%20http://sgzj.shouyouqu.com/"&gt;http://sgzj.shouyouqu.com/&lt;/a&gt;
+和对应的&lt;a class="reference external" href="http://cc2046.taobao.com/index.htm"&gt;淘宝店&lt;/a&gt;
+&lt;a class="reference external" href="http://cc2046.taobao.com/index.htm"&gt;http://cc2046.taobao.com/index.htm&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;挂机起因&lt;/h2&gt;
+&lt;p&gt;玩四国的除了大RMB玩家外可能都比较缺钱强化卡牌，而游戏里面一个重要的来钱手段就是7月18号开启的魔神战，全服务器的玩家共同砍魔神获得金币或者卡牌奖励，魔神战每天下午1点和晚9点开始持续2小时(除非魔神提前被砍死)，打魔神战有个要命的CD(俗称冷却时间)，CD根据卡组的COST值有些微小差异，COST越低CD越短，但最少差不多也要1分钟，也就是说为了获得较高的金币奖励，玩家不得不开着四国，魔神CD一到马上开砍，不得不说这招对提高游戏日活和用户停留时间应该是帮助蛮大的。而作为一名懒人的我，没有那个精力也没有那个时间盯着手机砍魔神，于是就琢磨是否可以写个机器人挂机砍魔神，事实证明这完全是可以的，因为四国是基于HTTP的且没有用HTTPS。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;挂机程序&lt;/h2&gt;
+&lt;p&gt;挂机程序原理很简单，只需要抓包抓到魔神战的HTTP请求URL地址和用户的Cookie，再在魔神战这个时间点启动程序模拟砍魔神的HTTP请求即可。最简单的其实用CURL就可以实现这个功能，不过为了测试并发和加入一些随机因子让机器人更像真人在玩，我后来用Python写了个简单的程序来做这件事。处于xxx考虑，这里我暂且把部分代码用xxx替代，Python代码如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# @author: Felinx Lee&lt;/span&gt;
+&lt;span class="c1"&gt;# Created on Jul 24, 2013&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 四国战记刷魔神boss&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;threading&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pytz&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;timezone&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado.httpclient&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTTPClient&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;HTTPRequest&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;escape&lt;/span&gt;
+
+&lt;span class="n"&gt;max_threads&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;  &lt;span class="c1"&gt;#  大于1时会用多线程同时砍，事实证明四国战记服务器程序还是蛮靠谱的，多线程并发会放进队列，不能同时砍两次甚至更多次:)&lt;/span&gt;
+
+&lt;span class="n"&gt;url_suffix&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;siguozhanji.muhenet.com/boss.php?do=Figxxxxxxxxxxxxxxxxxxxxxx&amp;quot;&lt;/span&gt;
+
+&lt;span class="n"&gt;users&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+         &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;server&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;s2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;cookie&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;_sid=cookiexxxxxx1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;  &lt;span class="c1"&gt;# s2 表 2 区&lt;/span&gt;
+         &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;server&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;s3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;cookie&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;_sid=cookiexxxxxx2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;  &lt;span class="c1"&gt;# s2 表 3 区&lt;/span&gt;
+         &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;log&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;abspath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vm"&gt;__file__&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;sg_boss.log&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fight&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+    &lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;HTTPClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;.&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;server&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;url_suffix&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;request&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;HTTPRequest&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Cookie&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cookie&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+    &lt;span class="n"&gt;respone&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fetch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;escape&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json_decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;respone&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;a+&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;tz&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;timezone&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Asia/Shanghai&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 因为我的服务器在美国，用的是UTC标准时间，这里为了日志记录方便转成了北京时间&lt;/span&gt;
+        &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tz&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%Y-%m-&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;%X&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;message&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;OK&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;escape&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;utf8&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c1"&gt;# 1.5 avg + 0.5&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;max_threads&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;threading&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Thread&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;fight&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,))&lt;/span&gt;
+                &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;然后在系统的crontab里添加如下这样的一段定时任务，让程序到点自动运行&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+* 5 * * * python /home/felinx/temp/sg_boss_bot.py
+0-30 6 * * * python /home/felinx/temp/sg_boss_bot.py
+
+* 13 * * * python /home/felinx/temp/sg_boss_bot.py
+0-30 14 * * * python /home/felinx/temp/sg_boss_bot.py
+&lt;/pre&gt;
+&lt;p&gt;注意上面的小时即每行的第二个参数是UTC时间的小时，加8就是北京时间，分别对应到13、14、21、22点，0-30指只前半小时生效，因为通常一个小时以后魔神就被那些大神玩家砍死了......&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;比较有意思的是如果机器人帮你砍过了，如果手机上的四国战记是开着的，它会自动切换到魔神战的打斗场景里去。&lt;/div&gt;
+&lt;div class="line"&gt;除了魔神战，其它的事情比如自动刷塔、自动砍盗贼是不是也可以做到呢？原则上也是可以的:)&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;挂机效果&lt;/h2&gt;
+&lt;p&gt;从7月24号我这个挂机机器人上线以来，我的号每次魔神战(基本都是3冰熊的卡组)大概可以砍10w上下的功勋值拿到24w+的游戏金币，有时候还能混到个强化牌加经验的可口食物，但不得不说有些大RMB玩家太疯狂，我的这机器人也砍的没有他们勤快和多分:)&lt;/p&gt;
+&lt;p&gt;不得不赞一下四国真是一个良心手游，值得推荐。我没有充过钱(四国团队的人要不喜欢了)依然可以玩的挺high，相比我叫MT我就怎么都玩不下去，而且自我第一天开始玩起到现在每天都在玩，现在每天固定要刷完5、6、7塔，有空时砍砍盗贼，当然魔神战没时间盯这就靠这机器人了，我加的那些好友大部分的等级都跟我同步在上升，四国的日活数据还是很不错的，祝贺四国战记团队。&lt;/p&gt;
+&lt;p&gt;最后，四国团队的人该有一天会发现我在挂机(我都写这了)，把我的设备给封掉吧，然后就没有然后了...&lt;/p&gt;
+&lt;p&gt;附：写博客的这个时间机器人砍魔神的结果图&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="/static/2013/08/IMG_1490.png"&gt;&lt;img alt="image0" class="alignnone size-full wp-image-833" src="/static/2013/08/IMG_1490.png" style="width: 960px; height: 640px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="四国战记"></category></entry><entry><title>实时消息处理系统NSQ &amp; Python Worker</title><link href="http://feilong.me/2013/05/nsq-realtime-message-processing-system.html" rel="alternate"></link><published>2013-05-18T18:43:00+08:00</published><updated>2013-05-18T18:43:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2013-05-18:/2013/05/nsq-realtime-message-processing-system.html</id><summary type="html">&lt;p&gt;NSQ是由知名短链接服务商&lt;a class="reference external" href="https://bitly.com"&gt;bitly&lt;/a&gt;用Go语言开发的实时消息处理系统，具有高性能、高可靠、无视单点故障等优点，是一个非常不错的新兴的消息队列解决方案。nsq现在发展很快，已有多种语言的客户端，Go和Python版本的客户端是官方出的，比较给力，其中Python客户端&lt;a class="reference external" href="https://github.com/bitly/pynsq"&gt;pynsq&lt;/a&gt;的Writer即发布消息部分的代码是我贡献的。&lt;/p&gt;
+&lt;p&gt;以下是我准备在5.22的上海GDG活动中做的有关NSQ的主题演讲的slideshare，看不到的同学请下载后面的pdf版本，关于nsq更详细的介绍就看我5.22日的主题分享了。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/FelinxLee/nsq-python-worker"&gt;Nsq &amp;amp; python
+worker&lt;/a&gt; from
+&lt;a class="reference external" href="http://www.slideshare.net/FelinxLee"&gt;Felinx Lee&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;分享过程视频，因为是支支用手机录的屏幕比较晃，大家凑合下。另外更正讲解过程中的一个口误，不是Go的作者之一follow了我的nsqworker项目而是nsq的主要作者。&lt;/p&gt;
+&lt;p&gt;PDF版本&amp;nbsp;&lt;a class="reference external" href="/static/2013/05/NSQ-Python-Worker.pdf"&gt;NSQ &amp;amp; Python
+Worker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PPT提到的我写的nsqworker的项目地址见：&lt;a class="reference external" href="https://github.com/felinx/nsqworker"&gt;https://github.com/felinx/nsqworker&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;NSQ是由知名短链接服务商&lt;a class="reference external" href="https://bitly.com"&gt;bitly&lt;/a&gt;用Go语言开发的实时消息处理系统，具有高性能、高可靠、无视单点故障等优点，是一个非常不错的新兴的消息队列解决方案。nsq现在发展很快，已有多种语言的客户端，Go和Python版本的客户端是官方出的，比较给力，其中Python客户端&lt;a class="reference external" href="https://github.com/bitly/pynsq"&gt;pynsq&lt;/a&gt;的Writer即发布消息部分的代码是我贡献的。&lt;/p&gt;
+&lt;p&gt;以下是我准备在5.22的上海GDG活动中做的有关NSQ的主题演讲的slideshare，看不到的同学请下载后面的pdf版本，关于nsq更详细的介绍就看我5.22日的主题分享了。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/FelinxLee/nsq-python-worker"&gt;Nsq &amp;amp; python
+worker&lt;/a&gt; from
+&lt;a class="reference external" href="http://www.slideshare.net/FelinxLee"&gt;Felinx Lee&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;分享过程视频，因为是支支用手机录的屏幕比较晃，大家凑合下。另外更正讲解过程中的一个口误，不是Go的作者之一follow了我的nsqworker项目而是nsq的主要作者。&lt;/p&gt;
+&lt;p&gt;PDF版本&amp;nbsp;&lt;a class="reference external" href="/static/2013/05/NSQ-Python-Worker.pdf"&gt;NSQ &amp;amp; Python
+Worker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PPT提到的我写的nsqworker的项目地址见：&lt;a class="reference external" href="https://github.com/felinx/nsqworker"&gt;https://github.com/felinx/nsqworker&lt;/a&gt;&lt;/p&gt;
+</content><category term="NSQ"></category><category term="消息系统"></category><category term="pynsq"></category></entry><entry><title>Web Performance &amp; Load 测试工具multi-mechanize</title><link href="http://feilong.me/2013/02/load-testing-with-multi-mechanize.html" rel="alternate"></link><published>2013-02-19T19:21:00+08:00</published><updated>2013-02-19T19:21:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2013-02-19:/2013/02/load-testing-with-multi-mechanize.html</id><summary type="html">&lt;p&gt;对Web服务做Performance &amp;amp; Load测试，最常见的工具有&lt;a class="reference external" href="http://httpd.apache.org/docs/2.2/programs/ab.html"&gt;Apache
+Benchmark&lt;/a&gt;俗称ab和商用工具LoadRunner。ab简单直接，功能也相对较弱，但我们经常看到的对一些Web
+server或者Framework的性能测试用的ab做的，而LoadRunner功能也确实很强大，各种大型软件公司、软件外包企业几乎是必备了，用起来很High，当然其价格也确实很High
+:)&lt;/p&gt;
+&lt;p&gt;这里要介绍的&lt;a class="reference external" href="https://github.com/cgoldberg/multi-mechanize"&gt;multi-mechanize(&lt;/a&gt;这名忒难记)是一款用Python开发的Performance
+&amp;amp;
+Load测试工具，是由&lt;a class="reference external" href="http://pylot.org/"&gt;Pylot&lt;/a&gt;的作者新近开发的，算是升级换代的产品。用multi-mechanize可以通过编写Python脚本来实现较复杂的测试逻辑，其并发测试是通过multiprocessing(多进程)和多线程机制来实现的。&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;&lt;strong&gt;1. 安装&lt;/strong&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pip-easy-install"&gt;
+&lt;h2&gt;万能的pip&amp;amp;easy_install&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pip-install-multi-mechanize-mechanize-numpy-matplotlib"&gt;
+&lt;h2&gt;pip install multi-mechanize mechanize numpy matplotlib&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;mechanize是一个模拟browser行为的一个库，当然你也可以用其它的如urllib2、request、tornado.httpclient等等库，不是必须。&lt;/li&gt;
+&lt;li&gt;后面两个numpy和matplotlib也是可选的，当你需要它自动生成图形化报表时才会用到，安装matplotlib你的系统有可能需要安装libpng和freetype库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;2. 使用方法&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;创建项目 …&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;对Web服务做Performance &amp;amp; Load测试，最常见的工具有&lt;a class="reference external" href="http://httpd.apache.org/docs/2.2/programs/ab.html"&gt;Apache
+Benchmark&lt;/a&gt;俗称ab和商用工具LoadRunner。ab简单直接，功能也相对较弱，但我们经常看到的对一些Web
+server或者Framework的性能测试用的ab做的，而LoadRunner功能也确实很强大，各种大型软件公司、软件外包企业几乎是必备了，用起来很High，当然其价格也确实很High
+:)&lt;/p&gt;
+&lt;p&gt;这里要介绍的&lt;a class="reference external" href="https://github.com/cgoldberg/multi-mechanize"&gt;multi-mechanize(&lt;/a&gt;这名忒难记)是一款用Python开发的Performance
+&amp;amp;
+Load测试工具，是由&lt;a class="reference external" href="http://pylot.org/"&gt;Pylot&lt;/a&gt;的作者新近开发的，算是升级换代的产品。用multi-mechanize可以通过编写Python脚本来实现较复杂的测试逻辑，其并发测试是通过multiprocessing(多进程)和多线程机制来实现的。&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;&lt;strong&gt;1. 安装&lt;/strong&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pip-easy-install"&gt;
+&lt;h2&gt;万能的pip&amp;amp;easy_install&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pip-install-multi-mechanize-mechanize-numpy-matplotlib"&gt;
+&lt;h2&gt;pip install multi-mechanize mechanize numpy matplotlib&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;mechanize是一个模拟browser行为的一个库，当然你也可以用其它的如urllib2、request、tornado.httpclient等等库，不是必须。&lt;/li&gt;
+&lt;li&gt;后面两个numpy和matplotlib也是可选的，当你需要它自动生成图形化报表时才会用到，安装matplotlib你的系统有可能需要安装libpng和freetype库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;2. 使用方法&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;创建项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+multimech-newproject my_project
+&lt;/pre&gt;
+&lt;p&gt;自动创建一个my_project目录，子目录test_scripts用来放测试脚本，config.cfg是测试配置，主要要配的是测试时间、测试脚本和并发threads量。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;脚本编写，借用官方的一个简单例子：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;#  Copyright (c) 2010 Corey Goldberg (corey@goldb.org)&lt;/span&gt;
+&lt;span class="c1"&gt;#  License: GNU LGPLv3&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;#  This file is part of Multi-Mechanize&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;mechanize&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Transaction&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;custom_timers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;br&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mechanize&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Browser&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;br&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_handle_robots&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;start_timer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;resp&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;br&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://www.example.com/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;latency&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;start_timer&lt;/span&gt;
+
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;custom_timers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Example_Homepage&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;latency&lt;/span&gt;
+
+        &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Bad HTTP Response&amp;#39;&lt;/span&gt;
+        &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Example Web Page&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;resp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_data&lt;/span&gt;&lt;span class="p"&gt;()),&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Failed Content Verification&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;trans&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Transaction&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;trans&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;trans&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;custom_timers&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;注意：按multi-mechanize的默认规则，每个脚本必须有一个Transaction的类，类要有一个run方法，在run里面写测试业务逻辑。这个例子是打开http://www.example.com，记录访问所耗时长，非常简单明了，而实际的场景你可能需要有用户登录、然后测试某个或多个页面(API)，只是测试业务复杂一些，写法是类似的。一个脚本文件只能有一个Transaction的类、类也只能有一个run方法，写起case来是不是觉得非常不方便？不用急，针对这点，后面的小技巧部分会另辟蹊径给你指条明路。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;运行项目的测试脚本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+multimech-run my_project
+&lt;/pre&gt;
+&lt;p&gt;测试结果报表和原始数据将放到results目录下按测试时间生成的子目录中，生产的html版本的结果统计如下图所示:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="/static/2013/02/multi-mechanize-report.jpg"&gt;&lt;img alt="image0" src="/static/2013/02/multi-mechanize-report.jpg" style="width: 881px; height: 942px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;3. 使用小技巧&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cookie：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果使用的是mechanize，可以通过下面的方式，从上面的browser对象br里获取到cookie信息。&lt;/p&gt;
+&lt;p&gt;br._ua_handlers[&amp;quot;_cookies&amp;quot;].cookieja&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;单个脚本多个测试用例的支持：这个思路来源于testsuite的概念，同一个testsuite里的case作为一组相关的case可以共享一些代码逻辑和资源(如browser对象)，而multi-mechanize默认的方式是不支持的，要实现这一点，只需要一点小小的技巧即可，上代码：&lt;/li&gt;
+&lt;li&gt;真实的并发量计算：multi-mechanize使用了multiprocessing库，会同时起多个进程，且每个进程按config里的配置起多个线程来实现并发测试，但真正的单位时间内的并发量并不是config里设置threads=10这样的表示每秒10个并发，真实的并发量需要根据最终完成的transaction数和这些transaction里面包含多少次http请求和总的完成时间来计算得知，这点不是很直观。&lt;/li&gt;
+&lt;li&gt;自定义统计数据：你可以往self.custom_timers这个内建的字典里塞任意的自定义统计数据，他们在报表中都能够得到体现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多的文档和一手资料请参考文档&lt;a class="reference external" href="http://testutils.org/multi-mechanize/"&gt;http://testutils.org/multi-mechanize/&lt;/a&gt;和git代码库&lt;a class="reference external" href="https://github.com/cgoldberg/multi-mechanize%20"&gt;https://github.com/cgoldberg/multi-mechanize&lt;/a&gt;。最后multi-mechanize还不是很好用，一是使用过程中发现有一些情况会抛异常，导致不能正确生成报表，另一个别扭的是case的编写不是unittest那一套，是作者自创Transaction流:)&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="multi-mechanize"></category></entry><entry><title>用Tornado开发RESTful API运用</title><link href="http://feilong.me/2012/10/developing-restful-api-with-tornado.html" rel="alternate"></link><published>2012-10-22T11:56:00+08:00</published><updated>2012-10-22T11:56:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2012-10-22:/2012/10/developing-restful-api-with-tornado.html</id><summary type="html">&lt;p&gt;《用Tornado开发RESTful API应用》，这是我在PyconCN
+2012上做的演讲主题，我原计划对此大概讲个30分钟，不过现场主持好像把我的这个主题归类到快速演讲里，或者是我之前没搞清楚吧，所以现场我对演讲的内容做了一些压缩，节奏也比较快，一些内容没有时间来做展开，对实现细节有兴趣的朋友可以去看我的演讲Slides和开源出来的d3status这个demo的源代码，源代码放在&amp;nbsp;&lt;a class="reference external" href="https://github.com/felinx/d3status"&gt;https://github.com/felinx/d3status&lt;/a&gt;，演讲Slides的下载链接见&amp;nbsp;&lt;a class="reference external" href="/static/2012/10/用Tornado开发RESTful-API运用.pdf"&gt;用Tornado开发RESTful
+API运用&lt;/a&gt;，你也可以通过下面内嵌的Slides直接查看，不过因为Slides放在slideshare上，需要翻墙。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/FelinxLee/tornadorestful-api"&gt;用Tornado开发RESTful
+API运用&lt;/a&gt;
+from &lt;a class="reference external" href="http://www.slideshare.net/FelinxLee"&gt;Felinx Lee&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;特别说明：&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;1.
+本次PyconCN事后有不少人吐槽广告比较多而干货少，我这个不算干货也不算广告，硬要说是广告的话，那就是我免费给Tornado打了个广告:)&lt;/div&gt;
+&lt;div class="line"&gt;2.
+有朋友在github上提出对d3status的ios客户端感兴趣，问能不能开源？答：因为iPhone
+APP的ObjC代码是朋友写的，这个暂时不考虑开源。&lt;/div&gt;
+&lt;div class="line"&gt;3.
+d3status这个demo虽然很小，但五脏俱全，且d3status的骨架抽取自我们线上运行了有近一年的app的源代码，有一定的参考和学习价值。&lt;/div&gt;
+&lt;/div&gt;
+</summary><content type="html">&lt;p&gt;《用Tornado开发RESTful API应用》，这是我在PyconCN
+2012上做的演讲主题，我原计划对此大概讲个30分钟，不过现场主持好像把我的这个主题归类到快速演讲里，或者是我之前没搞清楚吧，所以现场我对演讲的内容做了一些压缩，节奏也比较快，一些内容没有时间来做展开，对实现细节有兴趣的朋友可以去看我的演讲Slides和开源出来的d3status这个demo的源代码，源代码放在&amp;nbsp;&lt;a class="reference external" href="https://github.com/felinx/d3status"&gt;https://github.com/felinx/d3status&lt;/a&gt;，演讲Slides的下载链接见&amp;nbsp;&lt;a class="reference external" href="/static/2012/10/用Tornado开发RESTful-API运用.pdf"&gt;用Tornado开发RESTful
+API运用&lt;/a&gt;，你也可以通过下面内嵌的Slides直接查看，不过因为Slides放在slideshare上，需要翻墙。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/FelinxLee/tornadorestful-api"&gt;用Tornado开发RESTful
+API运用&lt;/a&gt;
+from &lt;a class="reference external" href="http://www.slideshare.net/FelinxLee"&gt;Felinx Lee&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;特别说明：&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;1.
+本次PyconCN事后有不少人吐槽广告比较多而干货少，我这个不算干货也不算广告，硬要说是广告的话，那就是我免费给Tornado打了个广告:)&lt;/div&gt;
+&lt;div class="line"&gt;2.
+有朋友在github上提出对d3status的ios客户端感兴趣，问能不能开源？答：因为iPhone
+APP的ObjC代码是朋友写的，这个暂时不考虑开源。&lt;/div&gt;
+&lt;div class="line"&gt;3.
+d3status这个demo虽然很小，但五脏俱全，且d3status的骨架抽取自我们线上运行了有近一年的app的源代码，有一定的参考和学习价值。&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Tornado"></category><category term="RESTful"></category></entry><entry><title>Tornado对子域名和泛域名的支持</title><link href="http://feilong.me/2012/08/wildcard-subdomain-support-in-tornado.html" rel="alternate"></link><published>2012-08-20T12:42:00+08:00</published><updated>2012-08-20T12:42:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2012-08-20:/2012/08/wildcard-subdomain-support-in-tornado.html</id><summary type="html">&lt;p&gt;其实Tornado对子域名和泛域名(除了特别说明外，以下子域名和泛域名均简称为泛域名)的支持并不是什么新鲜事，两年多前我用Tornado写的开源网站
+&lt;a class="reference external" href="http://poweredsites.org"&gt;http://poweredsites.org&lt;/a&gt;
+就有了对泛域名的支持，但是Tornado的官方文档里并没有明确对此功能进行说明，虽然源代码里是有注释的，终是有点隐晦，这不，近日mywaiting同学就遇到了这个问题，我应邀特撰此博文，分享下我对此的一点点经验。&lt;/p&gt;
+&lt;p&gt;通常，用Tornado添加url映射路由表是直接传handlers给Application这种方式的，比如官方的chatdemo：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tornado&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;handlers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MainHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/auth/login&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;AuthLoginHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/auth/logout&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;AuthLogoutHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/a/message/new&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MessageNewHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/a/message/updates&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MessageUpdatesHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;settings&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;其实Tornado对子域名和泛域名(除了特别说明外，以下子域名和泛域名均简称为泛域名)的支持并不是什么新鲜事，两年多前我用Tornado写的开源网站
+&lt;a class="reference external" href="http://poweredsites.org"&gt;http://poweredsites.org&lt;/a&gt;
+就有了对泛域名的支持，但是Tornado的官方文档里并没有明确对此功能进行说明，虽然源代码里是有注释的，终是有点隐晦，这不，近日mywaiting同学就遇到了这个问题，我应邀特撰此博文，分享下我对此的一点点经验。&lt;/p&gt;
+&lt;p&gt;通常，用Tornado添加url映射路由表是直接传handlers给Application这种方式的，比如官方的chatdemo：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tornado&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;handlers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MainHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/auth/login&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;AuthLoginHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/auth/logout&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;AuthLogoutHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/a/message/new&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MessageNewHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/a/message/updates&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;MessageUpdatesHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+        &lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;settings&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="n"&gt;cookie_secret&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;43oETzKXQAGaYdkL5gEmGeJJFuYh7EQnp2XdTP1o/Vo=&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;login_url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/auth/login&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;template_path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vm"&gt;__file__&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;templates&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="n"&gt;static_path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vm"&gt;__file__&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;static&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="n"&gt;xsrf_cookies&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="n"&gt;autoescape&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;xhtml_escape&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;tornado&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;handlers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这种方式其实添加的是一个域名通配的url映射表，即域名&amp;amp;子域名不限，只要访问能够解析到这个chatdemo上，“/auth/login”
+“/auth/login”这些url就都能够正常运行。假设www.feilong.me、abc.feilong.me、feilong2.me这个三个(子)域名均配置为可由这个chatdemo程序来host，那么访问这三个(子)域名均可以正常使用这个chatdemo，总之域名是无关的。&lt;/p&gt;
+&lt;p&gt;实际上，这种方式它的内部是通过Application里的这个add_handlers来实现的(原码注释如下)：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;add_handlers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;host_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;host_handlers&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Appends the given handlers to our handler list.&lt;/span&gt;
+
+&lt;span class="sd"&gt;    Note that host patterns are processed sequentially in the&lt;/span&gt;
+&lt;span class="sd"&gt;    order they were added, and only the first matching pattern is&lt;/span&gt;
+&lt;span class="sd"&gt;    used.  This means that all handlers for a given host must be&lt;/span&gt;
+&lt;span class="sd"&gt;    added in a single add_handlers call.&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;只不过它是隐式的调用这个add_handlers而已，其关键点就在于第一个参数host_pattern(匹配域名的)上，上面那种方式，默认添加的host_pattern是&amp;quot;.*$&amp;quot;，即域名通配，若要支持泛域名，只需要显式的调用add_handlers来添加相应的host_pattern和handlers即可。&lt;/p&gt;
+&lt;p&gt;接下来就以&lt;a class="reference external" href="https://bitbucket.org/felinx/poweredsites"&gt;poweredsites的源码&lt;/a&gt;来介绍Tornado对泛域名的支持，app.py里的Application里面有这么几句：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;handlers&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# add handlers for sub domains&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;sub_handler&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# host pattern and handlers&lt;/span&gt;
+    &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_handlers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sub_handler&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;sub_handler&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;常见的方式super(Application, self).__init__(handlers,
+**settings)添加的是根域名poweredsites的handlers，接着用for循环显式添加的是子域名和泛域名的handlers。这里的sub_handlers依次放有各子域名的handlers，其最后一个是泛域名的handlers：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;site&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;admin&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# wildcard subdomain handler for project should be the last one.&lt;/span&gt;
+&lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub_handlers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;指定的子域名的sub_handlers(site.sub_handlers)是这个样子的，这里的第一个元素就是host_pattern：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sub_handlers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;^sites.poweredsites.org$&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="p"&gt;[&lt;/span&gt;
+                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_WebsiteIndexHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/feeds&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_WebsitesFeedsHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/([a-z0-9]{32})&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_WebsiteHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/([^/]+)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;WebsiteHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                 &lt;span class="p"&gt;]&lt;/span&gt;
+                &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;泛域名(project.sub_handlers)的区别也就在于这第一个元素，即用来做host_pattern的是通配一些子域名的：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sub_handlers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;^[a-zA-Z_\-0-9]*\.poweredsites.org$&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ProjectIndexHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/top&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ProjectTopHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/opensource&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ProjectOpensourceHandler&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                 &lt;span class="p"&gt;]&lt;/span&gt;
+                &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在用到了泛域名的ProjectIndexHandler里，运行时具体的子域名就可以通过下面这样的方式获得：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ProjectIndexHandler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ProjectBaseHandler&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;subdomain&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;需要说明的是，Tornado里面的url映射表和Django一样是有顺序的，即url依次序由上到下匹配，只要匹配到就立即结束，不再往下匹配，而带子域名和泛域名的url路由其匹配优先级是要高于通配域名&amp;quot;.*$&amp;quot;的(这个不用你操心，add_handlers会自动为你做到这一点)。同样的，对于泛域名，因为其子域名是通配的，因此指定子域名的handlers需要放到泛域名前添加，如admin、blog这类子域名的handlers要放在泛域名之前，这就是poweredsites里sub_handlers.append(project.sub_handlers)放到最后一条的原因，project这条是对应泛域名的，&lt;a class="reference external" href="http://tornado.poweredsites.org"&gt;http://tornado.poweredsites.org&lt;/a&gt;
+就是靠这一条来实现的。&lt;/p&gt;
+&lt;p&gt;备注：需要支持泛域名，首先要你的域名解析支持泛域名。&lt;/p&gt;
+</content><category term="Tornado"></category><category term="泛域名"></category></entry><entry><title>有趣的Python闭包(Closures)</title><link href="http://feilong.me/2012/06/interesting-python-closures.html" rel="alternate"></link><published>2012-06-03T13:23:00+08:00</published><updated>2012-06-03T13:23:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2012-06-03:/2012/06/interesting-python-closures.html</id><summary type="html">&lt;p&gt;写下这篇博客，起源于Tornado邮件群组的这个问题 &lt;a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/d10165015eb293c1"&gt;how to use outer variable
+in inner
+method&lt;/a&gt;，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="c1"&gt;# print a + 1&lt;/span&gt;
+        &lt;span class="c1"&gt;# b = a + 1&lt;/span&gt;
+        &lt;span class="c1"&gt;# a = 1&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在Python2.x上运行这个函数会报UnboundLocalError:&amp;nbsp;local&amp;nbsp;variable&amp;nbsp;'a'&amp;nbsp;referenced&amp;nbsp;before&amp;nbsp;assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP …&lt;/p&gt;</summary><content type="html">&lt;p&gt;写下这篇博客，起源于Tornado邮件群组的这个问题 &lt;a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/d10165015eb293c1"&gt;how to use outer variable
+in inner
+method&lt;/a&gt;，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="c1"&gt;# print a + 1&lt;/span&gt;
+        &lt;span class="c1"&gt;# b = a + 1&lt;/span&gt;
+        &lt;span class="c1"&gt;# a = 1&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在Python2.x上运行这个函数会报UnboundLocalError:&amp;nbsp;local&amp;nbsp;variable&amp;nbsp;'a'&amp;nbsp;referenced&amp;nbsp;before&amp;nbsp;assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP
+227里面介绍到，Python解析器在搜索一个变量的定义时是根据如下三级规则来查找的：&lt;/p&gt;
+&lt;blockquote&gt;
+The Python 2.0 definition specifies exactly three namespaces to
+check for each name -- the local namespace, the global namespace,
+and the builtin namespace.&lt;/blockquote&gt;
+&lt;p&gt;这里的local实际上可能还有多级，上面的代码就是一个例子，下面通过对代码做些简单的修改来一步步理解这里面的规律：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;如果将a = a + 1这句换成print a + 1或者b = a +
+1，是不会有问题的，即在内部函数bar内，外部函数foo里的a实际是可见的，可以引用。&lt;/li&gt;
+&lt;li&gt;将a = a + 1换成 a =
+1也是没有问题的，但是如果你将两处出现的a的id打印出来你会发现，其实这两个a不是一回事，在内部函数bar里面，本地的a
+=
+1定义了在bar函数范围内的新的一个局部变量，因为名字和外部函数foo里面的变量a名字相同，导致外部函数foo里的a在内部函数bar里实际已不可见。&lt;/li&gt;
+&lt;li&gt;再来说a = a + 1出错是怎么回事，首先a =
+xxx这种形式，Python解析器认为要在内部函数bar内创建一个新的局部变量a，同时外部函数foo里的a在bar里已不可见，而解析器对接下来对右边的a
++
+1的解析就是用本地的变量a加1，而这时左边的a即本地的变量a还没有创建(等右边赋值呢)，因此就这就产生了一个是鸡生蛋还是蛋生鸡的问题，导致了上面说的UnboundLocalError的错误。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;要解决这个问题，在Python2.x里主要有两个方案：&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;用别名替代比如b = a + 1，内部函数bar内只引用外部函数foo里的a。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;将foo里的a设成一个容器，如list&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+    &lt;span class="n"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当然这有些时候还是很不方便，因此在Python3.x中引入了一个nonloacal的关键字来解决这个问题，只要在a
+= a + 1前加一句nonloacal
+a即可，即显式的指定a不是内部函数bar内的本地变量，这样就可以在bar内正常的使用和再赋值外部函数foo内的变量a了。&lt;/p&gt;
+&lt;p&gt;在搜索Python闭包相关的材料中，我在StackOverflow上发现一个有趣的有关Python闭包的问题，有兴趣的可以思考思考做做看，结果应该是什么？你预期的结果是什么，若不一致，如果要得到你预期的结果应该怎么改？&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;flist&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+    &lt;span class="n"&gt;flist&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;flist&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;扩展阅读：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0227/"&gt;PEP 227 -- Statically Nested
+Scopes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-3104/"&gt;PEP 3104 -- Access to Names in Outer
+Scopes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com/questions/233673/lexical-closures-in-python"&gt;Lexical closures in
+Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content><category term="闭包"></category><category term="closure"></category></entry><entry><title>用Tornado实现简单的在线代理</title><link href="http://feilong.me/2011/09/tornado-as-a-proxy.html" rel="alternate"></link><published>2011-09-10T23:13:00+08:00</published><updated>2011-09-10T23:13:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-09-10:/2011/09/tornado-as-a-proxy.html</id><summary type="html">&lt;p&gt;实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如&lt;a class="reference external" href="http://www.tornadoweb.cn"&gt;http://www.tornadoweb.cn&lt;/a&gt;用的就是nginx的代理功能做的tornadoweb官网的镜像。&lt;/p&gt;
+&lt;p&gt;最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运用需要调用到另一平台产品(Platform)的API。对于这个系统来说，可选的一种实现方式方式是APP同时跟Server&amp;amp;Platform两者交互；另一种则在Server端封装掉Platform的API，APP只和Server交互。显然后一种方式的系统架构会清晰些，APP编程时也就相对简单。那么如何在Server端封装Platform的API呢，我首先考虑到的就是用代理的方式来实现。碰巧最近Tornado邮件群组里有人在讨论&lt;a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/4c1ffaa0a0667650?pli=1"&gt;using
+Tornado as a
+proxy&lt;/a&gt;，贴主提到的运用场景跟我这碰到的场景非常的相似，我把原帖的代码做了些整理和简化，源代码如下：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# -*- coding: utf-8 -*-
+#
+# Copyright(c) 2011 Felinx Lee &amp;amp; http://feilong.me/
+#
+# Licensed under the Apache License, Version …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如&lt;a class="reference external" href="http://www.tornadoweb.cn"&gt;http://www.tornadoweb.cn&lt;/a&gt;用的就是nginx的代理功能做的tornadoweb官网的镜像。&lt;/p&gt;
+&lt;p&gt;最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运用需要调用到另一平台产品(Platform)的API。对于这个系统来说，可选的一种实现方式方式是APP同时跟Server&amp;amp;Platform两者交互；另一种则在Server端封装掉Platform的API，APP只和Server交互。显然后一种方式的系统架构会清晰些，APP编程时也就相对简单。那么如何在Server端封装Platform的API呢，我首先考虑到的就是用代理的方式来实现。碰巧最近Tornado邮件群组里有人在讨论&lt;a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/4c1ffaa0a0667650?pli=1"&gt;using
+Tornado as a
+proxy&lt;/a&gt;，贴主提到的运用场景跟我这碰到的场景非常的相似，我把原帖的代码做了些整理和简化，源代码如下：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# -*- coding: utf-8 -*-
+#
+# Copyright(c) 2011 Felinx Lee &amp;amp; http://feilong.me/
+#
+# Licensed under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;); you may
+# not use this file except in compliance with the License. You may obtain
+# a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+# License for the specific language governing permissions and limitations
+# under the License.
+
+import logging
+
+import tornado.httpserver
+import tornado.ioloop
+import tornado.options
+import tornado.web
+import tornado.httpclient
+from tornado.web import HTTPError, asynchronous
+from tornado.httpclient import HTTPRequest
+from tornado.options import define, options
+try:
+    from tornado.curl_httpclient import CurlAsyncHTTPClient as AsyncHTTPClient
+except ImportError:
+    from tornado.simple_httpclient import SimpleAsyncHTTPClient as AsyncHTTPClient
+
+define(&amp;quot;port&amp;quot;, default=8888, help=&amp;quot;run on the given port&amp;quot;, type=int)
+define(&amp;quot;api_protocol&amp;quot;, default=&amp;quot;http&amp;quot;)
+define(&amp;quot;api_host&amp;quot;, default=&amp;quot;feilong.me&amp;quot;)
+define(&amp;quot;api_port&amp;quot;, default=&amp;quot;80&amp;quot;)
+define(&amp;quot;debug&amp;quot;, default=True, type=bool)
+
+class ProxyHandler(tornado.web.RequestHandler):
+    &amp;#64;asynchronous
+    def get(self):
+        # enable API GET request when debugging
+        if options.debug:
+            return self.post()
+        else:
+            raise HTTPError(405)
+
+    &amp;#64;asynchronous
+    def post(self):
+        protocol = options.api_protocol
+        host = options.api_host
+        port = options.api_port
+
+        # port suffix
+        port = &amp;quot;&amp;quot; if port == &amp;quot;80&amp;quot; else &amp;quot;:%s&amp;quot; % port
+
+        uri = self.request.uri
+        url = &amp;quot;%s://%s%s%s&amp;quot; % (protocol, host, port, uri)
+
+        # update host to destination host
+        headers = dict(self.request.headers)
+        headers[&amp;quot;Host&amp;quot;] = host
+
+        try:
+            AsyncHTTPClient().fetch(
+                HTTPRequest(url=url,
+                            method=&amp;quot;POST&amp;quot;,
+                            body=self.request.body,
+                            headers=headers,
+                            follow_redirects=False),
+                self._on_proxy)
+        except tornado.httpclient.HTTPError, x:
+            if hasattr(x, &amp;quot;response&amp;quot;) and x.response:
+                self._on_proxy(x.response)
+            else:
+                logging.error(&amp;quot;Tornado signalled HTTPError %s&amp;quot;, x)
+
+    def _on_proxy(self, response):
+        if response.error and not isinstance(response.error,
+                                             tornado.httpclient.HTTPError):
+            raise HTTPError(500)
+        else:
+            self.set_status(response.code)
+            for header in (&amp;quot;Date&amp;quot;, &amp;quot;Cache-Control&amp;quot;, &amp;quot;Server&amp;quot;, &amp;quot;Content-Type&amp;quot;, &amp;quot;Location&amp;quot;):
+                v = response.headers.get(header)
+                if v:
+                    self.set_header(header, v)
+            if response.body:
+                self.write(response.body)
+            self.finish()
+
+def main():
+    tornado.options.parse_command_line()
+    application = tornado.web.Application([
+        (r&amp;quot;/.*&amp;quot;, ProxyHandler),
+    ])
+    http_server = tornado.httpserver.HTTPServer(application)
+    http_server.listen(options.port)
+    tornado.ioloop.IOLoop.instance().start()
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    main()
+&lt;/pre&gt;
+&lt;p&gt;运行上面的代码后，访问 &lt;a class="reference external" href="http://localhost:8888/"&gt;http://localhost:8888/&lt;/a&gt;
+将会完整显示飞龙博客的首页，即代理访问了http://feilong.me/的内容。&lt;/p&gt;
+&lt;p&gt;我考虑用程序的方式来做代理而不是直接用Nginx来做代理，其中一点是考虑到用程序可以很容易的控制Platform的哪些API是需要代理的，而哪些是要屏蔽掉的，还有哪些可能是要重写的(比如Server的login可能不能直接代理Platform的login，但却要调用到Platform的login
+API)。&lt;/p&gt;
+&lt;p&gt;以上这段代码只是做了简单的页面内容代理，并没有对页面进行进一步的解析处理，比如链接替换等，这些就交个有兴趣的朋友去开发了。基于以上这段代码，将其扩展一下，是完全可以实现一个完整的在线代理程序的。&lt;/p&gt;
+&lt;p&gt;这段代码我已放到了我的实验项目里，见&lt;a class="reference external" href="https://bitbucket.org/felinx/labs"&gt;https://bitbucket.org/felinx/labs&lt;/a&gt;，我将会放更多类似于这样的实验性质的小项目到这个repository里来，有兴趣的朋友可以关注一下。&lt;/p&gt;
+</content></entry><entry><title>Python web开发吐槽</title><link href="http://feilong.me/2011/08/talk-about-python-web-in-july-python-salon.html" rel="alternate"></link><published>2011-08-03T13:30:00+08:00</published><updated>2011-08-03T13:30:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-08-03:/2011/08/talk-about-python-web-in-july-python-salon.html</id><summary type="html">&lt;p&gt;说来惭愧，我用Python也有近5年了，但2011年7月上海Python聚会还是我第一次参与Python线下活动。第一次去，多少拿点东西去分享下吧，因此我以我的业余水平跑去吐槽吐槽了下Python的web开发。&lt;/p&gt;
+&lt;p&gt;此次聚会因为有沈崴沈游侠到场，来膜拜沈游侠的人很多，我也是其中之一，我的吐槽议题只是起个头的，录音中大家也可以听到很多Python牛人吐槽的声音。&lt;/p&gt;
+&lt;p&gt;下面为我在2011年7月上海Python聚会上吐槽Python web开发的录音和PPT材料。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://dlc3.sdo.com/FTP/CASMI/96423216/162768713/007M_110731_1353.MP3"&gt;Python
+web开发吐槽实况录音&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/FelinxLee/python-web"&gt;Python
+web开发吐槽PPT&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;说来惭愧，我用Python也有近5年了，但2011年7月上海Python聚会还是我第一次参与Python线下活动。第一次去，多少拿点东西去分享下吧，因此我以我的业余水平跑去吐槽吐槽了下Python的web开发。&lt;/p&gt;
+&lt;p&gt;此次聚会因为有沈崴沈游侠到场，来膜拜沈游侠的人很多，我也是其中之一，我的吐槽议题只是起个头的，录音中大家也可以听到很多Python牛人吐槽的声音。&lt;/p&gt;
+&lt;p&gt;下面为我在2011年7月上海Python聚会上吐槽Python web开发的录音和PPT材料。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://dlc3.sdo.com/FTP/CASMI/96423216/162768713/007M_110731_1353.MP3"&gt;Python
+web开发吐槽实况录音&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.slideshare.net/FelinxLee/python-web"&gt;Python
+web开发吐槽PPT&lt;/a&gt;&lt;/p&gt;
+</content><category term="Python"></category><category term="web framework"></category></entry><entry><title>tornadoweb.cn现提供Tornado中译文档</title><link href="http://feilong.me/2011/06/tornadoweb-cn-documentation.html" rel="alternate"></link><published>2011-06-20T15:14:00+08:00</published><updated>2011-06-20T15:14:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-06-20:/2011/06/tornadoweb-cn-documentation.html</id><summary type="html">&lt;p&gt;2011/07/06最新补充：tornado发布2.0后文档组织有较大更新，现&amp;nbsp;&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;http://www.tornadoweb.cn&lt;/a&gt;
+的子站&amp;nbsp;&lt;a class="reference external" href="http://en.tornadoweb.cn/"&gt;http://en.tornadoweb.cn&lt;/a&gt;
+提供原始文档的完整镜像，跟&lt;a class="reference external" href="http://tornado.org/"&gt;tornado.org&lt;/a&gt;同步，不再是本地的一个版本，cn站点首页提供的文档链接也已更新。&lt;/p&gt;
+&lt;p&gt;===&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.tornadoweb.org"&gt;tornadoweb.org&lt;/a&gt;的镜像站点&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;http://www.tornadoweb.cn&lt;/a&gt;(关于此镜像的由来另见：&lt;a class="reference external" href="http://feilong.me/2011/05/tornadoweb-cn-mirror"&gt;发布Tornado镜像站点tornadoweb.cn&lt;/a&gt;)现提供Tornado中译文档供参考，新的网站目录结构如下：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;http://www.tornadoweb.cn/&lt;/a&gt; 中译首页&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.tornadoweb.cn/documentation"&gt;http://www.tornadoweb.cn/documentation&lt;/a&gt; 中译Tornado文档&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.tornadoweb.cn/en"&gt;http://www.tornadoweb.cn/en …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;2011/07/06最新补充：tornado发布2.0后文档组织有较大更新，现&amp;nbsp;&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;http://www.tornadoweb.cn&lt;/a&gt;
+的子站&amp;nbsp;&lt;a class="reference external" href="http://en.tornadoweb.cn/"&gt;http://en.tornadoweb.cn&lt;/a&gt;
+提供原始文档的完整镜像，跟&lt;a class="reference external" href="http://tornado.org/"&gt;tornado.org&lt;/a&gt;同步，不再是本地的一个版本，cn站点首页提供的文档链接也已更新。&lt;/p&gt;
+&lt;p&gt;===&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.tornadoweb.org"&gt;tornadoweb.org&lt;/a&gt;的镜像站点&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;http://www.tornadoweb.cn&lt;/a&gt;(关于此镜像的由来另见：&lt;a class="reference external" href="http://feilong.me/2011/05/tornadoweb-cn-mirror"&gt;发布Tornado镜像站点tornadoweb.cn&lt;/a&gt;)现提供Tornado中译文档供参考，新的网站目录结构如下：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;http://www.tornadoweb.cn/&lt;/a&gt; 中译首页&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.tornadoweb.cn/documentation"&gt;http://www.tornadoweb.cn/documentation&lt;/a&gt; 中译Tornado文档&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.tornadoweb.cn/en"&gt;http://www.tornadoweb.cn/en&lt;/a&gt; 原版首页镜像&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.tornadoweb.cn/en/documentation"&gt;http://www.tornadoweb.cn/en/documentation&lt;/a&gt; 原版文档镜像&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;该中文文档的大部分翻译工作由 &lt;a class="reference external" href="http://zys-free.com/"&gt;邹业盛&lt;/a&gt;
+完成，后期的增修和编排由 &lt;a class="reference external" href="http://ducktypist.com/"&gt;gastlygem&lt;/a&gt; 完成。
+译文版权归原作者和译者所有，翻译原稿见
+&lt;a class="reference external" href="http://github.com/breezemind/tornado/tree/master/website/templates/cn"&gt;Tornado中文版文档&lt;/a&gt;。
+&lt;a class="reference external" href="http://www.tornadoweb.cn%20"&gt;http://www.tornadoweb.cn&lt;/a&gt;由
+&lt;a class="reference external" href="../"&gt;飞龙&lt;/a&gt; 筹划并赞助空间和域名。&lt;/p&gt;
+&lt;p&gt;大家发现有待优化的地方，可以参与进来进行改进，翻译的文件在
+&lt;a class="reference external" href="https://github.com/breezemind/tornado/tree/master/website/templates/cn"&gt;https://github.com/breezemind/tornado/tree/master/website/templates/cn&lt;/a&gt;，给发我一个pull
+request即可。&lt;/p&gt;
+</content><category term="Python"></category><category term="Tornado"></category></entry><entry><title>发布Tornado镜像站点tornadoweb.cn</title><link href="http://feilong.me/2010/05/tornadoweb-cn-mirror.html" rel="alternate"></link><published>2011-05-19T15:06:00+08:00</published><updated>2011-05-19T15:06:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-05-19:/2010/05/tornadoweb-cn-mirror.html</id><summary type="html">&lt;p&gt;鉴于&lt;a class="reference external" href="http://www.tornadoweb.org"&gt;Tornado官网&lt;/a&gt;架设在GAE上，而GAE在国内被墙，如果不爬墙大家访问不了Tornado官网，这个让很多国内Tornado用户不爽，也影响了Tornado在国内的推广。而我手头一直持有&lt;a class="reference external" href="http://www.tornadoweb.cn"&gt;tornadoweb.cn&lt;/a&gt;和tornadoweb.com.cn两个域名，之前是想开发个Tornado的中文站的，但在目前闲置的情况下，还不如先做一个官方网站的镜像，故今天特配置了一下我EC2上的nginx，做了一个Tornado官方网站的镜像站点&lt;a class="reference external" href="http://www.tornadoweb.cn"&gt;tornadoweb.cn&lt;/a&gt;，以造福国内Tornado用户，以后国内用户就可以直接通过&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;tornadoweb.cn&lt;/a&gt;查阅Tornado的文档了。&lt;/p&gt;
+&lt;p&gt;此举已致信Tornado的Ben：&lt;/p&gt;
+&lt;p&gt;Hi, Ben,&lt;/p&gt;
+&lt;p&gt;I have tried to create a mirror
+site(&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;http://www.tornadoweb.cn&lt;/a&gt;, just
+proxy the origin content) of &lt;a class="reference external" href="http://tornadoweb.org/"&gt;tornadoweb.org&lt;/a&gt;
+for Chinese …&lt;/p&gt;</summary><content type="html">&lt;p&gt;鉴于&lt;a class="reference external" href="http://www.tornadoweb.org"&gt;Tornado官网&lt;/a&gt;架设在GAE上，而GAE在国内被墙，如果不爬墙大家访问不了Tornado官网，这个让很多国内Tornado用户不爽，也影响了Tornado在国内的推广。而我手头一直持有&lt;a class="reference external" href="http://www.tornadoweb.cn"&gt;tornadoweb.cn&lt;/a&gt;和tornadoweb.com.cn两个域名，之前是想开发个Tornado的中文站的，但在目前闲置的情况下，还不如先做一个官方网站的镜像，故今天特配置了一下我EC2上的nginx，做了一个Tornado官方网站的镜像站点&lt;a class="reference external" href="http://www.tornadoweb.cn"&gt;tornadoweb.cn&lt;/a&gt;，以造福国内Tornado用户，以后国内用户就可以直接通过&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;tornadoweb.cn&lt;/a&gt;查阅Tornado的文档了。&lt;/p&gt;
+&lt;p&gt;此举已致信Tornado的Ben：&lt;/p&gt;
+&lt;p&gt;Hi, Ben,&lt;/p&gt;
+&lt;p&gt;I have tried to create a mirror
+site(&lt;a class="reference external" href="http://www.tornadoweb.cn/"&gt;http://www.tornadoweb.cn&lt;/a&gt;, just
+proxy the origin content) of &lt;a class="reference external" href="http://tornadoweb.org/"&gt;tornadoweb.org&lt;/a&gt;
+for Chinese because &lt;a class="reference external" href="http://tornadoweb.org/"&gt;tornadoweb.org&lt;/a&gt; is
+blocked by GFW in China, so Chinese guys can not view Tornado
+documentation online if they do not use any VPNs.&lt;/p&gt;
+&lt;p&gt;Can I do that? If it is ok, I would like to announce this site to
+Tornado uses in China, it's a good news for them really, thanks a lot.&lt;/p&gt;
+&lt;p&gt;Ben很快回复了，但他希望最好能在头上说明下这是原站的镜像：&lt;/p&gt;
+&lt;p&gt;Yeah, I think that's fine. &amp;nbsp;Maybe just add a disclaimer at the top of
+the home page that this is a mirror and the official home page is
+&lt;a class="reference external" href="http://tornadoweb.org/"&gt;tornadoweb.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;因此，我接着就把tornado的logo文件代理到一个本地新制作的文件，在原logo上加上了是镜像的备注信息(A
+mirror of tornadoweb.org)，再次给Ben去了封信，Ben立马就回了。&lt;/p&gt;
+&lt;p&gt;Yeah, looks good.&lt;/p&gt;
+&lt;p&gt;OK，此事搞定！&lt;/p&gt;
+&lt;p&gt;呱唧呱唧，大家还不给飞龙鼓掌:)&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a class="reference external" href="http://feilong.me/2011/05/tornadoweb-cn-mirror"&gt;http://feilong.me/2011/05/tornadoweb-cn-mirror&lt;/a&gt;&lt;/p&gt;
+</content></entry><entry><title>用Supervisord管理Python进程</title><link href="http://feilong.me/2011/03/monitor-processes-with-supervisord.html" rel="alternate"></link><published>2011-03-29T11:51:00+08:00</published><updated>2011-03-29T11:51:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-03-29:/2011/03/monitor-processes-with-supervisord.html</id><summary type="html">&lt;p&gt;Supervisord是用Python实现的一款非常实用的进程管理工具，类似于&lt;a class="reference external" href="http://mmonit.com/monit/"&gt;monit&lt;/a&gt;(关于monit见我的博客:&lt;a class="reference external" href="http://feilong.me/2011/02/monitor-core-processes-with-monit"&gt;用monit监控系统关键进程&lt;/a&gt;)，monit和supervisord的一个比较大的差异是supervisord管理的进程必须由supervisord来启动，monit可以管理已经在运行的程序；supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon
+off让nginx以非daemon方式启动。&lt;/p&gt;
+&lt;div class="section" id="supervisord"&gt;
+&lt;h2&gt;Supervisord安装&lt;/h2&gt;
+&lt;p&gt;Supervisord可以通过&lt;tt class="docutils literal"&gt;sudo easy_install supervisor&lt;/tt&gt;安装，当然也可以通过&lt;a class="reference external" href="http://supervisord.org/"&gt;Supervisord官网&lt;/a&gt;下载后setup.py
+install安装。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;Supervisord配置&lt;/h2&gt;
+&lt;p&gt;Supervisord默认的配置文件路径为/etc/supervisord.conf，通过文本编辑器修改这个文件，下面是一个示例的配置文件：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+;/etc/supervisord.conf
+[unix_http_server]
+file = /var/run/supervisor.sock
+chmod = 0777
+chown= root:felinx
+
+[inet_http_server]
+# Web管理界面设定
+port=9001
+username = admin …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Supervisord是用Python实现的一款非常实用的进程管理工具，类似于&lt;a class="reference external" href="http://mmonit.com/monit/"&gt;monit&lt;/a&gt;(关于monit见我的博客:&lt;a class="reference external" href="http://feilong.me/2011/02/monitor-core-processes-with-monit"&gt;用monit监控系统关键进程&lt;/a&gt;)，monit和supervisord的一个比较大的差异是supervisord管理的进程必须由supervisord来启动，monit可以管理已经在运行的程序；supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon
+off让nginx以非daemon方式启动。&lt;/p&gt;
+&lt;div class="section" id="supervisord"&gt;
+&lt;h2&gt;Supervisord安装&lt;/h2&gt;
+&lt;p&gt;Supervisord可以通过&lt;tt class="docutils literal"&gt;sudo easy_install supervisor&lt;/tt&gt;安装，当然也可以通过&lt;a class="reference external" href="http://supervisord.org/"&gt;Supervisord官网&lt;/a&gt;下载后setup.py
+install安装。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;Supervisord配置&lt;/h2&gt;
+&lt;p&gt;Supervisord默认的配置文件路径为/etc/supervisord.conf，通过文本编辑器修改这个文件，下面是一个示例的配置文件：&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+;/etc/supervisord.conf
+[unix_http_server]
+file = /var/run/supervisor.sock
+chmod = 0777
+chown= root:felinx
+
+[inet_http_server]
+# Web管理界面设定
+port=9001
+username = admin
+password = yourpassword
+
+[supervisorctl]
+; 必须和'unix_http_server'里面的设定匹配
+serverurl = unix:///var/run/supervisord.sock
+
+[supervisord]
+logfile=/var/log/supervisord/supervisord.log ; (main log file;default $CWD/supervisord.log)
+logfile_maxbytes=50MB       ; (max main logfile bytes b4 rotation;default 50MB)
+logfile_backups=10          ; (num of main logfile rotation backups;default 10)
+loglevel=info               ; (log level;default info; others: debug,warn,trace)
+pidfile=/var/run/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
+nodaemon=true              ; (start in foreground if true;default false)
+minfds=1024                 ; (min. avail startup file descriptors;default 1024)
+minprocs=200                ; (min. avail process descriptors;default 200)
+user=root                 ; (default is current user, required if root)
+childlogdir=/var/log/supervisord/            ; ('AUTO' child log dir, default $TEMP)
+
+[rpcinterface:supervisor]
+supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
+
+; 管理的单个进程的配置，可以添加多个program
+[program:chatdemon]
+command=python /home/felinx/demos/chat/chatdemo.py
+autostart = true
+startsecs = 5
+user = felinx
+redirect_stderr = true
+；这对这个program的log的配置，上面的logfile_maxbytes是supervisord本身的log配置
+stdout_logfile_maxbytes = 20MB
+stdoiut_logfile_backups = 20
+stdout_logfile = /var/log/supervisord/chatdemo.log
+
+; 配置一组进程，对于类似的program可以通过这种方式添加，避免手工一个个添加
+[program:groupworker]
+command=python /home/felinx/demos/groupworker/worker.py
+numprocs=24
+process_name=%(program_name)s_%(process_num)02d
+autostart = true
+startsecs = 5
+user = felinx
+redirect_stderr = true
+stdout_logfile = /var/log/supervisord/groupworker.log
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;Supervisord管理&lt;/h2&gt;
+&lt;p&gt;Supervisord安装完成后有两个可用的命令行supervisor和supervisorctl，命令使用解释如下：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;supervisord，初始启动Supervisord，启动、管理配置中设置的进程。&lt;/li&gt;
+&lt;li&gt;supervisorctl stop
+programxxx，停止某一个进程(programxxx)，programxxx为&lt;tt class="docutils literal"&gt;[program:chatdemon]&lt;/tt&gt;里配置的值，这个示例就是chatdemon。&lt;/li&gt;
+&lt;li&gt;supervisorctl start programxxx，启动某个进程&lt;/li&gt;
+&lt;li&gt;supervisorctl restart programxxx，重启某个进程&lt;/li&gt;
+&lt;li&gt;supervisorctl stop groupworker:
+，重启所有属于名为groupworker这个分组的进程(start,restart同理)&lt;/li&gt;
+&lt;li&gt;supervisorctl stop
+all，停止全部进程，注：start、restart、stop都不会载入最新的配置文件。&lt;/li&gt;
+&lt;li&gt;supervisorctl
+reload，载入最新的配置文件，停止原有进程并按新的配置启动、管理所有进程。&lt;/li&gt;
+&lt;li&gt;supervisorctl
+update，根据最新的配置文件，启动新配置或有改动的进程，配置没有改动的进程不会受影响而重启。&lt;/li&gt;
+&lt;li&gt;注意：显示用stop停止掉的进程，用reload或者update都不会自动重启。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="Python"></category><category term="supervisord"></category></entry><entry><title>Pycon2011精彩视频分享</title><link href="http://feilong.me/2011/03/pycon2011-videos-sharing.html" rel="alternate"></link><published>2011-03-21T10:58:00+08:00</published><updated>2011-03-21T10:58:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-03-21:/2011/03/pycon2011-videos-sharing.html</id><summary type="html">&lt;p&gt;Python大会上的精彩视频，这些视频很大而且在墙外，因此我用本站的服务器下了下来，然后转到了我国内的服务器，特分享给大家。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://goo.gl/KvA5G"&gt;Pycon-PyCon2011AnIntroductionToTornado277.m4v&lt;/a&gt;
+献给Tornado爱好者，视频开头有一些垃圾时间，可以忽略。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://goo.gl/O94np"&gt;How Dropbox Did It and How Python Helped&lt;/a&gt;
+Python在Dropbox的运用。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://goo.gl/W759t"&gt;Using Coroutines to Create Efficient, High-Concurrency Web
+Applications&lt;/a&gt; 介绍Python协程的。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://goo.gl/95PtV"&gt;Advanced Network Architectures With ZeroMQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;待补充...，欢迎大家推荐Pycon2011视频源。&lt;/li&gt;
+&lt;/ul&gt;
+</summary><content type="html">&lt;p&gt;Python大会上的精彩视频，这些视频很大而且在墙外，因此我用本站的服务器下了下来，然后转到了我国内的服务器，特分享给大家。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://goo.gl/KvA5G"&gt;Pycon-PyCon2011AnIntroductionToTornado277.m4v&lt;/a&gt;
+献给Tornado爱好者，视频开头有一些垃圾时间，可以忽略。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://goo.gl/O94np"&gt;How Dropbox Did It and How Python Helped&lt;/a&gt;
+Python在Dropbox的运用。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://goo.gl/W759t"&gt;Using Coroutines to Create Efficient, High-Concurrency Web
+Applications&lt;/a&gt; 介绍Python协程的。&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://goo.gl/95PtV"&gt;Advanced Network Architectures With ZeroMQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;待补充...，欢迎大家推荐Pycon2011视频源。&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="Python"></category><category term="PyCon"></category></entry><entry><title>如何在开发测试和生产环境下跑同一套Python代码</title><link href="http://feilong.me/2011/03/run-some-code-in-testing-and-deploying-server.html" rel="alternate"></link><published>2011-03-14T13:27:00+08:00</published><updated>2011-03-14T13:27:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-03-14:/2011/03/run-some-code-in-testing-and-deploying-server.html</id><summary type="html">&lt;p&gt;通常在开发测试和生产环境下，程序的配置和系统环境等会有所差异，比如最常见的调试DEBUG选项本地一般是开的，而在生产环境这个肯定是要关闭的。手动维护两套配置显然是不明智的，下面介绍一点小技巧，让你可以轻松实现一套代码同时跑在开发测试和生产环境下。&lt;/p&gt;
+&lt;p&gt;下面以Django为例(Tornado、Pylons等类似)&lt;/p&gt;
+&lt;p&gt;首先需要判断当前环境是开发环境还是生产环境，常见的方式是检测机器名。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;platform&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;platform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;FELINX&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# FELINX is the name of felinx&amp;#39; EC2 server.&lt;/span&gt;
+    &lt;span class="n"&gt;DEBUG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;DEBUG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;不清楚机器名的话，可以通过hostname命令来查询和修改，下面是修改的命令。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;hostname&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这样在开发环境和生产环境的DEBUG选项就不一样了，接下来对有需要区别对待的配置或代码就可以通过检测DEBUG来进行选择了，比如在&lt;a class="reference external" href="http://www.chinapy.org"&gt;http://www.chinapy.org&lt;/a&gt;的&lt;a class="reference external" href="https://bitbucket.org/felinx/chinapy/src/tip/chinapy/settings_local.py"&gt;settings_local.py&lt;/a&gt;中有这么一段代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;DEBUG …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;通常在开发测试和生产环境下，程序的配置和系统环境等会有所差异，比如最常见的调试DEBUG选项本地一般是开的，而在生产环境这个肯定是要关闭的。手动维护两套配置显然是不明智的，下面介绍一点小技巧，让你可以轻松实现一套代码同时跑在开发测试和生产环境下。&lt;/p&gt;
+&lt;p&gt;下面以Django为例(Tornado、Pylons等类似)&lt;/p&gt;
+&lt;p&gt;首先需要判断当前环境是开发环境还是生产环境，常见的方式是检测机器名。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;platform&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;platform&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;FELINX&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c1"&gt;# FELINX is the name of felinx&amp;#39; EC2 server.&lt;/span&gt;
+    &lt;span class="n"&gt;DEBUG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;DEBUG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;不清楚机器名的话，可以通过hostname命令来查询和修改，下面是修改的命令。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;hostname&lt;/span&gt; &lt;span class="n"&gt;xxx&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这样在开发环境和生产环境的DEBUG选项就不一样了，接下来对有需要区别对待的配置或代码就可以通过检测DEBUG来进行选择了，比如在&lt;a class="reference external" href="http://www.chinapy.org"&gt;http://www.chinapy.org&lt;/a&gt;的&lt;a class="reference external" href="https://bitbucket.org/felinx/chinapy/src/tip/chinapy/settings_local.py"&gt;settings_local.py&lt;/a&gt;中有这么一段代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;DEBUG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;CACHE_BACKEND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;file://&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dirname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vm"&gt;__file__&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;cache&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;SESSION_ENGINE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;django.contrib.sessions.backends.db&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;CACHE_BACKEND&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;memcached://127.0.0.1:11211&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;SESSION_ENGINE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;django.contrib.sessions.backends.cache&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;上面就实现了自动选择相应的CACHE和SESSION配置，这样相同的代码就可以跑在开发环境和生产环境了。&lt;/p&gt;
+</content><category term="Python"></category><category term="tips"></category></entry><entry><title>Python兼容性编程</title><link href="http://feilong.me/2011/02/learning-python-follow-felinx-part-one.html" rel="alternate"></link><published>2011-02-21T18:17:00+08:00</published><updated>2011-02-21T18:17:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-02-21:/2011/02/learning-python-follow-felinx-part-one.html</id><summary type="html">&lt;p&gt;鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家&lt;strong&gt;讨论、拍砖、献花&lt;/strong&gt;！&lt;/p&gt;
+&lt;p&gt;我将主要结合&lt;a class="reference external" href="http://github.com/facebook/tornado"&gt;Tornado的源码&lt;/a&gt;来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。&lt;/p&gt;
+&lt;p&gt;为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Tornado的代码规范且质量很高；&lt;/li&gt;
+&lt;li&gt;代码总量比较小，比较容易掌握；&lt;/li&gt;
+&lt;li&gt;飞龙对Tornado多多少少有点研究。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注：&lt;a class="reference external" href="http://www.tornadoweb.org/"&gt;Tornado(要翻墙)&lt;/a&gt;是&lt;a class="reference external" href="http://friendfeed.com"&gt;friendfeed.com&lt;/a&gt;（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web
+server，同时又是一个类web.py的web框架，关于Tornado
+web框架部分的讨论见我的博客“ &lt;a class="reference external" href="http://feilong.me/2011/01/talk-about-python-web-framework"&gt;浅谈Python
+web框架&lt;/a&gt;”相应的部分，对于Tornado的web
+server的性能，可以参考Tornado官方主页和&lt;a class="reference external" href="http://nichol.as/benchmark-of-python-web-servers"&gt;http://nichol.as/benchmark-of-python-web-servers&lt;/a&gt;的介绍。&lt;/p&gt;
+&lt;p&gt;看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:)&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;系统兼容 …&lt;/h2&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家&lt;strong&gt;讨论、拍砖、献花&lt;/strong&gt;！&lt;/p&gt;
+&lt;p&gt;我将主要结合&lt;a class="reference external" href="http://github.com/facebook/tornado"&gt;Tornado的源码&lt;/a&gt;来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。&lt;/p&gt;
+&lt;p&gt;为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Tornado的代码规范且质量很高；&lt;/li&gt;
+&lt;li&gt;代码总量比较小，比较容易掌握；&lt;/li&gt;
+&lt;li&gt;飞龙对Tornado多多少少有点研究。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注：&lt;a class="reference external" href="http://www.tornadoweb.org/"&gt;Tornado(要翻墙)&lt;/a&gt;是&lt;a class="reference external" href="http://friendfeed.com"&gt;friendfeed.com&lt;/a&gt;（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web
+server，同时又是一个类web.py的web框架，关于Tornado
+web框架部分的讨论见我的博客“ &lt;a class="reference external" href="http://feilong.me/2011/01/talk-about-python-web-framework"&gt;浅谈Python
+web框架&lt;/a&gt;”相应的部分，对于Tornado的web
+server的性能，可以参考Tornado官方主页和&lt;a class="reference external" href="http://nichol.as/benchmark-of-python-web-servers"&gt;http://nichol.as/benchmark-of-python-web-servers&lt;/a&gt;的介绍。&lt;/p&gt;
+&lt;p&gt;看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:)&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;系统兼容&lt;/h2&gt;
+&lt;p&gt;Python和许多具有虚拟机的语言一样，支持跨平台，基本可以一次编写到处运行，所以大部分时候大家不用考虑系统兼容性的问题，跟系统相关的能用Python现成的API的就用，不要自己去蛮干就行。比如文件路径的拼接，你别自己傻乎乎的去做字符串拼接，而是用已封装好的os.path.join来实现。&lt;/p&gt;
+&lt;p&gt;如果你要实现的功能跟系统强相关或在不同的系统中实现是完全不一样的，那就需要考虑这个问题了，这个时候一般是把相关的API封装成一致，然后根据系统信息来选择不同的实现模块，Tornado示例代码如下（模块和代码行数见第一行注释，注：代码行可能会随着Tornado的升级而稍有变化，后面不再做特别说明）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# tornado.httpserver line 32&lt;/span&gt;
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;fcntl&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;tornado&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;win32_support&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;fcntl&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;raise&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在windows上运行和在linux下运行，导入的fcntl模块是不同的，windows下导入的是Tornado的win32_support这个实验性质的模块，当然API接口做的跟fcntl是一致的，而在具体用到fcntl的部分就不再需要考虑系统兼容性的问题了，更复杂一点的一个例子见：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# tornado.ioloop line 539&lt;/span&gt;
+&lt;span class="c1"&gt;# Choose a poll implementation. Use epoll if it is available, fall back to&lt;/span&gt;
+&lt;span class="c1"&gt;# select() for non-Linux platforms&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;hasattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;epoll&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# Python 2.6+ on Linux&lt;/span&gt;
+    &lt;span class="n"&gt;_poll&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;epoll&lt;/span&gt;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nb"&gt;hasattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;kqueue&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# Python 2.6+ on BSD or Mac&lt;/span&gt;
+    &lt;span class="n"&gt;_poll&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_KQueue&lt;/span&gt;
+&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# Linux systems with our C module installed&lt;/span&gt;
+        &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;epoll&lt;/span&gt;
+        &lt;span class="n"&gt;_poll&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_EPoll&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# All other systems&lt;/span&gt;
+        &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;linux&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;platform&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;logging&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;warning&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;epoll module not found; using select()&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;_poll&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_Select&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;其实就是在不同的操作系统上选择不同的poll实现，至于模块在不同操作系统是如何实现那是另一个问题了。&lt;/p&gt;
+&lt;p&gt;通过这种方式可以有效的屏蔽不同系统下的编程差异，降低系统兼容性编程的复杂度。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;向下兼容&lt;/h2&gt;
+&lt;p&gt;软件版本都避免不了升级，版本一多就有了版本向下兼容的问题（特别的，Python3.x是不向下兼容Python2.x的），这个时候代码里就需要一些向下兼容的代码，主要表现有两种，下面分别介绍：&lt;/p&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h3&gt;兼容不同的Python版本&lt;/h3&gt;
+&lt;p&gt;这类最常见的就是用try、import、except三者组成的黄金搭档，Tornado代码举例如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# tornado.escape line 24&lt;/span&gt;
+&lt;span class="c1"&gt;# json module is in the standard library as of python 2.6; fall back to&lt;/span&gt;
+&lt;span class="c1"&gt;# simplejson if present for older versions.&lt;/span&gt;
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
+    &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="nb"&gt;hasattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;loads&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="nb"&gt;hasattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dumps&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;_json_decode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;
+    &lt;span class="n"&gt;_json_encode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dumps&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;simplejson&lt;/span&gt;
+        &lt;span class="n"&gt;_json_decode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_unicode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="n"&gt;_json_encode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dumps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="c1"&gt;# For Google AppEngine&lt;/span&gt;
+            &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;django.utils&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;
+            &lt;span class="n"&gt;_json_decode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loads&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_unicode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+            &lt;span class="n"&gt;_json_encode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;simplejson&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dumps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;_json_decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;NotImplementedError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                &lt;span class="s2"&gt;&amp;quot;A JSON parser is required, e.g., simplejson at &amp;quot;&lt;/span&gt;
+                &lt;span class="s2"&gt;&amp;quot;http://pypi.python.org/pypi/simplejson/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;_json_encode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_json_decode&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这段这么长的代码的目的其实只有一个，就是导入可用的json模块，分别尝试用Python2.6+自带的json模块、simplejson第三方包、django环境里的simplejson（其实和前面的simplejson是一个东西，不过django把它集成到它自己的utils里去了），若都缺的话最后会抛一个常用来表功能未实现的异常（NotImplementedError）。有了这段代码，在Python2.6+、Python2.5+simplejson、Python2.5+django的Python环境下，Tornado的json编解码的功能都能够正常使用。
+更常见一点的例子，如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# tornado.httpserver line 40&lt;/span&gt;
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;ssl&lt;/span&gt; &lt;span class="c1"&gt;# Python 2.6+&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;ssl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;multiprocessing&lt;/span&gt; &lt;span class="c1"&gt;# Python 2.6+&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;multiprocessing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;然后后面一般会有针对性的处理，如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;multiprocessing&lt;/span&gt; &lt;span class="ow"&gt;is&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# do something&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="api"&gt;
+&lt;h3&gt;兼容API的变化&lt;/h3&gt;
+&lt;p&gt;无论事先有多好的设计，API的变化多多少少总是不可避免的，API的变化必然会带来软件兼容性的问题，在Python的世界里，因为Python特殊的变量机制（如下图，详见：&lt;a class="reference external" href="../2011/01/recommended-entries-for-you-to-master-python"&gt;学好Python必读的几篇文章&lt;/a&gt;
+里推荐的第二篇文章 &lt;a class="reference external" href="http://python.net/%7Egoodger/projects/pycon/2007/idiomatic/handout.html"&gt;Code Like a Pythonista: Idiomatic
+Python&lt;/a&gt;），&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" src="/static/2011/02/ab2tag.jpg" style="width: 153px; height: 88px;" /&gt;&lt;/p&gt;
+&lt;p&gt;这个问题通常变得异常的简单，Tornado示例如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# tornado.httpclient line 367&lt;/span&gt;
+&lt;span class="c1"&gt;# For backwards compatibility: Tornado 1.0 included a new implementation of&lt;/span&gt;
+&lt;span class="c1"&gt;# AsyncHTTPClient that has since replaced the original.  Define an alias&lt;/span&gt;
+&lt;span class="c1"&gt;# so anything that used AsyncHTTPClient2 still works&lt;/span&gt;
+&lt;span class="n"&gt;AsyncHTTPClient2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AsyncHTTPClient&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;你没有看错，除了注释，代码其实就那么一行。
+Tornado最早的版本就有一个AsyncHTTPClient实现，但是在中间又引人了一个实验性质的AsyncHTTPClient把它命名为AsyncHTTPClient2以示区别，AsyncHTTPClient2比AsyncHTTPClient更强劲，后来功能稳定了Tornado就把AsyncHTTPClient2的代码移到了AsyncHTTPClient中当作默认的实现。&lt;/p&gt;
+&lt;p&gt;接下来问题就来了，如果直接把AsyncHTTPClient2的代码都去掉，还在用AsyncHTTPClient2的同学一旦升级了Tornado就糟了，而如果继续保持AsyncHTTPClient2的全部代码不动，那就会有两份几乎一模一样的冗余代码，优雅的解决这个问题实际上只需要上面这么一行代码，AsyncHTTPClient2的代码可以全部撤下，因为这样无论用户在用AsyncHTTPClient还是AsyncHTTPClient2，实际用的会是同一个API。&lt;/p&gt;
+&lt;p&gt;这一解决方案非常实用的，许多地方都可以看到它的影子，再给大家举个例子，旧的多线程模块threading的实现其命名规范是不符合现在的PEP8标准的，而它提供符合PEP8标准的API的方式也很简单，示例代码片段如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# python2.6 threading line 799&lt;/span&gt;
+&lt;span class="c1"&gt;# Global API functions&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;currentThread&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;_active&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;_get_ident&lt;/span&gt;&lt;span class="p"&gt;()]&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;KeyError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;##print &amp;quot;current_thread(): no current thread for&amp;quot;, _get_ident()&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;_DummyThread&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;current_thread&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;currentThread&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;activeCount&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;_active_limbo_lock&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;acquire&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_active&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;_limbo&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;_active_limbo_lock&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;release&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;count&lt;/span&gt;
+
+&lt;span class="n"&gt;active_count&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;activeCount&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;向上兼容&lt;/h2&gt;
+&lt;p&gt;向上兼容这个可能少有人听过，但在Python这奇妙的世界里，还真有这事，这就是神秘的__future__模块，你可能看到过下面这样的代码：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# tornado.httpclient line 19&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;__future__&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;with_statement&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这就是在消费Python未来的成果（将来或说较新的版本才有的特性），在较低的版本里就可以使用较高版本里才会正式成为Python一部分的新特性，这里是后面的代码有用到with表达式（关于它将来会另外写博客介绍），深入进__future__模块的代码，里面有这么几行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;with_statement&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;_Feature&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;alpha&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                          &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;alpha&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                          &lt;span class="n"&gt;CO_FUTURE_WITH_STATEMENT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;前两行tuple分别表示首次引入的版本和预测的即将成为Python正式的一部分的版本信息，针对with表达式，这里的意思就是说with是在Python2.5的版本才实验性引入的，但需要用前面那句import才能够正常使用，而在Python2.6中可能会（实事已经）成为正式Python的一部分，即可以不用import那句就可以直接用了。
+__future__里引入的特性都将成为未来版本里实事上的标准，但是在一些实验性引入该特性的低版本里通过__future__也可以用，将来升级了Python版本，用了新特性的代码也不会有兼容性的问题了。&lt;/p&gt;
+&lt;p&gt;总之，Python很容易写出兼容性很好的程序，可是杯具的是Python3.x不完全兼容2.x，导致Python3.x推出来这么久了迟迟没有得到大规模的运用。&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="Python"></category></entry><entry><title>浅谈Python web框架</title><link href="http://feilong.me/2011/01/talk-about-python-web-framework.html" rel="alternate"></link><published>2011-01-25T19:01:00+08:00</published><updated>2011-01-25T19:01:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-25:/2011/01/talk-about-python-web-framework.html</id><summary type="html">&lt;p&gt;说到web
+framework，Ruby的世界Rails一统江湖，而Python则是一个百花齐放的世界，各种micro-framework、framework不可胜数，不完全列表见：&lt;a class="reference external" href="http://wiki.python.org/moin/WebFrameworks"&gt;http://wiki.python.org/moin/WebFrameworks&lt;/a&gt;。虽然另一大脚本语言PHP也有不少框架，但远没有Python这么夸张，也正是因为Python
+web framework（Python
+web开发框架，以下简称Python框架）太多，所以在Python社区总有关于Python框架孰优孰劣的话题，讨论的时间跨度甚至长达3-5年。&lt;/p&gt;
+&lt;p&gt;Python这么多框架，能挨个玩个遍的人不多，坦白的说我也只用过其中的三个开发过项目，另外一些稍微接触过，所以这里只能浅谈一下，欢迎懂行的朋友们补充、拍砖。&lt;/p&gt;
+&lt;div class="section" id="django"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="http://www.djangoproject.com"&gt;Django&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="section" id="image0"&gt;
+&lt;h2&gt;&lt;img alt="image0" class="alignnone size-full wp-image-225" src="/static/2011/01/hdr_logo.gif" style="width: 117px; height: 41px;" /&gt;&lt;/h2&gt;
+&lt;p&gt;Python框架虽然说是百花齐放，但仍然有那么一家是最大的，它就是Django。要说Django是Python框架里最好的，有人同意也有人坚决反对，但说Django的文档最完善、市场占有率最高、招聘职位最多估计大家都没什么意见。Django为人所称道的地方主要有：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;完美的文档，Django的成功，我觉得很大一部分原因要归功于Django近乎完美的官方文档（包括Django
+book）。&lt;/li&gt;
+&lt;li&gt;全套的解决方案，Django象Rails一样，提供全套的解决方案（full-stack …&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;说到web
+framework，Ruby的世界Rails一统江湖，而Python则是一个百花齐放的世界，各种micro-framework、framework不可胜数，不完全列表见：&lt;a class="reference external" href="http://wiki.python.org/moin/WebFrameworks"&gt;http://wiki.python.org/moin/WebFrameworks&lt;/a&gt;。虽然另一大脚本语言PHP也有不少框架，但远没有Python这么夸张，也正是因为Python
+web framework（Python
+web开发框架，以下简称Python框架）太多，所以在Python社区总有关于Python框架孰优孰劣的话题，讨论的时间跨度甚至长达3-5年。&lt;/p&gt;
+&lt;p&gt;Python这么多框架，能挨个玩个遍的人不多，坦白的说我也只用过其中的三个开发过项目，另外一些稍微接触过，所以这里只能浅谈一下，欢迎懂行的朋友们补充、拍砖。&lt;/p&gt;
+&lt;div class="section" id="django"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="http://www.djangoproject.com"&gt;Django&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div class="section" id="image0"&gt;
+&lt;h2&gt;&lt;img alt="image0" class="alignnone size-full wp-image-225" src="/static/2011/01/hdr_logo.gif" style="width: 117px; height: 41px;" /&gt;&lt;/h2&gt;
+&lt;p&gt;Python框架虽然说是百花齐放，但仍然有那么一家是最大的，它就是Django。要说Django是Python框架里最好的，有人同意也有人坚决反对，但说Django的文档最完善、市场占有率最高、招聘职位最多估计大家都没什么意见。Django为人所称道的地方主要有：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;完美的文档，Django的成功，我觉得很大一部分原因要归功于Django近乎完美的官方文档（包括Django
+book）。&lt;/li&gt;
+&lt;li&gt;全套的解决方案，Django象Rails一样，提供全套的解决方案（full-stack
+framework + batteries
+included），基本要什么有什么（比如：cache、session、feed、orm、geo、auth），而且全部Django自己造，开发网站应手的工具Django基本都给你做好了，因此开发效率是不用说的，出了问题也算好找，不在你的代码里就在Django的源码里。&lt;/li&gt;
+&lt;li&gt;强大的URL路由配置，Django让你可以设计出非常优雅的URL，在Django里你基本可以跟丑陋的GET参数说拜拜。&lt;/li&gt;
+&lt;li&gt;自助管理后台，admin
+interface是Django里比较吸引眼球的一项contrib，让你几乎不用写一行代码就拥有一个完整的后台管理界面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;而Django的缺点主要源自Django坚持自己造所有的轮子，整个系统相对封闭，Django最为人诟病的地方有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;系统紧耦合，如果你觉得Django内置的某项功能不是很好，想用喜欢的第三方库来代替是很难的，比如下面将要说的ORM、Template。要在Django里用SQLAlchemy或Mako几乎是不可能，即使打了一些补丁用上了也会让你觉得非常非常别扭。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Django自带的ORM远不如SQLAlchemy强大，除了在Django这一亩三分地，SQLAlchemy是Python世界里事实上的ORM标准，其它框架都支持SQLAlchemy了，唯独Django仍然坚持自己的那一套。Django的开发人员对SQLAlchemy的支持也是有过讨论和尝试的，不过最终还是放弃了，估计是代价太高且跟Django其它的模块很难合到一块。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Template功能比较弱，不能插入Python代码，要写复杂一点的逻辑需要另外用Python实现Tag或Filter。关于模板这一点，一直以来争论比较多，最近有两篇关于Python模板的比较有意思的文章可供参考：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pydanny.blogspot.com/2010/12/stupid-template-languages.html"&gt;http://pydanny.blogspot.com/2010/12/stupid-template-languages.html&lt;/a&gt;（需翻墙）&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://techspot.zzzeek.org/2010/12/04/in-response-to-stupid-template-languages/"&gt;http://techspot.zzzeek.org/2010/12/04/in-response-to-stupid-template-languages/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;URL配置虽然强大，但全部要手写，这一点跟Rails的Convention over
+configuration的理念完全相左，高手和初识Django的人配出来的URL会有很大差异。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;让人纠结的auth模块，Django的auth跟其它模块结合紧密，功能也挺强的，就是做的有点过了，用户的数据库schema都给你定好了，这样问题就来了，比如很多网站要求email地址唯一，可schema里这个字段的值不是唯一的，纠结是必须的了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Python文件做配置文件，而不是更常见的ini、xml或yaml等形式。这本身不是什么问题，可是因为理论上来说settings的值是能够动态的改变的（虽然大家不会这么干），但这不是最佳实践的体现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;总的来说，Django大包大揽，用它来快速开发一些Web运用是很不错的。如果你顺着Django的设计哲学来，你会觉得Django很好用，越用越爽；相反，你如果不能融入或接受Django的设计哲学，你用Django一定会很痛苦，趁早放弃的好。所以说在有些人眼里Django无异于仙丹，但对有一些人来说它又是毒药且剧毒。&lt;/p&gt;
+&lt;p&gt;Django案例有&lt;a class="reference external" href="http://disqus.com"&gt;disqus.com&lt;/a&gt;、&lt;a class="reference external" href="http://bitbucket.org"&gt;bitbucket.org&lt;/a&gt;、&lt;a class="reference external" href="http://www.haibao.cn"&gt;海报网&lt;/a&gt;等。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pylons-turbogears-repoze-bfg"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="http://www.pylonshq.com"&gt;Pylons&lt;/a&gt; &amp;amp; &lt;a class="reference external" href="http://turbogears.org/"&gt;TurboGears&lt;/a&gt; &amp;amp; &lt;a class="reference external" href="http://bfg.repoze.org/"&gt;repoze.bfg&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="image1" class="alignnone size-full wp-image-226" src="/static/2011/01/pylons_logo.jpg" style="width: 346px; height: 102px;" /&gt;&lt;/p&gt;
+&lt;p&gt;除了Django另一个大头就是Pylons了，因为TurboGears2.x是基于Pylons来做的，而repoze.bfg也已经并入Pylons
+project里这个大的项目里，后面不再单独讨论TurboGears和repoze.bfg了。&lt;/p&gt;
+&lt;p&gt;Pylons和Django的设计理念完全不同，Pylons本身只有两千行左右的Python代码，不过它还附带有一些几乎就是Pylons御用的第三方模块。Pylons只提供一个架子和可选方案，你可以根据自己的喜好自由的选择Template、ORM、form、auth等组件，系统高度可定制。我们常说Python是一个胶水语言(glue
+language)，那么我们完全可以说Pylons就是一个用胶水语言设计的胶水框架:)&lt;/p&gt;
+&lt;p&gt;选择Pylons多是选择了它的自由，选择了自由的同时也预示着你选择了噩梦：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;学习噩梦，Pylons依赖于许多第三方库，它们并不是Pylons造，你学Pylons的同时还得学这些库怎么使用，关键有些时候你都不知道你要学什么。Pylons的学习曲线相对比Django要高的多，而之前Pylons的官方文档也一直是人批评的对象，好在后来出了&lt;a class="reference external" href="http://pylonsbook.com/en/1.1/"&gt;The
+Definitive Guide to
+Pylons&lt;/a&gt;这本书，这一局面有所改观。因为这个原因，Pylons一度被誉为只适合高手使用的Python框架。&lt;/li&gt;
+&lt;li&gt;调试噩梦，因为牵涉到的模块多，一旦有错误发生就比较难定位问题处在哪里。可能是你写的程序的错、也可能是Pylons出错了、再或是SQLAlchemy出错了、搞不好是formencode有bug，反正很凌乱了。这个只有用的很熟了才能解决这个问题。&lt;/li&gt;
+&lt;li&gt;升级噩梦，安装Pylons大大小小共要安装近20个Python模块，各有各自的版本号，要升级Pylons的版本，哪个模块出了不兼容的问题都有可能，升级基本上很难很难。至今reddit的Pylons还停留在古董的0.9.6上，SQLAlchemy也还是0.5.3的版本，应该跟这条有关系。所以大家玩Pylons一定要结合virtualenv来玩，给自己留条后路，不然会死得很惨。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pylons和repoze.bfg的融合可能会催生下一个能挑战Django地位的框架。&lt;/p&gt;
+&lt;p&gt;Pylons的案例有&lt;a class="reference external" href="http://www.reddit.com"&gt;reddit.com&lt;/a&gt;、&lt;a class="reference external" href="http://www.dropbox.com"&gt;dropbox.com&lt;/a&gt;、&lt;a class="reference external" href="http://www.quora.com"&gt;quora.com&lt;/a&gt;等。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tornado-web-py"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="http://www.tornadoweb.org"&gt;Tornado&lt;/a&gt;&amp;amp; &lt;a class="reference external" href="http://webpy.org/"&gt;web.py&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="image2" class="alignnone size-full wp-image-227" src="/static/2011/01/tornado.png" style="width: 286px; height: 72px;" /&gt;&lt;/p&gt;
+&lt;p&gt;Tornado即是一个web
+server（对此本文不作详述），同时又是一个类web.py的micro-framework，作为框架Tornado的思想主要来源于web.py，大家在web.py的网站首页也可以看到Tornado的大佬&lt;a class="reference external" href="http://bret.appspot.com"&gt;Bret
+Taylor&lt;/a&gt;的这么一段话（他这里说的FriendFeed用的框架跟Tornado可以看作是一个东西）：&lt;/p&gt;
+&lt;blockquote&gt;
+&amp;quot;[web.py inspired the] web framework we use at FriendFeed [and] the
+webapp framework that ships with App Engine...&amp;quot;&lt;/blockquote&gt;
+&lt;p&gt;因为有这层关系，后面不再单独讨论Tornado。&lt;/p&gt;
+&lt;p&gt;web.py的设计理念力求精简（Keep it simple and
+powerful），总共就没多少行代码，也不像Pylons那样依赖大量的第三方模块，而是只提供的一个框架所必须的一些东西，如：URL路由、Template、数据库访问，其它的就交给用户自己去做好了。&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;一个框架精简的好处在于你可以聚焦在业务逻辑上，而不用太多的去关心框架本身或受框架的干扰，同时缺点也很明显，许多事情你得自己操刀上。&lt;/div&gt;
+&lt;div class="line"&gt;我个人比较偏好这种精简的框架，因为你很容易通过阅读源码弄明白整个框架的工作机制，如果框架那一块不是很合意的话，我完全可以Monkey
+patch一下按自己的要求来。&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;早期的reddit是用web.py写的，Tornado的案例有&lt;a class="reference external" href="http://friendfeed.com"&gt;friendfeed.com&lt;/a&gt;、&lt;a class="reference external" href="http://bit.ly"&gt;bit.ly&lt;/a&gt;、&lt;a class="reference external" href="http://www.quora.com"&gt;quora.com&lt;/a&gt;和我的开源站点&lt;a class="reference external" href="http://poweredsites.org"&gt;poweredsites.org&lt;/a&gt;等。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bottle-flask"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="http://bottle.paws.de/"&gt;Bottle&lt;/a&gt; &amp;amp; &lt;a class="reference external" href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="image3" class="alignnone size-full wp-image-228" src="/static/2011/01/bottle-logo.png" style="width: 276px; height: 100px;" /&gt;&lt;/p&gt;
+&lt;p&gt;Bottle和Flask作为新生一代Python框架的代表，挺有意思的是都采用了decorator的方式配置URL路由，如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bottle&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;
+
+&lt;span class="nd"&gt;@route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/:name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;World&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;lt;b&amp;gt;Hello &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;!&amp;lt;/b&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+
+&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8080&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Bottle、Flask跟web.py一样，都非常精简，Bottle甚至所有的代码都在那一个两千来行的.py文件里。另外Flask和Pylons一样，可以跟Jinja2、SQLAlchemy之类结合的很好。&lt;/p&gt;
+&lt;p&gt;不过目前不管是Bottle还是Flask成功案例都还很少。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="quixote"&gt;
+&lt;h2&gt;&lt;a class="reference external" href="http://www.quixote.ca/"&gt;Quixote&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;之所以要特别说一下Quixote，是因为国内的最大的用Python开发的网站“&lt;a class="reference external" href="http://www.douban.com"&gt;豆瓣网&lt;/a&gt;”是用Quixote开发的。我只简单翻了一下源代码，没有做过研究，不发表评论，有经验的来补充下。我只是在想，如果豆瓣网交到现在来开发，应该会有更多的选择。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="web2pyuliwebkarrigellwerkzeug"&gt;
+&lt;h2&gt;其它（web2py、uliweb、Karrigell、Werkzeug ...）&lt;/h2&gt;
+&lt;p&gt;欢迎大家补充...&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;最后关于框架选择的误区&lt;/h2&gt;
+&lt;p&gt;在框架的选择问题上，许多人很容易就陷入了下面两个误区中而不自知：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;哪个框架最好 －
+世上没有最好的框架，只有最适合你自己、最适合你的团队的框架。编程语言选择也是一个道理，你的团队Python最熟就用Python好了，如果最熟悉的是Ruby那就用Ruby好了，编程语言、框架都只是工具，能多、快、好、省的干完活就是好东西，管TMD是日本鬼子还是美帝造呢！&lt;/li&gt;
+&lt;li&gt;过分关注性能 －
+其实大部分人是没必要太关心框架的性能的，因为你开发的网站根本就是个小站，能上1万的IP的网站已经不多了，上10万的更是很少很少。在没有一定的访问量前谈性能其实是没有多大意义的，因为你的CPU和内存一直就闲着呢。而且语言和框架一般也不会是性能瓶颈，性能问题最常出现在数据库访问和文件读写上。PHP的Zend
+Framework是出了名的慢，但是Zend
+Framework一样有大站，如：digg.com；常被人说有性能问题的Ruby和Rails，不是照样可以开发出twitter吗？再者现在的硬件、带宽成本其实是很低的，特别有了云计算平台后，人力成本才是最贵的，没有上万的IP根本就不用太在意性能问题，流量上去了花点钱买点服务器空间好了，简单快速的解决性能问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注：前面有网友质疑我“Quora是用Pylons开发的”这样的说法不客观，特说明一下，这里所说的某个网站A是用B开发的，只是指A主要或部分是由B开发的，大家就不要再去纠结A还用C了。&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="Python"></category><category term="web framework"></category><category term="Django"></category><category term="Tornado"></category></entry><entry><title>Python一大好消息PEP 3333 Accepted</title><link href="http://feilong.me/2011/01/pep-3333-accepted.html" rel="alternate"></link><published>2011-01-14T08:47:00+08:00</published><updated>2011-01-14T08:47:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-14:/2011/01/pep-3333-accepted.html</id><summary type="html">&lt;p&gt;不日前我在&lt;a class="reference external" href="http://feilong.me/2011/01/recommended-entries-for-you-to-master-python"&gt;“学好Python必读的几篇文章”&lt;/a&gt;中提到的尚在草案状态的&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-3333/"&gt;PEP
+3333&lt;/a&gt;已经正式Final了（Status:Final），公布这个事件的邮件见&lt;a class="reference external" href="http://mail.python.org/pipermail/web-sig/2011-January/004979.html"&gt;PEP
+3333
+Accepted&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;这标志着新的兼容Python3的WSGI规范制定工作已完成，此事无疑给Python
+Web界和Python3的推广运用注入一强心剂，意义非常重大：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0333/"&gt;PEP
+333&lt;/a&gt;和Python3的不兼容让很多Web
+server、framework、middleware的开发者不得不对Python3的支持采取观望、等待的态度，暂时没有把项目升级到Python3排上日程。PEP
+3333的定稿，将加速这些项目Python3的移植，可以预见的是很快就会有人宣称他们的Web
+server或framework将支持PEP
+3333、Python3了，届时大家就可以用Python3来写Web运用了。&lt;/li&gt;
+&lt;li&gt;再扯远一点，当用Python3开发Web已经成为主流的时候，大家就不再为Python2.x和Python3.x的不兼容而犯愁了，这会坚定更多的想用Python开发Web运用的人的决心，Python用户有望进一步的增加，Tiobe上Python语言的指数将再攀新高。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;PS：快速预览PEP333和PEP3333的差异见：&lt;a class="reference external" href="http://svn.python.org/view/peps/trunk/pep-3333.txt?r1=84854&amp;amp;r2=HEAD"&gt;http://svn.python.org/view/peps/trunk/pep-3333 …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;不日前我在&lt;a class="reference external" href="http://feilong.me/2011/01/recommended-entries-for-you-to-master-python"&gt;“学好Python必读的几篇文章”&lt;/a&gt;中提到的尚在草案状态的&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-3333/"&gt;PEP
+3333&lt;/a&gt;已经正式Final了（Status:Final），公布这个事件的邮件见&lt;a class="reference external" href="http://mail.python.org/pipermail/web-sig/2011-January/004979.html"&gt;PEP
+3333
+Accepted&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;这标志着新的兼容Python3的WSGI规范制定工作已完成，此事无疑给Python
+Web界和Python3的推广运用注入一强心剂，意义非常重大：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0333/"&gt;PEP
+333&lt;/a&gt;和Python3的不兼容让很多Web
+server、framework、middleware的开发者不得不对Python3的支持采取观望、等待的态度，暂时没有把项目升级到Python3排上日程。PEP
+3333的定稿，将加速这些项目Python3的移植，可以预见的是很快就会有人宣称他们的Web
+server或framework将支持PEP
+3333、Python3了，届时大家就可以用Python3来写Web运用了。&lt;/li&gt;
+&lt;li&gt;再扯远一点，当用Python3开发Web已经成为主流的时候，大家就不再为Python2.x和Python3.x的不兼容而犯愁了，这会坚定更多的想用Python开发Web运用的人的决心，Python用户有望进一步的增加，Tiobe上Python语言的指数将再攀新高。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;PS：快速预览PEP333和PEP3333的差异见：&lt;a class="reference external" href="http://svn.python.org/view/peps/trunk/pep-3333.txt?r1=84854&amp;amp;r2=HEAD"&gt;http://svn.python.org/view/peps/trunk/pep-3333.txt?r1=84854&amp;amp;r2=HEAD&lt;/a&gt;&lt;/p&gt;
+</content><category term="Python"></category><category term="pep"></category></entry><entry><title>学好Python必读的几篇文章</title><link href="http://feilong.me/2011/01/recommended-entries-for-you-to-master-python.html" rel="alternate"></link><published>2011-01-12T12:02:00+08:00</published><updated>2011-01-12T12:02:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-12:/2011/01/recommended-entries-for-you-to-master-python.html</id><summary type="html">&lt;p&gt;作为脚本语言Python上手容易，但要学好Python能写出一手漂亮的、Pythonic的Python代码并非一日之功，本文的目的在于推荐一些优秀的Python相关的文章(至于书大家可以看dip、learning
+python和官方手册去)，让你在成长为一名Python高手的路上少走一点弯路。注：文章都是英文的，学好Python读懂英文资料这是必须的了。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0008/"&gt;1. PEP8 Style Guide for Python Code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;排第一的当属Python的编码规范PEP8，这个就不用我多说吧，无论是初学还是高手PEP8都是必须烂熟于胸的。在遵循里面讲述的规则的同时，大家也要记住两句比较特殊的话，不过这两句话千万别滥用了:）&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Two good reasons to break a particular rule:
+
+(1) When applying the rule would make the code less readable, even for
+    someone who is used to …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;作为脚本语言Python上手容易，但要学好Python能写出一手漂亮的、Pythonic的Python代码并非一日之功，本文的目的在于推荐一些优秀的Python相关的文章(至于书大家可以看dip、learning
+python和官方手册去)，让你在成长为一名Python高手的路上少走一点弯路。注：文章都是英文的，学好Python读懂英文资料这是必须的了。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0008/"&gt;1. PEP8 Style Guide for Python Code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;排第一的当属Python的编码规范PEP8，这个就不用我多说吧，无论是初学还是高手PEP8都是必须烂熟于胸的。在遵循里面讲述的规则的同时，大家也要记住两句比较特殊的话，不过这两句话千万别滥用了:）&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Two good reasons to break a particular rule:
+
+(1) When applying the rule would make the code less readable, even for
+    someone who is used to reading code that follows the rules.
+
+(2) To be consistent with surrounding code that also breaks it (maybe for
+    historic reasons) -- although this is also an opportunity to clean up
+    someone else's mess (in true XP style).
+&lt;/pre&gt;
+&lt;p&gt;如果要写Python的C扩展库，你还必须好好学习下&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0007/"&gt;PEP7&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html"&gt;2. Code Like a Pythonista: Idiomatic
+Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;文如其名，本文篇幅较长，但非常非常实用。本文介绍了一系列Python约定俗成的用法和技巧，学习本文能让你写出来的Python代码马上上一个档次，让你成为一个真正的Pythoneer。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0318/"&gt;3. PEP318 Decorators for Functions and
+Methods&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在Python的世界里decorator是非常常见的，常见的比如auth、cache都会提供decorator，decorator所实现的功能就是修改紧接
+decorator之后定义的函数和方法，你可以根据自己的需要给一个已有的函数和方法添油加醋。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://docs.python.org/library/re.html"&gt;4. Python regular expression documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;掌握正则表达式是编程人员的必备技能，这是re模块的官方文档，用到正则表达式的时候要常来翻翻。Python的正则表达式跟别的语言函数用法有点
+不一样，因此也有人抱怨说Python的re模块不好用，文章开头关于正则表达式规则部分可以当正则表达式的入门教材，如果你还不知道正则表达式是个什么
+东西的话。个人觉得Python的re模块非常强大的，举个有点意思的例子，比如VERBOSE的正则表达式还支持在正则表达式中间加注释说明正则表达式
+的具体含义，因为正则表达式通常都象天书一样比较难懂，因此这个功能显得非常有用。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;\d +  # the integral part&lt;/span&gt;
+&lt;span class="s2"&gt;                   \.    # the decimal point&lt;/span&gt;
+&lt;span class="s2"&gt;                   \d *  # some fractional digits&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0333/"&gt;5. PEP333 Python Web Server Gateway Interface
+v1.0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果你要用Python来做Web相关的开发（对大多说人来说主要就是指Web运用）WSGI是必读的，WSGI是Python
+web server、application、middleware之间的官方规范标准，现在主流的Python
+web
+server和framework都肯定支持WSGI的。只有了解了WSGI你才能更好的理解Python的web
+framework的工作机制、middleware为啥可以串联起来、web server是怎么跟web
+application交互的。WSGI有两个为人诟病的地方，一是不支持异步，Tornado是一个异步的Web
+server，但是若要在上面运行WSGI的framework如Django，则Tornado的异步特性完全用不上；二是WSGI
+v1.0不支持Python3.x，为了支持Python3.x，有两篇还在Draft状态的PEP文档&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-3333/"&gt;PEP3333&lt;/a&gt;和&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0444/"&gt;PEP444&lt;/a&gt;可供参考。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://scotdoyle.com/python-epoll-howto.html"&gt;6. How To Use Linux epoll with
+Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;更深入一点，如果你要做服务器端的编程的话，此文可以让你深入理解Python的同步、异步socket编程模式。假如你觉得Tornado的源码比较费解的话，读读这篇文章对你会很有大的帮助。&lt;/p&gt;
+&lt;p&gt;7.另外还有一些比较重要的文档，这里不做详解，有兴趣的同学可以去看看：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.siafoo.net/article/52"&gt;Python Tips, Tricks, and Hacks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0257/"&gt;Python Docstring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0342/"&gt;Coroutines via Enhanced
+Generators&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://packages.python.org/greenlet/"&gt;Greenlet documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python.org/download/releases/2.2.3/descrintro/"&gt;Unifying types and classes in
+Python&lt;/a&gt;(要翻墙)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.cafepy.com/article/python_attributes_and_methods/python_attributes_and_methods.html"&gt;Python Attributes and
+Methods&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.cafepy.com/article/python_types_and_objects/"&gt;Python Types and
+Objects&lt;/a&gt;，中文版见：&lt;a class="reference external" href="http://wiki.woodpecker.org.cn/moin/PyTypesAndObjects"&gt;http://wiki.woodpecker.org.cn/moin/PyTypesAndObjects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.fantascienza.net/leonardo/ar/python_best_practices.html"&gt;Python best
+practices&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://artifex.org/~hblanks/talks/2011/pep20_by_example.py.txt"&gt;PEP 20 (The Zen of Python) by
+example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html"&gt;Google Python
+Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;待补充..，欢迎大家推荐。&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="Python"></category></entry><entry><title>说说Python获年度Tiobe编程语言大奖这事</title><link href="http://feilong.me/2011/01/python-wins-tiobe-2010-pro-lang-award.html" rel="alternate"></link><published>2011-01-10T18:36:00+08:00</published><updated>2011-01-10T18:36:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-10:/2011/01/python-wins-tiobe-2010-pro-lang-award.html</id><summary type="html">&lt;p&gt;今天在reddit的feed里看到了Python获得了2010年编程语言大奖，国外也有不少朋友在讨论这事，我也顺带来说几句。&lt;/p&gt;
+&lt;p&gt;Python在2010年获得了较大的市场份额增长，2010年1月以来Python的市场份额增长了1.81％，是增长速度最快的，其次是Objective
+-
+C（1.63％）。排名见下表，详情请见Tiobe原址：&lt;a class="reference external" href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html"&gt;http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-118 aligncenter" src="/static/2011/01/python_tiobe_index_2010_winner.jpg" style="width: 598px; height: 582px;" /&gt;&lt;/p&gt;
+&lt;p&gt;再来看一下历年的获奖语言：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="size-full wp-image-119 aligncenter" src="/static/2011/01/python_lang_wins_years.jpg" style="width: 144px; height: 215px;" /&gt;&lt;/p&gt;
+&lt;p&gt;Python在2007和2010最近的这几年里获得两次年度大奖，确实是很给力。&lt;/p&gt;
+&lt;p&gt;虽然Tiobe的排名不是非常靠谱，大家对此排行争议也很多，但大体它还是可以反映一个趋势。Python除了保持在后台脚本、测试领域的优势外，最近几年随着Python
+web
+framework的蓬勃发展，Python在Web领域的运用也越来越多，国外出现了一大批用Python开发的新站、大站，比如大名鼎鼎的：&lt;a class="reference external" href="http://www.reddit.com"&gt;reddit.com&lt;/a&gt;、&lt;a class="reference external" href="http://www.dropbox.com"&gt;dropbox.com&lt;/a&gt;、&lt;a class="reference external" href="http://bitbucket.org"&gt;bitbucket.org&lt;/a&gt;、&lt;a class="reference external" href="http://www.quora.com"&gt;quora.com&lt;/a&gt;、&lt;a class="reference external" href="http://friendfeed.com"&gt;friendfeed.com&lt;/a&gt;，其中reddit代码还是开源的 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;今天在reddit的feed里看到了Python获得了2010年编程语言大奖，国外也有不少朋友在讨论这事，我也顺带来说几句。&lt;/p&gt;
+&lt;p&gt;Python在2010年获得了较大的市场份额增长，2010年1月以来Python的市场份额增长了1.81％，是增长速度最快的，其次是Objective
+-
+C（1.63％）。排名见下表，详情请见Tiobe原址：&lt;a class="reference external" href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html"&gt;http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-118 aligncenter" src="/static/2011/01/python_tiobe_index_2010_winner.jpg" style="width: 598px; height: 582px;" /&gt;&lt;/p&gt;
+&lt;p&gt;再来看一下历年的获奖语言：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="size-full wp-image-119 aligncenter" src="/static/2011/01/python_lang_wins_years.jpg" style="width: 144px; height: 215px;" /&gt;&lt;/p&gt;
+&lt;p&gt;Python在2007和2010最近的这几年里获得两次年度大奖，确实是很给力。&lt;/p&gt;
+&lt;p&gt;虽然Tiobe的排名不是非常靠谱，大家对此排行争议也很多，但大体它还是可以反映一个趋势。Python除了保持在后台脚本、测试领域的优势外，最近几年随着Python
+web
+framework的蓬勃发展，Python在Web领域的运用也越来越多，国外出现了一大批用Python开发的新站、大站，比如大名鼎鼎的：&lt;a class="reference external" href="http://www.reddit.com"&gt;reddit.com&lt;/a&gt;、&lt;a class="reference external" href="http://www.dropbox.com"&gt;dropbox.com&lt;/a&gt;、&lt;a class="reference external" href="http://bitbucket.org"&gt;bitbucket.org&lt;/a&gt;、&lt;a class="reference external" href="http://www.quora.com"&gt;quora.com&lt;/a&gt;、&lt;a class="reference external" href="http://friendfeed.com"&gt;friendfeed.com&lt;/a&gt;，其中reddit代码还是开源的。有趣的是，虽然在Python的Web开发领域&lt;a class="reference external" href="http://www.djangoproject.com"&gt;Django&lt;/a&gt;大红大紫，但是这五个网站中只有bitbucket一个是用Django开发的，而且问题还特多（碰到500错误是常态，最近似乎稳定些了），另外有三个用的是相对小众的&lt;a class="reference external" href="http://www.pylonshq.com"&gt;Pylons&lt;/a&gt;，而friendfeed用的则是friendfeed自己写的&lt;a class="reference external" href="http://www.tornadoweb.org"&gt;Tornado&lt;/a&gt;(网站需翻墙)。虽然Python语言的前景一片大好，但我个人认为目前也有一些问题待解决的：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Python web
+framework多如牛毛（不完全列表见：&lt;a class="reference external" href="http://wiki.python.org/moin/WebFrameworks"&gt;http://wiki.python.org/moin/WebFrameworks&lt;/a&gt;），Python界需要出现一个具有垄断地位的Web
+framework，我认为Django还不够。Web
+framework一多，好处是你可以有更多的选择自由，甚至一个framework本身还是高度可定制的（如：Pylons）；不好的地方则是很多时候你不知道该选哪一个，特别新手往往要在framework之间左右摇摆好久，从我们常常看到“是选Django呢还是Pylons呢”这类的提问和争论就可知一般（不管是国内还是国外），另外这样也不利于知识的分享，因为知识点比较分散。好在现在Python界正在尝试做一些融合，&lt;a class="reference external" href="http://bfg.repoze.org/"&gt;repoze.bfg&lt;/a&gt;已经开始合并到Pylons这个大的project中了。具体可以看看：&lt;a class="reference external" href="http://lists.repoze.org/pipermail/repoze-dev/2010-November/003619.html"&gt;http://lists.repoze.org/pipermail/repoze-dev/2010-November/003619.html&lt;/a&gt;
+和
+&lt;a class="reference external" href="http://be.groovie.org/post/1558848023/notes-on-the-pylons-repoze-bfg-merger"&gt;http://be.groovie.org/post/1558848023/notes-on-the-pylons-repoze-bfg-merger&lt;/a&gt;
+（后者要翻墙）。不知道合并后的Pylons能否达到Rails在Ruby的Web开发领域中那样的统治地位，虽然我看好Pylons但是我觉得在Python的世界里这个会很难，因为有了&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0333/"&gt;WSGI规范(PEP333)&lt;/a&gt;用Python自己造一个Web的轮子实在太简单了，你我都有能力写一个:)&lt;/li&gt;
+&lt;li&gt;Python2.x和Python3.x差异挺大、前后不兼容，虽然有2to3的工具可以转，但不能解决所有的问题。Python3.x尚未完全普及开来，很多第三方的库都没用官方支持Python3.x。考虑到前后版本的这个不兼容性，这会让一些人对采用Python开发项目产生顾忌。而在Web开发领域，WSGI1.0也是不支持Python3.x，支持Python3.x的&lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0444/"&gt;Web3（PEP444）&lt;/a&gt;还处在草案状态。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;虽然有上面所说的一些问题，但是可以预见的是，随着Python3.x的普及和Python
+web
+framework的发展、成熟，Python依然有很大的上涨空间，我认为将来（最多5年吧）超过PHP是很有可能的，祝Python一路走好。&lt;/p&gt;
+&lt;p&gt;另外，我新注册了域名&lt;a class="reference external" href="http://www.chinapy.org"&gt;chinapy.org&lt;/a&gt;（现在还不能访问），准备弄一个开放一点的中国的Python社区，给Python在中国的推广运用做点自己的贡献。&lt;/p&gt;
+</content><category term="Python"></category><category term="编程语言"></category></entry><entry><title>当飞龙遭遇python-cn邮件群组</title><link href="http://feilong.me/2010/12/felinx-rejected-by-python-cn.html" rel="alternate"></link><published>2010-12-27T23:51:00+08:00</published><updated>2010-12-27T23:51:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-27:/2010/12/felinx-rejected-by-python-cn.html</id><summary type="html">&lt;p&gt;今日下班前，我再一次翻墙去申请加入&lt;a class="reference external" href="http://groups.google.com/group/python-cn"&gt;http://groups.google.com/group/python-cn&lt;/a&gt;即CPyUG华蟒用户组，等回到家打开邮箱时发现又一次被拒了，管理员效率还真是高啊！我已不记得这是我第几次申请被拒了，估计不小于5次了。这次我为了壮壮胆气，在申请的备注里还把我的python开源网站&lt;a class="reference external" href="http://poweredsites.org"&gt;http://poweredsites.org&lt;/a&gt;给抬了出来，仍然是不管用啊。&lt;/p&gt;
+&lt;p&gt;为什么我一直会被拒呢？我是百思不得其解，之前申请的时候我有备注过Python爱好者，或Pythoneer，先不说我的Python水平到底如何，至少我也是一位狂热的Python爱好者，就冲我多次申请这群组的权限这热情，管理员也该批了。&lt;/p&gt;
+&lt;p&gt;我不知道有多少想加入python-cn的人被拒了，有多少人受过python-cn管理员的打击。我想有些可能刚对python有点兴趣的人，被这一拒说不定对python的热情就大减了，毕竟这是一个较有影响力的中文python群组，这不应是python-cn对python爱好者的态度。&lt;/p&gt;
+&lt;p&gt;我加入了很多国外的python群组，特别tornado的群组我是经常会说点话的，除了python-cn我还没见过哪个群组是要审批的，更别提申请被拒了。我不知道python-cn的管理员把这个群组搞得这么封闭是为了什么？可能这样一定程度上能防止一些不良人士跑去发垃圾邮件，但这个同时也阻碍了很多对python有兴趣的同学加入，这个得与失应该好好把握。另外像国外的django-user是开放的，里面的用户也很多，我也没看到有多少垃圾邮件在里面横行，即使有垃圾邮件，用户也会让它自动沉淀下去的，python-cn何必搞得这么闭塞？python是open的，python-cn却是close的 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;今日下班前，我再一次翻墙去申请加入&lt;a class="reference external" href="http://groups.google.com/group/python-cn"&gt;http://groups.google.com/group/python-cn&lt;/a&gt;即CPyUG华蟒用户组，等回到家打开邮箱时发现又一次被拒了，管理员效率还真是高啊！我已不记得这是我第几次申请被拒了，估计不小于5次了。这次我为了壮壮胆气，在申请的备注里还把我的python开源网站&lt;a class="reference external" href="http://poweredsites.org"&gt;http://poweredsites.org&lt;/a&gt;给抬了出来，仍然是不管用啊。&lt;/p&gt;
+&lt;p&gt;为什么我一直会被拒呢？我是百思不得其解，之前申请的时候我有备注过Python爱好者，或Pythoneer，先不说我的Python水平到底如何，至少我也是一位狂热的Python爱好者，就冲我多次申请这群组的权限这热情，管理员也该批了。&lt;/p&gt;
+&lt;p&gt;我不知道有多少想加入python-cn的人被拒了，有多少人受过python-cn管理员的打击。我想有些可能刚对python有点兴趣的人，被这一拒说不定对python的热情就大减了，毕竟这是一个较有影响力的中文python群组，这不应是python-cn对python爱好者的态度。&lt;/p&gt;
+&lt;p&gt;我加入了很多国外的python群组，特别tornado的群组我是经常会说点话的，除了python-cn我还没见过哪个群组是要审批的，更别提申请被拒了。我不知道python-cn的管理员把这个群组搞得这么封闭是为了什么？可能这样一定程度上能防止一些不良人士跑去发垃圾邮件，但这个同时也阻碍了很多对python有兴趣的同学加入，这个得与失应该好好把握。另外像国外的django-user是开放的，里面的用户也很多，我也没看到有多少垃圾邮件在里面横行，即使有垃圾邮件，用户也会让它自动沉淀下去的，python-cn何必搞得这么闭塞？python是open的，python-cn却是close的，真是滑稽。&lt;/p&gt;
+&lt;p&gt;python-cn你们不够open，你们这样搞只会扼杀国内python用户，阻碍国内python水平的提高，这应该是和python-cn的初衷相违背的。&lt;/p&gt;
+&lt;p&gt;另外再对比一下国外的Quora（虽然不大有可比性，但open的姿态是可比的），多少大牛泡在里头给无名小卒回答问题，我在里面发贴问问题，帖子有点语法错误都有人帮忙修改掉。看看人家Quora，再看看python-cn，我替python-cn感到害羞。&lt;/p&gt;
+&lt;p&gt;牢骚归牢骚，我还是希望python-cn这个群组能够更好的帮助中国的pythoneer学习、交流python，以一个更加open的姿态。&lt;/p&gt;
+</content><category term="Python"></category><category term="python-cn"></category><category term="邮件群组"></category></entry></feed>

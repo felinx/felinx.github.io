@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="author" content="飞龙" />
+<meta name="description" content="鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家讨论、拍砖、献花！ 我将主要结合Tornado的源码来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。 为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为： Tornado的代码规范且质量很高； 代码总量比较小，比较容易掌握； 飞龙对Tornado多多少少有点研究。 注：Tornado(要翻墙)是friendfeed.com（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web server，同时又是一个类web.py的web框架，关于Tornado web框架部分的讨论见我的博客“ 浅谈Python web框架”相应的部分，对于Tornado的web server的性能，可以参考Tornado官方主页和http://nichol.as/benchmark-of-python-web-servers的介绍。 看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:) 系统兼容 …" />
+<meta name="keywords" content="Python">
+<meta property="og:site_name" content="飞龙"/>
+<meta property="og:title" content="Python兼容性编程"/>
+<meta property="og:description" content="鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家讨论、拍砖、献花！ 我将主要结合Tornado的源码来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。 为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为： Tornado的代码规范且质量很高； 代码总量比较小，比较容易掌握； 飞龙对Tornado多多少少有点研究。 注：Tornado(要翻墙)是friendfeed.com（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web server，同时又是一个类web.py的web框架，关于Tornado web框架部分的讨论见我的博客“ 浅谈Python web框架”相应的部分，对于Tornado的web server的性能，可以参考Tornado官方主页和http://nichol.as/benchmark-of-python-web-servers的介绍。 看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:) 系统兼容 …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://feilong.me/2011/02/learning-python-follow-felinx-part-one.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2011-02-21 18:17:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://feilong.me/author/fei-long.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="Python"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙 &ndash; Python兼容性编程</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+      </a>
+      <h1><a href="http://feilong.me">飞龙</a></h1>
+
+<p>Nice speech, but what are you going to do.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/about.html" target="_blank">About</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://feilong.me">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="2011/02/learning-python-follow-felinx-part-one">Python兼容性编程</h1>
+    <p>
+          Posted on Mon 21 February 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家<strong>讨论、拍砖、献花</strong>！</p>
+<p>我将主要结合<a class="reference external" href="http://github.com/facebook/tornado">Tornado的源码</a>来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。</p>
+<p>为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为：</p>
+<ol class="arabic simple">
+<li>Tornado的代码规范且质量很高；</li>
+<li>代码总量比较小，比较容易掌握；</li>
+<li>飞龙对Tornado多多少少有点研究。</li>
+</ol>
+<p>注：<a class="reference external" href="http://www.tornadoweb.org/">Tornado(要翻墙)</a>是<a class="reference external" href="http://friendfeed.com">friendfeed.com</a>（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web
+server，同时又是一个类web.py的web框架，关于Tornado
+web框架部分的讨论见我的博客“ <a class="reference external" href="http://feilong.me/2011/01/talk-about-python-web-framework">浅谈Python
+web框架</a>”相应的部分，对于Tornado的web
+server的性能，可以参考Tornado官方主页和<a class="reference external" href="http://nichol.as/benchmark-of-python-web-servers">http://nichol.as/benchmark-of-python-web-servers</a>的介绍。</p>
+<p>看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:)</p>
+<div class="section" id="id1">
+<h2>系统兼容</h2>
+<p>Python和许多具有虚拟机的语言一样，支持跨平台，基本可以一次编写到处运行，所以大部分时候大家不用考虑系统兼容性的问题，跟系统相关的能用Python现成的API的就用，不要自己去蛮干就行。比如文件路径的拼接，你别自己傻乎乎的去做字符串拼接，而是用已封装好的os.path.join来实现。</p>
+<p>如果你要实现的功能跟系统强相关或在不同的系统中实现是完全不一样的，那就需要考虑这个问题了，这个时候一般是把相关的API封装成一致，然后根据系统信息来选择不同的实现模块，Tornado示例代码如下（模块和代码行数见第一行注释，注：代码行可能会随着Tornado的升级而稍有变化，后面不再做特别说明）：</p>
+<div class="highlight"><pre><span></span><span class="c1"># tornado.httpserver line 32</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">fcntl</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;nt&#39;</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tornado</span> <span class="kn">import</span> <span class="n">win32_support</span> <span class="k">as</span> <span class="n">fcntl</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span>
+</pre></div>
+<p>在windows上运行和在linux下运行，导入的fcntl模块是不同的，windows下导入的是Tornado的win32_support这个实验性质的模块，当然API接口做的跟fcntl是一致的，而在具体用到fcntl的部分就不再需要考虑系统兼容性的问题了，更复杂一点的一个例子见：</p>
+<div class="highlight"><pre><span></span><span class="c1"># tornado.ioloop line 539</span>
+<span class="c1"># Choose a poll implementation. Use epoll if it is available, fall back to</span>
+<span class="c1"># select() for non-Linux platforms</span>
+<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">select</span><span class="p">,</span> <span class="s2">&quot;epoll&quot;</span><span class="p">):</span>
+    <span class="c1"># Python 2.6+ on Linux</span>
+    <span class="n">_poll</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">epoll</span>
+<span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">select</span><span class="p">,</span> <span class="s2">&quot;kqueue&quot;</span><span class="p">):</span>
+    <span class="c1"># Python 2.6+ on BSD or Mac</span>
+    <span class="n">_poll</span> <span class="o">=</span> <span class="n">_KQueue</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Linux systems with our C module installed</span>
+        <span class="kn">import</span> <span class="nn">epoll</span>
+        <span class="n">_poll</span> <span class="o">=</span> <span class="n">_EPoll</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># All other systems</span>
+        <span class="kn">import</span> <span class="nn">sys</span>
+        <span class="k">if</span> <span class="s2">&quot;linux&quot;</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">platform</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;epoll module not found; using select()&quot;</span><span class="p">)</span>
+            <span class="n">_poll</span> <span class="o">=</span> <span class="n">_Select</span>
+</pre></div>
+<p>其实就是在不同的操作系统上选择不同的poll实现，至于模块在不同操作系统是如何实现那是另一个问题了。</p>
+<p>通过这种方式可以有效的屏蔽不同系统下的编程差异，降低系统兼容性编程的复杂度。</p>
+</div>
+<div class="section" id="id2">
+<h2>向下兼容</h2>
+<p>软件版本都避免不了升级，版本一多就有了版本向下兼容的问题（特别的，Python3.x是不向下兼容Python2.x的），这个时候代码里就需要一些向下兼容的代码，主要表现有两种，下面分别介绍：</p>
+<div class="section" id="id3">
+<h3>兼容不同的Python版本</h3>
+<p>这类最常见的就是用try、import、except三者组成的黄金搭档，Tornado代码举例如下：</p>
+<div class="highlight"><pre><span></span><span class="c1"># tornado.escape line 24</span>
+<span class="c1"># json module is in the standard library as of python 2.6; fall back to</span>
+<span class="c1"># simplejson if present for older versions.</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">json</span>
+    <span class="k">assert</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">json</span><span class="p">,</span> <span class="s2">&quot;loads&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">json</span><span class="p">,</span> <span class="s2">&quot;dumps&quot;</span><span class="p">)</span>
+    <span class="n">_json_decode</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span>
+    <span class="n">_json_encode</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">simplejson</span>
+        <span class="n">_json_decode</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">simplejson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">_unicode</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+        <span class="n">_json_encode</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">simplejson</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># For Google AppEngine</span>
+            <span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">simplejson</span>
+            <span class="n">_json_decode</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">simplejson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">_unicode</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+            <span class="n">_json_encode</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">simplejson</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">_json_decode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                <span class="s2">&quot;A JSON parser is required, e.g., simplejson at &quot;</span>
+                <span class="s2">&quot;http://pypi.python.org/pypi/simplejson/&quot;</span><span class="p">)</span>
+            <span class="n">_json_encode</span> <span class="o">=</span> <span class="n">_json_decode</span>
+</pre></div>
+<p>这段这么长的代码的目的其实只有一个，就是导入可用的json模块，分别尝试用Python2.6+自带的json模块、simplejson第三方包、django环境里的simplejson（其实和前面的simplejson是一个东西，不过django把它集成到它自己的utils里去了），若都缺的话最后会抛一个常用来表功能未实现的异常（NotImplementedError）。有了这段代码，在Python2.6+、Python2.5+simplejson、Python2.5+django的Python环境下，Tornado的json编解码的功能都能够正常使用。
+更常见一点的例子，如：</p>
+<div class="highlight"><pre><span></span><span class="c1"># tornado.httpserver line 40</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">ssl</span> <span class="c1"># Python 2.6+</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">ssl</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="c1"># Python 2.6+</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">multiprocessing</span> <span class="o">=</span> <span class="bp">None</span>
+</pre></div>
+<p>然后后面一般会有针对性的处理，如：</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">multiprocessing</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="c1"># do something</span>
+</pre></div>
+</div>
+<div class="section" id="api">
+<h3>兼容API的变化</h3>
+<p>无论事先有多好的设计，API的变化多多少少总是不可避免的，API的变化必然会带来软件兼容性的问题，在Python的世界里，因为Python特殊的变量机制（如下图，详见：<a class="reference external" href="../2011/01/recommended-entries-for-you-to-master-python">学好Python必读的几篇文章</a>
+里推荐的第二篇文章 <a class="reference external" href="http://python.net/%7Egoodger/projects/pycon/2007/idiomatic/handout.html">Code Like a Pythonista: Idiomatic
+Python</a>），</p>
+<p><img alt="image0" src="/static/2011/02/ab2tag.jpg" style="width: 153px; height: 88px;" /></p>
+<p>这个问题通常变得异常的简单，Tornado示例如下：</p>
+<div class="highlight"><pre><span></span><span class="c1"># tornado.httpclient line 367</span>
+<span class="c1"># For backwards compatibility: Tornado 1.0 included a new implementation of</span>
+<span class="c1"># AsyncHTTPClient that has since replaced the original.  Define an alias</span>
+<span class="c1"># so anything that used AsyncHTTPClient2 still works</span>
+<span class="n">AsyncHTTPClient2</span> <span class="o">=</span> <span class="n">AsyncHTTPClient</span>
+</pre></div>
+<p>你没有看错，除了注释，代码其实就那么一行。
+Tornado最早的版本就有一个AsyncHTTPClient实现，但是在中间又引人了一个实验性质的AsyncHTTPClient把它命名为AsyncHTTPClient2以示区别，AsyncHTTPClient2比AsyncHTTPClient更强劲，后来功能稳定了Tornado就把AsyncHTTPClient2的代码移到了AsyncHTTPClient中当作默认的实现。</p>
+<p>接下来问题就来了，如果直接把AsyncHTTPClient2的代码都去掉，还在用AsyncHTTPClient2的同学一旦升级了Tornado就糟了，而如果继续保持AsyncHTTPClient2的全部代码不动，那就会有两份几乎一模一样的冗余代码，优雅的解决这个问题实际上只需要上面这么一行代码，AsyncHTTPClient2的代码可以全部撤下，因为这样无论用户在用AsyncHTTPClient还是AsyncHTTPClient2，实际用的会是同一个API。</p>
+<p>这一解决方案非常实用的，许多地方都可以看到它的影子，再给大家举个例子，旧的多线程模块threading的实现其命名规范是不符合现在的PEP8标准的，而它提供符合PEP8标准的API的方式也很简单，示例代码片段如下：</p>
+<div class="highlight"><pre><span></span><span class="c1"># python2.6 threading line 799</span>
+<span class="c1"># Global API functions</span>
+
+<span class="k">def</span> <span class="nf">currentThread</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">_active</span><span class="p">[</span><span class="n">_get_ident</span><span class="p">()]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="c1">##print &quot;current_thread(): no current thread for&quot;, _get_ident()</span>
+        <span class="k">return</span> <span class="n">_DummyThread</span><span class="p">()</span>
+
+<span class="n">current_thread</span> <span class="o">=</span> <span class="n">currentThread</span>
+
+<span class="k">def</span> <span class="nf">activeCount</span><span class="p">():</span>
+    <span class="n">_active_limbo_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">_active</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">_limbo</span><span class="p">)</span>
+    <span class="n">_active_limbo_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="n">active_count</span> <span class="o">=</span> <span class="n">activeCount</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>向上兼容</h2>
+<p>向上兼容这个可能少有人听过，但在Python这奇妙的世界里，还真有这事，这就是神秘的__future__模块，你可能看到过下面这样的代码：</p>
+<div class="highlight"><pre><span></span><span class="c1"># tornado.httpclient line 19</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">with_statement</span>
+</pre></div>
+<p>这就是在消费Python未来的成果（将来或说较新的版本才有的特性），在较低的版本里就可以使用较高版本里才会正式成为Python一部分的新特性，这里是后面的代码有用到with表达式（关于它将来会另外写博客介绍），深入进__future__模块的代码，里面有这么几行：</p>
+<div class="highlight"><pre><span></span><span class="n">with_statement</span> <span class="o">=</span> <span class="n">_Feature</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                          <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                          <span class="n">CO_FUTURE_WITH_STATEMENT</span><span class="p">)</span>
+</pre></div>
+<p>前两行tuple分别表示首次引入的版本和预测的即将成为Python正式的一部分的版本信息，针对with表达式，这里的意思就是说with是在Python2.5的版本才实验性引入的，但需要用前面那句import才能够正常使用，而在Python2.6中可能会（实事已经）成为正式Python的一部分，即可以不用import那句就可以直接用了。
+__future__里引入的特性都将成为未来版本里实事上的标准，但是在一些实验性引入该特性的低版本里通过__future__也可以用，将来升级了Python版本，用了新特性的代码也不会有兼容性的问题了。</p>
+<p>总之，Python很容易写出兼容性很好的程序，可是杯具的是Python3.x不完全兼容2.x，导致Python3.x推出来这么久了迟迟没有得到大规模的运用。</p>
+</div>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://feilong.me/tag/python.html">Python</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'feilong';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>
+  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙 ",
+  "url" : "http://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="author" content="felinx" />
+    <meta name="description" content="飞龙札记 - felinx's blog" />
+<meta property="og:site_name" content="飞龙"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="飞龙"/>
+<meta property="og:description" content="飞龙札记 - felinx's blog"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://feilong.me"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙 &ndash; Tag Django</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+      </a>
+      <h1><a href="http://feilong.me">飞龙</a></h1>
+
+<p>Nice speech, but what are you going to do.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/about.html" target="_blank">About</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://feilong.me">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/01/talk-about-python-web-framework.html#2011/01/talk-about-python-web-framework">浅谈Python web框架</a></h2>
+    <p>
+          Posted on Tue 25 January 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/web-framework.html">web framework</a>,              <a href="http://feilong.me/tag/django.html">Django</a>,              <a href="http://feilong.me/tag/tornado.html">Tornado</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>说到web
+framework，Ruby的世界Rails一统江湖，而Python则是一个百花齐放的世界，各种micro-framework、framework不可胜数，不完全列表见：<a class="reference external" href="http://wiki.python.org/moin/WebFrameworks">http://wiki.python.org/moin/WebFrameworks</a>。虽然另一大脚本语言PHP也有不少框架，但远没有Python这么夸张，也正是因为Python
+web framework（Python
+web开发框架，以下简称Python框架）太多，所以在Python社区总有关于Python框架孰优孰劣的话题，讨论的时间跨度甚至长达3-5年。</p>
+<p>Python这么多框架，能挨个玩个遍的人不多，坦白的说我也只用过其中的三个开发过项目，另外一些稍微接触过，所以这里只能浅谈一下，欢迎懂行的朋友们补充、拍砖。</p>
+<div class="section" id="django">
+<h2><a class="reference external" href="http://www.djangoproject.com">Django</a></h2>
+</div>
+<div class="section" id="image0">
+<h2><img alt="image0" class="alignnone size-full wp-image-225" src="/static/2011/01/hdr_logo.gif" style="width: 117px; height: 41px;" /></h2>
+<p>Python框架虽然说是百花齐放，但仍然有那么一家是最大的，它就是Django。要说Django是Python框架里最好的，有人同意也有人坚决反对，但说Django的文档最完善、市场占有率最高、招聘职位最多估计大家都没什么意见。Django为人所称道的地方主要有：</p>
+<ul class="simple">
+<li>完美的文档，Django的成功，我觉得很大一部分原因要归功于Django近乎完美的官方文档（包括Django
+book）。</li>
+<li>全套的解决方案，Django象Rails一样，提供全套的解决方案（full-stack …</li></ul></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/01/talk-about-python-web-framework.html#2011/01/talk-about-python-web-framework">    Continue reading
+</a>
+  </div>
+</article>
+
+  <div class="pagination">
+  </div>
+
+
+
+
+    <footer>
+<p>
+  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙 ",
+  "url" : "http://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>

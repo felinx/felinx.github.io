@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙 - 编程</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/bian-cheng.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2011-01-20T17:17:00+08:00</updated><entry><title>基于UI Automation的自动化测试工具设计指南</title><link href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html" rel="alternate"></link><published>2011-01-20T17:17:00+08:00</published><updated>2011-01-20T17:17:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-20:/2011/01/ms-ui-automation-tool-design-guide.html</id><summary type="html">&lt;p&gt;说明：以下内容是根据2010年我在公司的一次关于UI
+Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI
+Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。&lt;/p&gt;
+&lt;p&gt;在没有MSUIA（Microsoft UI
+Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active
+Accessibility）、Win32
+API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows
+程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:)&lt;/p&gt;
+&lt;p&gt;在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。&lt;/p&gt;
+&lt;div class="section" id="uia"&gt;
+&lt;h2&gt;&lt;strong&gt;UIA名词解释&lt;/strong&gt;&lt;/h2&gt;
+&lt;div class="section" id="elements"&gt;
+&lt;h3&gt;Elements&lt;/h3&gt;
+&lt;p&gt;在UIA里 …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;说明：以下内容是根据2010年我在公司的一次关于UI
+Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI
+Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。&lt;/p&gt;
+&lt;p&gt;在没有MSUIA（Microsoft UI
+Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active
+Accessibility）、Win32
+API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows
+程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:)&lt;/p&gt;
+&lt;p&gt;在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。&lt;/p&gt;
+&lt;div class="section" id="uia"&gt;
+&lt;h2&gt;&lt;strong&gt;UIA名词解释&lt;/strong&gt;&lt;/h2&gt;
+&lt;div class="section" id="elements"&gt;
+&lt;h3&gt;Elements&lt;/h3&gt;
+&lt;p&gt;在UIA里，每一个UI控件即是一个Automation
+Element，所有的Elements是存储在一个树状结构中的，Windows的桌面是这颗树的根结点（RootElement）。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tree"&gt;
+&lt;h3&gt;Tree&lt;/h3&gt;
+&lt;p&gt;UIA tree就是上面所指的树，每个Application都可以看作是一棵子树。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="properties"&gt;
+&lt;h3&gt;Properties&lt;/h3&gt;
+&lt;p&gt;Element都有一些属性（Properties），比如Automation
+ID、Name、ControlType等，要找到一个控件主要是通过这些的属性来查找的。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="control-patterns"&gt;
+&lt;h3&gt;Control patterns&lt;/h3&gt;
+&lt;p&gt;在找到一个控件后，对一个控件进行操控的时候就需要用到这个控件支持的控制模式（Control
+patterns）了，比如：一个TextBox的ValuePattern可以用来获取TextBox里面的文字。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="event"&gt;
+&lt;h3&gt;Event&lt;/h3&gt;
+&lt;p&gt;当UI控件有什么变动的时候，可能会触发一些事件（比如：弹出HelpText），如果有Client订阅了这个事件则会收到事件的通知。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;&lt;strong&gt;UIA的架构&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="image0" src="/static/2011/01/UI_Automation.jpg" style="width: 804px; height: 452px;" /&gt;&lt;/p&gt;
+&lt;p&gt;上图左边那部分叫Client，本文指的是UI自动化测试工具，右边叫Application，指的是被测运用程序。Client和Application在启动的时候都会载入UI
+Automation Core(UIAutomationCore.dll），UI自动化测试工具就是通过UI
+Automation
+Core来操控运用程序的。从这个架构图上也可以看到UIA封装了一些MSAA和Win32的接口、屏蔽了Win32和.NET运用程序的差异，UI
+Automation Core对外提供了统一的接口，这也就大大简化了Client这边的实现。&lt;/p&gt;
+&lt;p&gt;基于UIA这套体系实现UI自动化需要解决的两个核心的问题，一是控件查找（Find
+Controls）；二是控件操作（Control manipulation），下面对此分别进行介绍。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="find-controls"&gt;
+&lt;h2&gt;&lt;strong&gt;控件查找（Find Controls）&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;UIA除了提供了最基本的遍历整个UIA
+tree的API（TreeWalker）外，另外也提供了一些Build-in的控件查找API。&lt;/p&gt;
+&lt;div class="section" id="treewalker"&gt;
+&lt;h3&gt;TreeWalker&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;GetFirstChild&lt;/li&gt;
+&lt;li&gt;GetNextSibling&lt;/li&gt;
+&lt;li&gt;GetParent&lt;/li&gt;
+&lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TreeWalker是标准的对UIA tree的遍历API，它是一切控件查找API的基础。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="build-in-finding-scopefilting-conditionapi"&gt;
+&lt;h3&gt;Build-in Finding（基于scope和filting condition的查找API）&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;FindFirst(TreeScope, Condition)&lt;/li&gt;
+&lt;li&gt;FindAll(TreeScope, Condition)&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UIA自带的这些Build-in的查找API是基于TreeScope和Filting
+Condition的，查找控件需要定义一个查找范围和过滤条件。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;查找范围（TreeScope）是子结点、子孙结点、父结点等这样的树中的范围定义。&lt;/li&gt;
+&lt;li&gt;过滤条件（Filting Condition）可以是逻辑条件（AndCondition、
+OrCondition、NotCondition等）也可以是属性条件（PropertyCondition）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面是一个最简单的示例，在RootElement桌面下查找子结点里Name属性是“Simple
+App”的一个控件，因为是在桌面的子结点（一级），它会是一个Application:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Condition&lt;/span&gt; &lt;span class="n"&gt;winNameCond&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;PropertyCondition&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AutomationElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NameProperty&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Simple App&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="n"&gt;AutomationElement&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AutomationElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RootElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FindFirst&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TreeScope&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Children&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;winNameCond&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="control-manipulation"&gt;
+&lt;h2&gt;&lt;strong&gt;控件操作（Control manipulation）&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;通过上面的Find
+Controls找到一个控件后，接下来就是如何操作它实现UI自动化的问题了，比如：点击一个Button，选择一个TreeViewItem等等。下面是一个已做好封装的UITextBox这个控件类里获取TextBox的文字的参考实现：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="nf"&gt;GetText&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="kt"&gt;object&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Element&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TryGetCurrentPattern&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ValuePattern&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;out&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;ValuePattern&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ValuePattern&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Current&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;如上面的代码所示，控件操作有一个固定的模式，首先尝试获取控件的Control
+Pattern，如果控件存在这样的Control
+Pattern就通过这个Pattern来操控控件，如果没有则需要自定义这个操作或抛出异常等。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ui"&gt;
+&lt;h2&gt;&lt;strong&gt;UI自动化测试工具设计&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;直接基于UIA来实现UI自动化不是不可以，但没有人会这么蛮干。为了获取一个Textbox里的文字这样简单的事情，得到处拷贝上面那段的代码，这是不可取的。所以针对上面说的两个核心的问题，我们需要在UIA上进行一些简化、封装（当然光有这两点是不够的，比如还需要提供一些Native的支持、UI同步、Log等功能，本文对此不做讨论）：&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h3&gt;简化、强化控件查找&lt;/h3&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;简化是指简化控件查找API，为了找一个控件就需要写一大堆的Code来定义这样那样的过滤条件（见控件查找部分的示例代码），如果能用一个简单的字符串就统一所有这些那就方便多了，很负责的说我们就是这么干的，Automation
+ID、Name、ControlType、Point、Index、或逻辑、与逻辑、通配符、正则表达式、关键路径查找等杂七杂八的各种数据类型统统放到一个字符串里搞定，这也是我们开发的这个工具非常强大的一个地方。&lt;/li&gt;
+&lt;li&gt;强化是指强化控件查找功能，UIA
+Build-in的查找功能的过滤条件是比较简单的，功能也是非常有限的，比如没有对根据通配符、正则表达式来查找的支持，但是我们可以通过最基本的TreeWalker的API来扩展实现这样的查找功能。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h3&gt;封装控件的操控&lt;/h3&gt;
+&lt;p&gt;封装常用控件的基本操作，如：Button的Click、TreeView的Expand和Collapse、Datagrid的操作等等，使控件的操作变成一个简单的API调用，可以考虑把UIA
+ControlType里定义的30几种控件中最常用的控件基本操作都实现了，这样写测试脚本的时候就很安逸了。一些产品中可能会使用一些非标的控件，对于这些自定义的控件，用标准控件的操控API可能不管用，通常通过下面两种方式来解决这个问题，一是继承标准控件，重写操控API的实现，如果能够实现的话；二是让开发人员改代码，尽量不要使用非标控件:)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="uiframework"&gt;
+&lt;h2&gt;&lt;strong&gt;UI自动化测试framework设计&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;当有了应手的测试工具后，测试脚本的维护依然是个老大难的问题，这个需要有一个好的自动化测试framework来隔离UI的变化，尽量减少维护成本，一个好的framework大体需要有下面几级的分层：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Core －
+framework的核心和通用模块，比如：TestCaseBase、Config、WatchDog、Env、OS、DB操作的封装等等。&lt;/li&gt;
+&lt;li&gt;Dialogs － UI Application、Dialog、Control属性的定义，对于一个大的UI
+dialog，为了方便组织是可以考虑切片成一些小的虚拟的Dialogs的。在Dialogs尽量不要涉及操作逻辑，只放属性的定义就可以了。&lt;/li&gt;
+&lt;li&gt;Key words 或者叫 Wrapper － Key
+words是按case（测试用例）层面的需求抽象出来的，大体对应到case里的一个操作步骤，这一个操作步骤实际上可以包含在一个或多个UI
+dialogs上的操作组合，比如：用户登录可以是一个Key
+word，但它实际上包含了输入用户名、输入密码、点击登录按钮等操作步骤。有了Key
+words对UI
+Dialog的封装，基本上可以做到在UI变化的时候，只修改Dialogs的定义，Key
+words的实现代码很少改动，cases的代码则无需修改（只要case的逻辑没有发生变化）。&lt;/li&gt;
+&lt;li&gt;Test cases － 到了cases层面问题就变得简单了，就是一些Key
+words的简单组合，再加上一些测试结果的验证就OK了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总之，通过UIA实现一套自己的强大的UI自动化测试工具不是不可能，希望本文对一些从事UI自动化测试的同学有所帮助。&lt;/p&gt;
+&lt;p&gt;扩展资料：&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Microsoft_UI_Automation"&gt;http://en.wikipedia.org/wiki/Microsoft_UI_Automation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://blogs.msdn.com/b/lixiong/archive/2009/12/05/ui-automation-under-the-hood.aspx"&gt;http://blogs.msdn.com/b/lixiong/archive/2009/12/05/ui-automation-under-the-hood.aspx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="UIAutomation"></category><category term="自动化测试"></category></entry><entry><title>免输入FTP信息自动升级WordPress</title><link href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html" rel="alternate"></link><published>2010-12-31T21:04:00+08:00</published><updated>2010-12-31T21:04:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-31:/2010/12/auto-update-wordpress-without-ftp-auth.html</id><summary type="html">&lt;p&gt;WordPress的3.0.4
+修复了一个严重的&lt;a class="reference external" href="http://cn.wordpress.org/2010/12/30/3-0-4-update/"&gt;安全漏洞&lt;/a&gt;，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。&lt;/p&gt;
+&lt;p&gt;但是，同样的等我跑去升级&lt;a class="reference external" href="http://17weiguan.com"&gt;围观网&lt;/a&gt;的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;飞龙札记和围观网是运行在两台不同的服务器上，但都是用nginx
+proxy到后台的PHP
+fastcgi进程进行处理的，服务器的配置基本一致，而两个网站用的WordPress文件是一样的，所以首先就可以排除WordPress版本和服务器配置的差异引起的不同。&lt;/li&gt;
+&lt;li&gt;两个网站的差别主要体现在主题和插件，这些虽然牵涉到WordPress的设置但是跟WordPress本身及插件升级根本没关系，所以也基本可以排除由WordPres设置差异造成两者升级差异的可能性。&lt;/li&gt;
+&lt;li&gt;而要求输入FTP信息，目的其实是为了下载WordPress升级文件。两个站一个可以自己下，另一个则要提供FTP账户信息，由此看来应该是文件夹权限问题造成的，仔细对比了一下飞龙札记和围观网的代码文件夹权限，发现飞龙札记的代码文件夹所有者和fastcgi进程的用户是同一个，而围观网的则是两个不同的用户。将围观网的代码文件夹所有者改成fastcgi的进程用户（sudo
+chown -R fastcgi-username
+/home/local/weiguan），问题解决，围观网自动升级不再需要输入FTP信息了 …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;WordPress的3.0.4
+修复了一个严重的&lt;a class="reference external" href="http://cn.wordpress.org/2010/12/30/3-0-4-update/"&gt;安全漏洞&lt;/a&gt;，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。&lt;/p&gt;
+&lt;p&gt;但是，同样的等我跑去升级&lt;a class="reference external" href="http://17weiguan.com"&gt;围观网&lt;/a&gt;的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;飞龙札记和围观网是运行在两台不同的服务器上，但都是用nginx
+proxy到后台的PHP
+fastcgi进程进行处理的，服务器的配置基本一致，而两个网站用的WordPress文件是一样的，所以首先就可以排除WordPress版本和服务器配置的差异引起的不同。&lt;/li&gt;
+&lt;li&gt;两个网站的差别主要体现在主题和插件，这些虽然牵涉到WordPress的设置但是跟WordPress本身及插件升级根本没关系，所以也基本可以排除由WordPres设置差异造成两者升级差异的可能性。&lt;/li&gt;
+&lt;li&gt;而要求输入FTP信息，目的其实是为了下载WordPress升级文件。两个站一个可以自己下，另一个则要提供FTP账户信息，由此看来应该是文件夹权限问题造成的，仔细对比了一下飞龙札记和围观网的代码文件夹权限，发现飞龙札记的代码文件夹所有者和fastcgi进程的用户是同一个，而围观网的则是两个不同的用户。将围观网的代码文件夹所有者改成fastcgi的进程用户（sudo
+chown -R fastcgi-username
+/home/local/weiguan），问题解决，围观网自动升级不再需要输入FTP信息了，WordPress瞬间自动升级完毕，大功告成，哈哈！！同理，若你的后台是Apache，则让文件夹用户和Apache进程用户保持一致即可。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;升级WordPress插件这一问题同理，赶快一键自动升级你的WordPress到3.0.4 吧。&lt;/p&gt;
+&lt;div id="_mcePaste"
+style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"&gt;&lt;/p&gt;&lt;p class="r rubric" id="wordpress3-0-4"&gt;&lt;a class="reference external" href="http://geekfiles.altervista.org/zh/wordpress-3-0-4-risolve-un-grave-bug-di-sicurezza/"&gt;*WordPress*的*3.0.4*
+修复了一个严重的*安全漏洞*&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/div&gt;</content><category term="Wordpress"></category></entry></feed>

@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="author" content="飞龙" />
+<meta name="description" content="写下这篇博客，起源于Tornado邮件群组的这个问题 how to use outer variable in inner method，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子: def foo(): a = 1 def bar(): a = a + 1 # print a + 1 # b = a + 1 # a = 1 print id(a) bar() print a, id(a) 在Python2.x上运行这个函数会报UnboundLocalError: local variable 'a' referenced before assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP …" />
+<meta name="keywords" content="闭包, closure">
+<meta property="og:site_name" content="飞龙"/>
+<meta property="og:title" content="有趣的Python闭包(Closures)"/>
+<meta property="og:description" content="写下这篇博客，起源于Tornado邮件群组的这个问题 how to use outer variable in inner method，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子: def foo(): a = 1 def bar(): a = a + 1 # print a + 1 # b = a + 1 # a = 1 print id(a) bar() print a, id(a) 在Python2.x上运行这个函数会报UnboundLocalError: local variable 'a' referenced before assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://feilong.me/2012/06/interesting-python-closures.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2012-06-03 13:23:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://feilong.me/author/fei-long.html">
+<meta property="article:section" content="Python"/>
+<meta property="article:tag" content="闭包"/>
+<meta property="article:tag" content="closure"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙 &ndash; 有趣的Python闭包(Closures)</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+      </a>
+      <h1><a href="http://feilong.me">飞龙</a></h1>
+
+<p>Nice speech, but what are you going to do.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/about.html" target="_blank">About</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://feilong.me">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="2012/06/interesting-python-closures">有趣的Python闭包(Closures)</h1>
+    <p>
+          Posted on Sun 03 June 2012 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>写下这篇博客，起源于Tornado邮件群组的这个问题 <a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/d10165015eb293c1">how to use outer variable
+in inner
+method</a>，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="c1"># print a + 1</span>
+        <span class="c1"># b = a + 1</span>
+        <span class="c1"># a = 1</span>
+        <span class="k">print</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+    <span class="n">bar</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">a</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+<p>在Python2.x上运行这个函数会报UnboundLocalError:&nbsp;local&nbsp;variable&nbsp;'a'&nbsp;referenced&nbsp;before&nbsp;assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP
+227里面介绍到，Python解析器在搜索一个变量的定义时是根据如下三级规则来查找的：</p>
+<blockquote>
+The Python 2.0 definition specifies exactly three namespaces to
+check for each name -- the local namespace, the global namespace,
+and the builtin namespace.</blockquote>
+<p>这里的local实际上可能还有多级，上面的代码就是一个例子，下面通过对代码做些简单的修改来一步步理解这里面的规律：</p>
+<ul class="simple">
+<li>如果将a = a + 1这句换成print a + 1或者b = a +
+1，是不会有问题的，即在内部函数bar内，外部函数foo里的a实际是可见的，可以引用。</li>
+<li>将a = a + 1换成 a =
+1也是没有问题的，但是如果你将两处出现的a的id打印出来你会发现，其实这两个a不是一回事，在内部函数bar里面，本地的a
+=
+1定义了在bar函数范围内的新的一个局部变量，因为名字和外部函数foo里面的变量a名字相同，导致外部函数foo里的a在内部函数bar里实际已不可见。</li>
+<li>再来说a = a + 1出错是怎么回事，首先a =
+xxx这种形式，Python解析器认为要在内部函数bar内创建一个新的局部变量a，同时外部函数foo里的a在bar里已不可见，而解析器对接下来对右边的a
++
+1的解析就是用本地的变量a加1，而这时左边的a即本地的变量a还没有创建(等右边赋值呢)，因此就这就产生了一个是鸡生蛋还是蛋生鸡的问题，导致了上面说的UnboundLocalError的错误。</li>
+</ul>
+<p>要解决这个问题，在Python2.x里主要有两个方案：</p>
+<ol class="arabic">
+<li><p class="first">用别名替代比如b = a + 1，内部函数bar内只引用外部函数foo里的a。</p>
+</li>
+<li><p class="first">将foo里的a设成一个容器，如list</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">]</span>
+    <span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+        <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">bar</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</li>
+</ol>
+<p>当然这有些时候还是很不方便，因此在Python3.x中引入了一个nonloacal的关键字来解决这个问题，只要在a
+= a + 1前加一句nonloacal
+a即可，即显式的指定a不是内部函数bar内的本地变量，这样就可以在bar内正常的使用和再赋值外部函数foo内的变量a了。</p>
+<p>在搜索Python闭包相关的材料中，我在StackOverflow上发现一个有趣的有关Python闭包的问题，有兴趣的可以思考思考做做看，结果应该是什么？你预期的结果是什么，若不一致，如果要得到你预期的结果应该怎么改？</p>
+<div class="highlight"><pre><span></span><span class="n">flist</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">i</span>
+    <span class="n">flist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">flist</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+<p>扩展阅读：</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://www.python.org/dev/peps/pep-0227/">PEP 227 -- Statically Nested
+Scopes</a></li>
+<li><a class="reference external" href="http://www.python.org/dev/peps/pep-3104/">PEP 3104 -- Access to Names in Outer
+Scopes</a></li>
+<li><a class="reference external" href="http://stackoverflow.com/questions/233673/lexical-closures-in-python">Lexical closures in
+Python</a></li>
+</ol>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://feilong.me/tag/bi-bao.html">闭包</a>
+      <a href="http://feilong.me/tag/closure.html">closure</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'feilong';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>
+  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙 ",
+  "url" : "http://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>

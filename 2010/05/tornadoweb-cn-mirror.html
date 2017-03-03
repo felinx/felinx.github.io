@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="author" content="飞龙" />
+<meta name="description" content="鉴于Tornado官网架设在GAE上，而GAE在国内被墙，如果不爬墙大家访问不了Tornado官网，这个让很多国内Tornado用户不爽，也影响了Tornado在国内的推广。而我手头一直持有tornadoweb.cn和tornadoweb.com.cn两个域名，之前是想开发个Tornado的中文站的，但在目前闲置的情况下，还不如先做一个官方网站的镜像，故今天特配置了一下我EC2上的nginx，做了一个Tornado官方网站的镜像站点tornadoweb.cn，以造福国内Tornado用户，以后国内用户就可以直接通过tornadoweb.cn查阅Tornado的文档了。 此举已致信Tornado的Ben： Hi, Ben, I have tried to create a mirror site(http://www.tornadoweb.cn, just proxy the origin content) of tornadoweb.org for Chinese …" />
+<meta name="keywords" content="">
+<meta property="og:site_name" content="飞龙"/>
+<meta property="og:title" content="发布Tornado镜像站点tornadoweb.cn"/>
+<meta property="og:description" content="鉴于Tornado官网架设在GAE上，而GAE在国内被墙，如果不爬墙大家访问不了Tornado官网，这个让很多国内Tornado用户不爽，也影响了Tornado在国内的推广。而我手头一直持有tornadoweb.cn和tornadoweb.com.cn两个域名，之前是想开发个Tornado的中文站的，但在目前闲置的情况下，还不如先做一个官方网站的镜像，故今天特配置了一下我EC2上的nginx，做了一个Tornado官方网站的镜像站点tornadoweb.cn，以造福国内Tornado用户，以后国内用户就可以直接通过tornadoweb.cn查阅Tornado的文档了。 此举已致信Tornado的Ben： Hi, Ben, I have tried to create a mirror site(http://www.tornadoweb.cn, just proxy the origin content) of tornadoweb.org for Chinese …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://feilong.me/2010/05/tornadoweb-cn-mirror.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2011-05-19 15:06:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://feilong.me/author/fei-long.html">
+<meta property="article:section" content="Python"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙 &ndash; 发布Tornado镜像站点tornadoweb.cn</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+      </a>
+      <h1><a href="http://feilong.me">飞龙</a></h1>
+
+<p>Nice speech, but what are you going to do.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/about.html" target="_blank">About</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://feilong.me">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="2010/05/tornadoweb-cn-mirror">发布Tornado镜像站点tornadoweb.cn</h1>
+    <p>
+          Posted on Thu 19 May 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>鉴于<a class="reference external" href="http://www.tornadoweb.org">Tornado官网</a>架设在GAE上，而GAE在国内被墙，如果不爬墙大家访问不了Tornado官网，这个让很多国内Tornado用户不爽，也影响了Tornado在国内的推广。而我手头一直持有<a class="reference external" href="http://www.tornadoweb.cn">tornadoweb.cn</a>和tornadoweb.com.cn两个域名，之前是想开发个Tornado的中文站的，但在目前闲置的情况下，还不如先做一个官方网站的镜像，故今天特配置了一下我EC2上的nginx，做了一个Tornado官方网站的镜像站点<a class="reference external" href="http://www.tornadoweb.cn">tornadoweb.cn</a>，以造福国内Tornado用户，以后国内用户就可以直接通过<a class="reference external" href="http://www.tornadoweb.cn/">tornadoweb.cn</a>查阅Tornado的文档了。</p>
+<p>此举已致信Tornado的Ben：</p>
+<p>Hi, Ben,</p>
+<p>I have tried to create a mirror
+site(<a class="reference external" href="http://www.tornadoweb.cn/">http://www.tornadoweb.cn</a>, just
+proxy the origin content) of <a class="reference external" href="http://tornadoweb.org/">tornadoweb.org</a>
+for Chinese because <a class="reference external" href="http://tornadoweb.org/">tornadoweb.org</a> is
+blocked by GFW in China, so Chinese guys can not view Tornado
+documentation online if they do not use any VPNs.</p>
+<p>Can I do that? If it is ok, I would like to announce this site to
+Tornado uses in China, it's a good news for them really, thanks a lot.</p>
+<p>Ben很快回复了，但他希望最好能在头上说明下这是原站的镜像：</p>
+<p>Yeah, I think that's fine. &nbsp;Maybe just add a disclaimer at the top of
+the home page that this is a mirror and the official home page is
+<a class="reference external" href="http://tornadoweb.org/">tornadoweb.org</a>.</p>
+<p>因此，我接着就把tornado的logo文件代理到一个本地新制作的文件，在原logo上加上了是镜像的备注信息(A
+mirror of tornadoweb.org)，再次给Ben去了封信，Ben立马就回了。</p>
+<p>Yeah, looks good.</p>
+<p>OK，此事搞定！</p>
+<p>呱唧呱唧，大家还不给飞龙鼓掌:)</p>
+<p>转载请注明出处：<a class="reference external" href="http://feilong.me/2011/05/tornadoweb-cn-mirror">http://feilong.me/2011/05/tornadoweb-cn-mirror</a></p>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'feilong';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>
+  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙 ",
+  "url" : "http://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>

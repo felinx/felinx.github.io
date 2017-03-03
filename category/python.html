@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="author" content="felinx" />
+    <meta name="description" content="飞龙札记 - felinx's blog" />
+<meta property="og:site_name" content="飞龙"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="飞龙"/>
+<meta property="og:description" content="飞龙札记 - felinx's blog"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://feilong.me"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙 &ndash; Category Python</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+      </a>
+      <h1><a href="http://feilong.me">飞龙</a></h1>
+
+<p>Nice speech, but what are you going to do.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/about.html" target="_blank">About</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://feilong.me">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2013/08/siguozhanji-boss-fight-robot.html#2013/08/siguozhanji-boss-fight-robot">四国战记外挂(四国助手)</a></h2>
+    <p>
+          Posted on Wed 14 August 2013 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/si-guo-zhan-ji.html">四国战记</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p><a class="reference external" href="http://sgzj.muhegame.com/">四国战记</a>是我最近玩过的比较不错的一款卡牌手游，玩四国依稀有点当年大学时代玩英雄无敌的感觉，我先无节操的推荐一下这款手游，邀请码就不放了，以免纯广告之嫌，我的号二区水源精华“灰太龙”，有兴趣的可以游戏里来找我(目测四国GM第一个来找我了，杯具鸟)。</p>
+<p>2013/08/31更新:
+我开发的外挂已实现自动打魔神、CD一到自动找合适的贼打、自动送和获取好友给的行动力、自动刷塔等辅助功能。</p>
+<p>2014/02/07更新: 目前功能已非常齐全，且已正式对外服务，请见:
+<a class="reference external" href="%20http://sgzj.shouyouqu.com/">四国助手</a>
+<a class="reference external" href="%20http://sgzj.shouyouqu.com/">http://sgzj.shouyouqu.com/</a>
+和对应的<a class="reference external" href="http://cc2046.taobao.com/index.htm">淘宝店</a>
+<a class="reference external" href="http://cc2046.taobao.com/index.htm">http://cc2046.taobao.com/index.htm</a></p>
+<div class="section" id="id2">
+<h2>挂机起因</h2>
+<p>玩四国的除了大RMB玩家外可能都比较缺钱强化卡牌，而游戏里面一个重要的来钱手段就是7月18号开启的魔神战，全服务器的玩家共同砍魔神获得金币或者卡牌奖励，魔神战每天下午1点和晚9点开始持续2小时(除非魔神提前被砍死)，打魔神战有个要命的CD(俗称冷却时间)，CD根据卡组的COST值有些微小差异，COST越低CD越短，但最少差不多也要1分钟，也就是说为了获得较高的金币奖励，玩家不得不开着四国 …</p></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2013/08/siguozhanji-boss-fight-robot.html#2013/08/siguozhanji-boss-fight-robot">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2013/05/nsq-realtime-message-processing-system.html#2013/05/nsq-realtime-message-processing-system">实时消息处理系统NSQ &amp; Python Worker</a></h2>
+    <p>
+          Posted on Sat 18 May 2013 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/nsq.html">NSQ</a>,              <a href="http://feilong.me/tag/xiao-xi-xi-tong.html">消息系统</a>,              <a href="http://feilong.me/tag/pynsq.html">pynsq</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>NSQ是由知名短链接服务商<a class="reference external" href="https://bitly.com">bitly</a>用Go语言开发的实时消息处理系统，具有高性能、高可靠、无视单点故障等优点，是一个非常不错的新兴的消息队列解决方案。nsq现在发展很快，已有多种语言的客户端，Go和Python版本的客户端是官方出的，比较给力，其中Python客户端<a class="reference external" href="https://github.com/bitly/pynsq">pynsq</a>的Writer即发布消息部分的代码是我贡献的。</p>
+<p>以下是我准备在5.22的上海GDG活动中做的有关NSQ的主题演讲的slideshare，看不到的同学请下载后面的pdf版本，关于nsq更详细的介绍就看我5.22日的主题分享了。</p>
+<p><a class="reference external" href="http://www.slideshare.net/FelinxLee/nsq-python-worker">Nsq &amp; python
+worker</a> from
+<a class="reference external" href="http://www.slideshare.net/FelinxLee">Felinx Lee</a></p>
+<p>分享过程视频，因为是支支用手机录的屏幕比较晃，大家凑合下。另外更正讲解过程中的一个口误，不是Go的作者之一follow了我的nsqworker项目而是nsq的主要作者。</p>
+<p>PDF版本&nbsp;<a class="reference external" href="/static/2013/05/NSQ-Python-Worker.pdf">NSQ &amp; Python
+Worker</a></p>
+<p>PPT提到的我写的nsqworker的项目地址见：<a class="reference external" href="https://github.com/felinx/nsqworker">https://github.com/felinx/nsqworker</a></p>
+
+      <br>
+      <a class="btn" href="http://feilong.me/2013/05/nsq-realtime-message-processing-system.html#2013/05/nsq-realtime-message-processing-system">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2013/02/load-testing-with-multi-mechanize.html#2013/02/load-testing-with-multi-mechanize">Web Performance &amp; Load 测试工具multi-mechanize</a></h2>
+    <p>
+          Posted on Tue 19 February 2013 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/multi-mechanize.html">multi-mechanize</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>对Web服务做Performance &amp; Load测试，最常见的工具有<a class="reference external" href="http://httpd.apache.org/docs/2.2/programs/ab.html">Apache
+Benchmark</a>俗称ab和商用工具LoadRunner。ab简单直接，功能也相对较弱，但我们经常看到的对一些Web
+server或者Framework的性能测试用的ab做的，而LoadRunner功能也确实很强大，各种大型软件公司、软件外包企业几乎是必备了，用起来很High，当然其价格也确实很High
+:)</p>
+<p>这里要介绍的<a class="reference external" href="https://github.com/cgoldberg/multi-mechanize">multi-mechanize(</a>这名忒难记)是一款用Python开发的Performance
+&amp;
+Load测试工具，是由<a class="reference external" href="http://pylot.org/">Pylot</a>的作者新近开发的，算是升级换代的产品。用multi-mechanize可以通过编写Python脚本来实现较复杂的测试逻辑，其并发测试是通过multiprocessing(多进程)和多线程机制来实现的。</p>
+<div class="section" id="id1">
+<h2><strong>1. 安装</strong></h2>
+</div>
+<div class="section" id="pip-easy-install">
+<h2>万能的pip&amp;easy_install</h2>
+</div>
+<div class="section" id="pip-install-multi-mechanize-mechanize-numpy-matplotlib">
+<h2>pip install multi-mechanize mechanize numpy matplotlib</h2>
+<ul class="simple">
+<li>mechanize是一个模拟browser行为的一个库，当然你也可以用其它的如urllib2、request、tornado.httpclient等等库，不是必须。</li>
+<li>后面两个numpy和matplotlib也是可选的，当你需要它自动生成图形化报表时才会用到，安装matplotlib你的系统有可能需要安装libpng和freetype库。</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>2. 使用方法</h2>
+<ul class="simple">
+<li>创建项目 …</li></ul></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2013/02/load-testing-with-multi-mechanize.html#2013/02/load-testing-with-multi-mechanize">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2012/10/developing-restful-api-with-tornado.html#2012/10/developing-restful-api-with-tornado">用Tornado开发RESTful API运用</a></h2>
+    <p>
+          Posted on Mon 22 October 2012 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/tornado.html">Tornado</a>,              <a href="http://feilong.me/tag/restful.html">RESTful</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>《用Tornado开发RESTful API应用》，这是我在PyconCN
+2012上做的演讲主题，我原计划对此大概讲个30分钟，不过现场主持好像把我的这个主题归类到快速演讲里，或者是我之前没搞清楚吧，所以现场我对演讲的内容做了一些压缩，节奏也比较快，一些内容没有时间来做展开，对实现细节有兴趣的朋友可以去看我的演讲Slides和开源出来的d3status这个demo的源代码，源代码放在&nbsp;<a class="reference external" href="https://github.com/felinx/d3status">https://github.com/felinx/d3status</a>，演讲Slides的下载链接见&nbsp;<a class="reference external" href="/static/2012/10/用Tornado开发RESTful-API运用.pdf">用Tornado开发RESTful
+API运用</a>，你也可以通过下面内嵌的Slides直接查看，不过因为Slides放在slideshare上，需要翻墙。</p>
+<p><a class="reference external" href="http://www.slideshare.net/FelinxLee/tornadorestful-api">用Tornado开发RESTful
+API运用</a>
+from <a class="reference external" href="http://www.slideshare.net/FelinxLee">Felinx Lee</a></p>
+<p>特别说明：</p>
+<div class="line-block">
+<div class="line">1.
+本次PyconCN事后有不少人吐槽广告比较多而干货少，我这个不算干货也不算广告，硬要说是广告的话，那就是我免费给Tornado打了个广告:)</div>
+<div class="line">2.
+有朋友在github上提出对d3status的ios客户端感兴趣，问能不能开源？答：因为iPhone
+APP的ObjC代码是朋友写的，这个暂时不考虑开源。</div>
+<div class="line">3.
+d3status这个demo虽然很小，但五脏俱全，且d3status的骨架抽取自我们线上运行了有近一年的app的源代码，有一定的参考和学习价值。</div>
+</div>
+
+      <br>
+      <a class="btn" href="http://feilong.me/2012/10/developing-restful-api-with-tornado.html#2012/10/developing-restful-api-with-tornado">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2012/08/wildcard-subdomain-support-in-tornado.html#2012/08/wildcard-subdomain-support-in-tornado">Tornado对子域名和泛域名的支持</a></h2>
+    <p>
+          Posted on Mon 20 August 2012 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/tornado.html">Tornado</a>,              <a href="http://feilong.me/tag/fan-yu-ming.html">泛域名</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>其实Tornado对子域名和泛域名(除了特别说明外，以下子域名和泛域名均简称为泛域名)的支持并不是什么新鲜事，两年多前我用Tornado写的开源网站
+<a class="reference external" href="http://poweredsites.org">http://poweredsites.org</a>
+就有了对泛域名的支持，但是Tornado的官方文档里并没有明确对此功能进行说明，虽然源代码里是有注释的，终是有点隐晦，这不，近日mywaiting同学就遇到了这个问题，我应邀特撰此博文，分享下我对此的一点点经验。</p>
+<p>通常，用Tornado添加url映射路由表是直接传handlers给Application这种方式的，比如官方的chatdemo：</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Application</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">handlers</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
+            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/auth/login&quot;</span><span class="p">,</span> <span class="n">AuthLoginHandler</span><span class="p">),</span>
+            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/auth/logout&quot;</span><span class="p">,</span> <span class="n">AuthLogoutHandler</span><span class="p">),</span>
+            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/a/message/new&quot;</span><span class="p">,</span> <span class="n">MessageNewHandler</span><span class="p">),</span>
+            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/a/message/updates&quot;</span><span class="p">,</span> <span class="n">MessageUpdatesHandler</span><span class="p">),</span>
+        <span class="p">]</span>
+        <span class="n">settings</span> <span class="o">=</span> <span class="nb">dict …</span></pre></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2012/08/wildcard-subdomain-support-in-tornado.html#2012/08/wildcard-subdomain-support-in-tornado">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2012/06/interesting-python-closures.html#2012/06/interesting-python-closures">有趣的Python闭包(Closures)</a></h2>
+    <p>
+          Posted on Sun 03 June 2012 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/bi-bao.html">闭包</a>,              <a href="http://feilong.me/tag/closure.html">closure</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>写下这篇博客，起源于Tornado邮件群组的这个问题 <a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/d10165015eb293c1">how to use outer variable
+in inner
+method</a>，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="c1"># print a + 1</span>
+        <span class="c1"># b = a + 1</span>
+        <span class="c1"># a = 1</span>
+        <span class="k">print</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+    <span class="n">bar</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">a</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+<p>在Python2.x上运行这个函数会报UnboundLocalError:&nbsp;local&nbsp;variable&nbsp;'a'&nbsp;referenced&nbsp;before&nbsp;assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP …</p>
+      <br>
+      <a class="btn" href="http://feilong.me/2012/06/interesting-python-closures.html#2012/06/interesting-python-closures">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/09/tornado-as-a-proxy.html#2011/09/tornado-as-a-proxy">用Tornado实现简单的在线代理</a></h2>
+    <p>
+          Posted on Sat 10 September 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+
+        &#8226; 2 min read
+    </p>
+  </header>
+  <div>
+      <p>实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如<a class="reference external" href="http://www.tornadoweb.cn">http://www.tornadoweb.cn</a>用的就是nginx的代理功能做的tornadoweb官网的镜像。</p>
+<p>最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运用需要调用到另一平台产品(Platform)的API。对于这个系统来说，可选的一种实现方式方式是APP同时跟Server&amp;Platform两者交互；另一种则在Server端封装掉Platform的API，APP只和Server交互。显然后一种方式的系统架构会清晰些，APP编程时也就相对简单。那么如何在Server端封装Platform的API呢，我首先考虑到的就是用代理的方式来实现。碰巧最近Tornado邮件群组里有人在讨论<a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/4c1ffaa0a0667650?pli=1">using
+Tornado as a
+proxy</a>，贴主提到的运用场景跟我这碰到的场景非常的相似，我把原帖的代码做了些整理和简化，源代码如下：</p>
+<pre class="literal-block">
+# -*- coding: utf-8 -*-
+#
+# Copyright(c) 2011 Felinx Lee &amp; http://feilong.me/
+#
+# Licensed under the Apache License, Version …</pre>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/09/tornado-as-a-proxy.html#2011/09/tornado-as-a-proxy">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/08/talk-about-python-web-in-july-python-salon.html#2011/08/talk-about-python-web-in-july-python-salon">Python web开发吐槽</a></h2>
+    <p>
+          Posted on Wed 03 August 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/web-framework.html">web framework</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>说来惭愧，我用Python也有近5年了，但2011年7月上海Python聚会还是我第一次参与Python线下活动。第一次去，多少拿点东西去分享下吧，因此我以我的业余水平跑去吐槽吐槽了下Python的web开发。</p>
+<p>此次聚会因为有沈崴沈游侠到场，来膜拜沈游侠的人很多，我也是其中之一，我的吐槽议题只是起个头的，录音中大家也可以听到很多Python牛人吐槽的声音。</p>
+<p>下面为我在2011年7月上海Python聚会上吐槽Python web开发的录音和PPT材料。</p>
+<p><a class="reference external" href="http://dlc3.sdo.com/FTP/CASMI/96423216/162768713/007M_110731_1353.MP3">Python
+web开发吐槽实况录音</a></p>
+<p><a class="reference external" href="http://www.slideshare.net/FelinxLee/python-web">Python
+web开发吐槽PPT</a></p>
+
+      <br>
+      <a class="btn" href="http://feilong.me/2011/08/talk-about-python-web-in-july-python-salon.html#2011/08/talk-about-python-web-in-july-python-salon">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/06/tornadoweb-cn-documentation.html#2011/06/tornadoweb-cn-documentation">tornadoweb.cn现提供Tornado中译文档</a></h2>
+    <p>
+          Posted on Mon 20 June 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/tornado.html">Tornado</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>2011/07/06最新补充：tornado发布2.0后文档组织有较大更新，现&nbsp;<a class="reference external" href="http://www.tornadoweb.cn/">http://www.tornadoweb.cn</a>
+的子站&nbsp;<a class="reference external" href="http://en.tornadoweb.cn/">http://en.tornadoweb.cn</a>
+提供原始文档的完整镜像，跟<a class="reference external" href="http://tornado.org/">tornado.org</a>同步，不再是本地的一个版本，cn站点首页提供的文档链接也已更新。</p>
+<p>===</p>
+<p><a class="reference external" href="http://www.tornadoweb.org">tornadoweb.org</a>的镜像站点<a class="reference external" href="http://www.tornadoweb.cn/">http://www.tornadoweb.cn</a>(关于此镜像的由来另见：<a class="reference external" href="http://feilong.me/2011/05/tornadoweb-cn-mirror">发布Tornado镜像站点tornadoweb.cn</a>)现提供Tornado中译文档供参考，新的网站目录结构如下：</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.tornadoweb.cn/">http://www.tornadoweb.cn/</a> 中译首页</li>
+<li><a class="reference external" href="http://www.tornadoweb.cn/documentation">http://www.tornadoweb.cn/documentation</a> 中译Tornado文档</li>
+<li><a class="reference external" href="http://www.tornadoweb.cn/en">http://www.tornadoweb.cn/en …</a></li></ul>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/06/tornadoweb-cn-documentation.html#2011/06/tornadoweb-cn-documentation">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2010/05/tornadoweb-cn-mirror.html#2010/05/tornadoweb-cn-mirror">发布Tornado镜像站点tornadoweb.cn</a></h2>
+    <p>
+          Posted on Thu 19 May 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>鉴于<a class="reference external" href="http://www.tornadoweb.org">Tornado官网</a>架设在GAE上，而GAE在国内被墙，如果不爬墙大家访问不了Tornado官网，这个让很多国内Tornado用户不爽，也影响了Tornado在国内的推广。而我手头一直持有<a class="reference external" href="http://www.tornadoweb.cn">tornadoweb.cn</a>和tornadoweb.com.cn两个域名，之前是想开发个Tornado的中文站的，但在目前闲置的情况下，还不如先做一个官方网站的镜像，故今天特配置了一下我EC2上的nginx，做了一个Tornado官方网站的镜像站点<a class="reference external" href="http://www.tornadoweb.cn">tornadoweb.cn</a>，以造福国内Tornado用户，以后国内用户就可以直接通过<a class="reference external" href="http://www.tornadoweb.cn/">tornadoweb.cn</a>查阅Tornado的文档了。</p>
+<p>此举已致信Tornado的Ben：</p>
+<p>Hi, Ben,</p>
+<p>I have tried to create a mirror
+site(<a class="reference external" href="http://www.tornadoweb.cn/">http://www.tornadoweb.cn</a>, just
+proxy the origin content) of <a class="reference external" href="http://tornadoweb.org/">tornadoweb.org</a>
+for Chinese …</p>
+      <br>
+      <a class="btn" href="http://feilong.me/2010/05/tornadoweb-cn-mirror.html#2010/05/tornadoweb-cn-mirror">    Continue reading
+</a>
+  </div>
+</article>
+
+  <div class="pagination">
+    <a class="btn" href="http://feilong.me/category/python2.html">
+      <i class="fa fa-angle-left"></i>     Older Posts
+
+    </a>
+  </div>
+
+
+
+
+    <footer>
+<p>
+  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙 ",
+  "url" : "http://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>

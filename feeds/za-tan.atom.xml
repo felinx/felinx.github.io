@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙 - 杂谈</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/za-tan.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2017-03-02T10:20:00+08:00</updated><entry><title>一封来自丁香园robbin的招(la)聘(ji)邮件</title><link href="http://feilong.me/2017/03/dxy-robbin-email.html" rel="alternate"></link><published>2017-03-02T10:20:00+08:00</published><updated>2017-03-02T10:20:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-02:/2017/03/dxy-robbin-email.html</id><summary type="html">&lt;p&gt;我从来没有用过丁香园的产品，今天我的Gmail邮箱却收到了以robbin的名义dxy的邮件地址发的丁香园招聘邮件，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="dxy-robbin-email" src="/static/2017/03-02-dxy-robbin-email.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;本质上这是一封spam邮件，邮件以robbin个人的名义发出，简历接收地址留的是robbin的个人Gmail而不是他在公司邮箱，邮件中的“和robbin一起工作、弹性工作时间、舒适的办公环境并附照片”等内容刻意将招聘广告包装的温馨、高大上，但这改变不了这封邮件的spam本质。对于未订阅渠道来的垃圾邮件，作为多少有点代码洁癖的程序员心理我是抵触的，针对程序员群体发这样的招聘邮件效果我个人持怀疑态度，robbin本身是一位高水平的程序员，发送这封邮件之前应该是经过深思熟虑的，个人不负责任的猜想丁香园在去年和Fenng撕了一番之后，招聘程序员变得不如以前顺利了，robbin所以才会出此下策。虽然像我这样反感这封邮件的人有之，但也一定会有人正好命中其换工作的需求投递简历给robbin的，招到了员工和丢了丁香园在一部分心中的口碑，个中得失只有让robbin去品了。&lt;/p&gt;
+&lt;p&gt;另外，邮件开头就特意提到robbin自己的JavaEye创始人身份，丁香园并没有我的任何足迹，这里我冒昧猜这是拉了JavaEye的用户数据给JavaEye的一批老用户发的，如果真是如此就牵出另一个有意思的问题，JavaEye已被CSDN收购更名成了ITeye，在丁香园工作的robbin用JavaEye的数据貌似也不合适(如果他们之间有协议另说)。&lt;/p&gt;
+&lt;p&gt;2017/3/3更新: 针对此事我发到v2ex上的帖子&lt;a href="https://www.v2ex.com/t/344276"&gt;https://www.v2ex.com/t/344276&lt;/a&gt;引出一个丁香园新近离职的程序员在知乎上的吐槽&lt;a href="https://www.zhihu.com/question/22046494/answer/59855377"&gt;https://www.zhihu.com/question/22046494 …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;我从来没有用过丁香园的产品，今天我的Gmail邮箱却收到了以robbin的名义dxy的邮件地址发的丁香园招聘邮件，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="dxy-robbin-email" src="/static/2017/03-02-dxy-robbin-email.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;本质上这是一封spam邮件，邮件以robbin个人的名义发出，简历接收地址留的是robbin的个人Gmail而不是他在公司邮箱，邮件中的“和robbin一起工作、弹性工作时间、舒适的办公环境并附照片”等内容刻意将招聘广告包装的温馨、高大上，但这改变不了这封邮件的spam本质。对于未订阅渠道来的垃圾邮件，作为多少有点代码洁癖的程序员心理我是抵触的，针对程序员群体发这样的招聘邮件效果我个人持怀疑态度，robbin本身是一位高水平的程序员，发送这封邮件之前应该是经过深思熟虑的，个人不负责任的猜想丁香园在去年和Fenng撕了一番之后，招聘程序员变得不如以前顺利了，robbin所以才会出此下策。虽然像我这样反感这封邮件的人有之，但也一定会有人正好命中其换工作的需求投递简历给robbin的，招到了员工和丢了丁香园在一部分心中的口碑，个中得失只有让robbin去品了。&lt;/p&gt;
+&lt;p&gt;另外，邮件开头就特意提到robbin自己的JavaEye创始人身份，丁香园并没有我的任何足迹，这里我冒昧猜这是拉了JavaEye的用户数据给JavaEye的一批老用户发的，如果真是如此就牵出另一个有意思的问题，JavaEye已被CSDN收购更名成了ITeye，在丁香园工作的robbin用JavaEye的数据貌似也不合适(如果他们之间有协议另说)。&lt;/p&gt;
+&lt;p&gt;2017/3/3更新: 针对此事我发到v2ex上的帖子&lt;a href="https://www.v2ex.com/t/344276"&gt;https://www.v2ex.com/t/344276&lt;/a&gt;引出一个丁香园新近离职的程序员在知乎上的吐槽&lt;a href="https://www.zhihu.com/question/22046494/answer/59855377"&gt;https://www.zhihu.com/question/22046494/answer/59855377&lt;/a&gt;，看来是真的急缺人了才发这邮件了。&lt;/p&gt;</content><category term="招聘"></category><category term="垃圾邮件"></category></entry><entry><title>我玩游戏这些年，无基友，不游戏</title><link href="http://feilong.me/2014/08/no-gyou-no-game.html" rel="alternate"></link><published>2014-08-02T18:15:00+08:00</published><updated>2014-08-02T18:15:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2014-08-02:/2014/08/no-gyou-no-game.html</id><summary type="html">&lt;p&gt;1999年的五一长假，我在寝室基友的的怂恿下开始玩星际争霸，从此一发不可收拾，与游戏结下了不解之缘，其实怨也是有的，事见&lt;a class="reference external" href="http://feilong.me/about"&gt;关于飞龙&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;99年那时才刚刚有了校园网络，外网带宽非常有限，大家更多的是在局域网内玩，而那时最适合局域网内玩的游戏莫过于星际争霸了。星际虽然也可以单机玩，但更多的是局域网内联机对战，也就是和基友一起玩，我印象最深的游戏ID有ych、coda、111、Phoenix、savage、Joker等，这些人除了是游戏中的基友之外也渐渐成了线下的好基友，大家没事就一起高谈阔论星际的各种战略、战术问题、还有大家一起玩的战例。我记得有一次我作为观战(ob)看了一整晚coda
+vs savage，这也成为我们三基友之间长期会聊到的一个话题。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="aligncenter" src="/static/2014/08/starcraft-300x225.jpg" style="width: 300px; height: 225px;" /&gt;&lt;/p&gt;
+&lt;p&gt;01年我大学毕业，这些基友四散到各地，不再在一个局域网了，再也不能一起愉快的游戏了，我转而去回顾一些经典单机游戏，如英雄无敌、暗黑、博德之门、冰风谷、辐射、异域镇魂曲等(有些可联网但当单机在玩)，但这些游戏大多一年玩一遍就会觉得很无聊，关键在于单机没有基友一起玩，游戏的乐趣大打折扣。在这极度无聊的时刻，浩方对战平台横空出世了，在互联网上架起了一个虚拟的局域网让广大基友可以一起愉快的玩耍星际争霸、魔兽争霸、英雄无敌等 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;1999年的五一长假，我在寝室基友的的怂恿下开始玩星际争霸，从此一发不可收拾，与游戏结下了不解之缘，其实怨也是有的，事见&lt;a class="reference external" href="http://feilong.me/about"&gt;关于飞龙&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;99年那时才刚刚有了校园网络，外网带宽非常有限，大家更多的是在局域网内玩，而那时最适合局域网内玩的游戏莫过于星际争霸了。星际虽然也可以单机玩，但更多的是局域网内联机对战，也就是和基友一起玩，我印象最深的游戏ID有ych、coda、111、Phoenix、savage、Joker等，这些人除了是游戏中的基友之外也渐渐成了线下的好基友，大家没事就一起高谈阔论星际的各种战略、战术问题、还有大家一起玩的战例。我记得有一次我作为观战(ob)看了一整晚coda
+vs savage，这也成为我们三基友之间长期会聊到的一个话题。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="aligncenter" src="/static/2014/08/starcraft-300x225.jpg" style="width: 300px; height: 225px;" /&gt;&lt;/p&gt;
+&lt;p&gt;01年我大学毕业，这些基友四散到各地，不再在一个局域网了，再也不能一起愉快的游戏了，我转而去回顾一些经典单机游戏，如英雄无敌、暗黑、博德之门、冰风谷、辐射、异域镇魂曲等(有些可联网但当单机在玩)，但这些游戏大多一年玩一遍就会觉得很无聊，关键在于单机没有基友一起玩，游戏的乐趣大打折扣。在这极度无聊的时刻，浩方对战平台横空出世了，在互联网上架起了一个虚拟的局域网让广大基友可以一起愉快的玩耍星际争霸、魔兽争霸、英雄无敌等，03年开始我又在浩方平台上玩起了星际，也正是这时我加入了一个叫MecurY的星际小战队，和战队的一帮基友长期出没在星际的1.08高手大厅，这个战队的QQ群我一直还在，虽然群已经不活跃了，但偶尔看到好基友的QQ或微信的动态大家都还会互动一下，基情永在。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="size-full wp-image-852 aligncenter" src="/static/2014/08/haofang.jpg" style="width: 160px; height: 150px;" /&gt;&lt;/p&gt;
+&lt;p&gt;05年我因为多方的原因，戒了游戏，一直到2012年暗黑3出来，这段时间都没有去碰过游戏，所以很遗憾的我错过了魔兽世界，一个重度依赖于基友一起玩的游戏，深以为憾。&lt;/p&gt;
+&lt;p&gt;2012年暴雪在暗黑2的十来年之后终于放出了暗黑3，因为之前有强烈的暗黑系列情节，再加上当时有好几个同事在中午午休的时候会耍上两把，最终禁不住基友的诱惑，我重新掉游戏坑里了(这次还花了美刀买账号，坑)。暗黑3出来以后，虽然销量创纪录，但是吐槽如潮，很快陆陆续续同事也都不玩了，没了身边的基友我只好去逛网易的暗黑3论坛找找有没有好基友，这个论坛当时很活跃，每天的帖子量也很大，我几乎每天都上，但是在我玩暗黑3的近一年时间里，我只在这论坛上结识了一个游戏中的基友，奇哉怪也。后来没有了基友，我仍然玩了差不多半年的时间暗黑，也算是一件奇葩事，估计是跟我当时mbp上就这么一个游戏有关，虽然很无聊但是没有别的玩:(&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" class="size-medium wp-image-854 aligncenter" src="/static/2014/08/diablo3-300x170.jpg" style="width: 300px; height: 170px;" /&gt;&lt;/p&gt;
+&lt;p&gt;2013年的6月，又是被基友同事给坑了，开始玩手游(顺便扔了暗黑3)，就是前一篇博客里提到的四国战记(很小众的游戏)，几个好基友天天讨论卡牌、符文、卡组、关卡等等。在四国的魔神出了之后，因为它特耗时且无聊，所以自己写了个小外挂自动去打魔神，有兴趣的详见&lt;a class="reference external" href="http://feilong.me/2013/08/siguozhanji-boss-fight-robot"&gt;四国战记外挂&lt;/a&gt;，这个外挂非常好用，所以陆陆续续就有游戏中的玩家来找我要用这个挂，我后续也开发了不少新的功能，直到有一天功能齐备了，还让基友瓜皮同学放淘宝上开卖了。因为这个外挂，我们把四国战记国服的最活跃的一批玩家全圈到了外挂群，大家成了好基友，包括瓜皮、F、老夫、老君、活胖、苔二、牛头、校长、秀秀、凯托、阿瓦、小可爱、傲气、弑神等等。不止一次有四国玩家提到，要不是因为这个挂群拉近了这帮玩家，他们早就不玩四国战记了，而实际上在线下我也已见过瓜皮、F、老君、牛头、傲气、弑神等几个，分别是在广州、杭州见到他们的，而且我去都是好吃好喝好招待，我们在线下初见时完全不是陌生人见面，而是一副多年老友的感觉，这不得不惊叹于游戏基友的力量。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image3" class="size-medium wp-image-855 aligncenter" src="/static/2014/08/sgzj-300x200.jpg" style="width: 300px; height: 200px;" /&gt;&lt;/p&gt;
+&lt;p&gt;回顾我玩游戏这些年，无基友，不游戏，玩游戏因为有了这些基友而更精彩。&lt;/p&gt;
+</content><category term="游戏"></category></entry><entry><title>那些年我们一起被偷的东西</title><link href="http://feilong.me/2012/06/things-have-been-stolen-in-those-years.html" rel="alternate"></link><published>2012-06-03T10:18:00+08:00</published><updated>2012-06-03T10:18:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2012-06-03:/2012/06/things-have-been-stolen-in-those-years.html</id><summary type="html">&lt;p&gt;2012年5月30日，我用了仅3个月的白色iPhone
+4S在世纪大道地铁站上电梯时被偷，再一次被偷不禁让我想起那些年我们一起被偷的东西。&lt;/p&gt;
+&lt;p&gt;遥想一下小时候在农村(80年代)，家家门不闭户，道不拾遗，几乎没有被偷的事情发生；当我读高中的时候(90年代初)偶尔听说村里有人偷鸡摸狗；到了读大学的时候(90年代末)，自行车和寝室被偷这类事情时有耳闻，听的比较多的案例是晚上小偷从窗子那把衣服裤子勾走，当然他们主要看中的是里面的钱包，不过我好像没有这样被偷过。时间一旦迈入了21世纪，一连串杯具就开始了：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;2000年，我大学要好的同学买了辆新自行车，我也经常蹭他这辆车，这自行车有个小毛病就是座椅比较松老是歪歪扭扭的，骑坐时很不舒服，有一天我们两人实在忍受不了这座椅，找来扳手和老虎钳子费了九牛二虎之力终于把座椅修好，第二天这自行车就不翼而飞了。我说小偷，座椅坏的那么长时间，你咋就看不上它呢？刚弄好你就盯上了，你眼睛还真毒啊！此次被偷虽然偷的不是我的东西，但跟我也有比较大的关系，所以这里也记录一笔。&lt;/li&gt;
+&lt;li&gt;2001年，当时我刚认识现在我的老婆红太龙，那正是咱俩甜蜜缠绵心无旁骛的时候:)。有一次在武汉大学校门口的录像厅一起看录像，下半夜，就放我们身边的包包被人翻了个底朝天，红太龙的钱包被人摸走了，那钱包可是我送给红太龙的第一个礼物啊，红太龙喜欢的不得了，小偷你也忍心偷啊......&lt;/li&gt;
+&lt;li&gt;2005年，重灾年。我那时租住在武大旁边的东湖新村，有大量的学生在此租房 …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;2012年5月30日，我用了仅3个月的白色iPhone
+4S在世纪大道地铁站上电梯时被偷，再一次被偷不禁让我想起那些年我们一起被偷的东西。&lt;/p&gt;
+&lt;p&gt;遥想一下小时候在农村(80年代)，家家门不闭户，道不拾遗，几乎没有被偷的事情发生；当我读高中的时候(90年代初)偶尔听说村里有人偷鸡摸狗；到了读大学的时候(90年代末)，自行车和寝室被偷这类事情时有耳闻，听的比较多的案例是晚上小偷从窗子那把衣服裤子勾走，当然他们主要看中的是里面的钱包，不过我好像没有这样被偷过。时间一旦迈入了21世纪，一连串杯具就开始了：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;2000年，我大学要好的同学买了辆新自行车，我也经常蹭他这辆车，这自行车有个小毛病就是座椅比较松老是歪歪扭扭的，骑坐时很不舒服，有一天我们两人实在忍受不了这座椅，找来扳手和老虎钳子费了九牛二虎之力终于把座椅修好，第二天这自行车就不翼而飞了。我说小偷，座椅坏的那么长时间，你咋就看不上它呢？刚弄好你就盯上了，你眼睛还真毒啊！此次被偷虽然偷的不是我的东西，但跟我也有比较大的关系，所以这里也记录一笔。&lt;/li&gt;
+&lt;li&gt;2001年，当时我刚认识现在我的老婆红太龙，那正是咱俩甜蜜缠绵心无旁骛的时候:)。有一次在武汉大学校门口的录像厅一起看录像，下半夜，就放我们身边的包包被人翻了个底朝天，红太龙的钱包被人摸走了，那钱包可是我送给红太龙的第一个礼物啊，红太龙喜欢的不得了，小偷你也忍心偷啊......&lt;/li&gt;
+&lt;li&gt;2005年，重灾年。我那时租住在武大旁边的东湖新村，有大量的学生在此租房，道理你懂的，相对的管理和治安也比较混乱。我的第一部手机Nokia
+8250不幸在这里遇难，我住的是二楼，床位靠窗，一天晚上睡觉前我把手机放枕边，第二天早上醒来发现手机不见了，房门没有任何被动过的痕迹，也就是说小偷是爬上二楼外墙，从窗子那正对着我的脸偷走我手机的，想想我就有点渗的慌。手机被偷后，灾难还没有结束，几天后的大白天，乘我去买火车票短期不在家的当口，小偷大白天破门而入(没错是破门而入)，把我当时的那台电脑主机偷走了(里面珍藏有我自己多年的星际录像和博德之门系列存档)，家里被翻的乱七八糟，小偷忙里偷闲顺手牵羊还偷走了我老婆送来的一盒月饼(不知道是不是还忙里偷闲咬着月饼行窃的)，月饼盒子他倒是没有拿走，卡和证件啥的也给我留了，良心大大的好，我还得赞他一下。&lt;/li&gt;
+&lt;li&gt;2006年，05年底我来到了上海，在华为上海研究所上班，华为当时对手机的使用有规定，不解释，反正只能用很挫的手机，我买了一部500块左右的索爱手机，还带100块花费的，具体型号不记得了，因为很快就被偷走了，事发在06年年初，被偷的过程也很简单，早上挤出了名的挤的970路公交车的时候被偷，我纳闷的是这么搓的手机小偷也不放过，这小偷也挺可怜的。&lt;/li&gt;
+&lt;li&gt;2009年，这一年我买的第一步智能机索爱P1义无反顾的去见小偷了。P1买的时候花了我3000块大洋，也是一笔血汗钱啊，后来被红太龙借用就不还了:(。一次红太龙和我妈妈带着我女儿逛家乐福，在一次接完电话后红太龙随手把手机放到了购物车上自带的包包里，结果被小偷盯上了。放的时候老妈当时还说了句“放这里不安全吧”，红太龙没有引起足够的重视，天真的认为家乐福这么大的超市不至于此。被偷后报案，家乐福工作人员表示，手机被偷的事常有，我们在购物推车上也有提示，不要将贵重物品放里面。后来也调看了监控录像，说人多比较模糊，无果！&lt;/li&gt;
+&lt;li&gt;2012年5月30日，我用了仅3个月的白色iPhone
+4S在世纪大道地铁站上电梯时被偷，本出于安全考虑我准备把背在后背的双肩包换到胸前，这时我错误的临时把手机放到了相对宽松的上衣口袋中（用这部手机以来这还是头一次放上衣口袋），等我把包背好再来掏手机的时候手机就被偷了，这个过程前后差不多也就一秒钟，但当时人太多分且事发恰好在上电梯口那里，我分不清是电梯上还是电梯下的人所为，身上多处搜查后确认手机被偷，我马上用我另一手机拨打了我的4S，手机已经被关机了，这时离事发不满一分钟，很遗憾最终我没能找到小偷。后来我报了案，来了好几个民警调查了下现场，民警让他们的上级调看了事发时的监控录像，给我的回答也是当时人比较多看不清楚，无果！民警例行的按模版记录此次被偷事件，前后搞了差不多一个小时，最后打印盖章了一张报案回单给我让我回去等最新消息，无果！我上班地铁上的时间比较长且揣的电子设备比较多，鉴于此前的被偷经历我平时已是非常的小心警觉，但这次比较意外的一次疏忽就被小偷逮了个正着，真是千提防万提防小偷防不甚防。昨日我去联通营业厅咨询手机补卡的时候，营业员跟我讲iPhone被偷是家常便饭，iPhone被偷的远不止我一个。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;纵观我自己亲身经历的这些被偷事件：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;地铁、公交、超市、学校等人多聚集的地方是重灾区。&lt;/li&gt;
+&lt;li&gt;手机特别是iPhone系列是小偷重点照顾对象。&lt;/li&gt;
+&lt;li&gt;不贴身的位置千万不能放贵重物品，比如购物推车、上衣靠边的口袋。&lt;/li&gt;
+&lt;li&gt;监控录像只是用来方便做假证的，关键时刻都是模糊的。&lt;/li&gt;
+&lt;li&gt;盗人之心不可有，防盗之心不可无。小偷太猖獗，他们日夜忙碌只为一招得手，防不胜防，你我不能有片刻的马虎。&lt;/li&gt;
+&lt;li&gt;无一技之长讨生活选择习偷窃技能的人是越来越多，和谐社会天下无贼那是痴人说梦。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-720 aligncenter" src="/static/2012/06/without-thief.jpg" style="width: 361px; height: 337px;" /&gt;&lt;/p&gt;
+&lt;p&gt;现在我坐地铁见到稍微长得猥琐点的人，就会带有色眼睛怀疑下这人会不会是小偷，已经到了神经质的地步，然而6月1日我在拥挤的地铁上无意间碰到一位MM的包包，MM当时瞟了我一眼后，马上就把包包换到胸前去了，难道我很猥琐很像小偷？看来被害得神经质的人远不止我一个，这事耐人寻味啊....&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;坐下来记这笔流水账，只为悼念下那些年我们一起被偷的东西。&lt;/strong&gt;&lt;/p&gt;
+</content><category term="iPhone"></category><category term="小偷"></category></entry><entry><title>9月1日入职盛大创新院</title><link href="http://feilong.me/2011/09/join-shanda-innovations.html" rel="alternate"></link><published>2011-09-01T07:34:00+08:00</published><updated>2011-09-01T07:34:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-09-01:/2011/09/join-shanda-innovations.html</id><summary type="html">&lt;p&gt;9月1日是传统的入学的日子，宝宝今日入学幼儿园中班，爷爷奶奶一起送她去上学，老婆(老师)今天正式开学，而我则挑了这么个特殊的日子，在昨天匆匆忙忙告别Autodesk之后今日入职盛大创新院。今天全家出动，对我们可谓一个新的开始。&lt;/p&gt;
+&lt;p&gt;去年CSDN
+SD大会碰巧坐&lt;a class="reference external" href="http://weibo.com/n/%E4%BD%99%E5%B0%8F%E6%B3%A2"&gt;&amp;#64;余小波&lt;/a&gt;旁，休息期间跟着余一起碰到了&lt;a class="reference external" href="http://weibo.com/n/dreamsoft"&gt;&amp;#64;dreamsoft&lt;/a&gt;
+(人称老郭的创新院郭院长)，当时我就震惊了，这居然是一院之长，太低调太Geek了吧，我毫无免疫力的瞬间成为老郭粉丝。&lt;/p&gt;
+&lt;p&gt;话说回来当时能去参加SD大会，完全是因为从&lt;a class="reference external" href="http://weibo.com/n/pinxue"&gt;&amp;#64;pinxue&lt;/a&gt;
+那知道&amp;nbsp;&lt;a class="reference external" href="http://weibo.com/n/%E9%AB%98%E6%9D%BE__"&gt;&amp;#64;高松__&lt;/a&gt;
+送些VIP的票，pinxue则是从&lt;a class="reference external" href="http://weibo.com/n/netwiser"&gt;&amp;#64;netwiser&lt;/a&gt;
+那认识的，他们还有Holly
+Lee等是多年好友，而我认识netwiser(早肉身跑到加拿大，也是多个站的站长)是因为去年早期弄了个4s相关的小站，搞了个buzz账号五花马，关注了一票人，其间跟netwiser讨论了不少建站的经验。从netwiser到dreamsoft再到盛大创新院，真的是张比较神奇的网络，这难到就是传说中的社会化网络？&lt;/p&gt;
+&lt;p&gt;还有一票神秘的朋友在等着我呢，盛大，我来了。&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;9月1日是传统的入学的日子，宝宝今日入学幼儿园中班，爷爷奶奶一起送她去上学，老婆(老师)今天正式开学，而我则挑了这么个特殊的日子，在昨天匆匆忙忙告别Autodesk之后今日入职盛大创新院。今天全家出动，对我们可谓一个新的开始。&lt;/p&gt;
+&lt;p&gt;去年CSDN
+SD大会碰巧坐&lt;a class="reference external" href="http://weibo.com/n/%E4%BD%99%E5%B0%8F%E6%B3%A2"&gt;&amp;#64;余小波&lt;/a&gt;旁，休息期间跟着余一起碰到了&lt;a class="reference external" href="http://weibo.com/n/dreamsoft"&gt;&amp;#64;dreamsoft&lt;/a&gt;
+(人称老郭的创新院郭院长)，当时我就震惊了，这居然是一院之长，太低调太Geek了吧，我毫无免疫力的瞬间成为老郭粉丝。&lt;/p&gt;
+&lt;p&gt;话说回来当时能去参加SD大会，完全是因为从&lt;a class="reference external" href="http://weibo.com/n/pinxue"&gt;&amp;#64;pinxue&lt;/a&gt;
+那知道&amp;nbsp;&lt;a class="reference external" href="http://weibo.com/n/%E9%AB%98%E6%9D%BE__"&gt;&amp;#64;高松__&lt;/a&gt;
+送些VIP的票，pinxue则是从&lt;a class="reference external" href="http://weibo.com/n/netwiser"&gt;&amp;#64;netwiser&lt;/a&gt;
+那认识的，他们还有Holly
+Lee等是多年好友，而我认识netwiser(早肉身跑到加拿大，也是多个站的站长)是因为去年早期弄了个4s相关的小站，搞了个buzz账号五花马，关注了一票人，其间跟netwiser讨论了不少建站的经验。从netwiser到dreamsoft再到盛大创新院，真的是张比较神奇的网络，这难到就是传说中的社会化网络？&lt;/p&gt;
+&lt;p&gt;还有一票神秘的朋友在等着我呢，盛大，我来了。&lt;/p&gt;
+</content><category term="工作"></category><category term="盛大创新院"></category></entry><entry><title>弹指一挥间，四载欧特克</title><link href="http://feilong.me/2011/08/four-years-work-at-autodesk.html" rel="alternate"></link><published>2011-08-31T11:24:00+08:00</published><updated>2011-08-31T11:24:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-08-31:/2011/08/four-years-work-at-autodesk.html</id><summary type="html">&lt;p&gt;弹指一挥间，我在欧特克(Autodesk)已工作了四年零两个月，今天是我在Autodesk的最后一天，看着下面这张工牌上的自己，不得不承认自己老了。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="aligncenter" src="/static/2011/08/pisla-li-191x300.jpg" style="width: 191px; height: 300px;" /&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;四年前，就凭我那蹩脚的英语和烂水平，我根本没有想到我能够加入Autodesk这样的行业领军企业。&lt;/li&gt;
+&lt;li&gt;四年来，我很幸运的遇到了一个非常好的老板(Julie)，也有赏识我的老板的老板，还有一个非常出色的团队，工作真的是非常的开心。在公司，身边尽是些牛X学校硕博毕业来的牛人，我在里头也就是个矮子(虽然算个头我还可以排在最前面)，意识到有差距，所以我只好多花点精力向高手们学习了。这四年除了开心的工作外，业余没事也自己择腾些网站，虽然没有大成，但因此修炼了下功夫、认识了一票业内朋友，这四年是收获非常大的四年，唯一没有收获的是头发，头发是日渐稀少了！！！&lt;/li&gt;
+&lt;li&gt;四年后的今天，我最终选择了离开，我选择离开主要是基于我个人的兴趣和职业发展规划，我欲在(移动)互联网方向有所作为，赶上这一波发展浪潮，而Autodesk相对缺乏这样的机会，不过我负责任的说Autodesk仍是一家非常非常靠谱的软件公司，Autodesk在行业的地位无人能撼动，因此我仍然愿意推荐有兴趣和有能力的朋友加入Autodesk，即使我已经拿不到所谓的推荐费了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;再见，Autodesk！&lt;/p&gt;
+&lt;p&gt;再见，Autodesk的朋友们！&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;弹指一挥间，我在欧特克(Autodesk)已工作了四年零两个月，今天是我在Autodesk的最后一天，看着下面这张工牌上的自己，不得不承认自己老了。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="aligncenter" src="/static/2011/08/pisla-li-191x300.jpg" style="width: 191px; height: 300px;" /&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;四年前，就凭我那蹩脚的英语和烂水平，我根本没有想到我能够加入Autodesk这样的行业领军企业。&lt;/li&gt;
+&lt;li&gt;四年来，我很幸运的遇到了一个非常好的老板(Julie)，也有赏识我的老板的老板，还有一个非常出色的团队，工作真的是非常的开心。在公司，身边尽是些牛X学校硕博毕业来的牛人，我在里头也就是个矮子(虽然算个头我还可以排在最前面)，意识到有差距，所以我只好多花点精力向高手们学习了。这四年除了开心的工作外，业余没事也自己择腾些网站，虽然没有大成，但因此修炼了下功夫、认识了一票业内朋友，这四年是收获非常大的四年，唯一没有收获的是头发，头发是日渐稀少了！！！&lt;/li&gt;
+&lt;li&gt;四年后的今天，我最终选择了离开，我选择离开主要是基于我个人的兴趣和职业发展规划，我欲在(移动)互联网方向有所作为，赶上这一波发展浪潮，而Autodesk相对缺乏这样的机会，不过我负责任的说Autodesk仍是一家非常非常靠谱的软件公司，Autodesk在行业的地位无人能撼动，因此我仍然愿意推荐有兴趣和有能力的朋友加入Autodesk，即使我已经拿不到所谓的推荐费了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;再见，Autodesk！&lt;/p&gt;
+&lt;p&gt;再见，Autodesk的朋友们！&lt;/p&gt;
+</content><category term="工作"></category><category term="Autodesk"></category></entry><entry><title>谈提问 - 如何有效的提问</title><link href="http://feilong.me/2011/08/how-to-ask-for-help.html" rel="alternate"></link><published>2011-08-30T17:56:00+08:00</published><updated>2011-08-30T17:56:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-08-30:/2011/08/how-to-ask-for-help.html</id><summary type="html">&lt;p&gt;说明：接上篇“&lt;a class="reference external" href="http://feilong.me/2011/08/talk-about-reading-books"&gt;谈读书&lt;/a&gt;”，本篇博客也来自于昨天我在公司的分享。&lt;/p&gt;
+&lt;p&gt;自从芝麻问答上线以来，通过各种途径问我问题的人越来越多。同样是问我问题的，有人非常诚恳的虚心求教，同时也把问题描述得非常清楚；而另有个别朋友问我问题，不容我工作和思考，急催着我回答，反倒像我欠他似的。这样的情况我帮谁呢？我想每个人心中都有自己的答案。后者求助的方式非常不友好，我估计我下次还帮他的可能性会比较小了。&lt;/p&gt;
+&lt;p&gt;对于如何有效的提问，根据前人的一些总结材料(文章结尾有提供)，结合我自己的一些经验，我精简为如下几个要点：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;提问前&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;请确认自己已经过努力思考，确实解决不了。&lt;/li&gt;
+&lt;li&gt;查找是否已有类似的问题存在，以尽量避免不必要的重复。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;提问时&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;态度诚恳，虚心求教。&lt;/li&gt;
+&lt;li&gt;提供详细的信息，以便别人能够快速准确的帮助你解决问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;提问后&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;尊重、感谢给你答案的人，特别是给你正确答案帮你解决了棘手问题的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上面这部分其实只适合个人在社区求助，并不完全适合在公司用。从公司的角度来讲，有员工遇到问题时要的是最快的把问题解决掉，而最快解决问题的方式往往就是直接问最熟悉此问题的相关的人，而不是遇到问题的人自己在那里先研究择腾半天最后还是搞不定再去求助，对个人来讲这样不太有利于成长，但对公司来说往往这样简单粗暴的方式解决问题却是最有利的。&lt;/p&gt;
+&lt;p&gt;更多的关于如何智慧的提问，前人已有很详尽的总结，我不再多啰唆，大家可以去参考：&lt;a class="reference external" href="http://wiki.woodpecker.org.cn/moin/AskForHelp"&gt;http&lt;/a&gt;&lt;a class="reference external" href="http://wiki.woodpecker.org.cn/moin/AskForHelp"&gt;://&lt;/a&gt;&lt;a class="reference external" href="http://wiki.woodpecker.org.cn/moin/AskForHelp"&gt;wiki …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;说明：接上篇“&lt;a class="reference external" href="http://feilong.me/2011/08/talk-about-reading-books"&gt;谈读书&lt;/a&gt;”，本篇博客也来自于昨天我在公司的分享。&lt;/p&gt;
+&lt;p&gt;自从芝麻问答上线以来，通过各种途径问我问题的人越来越多。同样是问我问题的，有人非常诚恳的虚心求教，同时也把问题描述得非常清楚；而另有个别朋友问我问题，不容我工作和思考，急催着我回答，反倒像我欠他似的。这样的情况我帮谁呢？我想每个人心中都有自己的答案。后者求助的方式非常不友好，我估计我下次还帮他的可能性会比较小了。&lt;/p&gt;
+&lt;p&gt;对于如何有效的提问，根据前人的一些总结材料(文章结尾有提供)，结合我自己的一些经验，我精简为如下几个要点：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;提问前&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;请确认自己已经过努力思考，确实解决不了。&lt;/li&gt;
+&lt;li&gt;查找是否已有类似的问题存在，以尽量避免不必要的重复。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;提问时&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;态度诚恳，虚心求教。&lt;/li&gt;
+&lt;li&gt;提供详细的信息，以便别人能够快速准确的帮助你解决问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;提问后&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;尊重、感谢给你答案的人，特别是给你正确答案帮你解决了棘手问题的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上面这部分其实只适合个人在社区求助，并不完全适合在公司用。从公司的角度来讲，有员工遇到问题时要的是最快的把问题解决掉，而最快解决问题的方式往往就是直接问最熟悉此问题的相关的人，而不是遇到问题的人自己在那里先研究择腾半天最后还是搞不定再去求助，对个人来讲这样不太有利于成长，但对公司来说往往这样简单粗暴的方式解决问题却是最有利的。&lt;/p&gt;
+&lt;p&gt;更多的关于如何智慧的提问，前人已有很详尽的总结，我不再多啰唆，大家可以去参考：&lt;a class="reference external" href="http://wiki.woodpecker.org.cn/moin/AskForHelp"&gt;http&lt;/a&gt;&lt;a class="reference external" href="http://wiki.woodpecker.org.cn/moin/AskForHelp"&gt;://&lt;/a&gt;&lt;a class="reference external" href="http://wiki.woodpecker.org.cn/moin/AskForHelp"&gt;wiki.woodpecker.org.cn/moin/AskForHelp&lt;/a&gt;&lt;/p&gt;
+</content><category term="提问"></category></entry><entry><title>谈读书 - 多读书，读好书</title><link href="http://feilong.me/2011/08/talk-about-reading-books.html" rel="alternate"></link><published>2011-08-30T16:36:00+08:00</published><updated>2011-08-30T16:36:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-08-30:/2011/08/talk-about-reading-books.html</id><summary type="html">&lt;p&gt;说明：此博客源于我昨天在公司做的一次分享，整个分享虽然有PPT和录音，但不便于完全公开，我将将其中的部分内容整理后以博客的形式分享给大家，谈读书是其中之一。&lt;/p&gt;
+&lt;p&gt;微博有看到这么一篇微博：假如把你放逐到山洞里，吃穿住不愁，笔墨纸砚各种书籍都有，但是没有网络，没有微博、电话、电视、手机、短信，跟外界唯一的联系是可以写信，
+三年一亿，你干吗？&amp;nbsp;&lt;a class="reference external" href="http://weibo.com/1134796120/xkXPF28dI"&gt;http://weibo.com/1134796120/xkXPF28dI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-581 aligncenter" src="/static/2011/08/shandong.jpg" style="width: 400px; height: 257px;" /&gt;&lt;/p&gt;
+&lt;p&gt;我的回答是：当然干，有书足矣。&lt;/p&gt;
+&lt;p&gt;我很喜欢读书，即使现在有了Kindle，我仍然不停的买入新的纸质书籍，我喜欢在Kindle上阅读，更喜欢闻着纸书的书香来阅读。床上、地铁上和马桶上都是我读书的最佳场所，特别是后两种，怎么可能会没有书陪伴？&lt;/p&gt;
+&lt;p&gt;我家离办公室很远，单趟光地铁上就要1个小时，马上还会更远一些，老婆看我辛苦，考虑给我在小区业主论坛上找找看是不是有拼车直接到的(干脆给买个车多好)，我一口予以否决，原因很简单，拼车是坐小汽车，上班路上我将无法象坐铁上那样能享受阅读了，这怎么受得了？有人看到这里可能会骂我装13了，其实我也是这么觉得的，不过有这些闲话又有什么关系呢 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;说明：此博客源于我昨天在公司做的一次分享，整个分享虽然有PPT和录音，但不便于完全公开，我将将其中的部分内容整理后以博客的形式分享给大家，谈读书是其中之一。&lt;/p&gt;
+&lt;p&gt;微博有看到这么一篇微博：假如把你放逐到山洞里，吃穿住不愁，笔墨纸砚各种书籍都有，但是没有网络，没有微博、电话、电视、手机、短信，跟外界唯一的联系是可以写信，
+三年一亿，你干吗？&amp;nbsp;&lt;a class="reference external" href="http://weibo.com/1134796120/xkXPF28dI"&gt;http://weibo.com/1134796120/xkXPF28dI&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-581 aligncenter" src="/static/2011/08/shandong.jpg" style="width: 400px; height: 257px;" /&gt;&lt;/p&gt;
+&lt;p&gt;我的回答是：当然干，有书足矣。&lt;/p&gt;
+&lt;p&gt;我很喜欢读书，即使现在有了Kindle，我仍然不停的买入新的纸质书籍，我喜欢在Kindle上阅读，更喜欢闻着纸书的书香来阅读。床上、地铁上和马桶上都是我读书的最佳场所，特别是后两种，怎么可能会没有书陪伴？&lt;/p&gt;
+&lt;p&gt;我家离办公室很远，单趟光地铁上就要1个小时，马上还会更远一些，老婆看我辛苦，考虑给我在小区业主论坛上找找看是不是有拼车直接到的(干脆给买个车多好)，我一口予以否决，原因很简单，拼车是坐小汽车，上班路上我将无法象坐铁上那样能享受阅读了，这怎么受得了？有人看到这里可能会骂我装13了，其实我也是这么觉得的，不过有这些闲话又有什么关系呢？我真的能看书啊！&lt;/p&gt;
+&lt;p&gt;多读书的同时，我提倡尽量读好书，读精品书籍。虽然我们人类大脑的潜在容量几乎没有限度，据说可以装下50亿本书，但我们的寿命是有限度的，我们花在读书上的时间更是有限的，而读过之后还能记下来的东西更是少得可怜，在这种情况下为什么不集中精力去读那些好书呢？当然我这里说的好书不一定是时下热门的书籍，但一定是经得过时间考验的书。&lt;/p&gt;
+&lt;p&gt;下面列了一些我最近看过或正在看的书，主要是IT技术和相关的人文书籍，作为技术类书籍，有些已经可以称得上古董了。我可以负责任的说，这些都是非常好的书籍，我这里也算是给大家推荐书籍了。为了避免大家说我是个书托，我就不提供相应书籍的购买链接了，大家要买自己去搜好了。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="alignnone size-full wp-image-596" src="/static/2011/08/good-books.jpg" style="width: 596px; height: 302px;" /&gt;&lt;/p&gt;
+&lt;p&gt;为什么这里面会有一本经济学的书籍呢？请看下面这段摘自《软件随想录》(More
+Joel on Software)中的话：&lt;/p&gt;
+&lt;blockquote&gt;
+Why should CS majors learn economic? Because a programmer who
+understands the fundamentals of business is going to be a more
+valuable programmer, to a business, than a programmer who doesn’t. That’s all there is to it. I can’t tell you how many times I’ve been frustrated
+by programmers with crazy ideas that make sense in code but don’t make sense in capitalism. If you understand this stuff, you’re a more valuable
+programmer, and you’ll get rewarded for it, for reasons that you’ll
+also learn in microeconomics.&lt;/blockquote&gt;
+&lt;p&gt;所以我在这里强烈推荐大家去读点经济学书籍，我自己也在重新学习经济学中。&lt;/p&gt;
+&lt;p&gt;最后附上一段非常经典的一分钟视频“李嘉诚劝读书”，视频很短，但字字珠玑，相信对你会有所触动。&lt;/p&gt;
+&lt;p&gt;视频地址：&lt;a class="reference external" href="http://v.youku.com/v_show/id_XMjgxNTY0MzY4.html"&gt;http://v.youku.com/v_show/id_XMjgxNTY0MzY4.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;转载请注明出处：&lt;a class="reference external" href="http://feilong.me/2011/08/talk-about-reading-books"&gt;http://feilong.me/2011/08/talk-about-reading-books&lt;/a&gt;&lt;/p&gt;
+</content><category term="读书"></category></entry><entry><title>JustAJoke长期招聘Python初级工程师(内附薪资)</title><link href="http://feilong.me/2011/05/just-a-joke-python-jobs.html" rel="alternate"></link><published>2011-05-06T08:51:00+08:00</published><updated>2011-05-06T08:51:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-05-06:/2011/05/just-a-joke-python-jobs.html</id><summary type="html">&lt;p&gt;JustAJoke研发团队主要从事娱乐浮云业务，因业务发展迅猛，现长期招聘靠谱Python初级技术人员，要求如下：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;精通Unix &amp;amp; Linux &amp;amp; MacOS，要求不会Windows。&lt;/li&gt;
+&lt;li&gt;精通Nginx、Apache、Postfix等各种服务器软件的配置和优化，能够根据服务器错误日志快速诊断定位服务器故障，有大型网站运维经验者优先。&lt;/li&gt;
+&lt;li&gt;精通Python、PHP、Java、Ruby语言中的至少四种，掌握Erlang、Go、Scala、SmallTalk语言的优先，Lisp尤佳。&lt;/li&gt;
+&lt;li&gt;精通Tornado、Django、Pylons、Flask等常用Python开发框架，熟悉Spring、Hibernate、Structs、Zend、Yii、Symfony等框架优先，ROR尤佳。&lt;/li&gt;
+&lt;li&gt;精通MySQL、PostgreSQL、Oracle等关系数据库和数据库优化技术，深入研究MongoDB、Couchdb、Redis等NoSQL
+数据库者优先。&lt;/li&gt;
+&lt;li&gt;精通JavaScript、CSS、jQuery、jQueryUI等前端技术，能够写出漂亮的兼容IE5－IE9、Firefox、Chrome、Safari的JS和CSS代码。&lt;/li&gt;
+&lt;li&gt;精通Photoshop …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;JustAJoke研发团队主要从事娱乐浮云业务，因业务发展迅猛，现长期招聘靠谱Python初级技术人员，要求如下：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;精通Unix &amp;amp; Linux &amp;amp; MacOS，要求不会Windows。&lt;/li&gt;
+&lt;li&gt;精通Nginx、Apache、Postfix等各种服务器软件的配置和优化，能够根据服务器错误日志快速诊断定位服务器故障，有大型网站运维经验者优先。&lt;/li&gt;
+&lt;li&gt;精通Python、PHP、Java、Ruby语言中的至少四种，掌握Erlang、Go、Scala、SmallTalk语言的优先，Lisp尤佳。&lt;/li&gt;
+&lt;li&gt;精通Tornado、Django、Pylons、Flask等常用Python开发框架，熟悉Spring、Hibernate、Structs、Zend、Yii、Symfony等框架优先，ROR尤佳。&lt;/li&gt;
+&lt;li&gt;精通MySQL、PostgreSQL、Oracle等关系数据库和数据库优化技术，深入研究MongoDB、Couchdb、Redis等NoSQL
+数据库者优先。&lt;/li&gt;
+&lt;li&gt;精通JavaScript、CSS、jQuery、jQueryUI等前端技术，能够写出漂亮的兼容IE5－IE9、Firefox、Chrome、Safari的JS和CSS代码。&lt;/li&gt;
+&lt;li&gt;精通Photoshop、Fireworks、Dreamweaver，有线上的PS作品优先(请提供你的作品链接)。&lt;/li&gt;
+&lt;li&gt;精通Git、Hg、SVN、P4等代码管理工具，参与过开源项目的开发，请提供开源项目代码仓库链接。&lt;/li&gt;
+&lt;li&gt;超强的自学能力、积极的工作心态、良好的团队合作精神，能够承受较强的工作压力和长期出差在外。&lt;/li&gt;
+&lt;li&gt;最后要求熟谙各种娱乐花边新闻、各种炒作技术。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;公司地址：我朝某个犄角旮旯&lt;/div&gt;
+&lt;div class="line"&gt;薪资水平：视个人能力5k－2000k&lt;/div&gt;
+&lt;div class="line"&gt;联系方式：&lt;a class="reference external" href="mailto:hr&amp;#64;JustAJoke.com"&gt;hr&amp;#64;JustAJoke.com&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Python"></category><category term="编程"></category><category term="招聘"></category></entry><entry><title>教你一招，让你快速找到自己最早的Buzz</title><link href="http://feilong.me/2011/02/quick-find-your-oldest-buzz.html" rel="alternate"></link><published>2011-02-10T11:32:00+08:00</published><updated>2011-02-10T11:32:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-02-10:/2011/02/quick-find-your-oldest-buzz.html</id><summary type="html">&lt;p&gt;Google
+Buzz推出已有一周年，最近很多网友想怀怀旧，把自己的处女Buzz给找出来记念一下，可是很不幸Google
+Buzz要做到这一点还真不容易，在个人的Buzz页面你只能一步步Load老的Buzz，没有翻到最后一页之说，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="alignnone size-full wp-image-235" src="/static/2011/02/buzz_load_more.jpg" style="width: 436px; height: 186px;" /&gt;&lt;/p&gt;
+&lt;p&gt;如果你的Buzz很多的话，对不起，Load旧的Buzz到一定程度就进行不下去了，没法Load到最后一页去挖最早的一篇Buzz。&lt;/p&gt;
+&lt;p&gt;难道要找自己最早的Buzz就这么难吗？办法是有地，接下来就教你一招搞定这事。&lt;/p&gt;
+&lt;p&gt;我们可以通过Gmail的邮件搜索来找到你最早的Buzz，在Gmail里搜索关键字“buzz”：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="alignnone size-full wp-image-236" src="/static/2011/02/search_buzz_in_gmail.jpg" style="width: 538px; height: 62px;" /&gt;&lt;/p&gt;
+&lt;p&gt;搜索结果包括你发的所有健在的Buzz记录，结果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" class="alignnone size-large wp-image-237" src="/static/2011/02/search_buzz_result-1024x103.jpg" style="width: 725px; height: 72px;" /&gt;&lt;/p&gt;
+&lt;p&gt;接下来就是点右上角或左下角的Older链接不停的翻旧的Buzz就可以了，翻到最后一页就是你最早的Buzz记录了（这个是可以一直翻到底的哦）。&lt;/p&gt;
+&lt;p&gt;我就是这样把最早的一条Buzz给翻出来的，你还不赶紧按此法把自己的处女Buzz挖出来顶顶。&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Google
+Buzz推出已有一周年，最近很多网友想怀怀旧，把自己的处女Buzz给找出来记念一下，可是很不幸Google
+Buzz要做到这一点还真不容易，在个人的Buzz页面你只能一步步Load老的Buzz，没有翻到最后一页之说，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="alignnone size-full wp-image-235" src="/static/2011/02/buzz_load_more.jpg" style="width: 436px; height: 186px;" /&gt;&lt;/p&gt;
+&lt;p&gt;如果你的Buzz很多的话，对不起，Load旧的Buzz到一定程度就进行不下去了，没法Load到最后一页去挖最早的一篇Buzz。&lt;/p&gt;
+&lt;p&gt;难道要找自己最早的Buzz就这么难吗？办法是有地，接下来就教你一招搞定这事。&lt;/p&gt;
+&lt;p&gt;我们可以通过Gmail的邮件搜索来找到你最早的Buzz，在Gmail里搜索关键字“buzz”：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="alignnone size-full wp-image-236" src="/static/2011/02/search_buzz_in_gmail.jpg" style="width: 538px; height: 62px;" /&gt;&lt;/p&gt;
+&lt;p&gt;搜索结果包括你发的所有健在的Buzz记录，结果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" class="alignnone size-large wp-image-237" src="/static/2011/02/search_buzz_result-1024x103.jpg" style="width: 725px; height: 72px;" /&gt;&lt;/p&gt;
+&lt;p&gt;接下来就是点右上角或左下角的Older链接不停的翻旧的Buzz就可以了，翻到最后一页就是你最早的Buzz记录了（这个是可以一直翻到底的哦）。&lt;/p&gt;
+&lt;p&gt;我就是这样把最早的一条Buzz给翻出来的，你还不赶紧按此法把自己的处女Buzz挖出来顶顶。&lt;/p&gt;
+</content><category term="Google"></category><category term="buzz"></category></entry><entry><title>历数Google Buzz八宗罪</title><link href="http://feilong.me/2010/12/google-buzz-top-8-defects.html" rel="alternate"></link><published>2010-12-31T12:14:00+08:00</published><updated>2010-12-31T12:14:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-31:/2010/12/google-buzz-top-8-defects.html</id><summary type="html">&lt;p&gt;Buzz在2010各大网站、机构评出的失败的产品列表中均排名前列，原因很简单，Buzz从2月推出至今一直问题不断，特别是开始的隐私泄漏问题和最近的掉评论问题，让很多用户无法忍受，虽然我是Buzz的忠忠忠忠忠实粉丝，但骂你一顿是必须的，恨Buzz你不是李刚啊！下面历数一下Buzz推出以来大大小小、莫名其妙、让人头疼的八宗罪（七宗罪再加一等，最后一等就是这掉评论了）。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-211 aligncenter" src="/static/2010/12/googlebuzz.jpg" style="width: 460px; height: 250px;" /&gt;&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;strong&gt;隐私泄漏&lt;/strong&gt;问题，Buzz刚推出时最为人诟病的就是隐私泄漏问题，如泄漏邮件地址和常联系的人的信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;掉fo问题&lt;/strong&gt;，不用多说，掉fo的同学应该深有体会。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关联恶魔&lt;/strong&gt;，Buzz的这个功能很强大，但是被用户滥用了，被人关联刷屏的感觉相信很多人体验过，在Mute功能没出来之前，关联了GR和Twitter的同学们几乎是过街老鼠人人喊打。&lt;/li&gt;
+&lt;li&gt;掉帖子问题，如果你的账号之前没有绑定手机，而这时你已经开始使用Buzz了，后面哪次登录Buzz时Google要你加入手机信息，而你一旦你绑定手机后，对不起，Buzz当你是一个新号，以前所有的帖子在Buzz里都找不到了，只有你的邮件里会留点残骸。深恶而痛绝之，我的飞龙里至今fo了两个一模一样的五花马。&lt;/li&gt;
+&lt;li&gt;转帖问题，Buzz转帖尊重原帖，这是对的，但却不尊重中间转的人，再转的人的帖子里只有原帖和原作者信息，没有中间转的那位的一点信息，中转的那位的再创作也就没了。举例，A发原帖，B转A的贴，C转B转A的贴，C转的贴里根本跟没B什么事 …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;Buzz在2010各大网站、机构评出的失败的产品列表中均排名前列，原因很简单，Buzz从2月推出至今一直问题不断，特别是开始的隐私泄漏问题和最近的掉评论问题，让很多用户无法忍受，虽然我是Buzz的忠忠忠忠忠实粉丝，但骂你一顿是必须的，恨Buzz你不是李刚啊！下面历数一下Buzz推出以来大大小小、莫名其妙、让人头疼的八宗罪（七宗罪再加一等，最后一等就是这掉评论了）。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" class="size-full wp-image-211 aligncenter" src="/static/2010/12/googlebuzz.jpg" style="width: 460px; height: 250px;" /&gt;&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;strong&gt;隐私泄漏&lt;/strong&gt;问题，Buzz刚推出时最为人诟病的就是隐私泄漏问题，如泄漏邮件地址和常联系的人的信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;掉fo问题&lt;/strong&gt;，不用多说，掉fo的同学应该深有体会。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关联恶魔&lt;/strong&gt;，Buzz的这个功能很强大，但是被用户滥用了，被人关联刷屏的感觉相信很多人体验过，在Mute功能没出来之前，关联了GR和Twitter的同学们几乎是过街老鼠人人喊打。&lt;/li&gt;
+&lt;li&gt;掉帖子问题，如果你的账号之前没有绑定手机，而这时你已经开始使用Buzz了，后面哪次登录Buzz时Google要你加入手机信息，而你一旦你绑定手机后，对不起，Buzz当你是一个新号，以前所有的帖子在Buzz里都找不到了，只有你的邮件里会留点残骸。深恶而痛绝之，我的飞龙里至今fo了两个一模一样的五花马。&lt;/li&gt;
+&lt;li&gt;转帖问题，Buzz转帖尊重原帖，这是对的，但却不尊重中间转的人，再转的人的帖子里只有原帖和原作者信息，没有中间转的那位的一点信息，中转的那位的再创作也就没了。举例，A发原帖，B转A的贴，C转B转A的贴，C转的贴里根本跟没B什么事。&lt;/li&gt;
+&lt;li&gt;Like无用，虽然Buzz有Like的功能，但几乎是没用的，因为在Buzz里你根本就看不多一个热贴排行、Like排行之类的东西，热点用户之类的东西也是没有的，开始玩buzz的时候压根就不知道去fo谁，所以民间有些人整理出一些话痨的帖子很受欢迎，不过我解决这个问题的方法比较简单，跟梨叔一样，见人就fo，开始一口气就加了1万。&lt;/li&gt;
+&lt;li&gt;无法fo人的问题，遇到这个问题的人可能不多，可能在fo的人比较多的情况下会有这个问题，至少我的五花马是怎么也加不了飞龙，虽然我后来unfo了很多人，但还是不行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;狂掉评论&lt;/strong&gt;问题，虽然可以捞回来，但是实在太麻烦了，不在你的GTalk好友里的都得常去捞。对于回帖较多的，捞回帖就得把你累死。若为了避免掉评论都加GTalk吧，这又报隐私隐患了不是，特别是fo比较多的人，不能这样玩，这是饮鸩止渴。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上是我自己使用Buzz以来的遇到的问题总结，欢迎大家讨论、补充。骂归骂，目的其实只有一个，就是希望Buzz越做越好。&lt;/p&gt;
+&lt;p&gt;附图：如何捞回评论，感谢屁民同学提供图片&lt;a class="reference external" href="http://goo.gl/UN9M4"&gt;http://goo.gl/UN9M4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" class="size-medium wp-image-80 aligncenter" src="/static/2010/12/laohuibuzz-300x217.png" style="width: 300px; height: 217px;" /&gt;&lt;/p&gt;
+</content><category term="Google"></category><category term="buzz"></category></entry><entry><title>博客开张</title><link href="http://feilong.me/2010/12/start-blogging.html" rel="alternate"></link><published>2010-12-26T00:00:00+08:00</published><updated>2010-12-26T00:00:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-26:/2010/12/start-blogging.html</id><summary type="html">&lt;p&gt;很早就有弄个博客的念头，可一直未能成行，理由很多但都不能当合理的借口。&lt;/p&gt;
+&lt;p&gt;算来网站已做了好几个，博客却一直寄人篱下，说来就觉得心酸，特别是那个什么Javaeye，我都被气死好几回了，再也不去了。&lt;/p&gt;
+&lt;p&gt;好了，最近为了开发了一个小的插件赚了点零花钱，花了些时间研究Wordpress，顺带弄了个&lt;a class="reference external" href="http://17weiguan.com/"&gt;围观网&lt;/a&gt;，现在干脆乘热打铁再弄一个自己的博客。&lt;/p&gt;
+&lt;p&gt;虽然现在微博横行，为什么还是要开博了，我觉得主要有几点：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;首先，博客还是要的，好记性不如烂笔头，偏偏我记性还不好，这就更需要有个地方来把一些有意义的东西给记录下来。比如平时工作、开发网站中碰到的
+疑难的问题，最后辛辛苦苦才搞定的解决方案，这些知识积累除了自己可能后面还会用到外，另外也可以帮助碰到同样问题的同学，何乐而不博呢？&lt;/li&gt;
+&lt;li&gt;别的站都是虚的，自己的博客还是最方便，特别是历史纪录查询。比如贴在twitter、buzz或新浪微博的东西想查自己的东西的时候不是那么容易。&lt;/li&gt;
+&lt;li&gt;将来时间长了翻回来看，博客的历史会是自己工作、人生的一大注解。&lt;/li&gt;
+&lt;li&gt;一个独立的博客也是一个比较好的交友平台，能够结识志同道合的朋友。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以还等什么，准备开始写博客吧...&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;很早就有弄个博客的念头，可一直未能成行，理由很多但都不能当合理的借口。&lt;/p&gt;
+&lt;p&gt;算来网站已做了好几个，博客却一直寄人篱下，说来就觉得心酸，特别是那个什么Javaeye，我都被气死好几回了，再也不去了。&lt;/p&gt;
+&lt;p&gt;好了，最近为了开发了一个小的插件赚了点零花钱，花了些时间研究Wordpress，顺带弄了个&lt;a class="reference external" href="http://17weiguan.com/"&gt;围观网&lt;/a&gt;，现在干脆乘热打铁再弄一个自己的博客。&lt;/p&gt;
+&lt;p&gt;虽然现在微博横行，为什么还是要开博了，我觉得主要有几点：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;首先，博客还是要的，好记性不如烂笔头，偏偏我记性还不好，这就更需要有个地方来把一些有意义的东西给记录下来。比如平时工作、开发网站中碰到的
+疑难的问题，最后辛辛苦苦才搞定的解决方案，这些知识积累除了自己可能后面还会用到外，另外也可以帮助碰到同样问题的同学，何乐而不博呢？&lt;/li&gt;
+&lt;li&gt;别的站都是虚的，自己的博客还是最方便，特别是历史纪录查询。比如贴在twitter、buzz或新浪微博的东西想查自己的东西的时候不是那么容易。&lt;/li&gt;
+&lt;li&gt;将来时间长了翻回来看，博客的历史会是自己工作、人生的一大注解。&lt;/li&gt;
+&lt;li&gt;一个独立的博客也是一个比较好的交友平台，能够结识志同道合的朋友。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以还等什么，准备开始写博客吧...&lt;/p&gt;
+</content></entry></feed>

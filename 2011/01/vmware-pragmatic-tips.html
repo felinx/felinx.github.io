@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="author" content="飞龙" />
+<meta name="description" content="近日Buzz好友Kyle Hu同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。 1.VM快照管理 这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。 2.扩大硬盘容量 有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。 但是有时候可能必须要扩大某个已有的硬盘分区（比如原来D盘只有10G，现在必须把D盘扩大到20G），这个时候就需要用到vmware-vdiskmanager.exe（位于VMware安装路径根目录，如：C:\Program Files\VMware\VMware Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下： VMware Virtual Disk Manager - build 34685. Usage …" />
+<meta name="keywords" content="vmware">
+<meta property="og:site_name" content="飞龙"/>
+<meta property="og:title" content="VMware几个实用技巧"/>
+<meta property="og:description" content="近日Buzz好友Kyle Hu同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。 1.VM快照管理 这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。 2.扩大硬盘容量 有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。 但是有时候可能必须要扩大某个已有的硬盘分区（比如原来D盘只有10G，现在必须把D盘扩大到20G），这个时候就需要用到vmware-vdiskmanager.exe（位于VMware安装路径根目录，如：C:\Program Files\VMware\VMware Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下： VMware Virtual Disk Manager - build 34685. Usage …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://feilong.me/2011/01/vmware-pragmatic-tips.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2011-01-17 13:41:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://feilong.me/author/fei-long.html">
+<meta property="article:section" content="IT"/>
+<meta property="article:tag" content="vmware"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙 &ndash; VMware几个实用技巧</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+      </a>
+      <h1><a href="http://feilong.me">飞龙</a></h1>
+
+<p>Nice speech, but what are you going to do.</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/about.html" target="_blank">About</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://feilong.me">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="2011/01/vmware-pragmatic-tips">VMware几个实用技巧</h1>
+    <p>
+          Posted on Mon 17 January 2011 in <a href="http://feilong.me/category/it.html">IT</a>
+
+
+        &#8226; 2 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>近日Buzz好友<a class="reference external" href="http://www.google.com/profiles/104231231256400902165">Kyle
+Hu</a>同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。</p>
+<div class="section" id="vm">
+<h2>1.VM快照管理</h2>
+<p>这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。</p>
+<p><img alt="image0" class="size-full wp-image-181 aligncenter" src="/static/2011/01/vm-take-snapshot.jpg" style="width: 675px; height: 249px;" /></p>
+</div>
+<div class="section" id="id1">
+<h2>2.扩大硬盘容量</h2>
+<p>有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。</p>
+<p><img alt="image1" class="size-full wp-image-182 aligncenter" src="/static/2011/01/vm-add-hd.jpg" style="width: 659px; height: 474px;" /></p>
+<p>但是有时候可能必须要扩大某个已有的硬盘分区（比如原来D盘只有10G，现在必须把D盘扩大到20G），这个时候就需要用到vmware-vdiskmanager.exe（位于VMware安装路径根目录，如：C:\Program
+Files\VMware\VMware
+Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下：</p>
+<pre class="literal-block">
+VMware&nbsp;Virtual&nbsp;Disk&nbsp;Manager&nbsp;-&nbsp;build&nbsp;34685.
+Usage:&nbsp;vmware-vdiskmanager.exe&nbsp;OPTIONS&nbsp;diskName&nbsp;\|&nbsp;drive-letter:
+Offline&nbsp;disk&nbsp;manipulation&nbsp;utility
+Options:
+-c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;create&nbsp;disk;&nbsp;need&nbsp;to&nbsp;specify&nbsp;other&nbsp;create&nbsp;options
+-d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;defragment&nbsp;the&nbsp;specified&nbsp;virtual&nbsp;disk
+-k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;shrink&nbsp;the&nbsp;specified&nbsp;virtual&nbsp;disk
+-n&nbsp;&lt;source-disk&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;rename&nbsp;the&nbsp;specified&nbsp;virtual&nbsp;disk;&nbsp;need&nbsp;to
+specify&nbsp;destination&nbsp;disk-name
+-p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;prepare&nbsp;the&nbsp;mounted&nbsp;virtual&nbsp;disk&nbsp;specified&nbsp;by
+the&nbsp;drive-letter&nbsp;for&nbsp;shrinking
+-q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;do&nbsp;not&nbsp;log&nbsp;messages
+-r&nbsp;&lt;source-disk&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;convert&nbsp;the&nbsp;specified&nbsp;disk;&nbsp;need&nbsp;to&nbsp;specify
+destination&nbsp;disk-type
+-x&nbsp;&lt;new-capacity&gt;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;expand&nbsp;the&nbsp;disk&nbsp;to&nbsp;the&nbsp;specified&nbsp;capacity
+Additional&nbsp;options&nbsp;for&nbsp;create&nbsp;and&nbsp;convert:
+-a&nbsp;&lt;adapter&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;(for&nbsp;use&nbsp;with&nbsp;-c&nbsp;only)&nbsp;adapter&nbsp;type&nbsp;(ide,&nbsp;buslogic&nbsp;or&nbsp;lsilogic)
+-s&nbsp;&lt;size&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;capacity&nbsp;of&nbsp;the&nbsp;virtual&nbsp;disk
+-t&nbsp;&lt;disk-type&gt;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;disk&nbsp;type&nbsp;id
+Disk&nbsp;types:
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;single&nbsp;growable&nbsp;virtual&nbsp;disk
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;growable&nbsp;virtual&nbsp;disk&nbsp;split&nbsp;in&nbsp;2Gb&nbsp;files
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;preallocated&nbsp;virtual&nbsp;disk
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;preallocated&nbsp;virtual&nbsp;disk&nbsp;split&nbsp;in&nbsp;2Gb&nbsp;files
+The&nbsp;capacity&nbsp;can&nbsp;be&nbsp;specified&nbsp;in&nbsp;sectors,&nbsp;Kb,&nbsp;Mb&nbsp;or&nbsp;Gb.
+The&nbsp;acceptable&nbsp;ranges:
+ide&nbsp;adapter&nbsp;:&nbsp;[100.0Mb,&nbsp;950.0Gb]
+scsi&nbsp;adapter:&nbsp;[100.0Mb,&nbsp;950.0Gb]
+ex&nbsp;1:&nbsp;vmware-vdiskmanager.exe&nbsp;-c&nbsp;-s&nbsp;850Mb&nbsp;-a&nbsp;ide&nbsp;-t&nbsp;0&nbsp;myIdeDisk.vmdk
+ex&nbsp;2:&nbsp;vmware-vdiskmanager.exe&nbsp;-d&nbsp;myDisk.vmdk
+ex&nbsp;3:&nbsp;vmware-vdiskmanager.exe&nbsp;-r&nbsp;sourceDisk.vmdk&nbsp;-t&nbsp;0&nbsp;destinationDisk.vmdk
+ex&nbsp;4:&nbsp;vmware-vdiskmanager.exe&nbsp;-x&nbsp;36Gb&nbsp;myDisk.vmdk
+ex&nbsp;5:&nbsp;vmware-vdiskmanager.exe&nbsp;-n&nbsp;sourceName.vmdk&nbsp;destinationName.vmdk
+ex&nbsp;6:&nbsp;vmware-vdiskmanager.exe&nbsp;-k&nbsp;myDisk.vmdk
+ex&nbsp;7:&nbsp;vmware-vdiskmanager.exe&nbsp;-p&nbsp;m:
+(A&nbsp;virtual&nbsp;disk&nbsp;first&nbsp;needs&nbsp;to&nbsp;be&nbsp;mounted&nbsp;at&nbsp;m:
+using&nbsp;the&nbsp;VMware&nbsp;Diskmount&nbsp;Utility.)
+</pre>
+<p>示例ex
+4就是一个扩大硬盘分区的例子，找到对应的你要扩大的.vmdk文件照着做就可以了，比如下面是将我的一个VM的D盘扩大到20G（文件路径有空格得用引号“”括一下）：</p>
+<pre class="literal-block">
+vmware-vdiskmanager.exe -x 20Gb
+“D:\\09.VM\\build\_vm\\vm\_40\\Windows XP Professional-000001.vmdk”
+</pre>
+<p>对于Windows系统的VM来说，新增的这部分磁盘空间在VM里暂时是看不到的，需要到系统管理工具里的磁盘管理工具里去分配一下就OK了。</p>
+</div>
+<div class="section" id="id2">
+<h2>3.释放硬盘空间</h2>
+<p>VM用的时间一长，有个大毛病就是占用的文件空间越来越大，而实际使用的空间并没有那么多（比如Kyle
+Hu遇到的问题：VM分区大小是80GB，使用27GB，虚拟机文件夹为41.9GB，困惑！）。具体原因未明，我的理解可能是因为虚拟硬盘在占用某块空间后，即使这块空间后面被释放了（如：文件删除），VM占用的空间也不能完全缩回去。对于这种情况，如果硬盘吃紧心疼这些被吃掉的空间，就需要用到VM的disk
+shrink功能来释放这些空间，关于disk
+shrink具体见官方的文档：<a class="reference external" href="http://www.vmware.com/support/ws5/doc/ws_disk_shrink.html">http://www.vmware.com/support/ws5/doc/ws_disk_shrink.html</a>，不过disk
+shrink有很多限制条件，比如不能有快照、空间不能被预分配等。要使用disk
+shrink需要先安装VMware Tools，安装VMware
+Tools需要先将你的VM打开，然后按下图选择安装VMware Tools，</p>
+<p><img alt="image2" class="size-full wp-image-184 aligncenter" src="/static/2011/01/vm-install-vm-tools.jpg" style="width: 449px; height: 293px;" /></p>
+<p>这样在VM里面就会自动插入一张VMware
+Tools的安装盘，VM是Windows系统的话进入光盘安装即可，如果是linux的话，操作步骤大致如下：</p>
+<blockquote>
+<div class="line-block">
+<div class="line"># 到光驱目录</div>
+<div class="line">cd /media/cdrom0</div>
+<div class="line"># 找到VMware Tools压缩文件</div>
+<div class="line">ls</div>
+<div class="line"># 解压到TMP文件夹下</div>
+<div class="line">tar xvfz VMwareTools-8.1.3-203739.tar.gz -C /tmp</div>
+<div class="line">cd /tmp</div>
+<div class="line"># 找到VMwareTools安装文件夹</div>
+<div class="line">ls</div>
+<div class="line">cd vmware-tools-distrib</div>
+<div class="line"># 用root权限安装</div>
+<div class="line">sudo ./vmware-install.pl</div>
+<div class="line"># 输入密码，一路回车，然后就安装完毕了。</div>
+<div class="line">#
+这个时候应该有<tt class="docutils literal"><span class="pre">vmware-toolbox这个命令了，</span></tt>如果还没有再运行一下vmware-tools-config.pl就OK了。</div>
+</div>
+</blockquote>
+<p>VMware Tools 安装完成后就可以在VM里按上面提供的链接里讲的那样进行disk
+shrink了，做完disk
+shrink后VM的使用空间和VM文件实际占用的空间基本能保持一致了。</p>
+</div>
+<div class="section" id="id3">
+<h2>4.磁盘碎片整理</h2>
+<p>跟真机一样，VM使用时间一长，就会产生很多磁盘碎片，VM的性能会有所下降，这个时候可以通过VM的Defragment来整理磁盘碎片。</p>
+<p><img alt="image3" class="size-full wp-image-186 aligncenter" src="/static/2011/01/vm-defragment.jpg" style="width: 644px; height: 555px;" /></p>
+<p>磁盘碎片整理结合上面介绍的disk shrink来使用（在disk
+shrink之后）效果更佳。</p>
+</div>
+<div class="section" id="id4">
+<h2>5.命令行启动VM</h2>
+<p>除了通过界面来操作VM，其实也是可以通过命令行来启动一个VM的（这个可能很少有人用到），比如下面的批处理命令能启动并全屏vm-40这个VM：</p>
+<blockquote>
+start vmware -X “D:\09.VM\build_vm\vm_40\winxppro.vmx”</blockquote>
+<p>你还可以在VM的启动项（如：windows的startup，linux的init.d等）里面预先加入一些自定义的任务，这样就可以自动控制一些VM去做一些事情，完成一些自动化的任务了。</p>
+</div>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://feilong.me/tag/vmware.html">vmware</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'feilong';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>
+  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙 ",
+  "url" : "http://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>
