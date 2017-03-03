@@ -76,7 +76,7 @@ SITEMAP = {
 DISQUS_SITENAME = "feilong"
 GOOGLE_ANALYTICS = "UA-9694421-8"
 
-STATIC_PATHS = ['static', 'CNAME']
+STATIC_PATHS = ['static', 'CNAME', '.gitignore']
 
 # EXTRA_PATH_METADATA = {
 #     'extra/custom.css': {'path': 'static/custom.css'},
