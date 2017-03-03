@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = "felinx"
+AUTHOR = "飞龙"
 SITEURL = "http://feilong.me"
-SITENAME = "飞龙"
+SITENAME = "飞龙札记"
 SITETITLE = SITENAME
 SITESUBTITLE = "Nice speech, but what are you going to do."
 SITEDESCRIPTION = "飞龙札记 - felinx's blog"
