@@ -1,8 +1,7 @@
 Title: 我为什么要用八卦(挂)做头像
-Date: 2015-07-22 10:20
-Modified: 2017-03-03 16:20
+Date: 2015-07-22 10:00
 Category: 杂谈
-Tags: 八卦
+Tags: 杂谈
 Slug: 2015/07/why-use-bagua-avatar
 Authors: 飞龙
 
