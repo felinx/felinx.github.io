@@ -3,7 +3,7 @@
 :date: 2010-12-31 21:04
 :author: 飞龙
 :category: 编程
-:tags: Wordpress
+:tags: WordPress
 :slug: 2010/12/auto-update-wordpress-without-ftp-auth
 :status: published
 

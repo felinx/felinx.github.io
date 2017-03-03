@@ -3,7 +3,7 @@
 :date: 2010-12-27 16:28
 :author: 飞龙
 :category: Web
-:tags: Wordpress
+:tags: WordPress
 :slug: 2010/12/recommended-wordpress-plugins
 :status: published
 
