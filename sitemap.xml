@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://feilong.me/</loc>
-<lastmod>2017-03-03T15:32:07-00:00</lastmod>
+<lastmod>2017-03-03T17:26:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/archives.html</loc>
-<lastmod>2017-03-03T15:32:07-00:00</lastmod>
+<lastmod>2017-03-03T17:26:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/tags.html</loc>
-<lastmod>2017-03-03T15:32:07-00:00</lastmod>
+<lastmod>2017-03-03T17:26:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/categories.html</loc>
-<lastmod>2017-03-03T15:32:07-00:00</lastmod>
+<lastmod>2017-03-03T17:26:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -34,6 +34,69 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://feilong.me/2017/03/dxy-robbin-email.html</loc>
 <lastmod>2017-03-02T10:20:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2016/04/you-are-not-couch.html</loc>
+<lastmod>2016-04-02T22:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2015/12/aolai-product-philosophy.html</loc>
+<lastmod>2015-12-07T22:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2015/11/siguozhanji-feedback-email.html</loc>
+<lastmod>2015-11-23T10:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2015/08/growth-hacker.html</loc>
+<lastmod>2015-08-08T10:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2015/08/mani-company-gene.html</loc>
+<lastmod>2015-08-05T10:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2015/08/why-do-perfect.html</loc>
+<lastmod>2015-08-03T10:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2015/07/you-can-do-better.html</loc>
+<lastmod>2015-07-23T10:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2015/07/why-use-bagua-avatar.html</loc>
+<lastmod>2015-07-22T10:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2015/07/write-in-offical-account.html</loc>
+<lastmod>2017-03-03T16:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -355,7 +418,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://feilong.me/category/du-shu.html</loc>
-<lastmod>2011-01-08T11:46:00+08:06</lastmod>
+<lastmod>2015-08-08T10:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -389,8 +452,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://feilong.me/category/you-xi.html</loc>
+<lastmod>2015-11-23T10:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>http://feilong.me/category/za-tan.html</loc>
-<lastmod>2017-03-02T10:20:00+08:06</lastmod>
+<lastmod>2017-03-03T16:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -398,6 +468,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://feilong.me/tag/web-framework.html</loc>
 <lastmod>2011-08-03T13:30:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/tag/gong-gong-zhang-hao.html</loc>
+<lastmod>2017-03-03T16:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -433,6 +510,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://feilong.me/tag/la-ji-you-jian.html</loc>
 <lastmod>2017-03-02T10:20:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/tag/chan-pin.html</loc>
+<lastmod>2015-12-07T22:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -494,6 +578,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://feilong.me/tag/monit.html</loc>
+<lastmod>2011-02-24T17:36:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/tag/chi.html</loc>
+<lastmod>2015-12-07T22:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>http://feilong.me/tag/fan-xiang-dai-li.html</loc>
 <lastmod>2011-06-11T11:41:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -508,6 +606,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://feilong.me/tag/yun-ying.html</loc>
+<lastmod>2015-11-23T10:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>http://feilong.me/tag/sheng-da-chuang-xin-yuan.html</loc>
 <lastmod>2011-09-01T07:34:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -515,8 +620,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://feilong.me/tag/tornado.html</loc>
-<lastmod>2012-10-22T11:56:00+08:06</lastmod>
+<loc>http://feilong.me/tag/python.html</loc>
+<lastmod>2011-08-03T13:30:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -538,6 +643,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://feilong.me/tag/xiao-tou.html</loc>
 <lastmod>2012-06-03T10:18:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/tag/bian-cheng-yu-yan.html</loc>
+<lastmod>2011-01-10T18:36:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -571,8 +683,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://feilong.me/tag/python.html</loc>
-<lastmod>2011-08-03T13:30:00+08:06</lastmod>
+<loc>http://feilong.me/tag/tornado.html</loc>
+<lastmod>2012-10-22T11:56:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -586,14 +698,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://feilong.me/tag/si-guo-zhan-ji.html</loc>
-<lastmod>2013-08-14T23:50:00+08:06</lastmod>
+<lastmod>2015-11-23T10:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://feilong.me/tag/nginx.html</loc>
-<lastmod>2011-06-11T11:41:00+08:06</lastmod>
+<loc>http://feilong.me/tag/zeng-chang-hei-ke.html</loc>
+<lastmod>2015-08-08T10:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -601,6 +713,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://feilong.me/tag/fan-yu-ming.html</loc>
 <lastmod>2012-08-20T12:42:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/tag/chuang-ye.html</loc>
+<lastmod>2015-08-08T10:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -627,8 +746,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://feilong.me/tag/bian-cheng-yu-yan.html</loc>
-<lastmod>2011-01-10T18:36:00+08:06</lastmod>
+<loc>http://feilong.me/tag/za-tan.html</loc>
+<lastmod>2016-04-02T22:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -643,6 +762,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://feilong.me/tag/vmware.html</loc>
 <lastmod>2011-01-17T13:41:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/tag/nginx.html</loc>
+<lastmod>2011-06-11T11:41:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -676,15 +802,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://feilong.me/tag/monit.html</loc>
-<lastmod>2011-02-24T17:36:00+08:06</lastmod>
+<loc>http://feilong.me/tag/bi-bao.html</loc>
+<lastmod>2012-06-03T13:23:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/tag/du-shu.html</loc>
-<lastmod>2011-08-30T16:36:00+08:06</lastmod>
+<lastmod>2015-08-08T10:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -711,15 +837,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://feilong.me/tag/bi-bao.html</loc>
-<lastmod>2012-06-03T13:23:00+08:06</lastmod>
+<loc>http://feilong.me/tag/wei-xin.html</loc>
+<lastmod>2017-03-03T16:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/author/fei-long.html</loc>
-<lastmod>2017-03-02T10:20:00+08:06</lastmod>
+<lastmod>2017-03-03T16:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙 - 读书</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/du-shu.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2011-01-08T11:46:00+08:00</updated><entry><title>Kindle中文乱码问题(TXT、PDF)解决办法</title><link href="http://feilong.me/2011/01/solve-kindle-cn-encoding-problem.html" rel="alternate"></link><published>2011-01-08T11:46:00+08:00</published><updated>2011-01-08T11:46:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-08:/2011/01/solve-kindle-cn-encoding-problem.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;问题一：文件名、TXT文档、上网等中文变成一个个“口”字问题&lt;/strong&gt;（已解决的请直接跳到第二条，我这主要记录一下给自己留个底，这部分的内容主要来自网络）&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙 - 读书</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/du-shu.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2015-08-08T10:00:00+08:00</updated><entry><title>《增长黑客》：一本感觉特别亲近的创业书</title><link href="http://feilong.me/2015/08/growth-hacker.html" rel="alternate"></link><published>2015-08-08T10:00:00+08:00</published><updated>2015-08-08T10:00:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2015-08-08:/2015/08/growth-hacker.html</id><summary type="html">&lt;p&gt;&lt;img alt="growth-hacker" src="/static/2015/08/growth-hacker.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;至今为止我所读过的所有书里，最感亲近的一本书非范老师的新书《增长黑客》莫属，这种感觉就好比走在上海熙熙攘攘的街上突然听到了一声熟悉的家乡话，当拿到书看到封面上那些熟悉的人名时，这种感觉就扑面而来。&lt;/p&gt;
+&lt;p&gt;《增长黑客》是前盛大创新院同事范冰范老师在工作之余历时一年之久写就的一本关于创业公司如何四两拨千斤巧妙增长的书，范冰虽然比我小好几岁，我还是习惯性的称他范老师，范老师是互联网行业知名的博主，在写作、互联网产品、Growth等多方面都是我事实上的老师。我在做之前的游戏玩家社交APP的时候，曾在魔都和帝都多次向范老师请教，范老师跟我分享过他在做“追TA”时的一些经验，这些经验范老师总结成文在本书中的“追TA”案例中可以找到。&lt;/p&gt;
+&lt;p&gt;如范老师自己所述，这是一本献给有梦想的创业者的书。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="preface-dream" src="/static/2015/08/preface-dream.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;每个创业公司都会经历从0到1的过程，《增长黑客》用大量详实的国内外的关于用户、收入增长的实际案例，给我们好好的上了一课，Hotmail、Instagram、Airbnb、Quora、Linkedin、WiFi万能钥匙、追TA等的案例读来不禁令人拍案叫绝。&lt;/p&gt;
+&lt;p&gt;近几年来，O2O市场火爆，相应的资本市场凶残，大量创业公司和资本涌入O2O领域，竞争异常激烈，极大的提升了本地市场的用户推广成本。我的创业项目“呱呱”(一款基于强地理位置的本地社交应用)正处于用户从0到1的阶段，产品所特有的强位置属性(方圆5.20公里 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="growth-hacker" src="/static/2015/08/growth-hacker.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;至今为止我所读过的所有书里，最感亲近的一本书非范老师的新书《增长黑客》莫属，这种感觉就好比走在上海熙熙攘攘的街上突然听到了一声熟悉的家乡话，当拿到书看到封面上那些熟悉的人名时，这种感觉就扑面而来。&lt;/p&gt;
+&lt;p&gt;《增长黑客》是前盛大创新院同事范冰范老师在工作之余历时一年之久写就的一本关于创业公司如何四两拨千斤巧妙增长的书，范冰虽然比我小好几岁，我还是习惯性的称他范老师，范老师是互联网行业知名的博主，在写作、互联网产品、Growth等多方面都是我事实上的老师。我在做之前的游戏玩家社交APP的时候，曾在魔都和帝都多次向范老师请教，范老师跟我分享过他在做“追TA”时的一些经验，这些经验范老师总结成文在本书中的“追TA”案例中可以找到。&lt;/p&gt;
+&lt;p&gt;如范老师自己所述，这是一本献给有梦想的创业者的书。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="preface-dream" src="/static/2015/08/preface-dream.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;每个创业公司都会经历从0到1的过程，《增长黑客》用大量详实的国内外的关于用户、收入增长的实际案例，给我们好好的上了一课，Hotmail、Instagram、Airbnb、Quora、Linkedin、WiFi万能钥匙、追TA等的案例读来不禁令人拍案叫绝。&lt;/p&gt;
+&lt;p&gt;近几年来，O2O市场火爆，相应的资本市场凶残，大量创业公司和资本涌入O2O领域，竞争异常激烈，极大的提升了本地市场的用户推广成本。我的创业项目“呱呱”(一款基于强地理位置的本地社交应用)正处于用户从0到1的阶段，产品所特有的强位置属性(方圆5.20公里)依赖于一定位置范围内的用户密度，我们要达到此用户密度目标不能跟这些挥舞着美金的公司直面竞争抢用户，必须借助于巧力四两拨千斤，《增长黑客》给我提供了一套用户增长的思想武器，也提供了一些实际操作案例可供案边参考。《增长黑客》是我本年度读到的不可多得的一本好书了，已随手送出了两本给同在创业的朋友。&lt;/p&gt;
+&lt;p&gt;读本书的时候一个有趣的插曲是：当我读到Linkedin的案例那一段时，看到了一张关于Linkedin的插图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="linkedin" src="/static/2015/08/linkedin.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;于是有了如下有意思的对话：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="chat" src="/static/2015/08/chat.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;书中还有多处提及到熟悉的前盛大创新院同事的名字和他们创业或参与创业的项目，加之本书正应了我自己当前创业所面临的用户增长的景，这些凑一起或许就是本书带给我的特别的亲近感吧！&lt;/p&gt;</content><category term="增长黑客"></category><category term="读书"></category><category term="创业"></category></entry><entry><title>Kindle中文乱码问题(TXT、PDF)解决办法</title><link href="http://feilong.me/2011/01/solve-kindle-cn-encoding-problem.html" rel="alternate"></link><published>2011-01-08T11:46:00+08:00</published><updated>2011-01-08T11:46:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-08:/2011/01/solve-kindle-cn-encoding-problem.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;问题一：文件名、TXT文档、上网等中文变成一个个“口”字问题&lt;/strong&gt;（已解决的请直接跳到第二条，我这主要记录一下给自己留个底，这部分的内容主要来自网络）&lt;/p&gt;
 &lt;p&gt;Amazon官方说kindle支持简体中文和繁体中文，事实上也算支持了，但中文支持还是很差，简体中文却大部分无法正常显示，变成“口”字了。这个是因为语言设置（locale）的问题，解决办法很简单，就是改变默认的语言设置，输入以下命令即可：&lt;/p&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;;debugOn&lt;/div&gt;

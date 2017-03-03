@@ -87,6 +87,324 @@
 
 <article>
   <header>
+    <h2><a href="http://feilong.me/2011/03/monitor-processes-with-supervisord.html#2011/03/monitor-processes-with-supervisord">用Supervisord管理Python进程</a></h2>
+    <p>
+          Posted on Tue 29 March 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/supervisord.html">supervisord</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>Supervisord是用Python实现的一款非常实用的进程管理工具，类似于<a class="reference external" href="http://mmonit.com/monit/">monit</a>(关于monit见我的博客:<a class="reference external" href="http://feilong.me/2011/02/monitor-core-processes-with-monit">用monit监控系统关键进程</a>)，monit和supervisord的一个比较大的差异是supervisord管理的进程必须由supervisord来启动，monit可以管理已经在运行的程序；supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon
+off让nginx以非daemon方式启动。</p>
+<div class="section" id="supervisord">
+<h2>Supervisord安装</h2>
+<p>Supervisord可以通过<tt class="docutils literal">sudo easy_install supervisor</tt>安装，当然也可以通过<a class="reference external" href="http://supervisord.org/">Supervisord官网</a>下载后setup.py
+install安装。</p>
+</div>
+<div class="section" id="id1">
+<h2>Supervisord配置</h2>
+<p>Supervisord默认的配置文件路径为/etc/supervisord.conf，通过文本编辑器修改这个文件，下面是一个示例的配置文件：</p>
+<pre class="literal-block">
+;/etc/supervisord.conf
+[unix_http_server]
+file = /var/run/supervisor.sock
+chmod = 0777
+chown= root:felinx
+
+[inet_http_server]
+# Web管理界面设定
+port=9001
+username = admin …</pre></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/03/monitor-processes-with-supervisord.html#2011/03/monitor-processes-with-supervisord">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/03/pycon2011-videos-sharing.html#2011/03/pycon2011-videos-sharing">Pycon2011精彩视频分享</a></h2>
+    <p>
+          Posted on Mon 21 March 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/pycon.html">PyCon</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>Python大会上的精彩视频，这些视频很大而且在墙外，因此我用本站的服务器下了下来，然后转到了我国内的服务器，特分享给大家。</p>
+<ul class="simple">
+<li><a class="reference external" href="http://goo.gl/KvA5G">Pycon-PyCon2011AnIntroductionToTornado277.m4v</a>
+献给Tornado爱好者，视频开头有一些垃圾时间，可以忽略。</li>
+<li><a class="reference external" href="http://goo.gl/O94np">How Dropbox Did It and How Python Helped</a>
+Python在Dropbox的运用。</li>
+<li><a class="reference external" href="http://goo.gl/W759t">Using Coroutines to Create Efficient, High-Concurrency Web
+Applications</a> 介绍Python协程的。</li>
+<li><a class="reference external" href="http://goo.gl/95PtV">Advanced Network Architectures With ZeroMQ</a></li>
+<li>待补充...，欢迎大家推荐Pycon2011视频源。</li>
+</ul>
+
+      <br>
+      <a class="btn" href="http://feilong.me/2011/03/pycon2011-videos-sharing.html#2011/03/pycon2011-videos-sharing">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/03/run-some-code-in-testing-and-deploying-server.html#2011/03/run-some-code-in-testing-and-deploying-server">如何在开发测试和生产环境下跑同一套Python代码</a></h2>
+    <p>
+          Posted on Mon 14 March 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/tips.html">tips</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>通常在开发测试和生产环境下，程序的配置和系统环境等会有所差异，比如最常见的调试DEBUG选项本地一般是开的，而在生产环境这个肯定是要关闭的。手动维护两套配置显然是不明智的，下面介绍一点小技巧，让你可以轻松实现一套代码同时跑在开发测试和生产环境下。</p>
+<p>下面以Django为例(Tornado、Pylons等类似)</p>
+<p>首先需要判断当前环境是开发环境还是生产环境，常见的方式是检测机器名。</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">platform</span>
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">node</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;FELINX&quot;</span><span class="p">:</span> <span class="c1"># FELINX is the name of felinx&#39; EC2 server.</span>
+    <span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+<p>不清楚机器名的话，可以通过hostname命令来查询和修改，下面是修改的命令。</p>
+<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">hostname</span> <span class="n">xxx</span>
+</pre></div>
+<p>这样在开发环境和生产环境的DEBUG选项就不一样了，接下来对有需要区别对待的配置或代码就可以通过检测DEBUG来进行选择了，比如在<a class="reference external" href="http://www.chinapy.org">http://www.chinapy.org</a>的<a class="reference external" href="https://bitbucket.org/felinx/chinapy/src/tip/chinapy/settings_local.py">settings_local.py</a>中有这么一段代码：</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">DEBUG …</span></pre></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/03/run-some-code-in-testing-and-deploying-server.html#2011/03/run-some-code-in-testing-and-deploying-server">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/03/amazon-aws-ec2-hardware-failure.html#2011/03/amazon-aws-ec2-hardware-failure">囧，Amazon AWS EC2硬件故障</a></h2>
+    <p>
+          Posted on Sun 06 March 2011 in <a href="http://feilong.me/category/it.html">IT</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/aws.html">aws</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>今天早上起来开Gmail又收到一封来自Amazon的邮件，这次不是新功能的Annoucement邮件也不是Billing邮件，而是一封Notice邮件，惊了我一声冷汗，邮件内容如下（部分内容打了马赛克）：</p>
+<pre class="literal-block">
+Hello,
+
+ We have noticed that one or more of your instances are running on a host degraded due to hardware failure.
+
+ i-221bdxxx
+
+ The risk of your instances failing is increased at this point. We cannot  determine the health of any applications running on the …</pre>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/03/amazon-aws-ec2-hardware-failure.html#2011/03/amazon-aws-ec2-hardware-failure">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/02/monitor-core-processes-with-monit.html#2011/02/monitor-core-processes-with-monit">用monit监控系统关键进程</a></h2>
+    <p>
+          Posted on Thu 24 February 2011 in <a href="http://feilong.me/category/it.html">IT</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/monit.html">monit</a>
+        &#8226; 2 min read
+    </p>
+  </header>
+  <div>
+      <p><a class="reference external" href="http://mmonit.com/monit/">monit</a>是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台，
+它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是<a class="reference external" href="http://supervisord.org/">supervisor</a>，后续会另外撰文介绍。</p>
+<p>下面分别介绍monit的安装、配置和启动。</p>
+<div class="section" id="id1">
+<h2>安装</h2>
+<p>在debian或ubuntu上安装monit非常方便，通过下面的命令</p>
+<pre class="literal-block">
+sudo apt-get install monit
+</pre>
+<p>即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。</p>
+<pre class="literal-block">
+./configure
+make
+make install
+</pre>
+<p>安装后，默认的配置文件为/etc/monit/monitrc。</p>
+</div>
+<div class="section" id="id2">
+<h2>配置</h2>
+<p>添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。</p>
+<pre class="literal-block">
+##
+## 飞龙札记 示例monit配置文件，说明：
+## 1. 域名以example.com为例 …</pre></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/02/monitor-core-processes-with-monit.html#2011/02/monitor-core-processes-with-monit">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/02/learning-python-follow-felinx-part-one.html#2011/02/learning-python-follow-felinx-part-one">Python兼容性编程</a></h2>
+    <p>
+          Posted on Mon 21 February 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/python.html">Python</a>
+        &#8226; 2 min read
+    </p>
+  </header>
+  <div>
+      <p>鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家<strong>讨论、拍砖、献花</strong>！</p>
+<p>我将主要结合<a class="reference external" href="http://github.com/facebook/tornado">Tornado的源码</a>来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。</p>
+<p>为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为：</p>
+<ol class="arabic simple">
+<li>Tornado的代码规范且质量很高；</li>
+<li>代码总量比较小，比较容易掌握；</li>
+<li>飞龙对Tornado多多少少有点研究。</li>
+</ol>
+<p>注：<a class="reference external" href="http://www.tornadoweb.org/">Tornado(要翻墙)</a>是<a class="reference external" href="http://friendfeed.com">friendfeed.com</a>（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web
+server，同时又是一个类web.py的web框架，关于Tornado
+web框架部分的讨论见我的博客“ <a class="reference external" href="http://feilong.me/2011/01/talk-about-python-web-framework">浅谈Python
+web框架</a>”相应的部分，对于Tornado的web
+server的性能，可以参考Tornado官方主页和<a class="reference external" href="http://nichol.as/benchmark-of-python-web-servers">http://nichol.as/benchmark-of-python-web-servers</a>的介绍。</p>
+<p>看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:)</p>
+<div class="section" id="id1">
+<h2>系统兼容 …</h2></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/02/learning-python-follow-felinx-part-one.html#2011/02/learning-python-follow-felinx-part-one">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/02/quick-find-your-oldest-buzz.html#2011/02/quick-find-your-oldest-buzz">教你一招，让你快速找到自己最早的Buzz</a></h2>
+    <p>
+          Posted on Thu 10 February 2011 in <a href="http://feilong.me/category/za-tan.html">杂谈</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/google.html">Google</a>,              <a href="http://feilong.me/tag/buzz.html">buzz</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>Google
+Buzz推出已有一周年，最近很多网友想怀怀旧，把自己的处女Buzz给找出来记念一下，可是很不幸Google
+Buzz要做到这一点还真不容易，在个人的Buzz页面你只能一步步Load老的Buzz，没有翻到最后一页之说，如下图：</p>
+<p><img alt="image0" class="alignnone size-full wp-image-235" src="/static/2011/02/buzz_load_more.jpg" style="width: 436px; height: 186px;" /></p>
+<p>如果你的Buzz很多的话，对不起，Load旧的Buzz到一定程度就进行不下去了，没法Load到最后一页去挖最早的一篇Buzz。</p>
+<p>难道要找自己最早的Buzz就这么难吗？办法是有地，接下来就教你一招搞定这事。</p>
+<p>我们可以通过Gmail的邮件搜索来找到你最早的Buzz，在Gmail里搜索关键字“buzz”：</p>
+<p><img alt="image1" class="alignnone size-full wp-image-236" src="/static/2011/02/search_buzz_in_gmail.jpg" style="width: 538px; height: 62px;" /></p>
+<p>搜索结果包括你发的所有健在的Buzz记录，结果如下：</p>
+<p><img alt="image2" class="alignnone size-large wp-image-237" src="/static/2011/02/search_buzz_result-1024x103.jpg" style="width: 725px; height: 72px;" /></p>
+<p>接下来就是点右上角或左下角的Older链接不停的翻旧的Buzz就可以了，翻到最后一页就是你最早的Buzz记录了（这个是可以一直翻到底的哦）。</p>
+<p>我就是这样把最早的一条Buzz给翻出来的，你还不赶紧按此法把自己的处女Buzz挖出来顶顶。</p>
+
+      <br>
+      <a class="btn" href="http://feilong.me/2011/02/quick-find-your-oldest-buzz.html#2011/02/quick-find-your-oldest-buzz">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/01/talk-about-python-web-framework.html#2011/01/talk-about-python-web-framework">浅谈Python web框架</a></h2>
+    <p>
+          Posted on Tue 25 January 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/web-framework.html">web framework</a>,              <a href="http://feilong.me/tag/django.html">Django</a>,              <a href="http://feilong.me/tag/tornado.html">Tornado</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>说到web
+framework，Ruby的世界Rails一统江湖，而Python则是一个百花齐放的世界，各种micro-framework、framework不可胜数，不完全列表见：<a class="reference external" href="http://wiki.python.org/moin/WebFrameworks">http://wiki.python.org/moin/WebFrameworks</a>。虽然另一大脚本语言PHP也有不少框架，但远没有Python这么夸张，也正是因为Python
+web framework（Python
+web开发框架，以下简称Python框架）太多，所以在Python社区总有关于Python框架孰优孰劣的话题，讨论的时间跨度甚至长达3-5年。</p>
+<p>Python这么多框架，能挨个玩个遍的人不多，坦白的说我也只用过其中的三个开发过项目，另外一些稍微接触过，所以这里只能浅谈一下，欢迎懂行的朋友们补充、拍砖。</p>
+<div class="section" id="django">
+<h2><a class="reference external" href="http://www.djangoproject.com">Django</a></h2>
+</div>
+<div class="section" id="image0">
+<h2><img alt="image0" class="alignnone size-full wp-image-225" src="/static/2011/01/hdr_logo.gif" style="width: 117px; height: 41px;" /></h2>
+<p>Python框架虽然说是百花齐放，但仍然有那么一家是最大的，它就是Django。要说Django是Python框架里最好的，有人同意也有人坚决反对，但说Django的文档最完善、市场占有率最高、招聘职位最多估计大家都没什么意见。Django为人所称道的地方主要有：</p>
+<ul class="simple">
+<li>完美的文档，Django的成功，我觉得很大一部分原因要归功于Django近乎完美的官方文档（包括Django
+book）。</li>
+<li>全套的解决方案，Django象Rails一样，提供全套的解决方案（full-stack …</li></ul></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/01/talk-about-python-web-framework.html#2011/01/talk-about-python-web-framework">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html#2011/01/ms-ui-automation-tool-design-guide">基于UI Automation的自动化测试工具设计指南</a></h2>
+    <p>
+          Posted on Thu 20 January 2011 in <a href="http://feilong.me/category/bian-cheng.html">编程</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/uiautomation.html">UIAutomation</a>,              <a href="http://feilong.me/tag/zi-dong-hua-ce-shi.html">自动化测试</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>说明：以下内容是根据2010年我在公司的一次关于UI
+Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI
+Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。</p>
+<p>在没有MSUIA（Microsoft UI
+Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active
+Accessibility）、Win32
+API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows
+程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:)</p>
+<p>在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。</p>
+<div class="section" id="uia">
+<h2><strong>UIA名词解释</strong></h2>
+<div class="section" id="elements">
+<h3>Elements</h3>
+<p>在UIA里 …</p></div></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html#2011/01/ms-ui-automation-tool-design-guide">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://feilong.me/2011/01/vmware-pragmatic-tips.html#2011/01/vmware-pragmatic-tips">VMware几个实用技巧</a></h2>
     <p>
           Posted on Mon 17 January 2011 in <a href="http://feilong.me/category/it.html">IT</a>
@@ -118,280 +436,6 @@ VMware&nbsp;Virtual&nbsp;Disk&nbsp;Manager&nbsp;-&nbsp;build&nbsp;34685.
 Usage …</pre></div>
       <br>
       <a class="btn" href="http://feilong.me/2011/01/vmware-pragmatic-tips.html#2011/01/vmware-pragmatic-tips">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/01/pep-3333-accepted.html#2011/01/pep-3333-accepted">Python一大好消息PEP 3333 Accepted</a></h2>
-    <p>
-          Posted on Fri 14 January 2011 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/pep.html">pep</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>不日前我在<a class="reference external" href="http://feilong.me/2011/01/recommended-entries-for-you-to-master-python">“学好Python必读的几篇文章”</a>中提到的尚在草案状态的<a class="reference external" href="http://www.python.org/dev/peps/pep-3333/">PEP
-3333</a>已经正式Final了（Status:Final），公布这个事件的邮件见<a class="reference external" href="http://mail.python.org/pipermail/web-sig/2011-January/004979.html">PEP
-3333
-Accepted</a>。</p>
-<p>这标志着新的兼容Python3的WSGI规范制定工作已完成，此事无疑给Python
-Web界和Python3的推广运用注入一强心剂，意义非常重大：</p>
-<ol class="arabic simple">
-<li><a class="reference external" href="http://www.python.org/dev/peps/pep-0333/">PEP
-333</a>和Python3的不兼容让很多Web
-server、framework、middleware的开发者不得不对Python3的支持采取观望、等待的态度，暂时没有把项目升级到Python3排上日程。PEP
-3333的定稿，将加速这些项目Python3的移植，可以预见的是很快就会有人宣称他们的Web
-server或framework将支持PEP
-3333、Python3了，届时大家就可以用Python3来写Web运用了。</li>
-<li>再扯远一点，当用Python3开发Web已经成为主流的时候，大家就不再为Python2.x和Python3.x的不兼容而犯愁了，这会坚定更多的想用Python开发Web运用的人的决心，Python用户有望进一步的增加，Tiobe上Python语言的指数将再攀新高。</li>
-</ol>
-<p>PS：快速预览PEP333和PEP3333的差异见：<a class="reference external" href="http://svn.python.org/view/peps/trunk/pep-3333.txt?r1=84854&amp;r2=HEAD">http://svn.python.org/view/peps/trunk/pep-3333 …</a></p>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/01/pep-3333-accepted.html#2011/01/pep-3333-accepted">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/01/recommended-entries-for-you-to-master-python.html#2011/01/recommended-entries-for-you-to-master-python">学好Python必读的几篇文章</a></h2>
-    <p>
-          Posted on Wed 12 January 2011 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/python.html">Python</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>作为脚本语言Python上手容易，但要学好Python能写出一手漂亮的、Pythonic的Python代码并非一日之功，本文的目的在于推荐一些优秀的Python相关的文章(至于书大家可以看dip、learning
-python和官方手册去)，让你在成长为一名Python高手的路上少走一点弯路。注：文章都是英文的，学好Python读懂英文资料这是必须的了。</p>
-<p><a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">1. PEP8 Style Guide for Python Code</a></p>
-<p>排第一的当属Python的编码规范PEP8，这个就不用我多说吧，无论是初学还是高手PEP8都是必须烂熟于胸的。在遵循里面讲述的规则的同时，大家也要记住两句比较特殊的话，不过这两句话千万别滥用了:）</p>
-<pre class="literal-block">
-Two good reasons to break a particular rule:
-
-(1) When applying the rule would make the code less readable, even for
-    someone who is used to …</pre>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/01/recommended-entries-for-you-to-master-python.html#2011/01/recommended-entries-for-you-to-master-python">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/01/python-wins-tiobe-2010-pro-lang-award.html#2011/01/python-wins-tiobe-2010-pro-lang-award">说说Python获年度Tiobe编程语言大奖这事</a></h2>
-    <p>
-          Posted on Mon 10 January 2011 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/bian-cheng-yu-yan.html">编程语言</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>今天在reddit的feed里看到了Python获得了2010年编程语言大奖，国外也有不少朋友在讨论这事，我也顺带来说几句。</p>
-<p>Python在2010年获得了较大的市场份额增长，2010年1月以来Python的市场份额增长了1.81％，是增长速度最快的，其次是Objective
--
-C（1.63％）。排名见下表，详情请见Tiobe原址：<a class="reference external" href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html">http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html</a>。</p>
-<p><img alt="image0" class="size-full wp-image-118 aligncenter" src="/static/2011/01/python_tiobe_index_2010_winner.jpg" style="width: 598px; height: 582px;" /></p>
-<p>再来看一下历年的获奖语言：</p>
-<p><img alt="image1" class="size-full wp-image-119 aligncenter" src="/static/2011/01/python_lang_wins_years.jpg" style="width: 144px; height: 215px;" /></p>
-<p>Python在2007和2010最近的这几年里获得两次年度大奖，确实是很给力。</p>
-<p>虽然Tiobe的排名不是非常靠谱，大家对此排行争议也很多，但大体它还是可以反映一个趋势。Python除了保持在后台脚本、测试领域的优势外，最近几年随着Python
-web
-framework的蓬勃发展，Python在Web领域的运用也越来越多，国外出现了一大批用Python开发的新站、大站，比如大名鼎鼎的：<a class="reference external" href="http://www.reddit.com">reddit.com</a>、<a class="reference external" href="http://www.dropbox.com">dropbox.com</a>、<a class="reference external" href="http://bitbucket.org">bitbucket.org</a>、<a class="reference external" href="http://www.quora.com">quora.com</a>、<a class="reference external" href="http://friendfeed.com">friendfeed.com</a>，其中reddit代码还是开源的 …</p>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/01/python-wins-tiobe-2010-pro-lang-award.html#2011/01/python-wins-tiobe-2010-pro-lang-award">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/01/something-about-domain-registration.html#2011/01/something-about-domain-registration">域名注册的那点事</a></h2>
-    <p>
-          Posted on Mon 10 January 2011 in <a href="http://feilong.me/category/web.html">Web</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/yu-ming.html">域名</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>要架设一个商业网站、个人博客，首要的即是要注册一个好的域名（大家也都知道kaixin001.com和kaixin.com那点事），而要注册一个好的域名特别是
-.com
-的也不是那么容易。鉴于我现在都快成“域名控”了，也积累了一些关于域名注册查询、域名注册、域名抢注的经验，特写博一篇与大家分享一下域名注册的那点事。</p>
-<div class="section" id="id2">
-<h2>1.注册查询</h2>
-<p>域名注册网站大都会提供域名注册查询的功能，但功能可能会比较简单，比如新网互联的，而有些会提供域名联想、域名建议等附加功能，比如万网的。而真正查询功能比较强大的是<a class="reference external" href="http://www.domaintools.com/">http://www.domaintools.com</a>，我在注册域名前都会到domaintools先查询一下，然后去注册。</p>
-<p>举例来说，假设我要查询以字符串fei开头的，不带数字和“-”且字符总数在8个以内的已删除的可注册的域名，下面的链接即实现了这一功能：</p>
-<p><a class="reference external" href="http://domain-search.domaintools.com/?q=fei&amp;bc=8&amp;bh=B&amp;order=left&amp;pool=B&amp;filter=y&amp;search_type=&amp;rows=100&amp;de_search=Search">http://domain-search.domaintools.com/?q=fei&amp;bc=8&amp;bh=B&amp;order=left&amp;pool=B …</a></p></div>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/01/something-about-domain-registration.html#2011/01/something-about-domain-registration">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/01/solve-kindle-cn-encoding-problem.html#2011/01/solve-kindle-cn-encoding-problem">Kindle中文乱码问题(TXT、PDF)解决办法</a></h2>
-    <p>
-          Posted on Sat 08 January 2011 in <a href="http://feilong.me/category/du-shu.html">读书</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/kindle.html">Kindle</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p><strong>问题一：文件名、TXT文档、上网等中文变成一个个“口”字问题</strong>（已解决的请直接跳到第二条，我这主要记录一下给自己留个底，这部分的内容主要来自网络）</p>
-<p>Amazon官方说kindle支持简体中文和繁体中文，事实上也算支持了，但中文支持还是很差，简体中文却大部分无法正常显示，变成“口”字了。这个是因为语言设置（locale）的问题，解决办法很简单，就是改变默认的语言设置，输入以下命令即可：</p>
-<div class="line-block">
-<div class="line">;debugOn</div>
-<div class="line">~changeLocale zh-CN</div>
-<div class="line">;debugOff</div>
-</div>
-<p>输入时要注意大小写，具体输入步骤是：在home页面，先按下回车（也就是方向键旁边那个弯弯箭头键），会出现一个输入框，输入第一条命令后，回车，再输入第二条，再回车，再第3条回车。这样就设置成功了，然后重启kindle。</p>
-<p>重启步骤：home -&gt; Menu -&gt; Settings -&gt; Menu -&gt; Restart</p>
-<p>也就是进入设置那里再按MENU选择restart重启，或者直接滑动那个关机键按住15秒左右就重启了。</p>
-<p>重启之后没问题的话，中文显示应该没问题了，不过txt文件支持还是会有些问题 …</p>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/01/solve-kindle-cn-encoding-problem.html#2011/01/solve-kindle-cn-encoding-problem">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/01/amazon-aws-ec2-guide.html#2011/01/amazon-aws-ec2-guide">亚马逊AWS(EC2)资源汇总</a></h2>
-    <p>
-          Posted on Sat 01 January 2011 in <a href="http://feilong.me/category/it.html">IT</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/aws.html">aws</a>,              <a href="http://feilong.me/tag/yun-ji-suan.html">云计算</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>亚马逊AWS全称Amazon Web
-Services，即亚马逊于2006年推出的云计算服务，核心产品包括EC2、S3、EBS、CloudFront、SimpleDB等，全部产品列表见：<a class="reference external" href="http://aws.amazon.com/products/">http://aws.amazon.com/products/</a>。</p>
-<p>从2010年11月1日开始，亚马逊还推出了一个免费<a class="reference external" href="http://aws.amazon.com/free/">AWS Free Usage
-Tier</a>体验活动，相当于613
-MB的VPS，可以免费（部分超额的使用还是要收费的）使用一年。</p>
-<p>在国外AWS居领导地位，很多大站、新站都用了AWS的服务，比如<a class="reference external" href="http://twitter.com">Twitter</a>、<a class="reference external" href="http://bitbucket.org">Bitbucket</a>、<a class="reference external" href="http://www.quora.com">Quora</a>，而在国内可能知道的、用过AWS的人并不多。我也是在<a class="reference external" href="http://www.andapponline.com">James
-Zhang</a>同学不停的鼓动下最终用上了AWS的，<a class="reference external" href="http://feilong.me">飞龙札记</a>和我的<a class="reference external" href="http://poweredsites.org">http://poweredsites.org</a>就是部署在AWS上，下面是我收集的一些关于AWS的资源汇总：</p>
-<p>AWS官方的文档入口</p>
-<ul class="simple">
-<li><a class="reference external" href="http://aws.amazon.com/documentation/">http://aws …</a></li></ul>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/01/amazon-aws-ec2-guide.html#2011/01/amazon-aws-ec2-guide">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html#2010/12/auto-update-wordpress-without-ftp-auth">免输入FTP信息自动升级WordPress</a></h2>
-    <p>
-          Posted on Fri 31 December 2010 in <a href="http://feilong.me/category/bian-cheng.html">编程</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/wordpress.html">Wordpress</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>WordPress的3.0.4
-修复了一个严重的<a class="reference external" href="http://cn.wordpress.org/2010/12/30/3-0-4-update/">安全漏洞</a>，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。</p>
-<p>但是，同样的等我跑去升级<a class="reference external" href="http://17weiguan.com">围观网</a>的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？</p>
-<ol class="arabic simple">
-<li>飞龙札记和围观网是运行在两台不同的服务器上，但都是用nginx
-proxy到后台的PHP
-fastcgi进程进行处理的，服务器的配置基本一致，而两个网站用的WordPress文件是一样的，所以首先就可以排除WordPress版本和服务器配置的差异引起的不同。</li>
-<li>两个网站的差别主要体现在主题和插件，这些虽然牵涉到WordPress的设置但是跟WordPress本身及插件升级根本没关系，所以也基本可以排除由WordPres设置差异造成两者升级差异的可能性。</li>
-<li>而要求输入FTP信息，目的其实是为了下载WordPress升级文件。两个站一个可以自己下，另一个则要提供FTP账户信息，由此看来应该是文件夹权限问题造成的，仔细对比了一下飞龙札记和围观网的代码文件夹权限，发现飞龙札记的代码文件夹所有者和fastcgi进程的用户是同一个，而围观网的则是两个不同的用户。将围观网的代码文件夹所有者改成fastcgi的进程用户（sudo
-chown -R fastcgi-username
-/home/local/weiguan），问题解决，围观网自动升级不再需要输入FTP信息了 …</li></ol>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html#2010/12/auto-update-wordpress-without-ftp-auth">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/12/enjoy-read-feeds-in-kindle.html#2010/12/enjoy-read-feeds-in-kindle">让你的Kindle成为离线阅读利器</a></h2>
-    <p>
-          Posted on Fri 31 December 2010 in <a href="http://feilong.me/category/du-shu.html">读书</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/kindle.html">Kindle</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>Kindle用来看书很爽，这个无需多说大家都知道，但是用Kindle来看订阅的新闻、博客，当离线的Google
-Reader来用，这个估计知道的人并不多，我这就给大家介绍一个网站，让你轻松实现这一功能，在Kindle上尽情的享受离线阅读订阅内容的快乐吧！</p>
-<p>我现在几乎所有的RSS订阅都是在每天上下班的路上（无WIFI、3G的情况下）用Kindle3来看的，基本脱离Google
-Reader的怀抱。</p>
-<ol class="arabic simple">
-<li>在亚马逊上也是可以订阅Feeds的，不过那是要钱的，略过不谈。</li>
-<li><a class="reference external" href="http://www.kindlefeeder.com">http://www.kindlefeeder.com</a>
-这个是老外的网站，可以订阅Feeds发到你的Kindle上，但是定时发送是要收钱的，再略过。</li>
-<li><a class="reference external" href="http://dogear.mobi/">http://dogear.mobi/</a>
-要重点介绍的是这个，国人做的。其实在我发现这个网站以前，我是想自己做一个这样的网站的，域名都买好了叫feedkindle.com，不过dogear已经很成熟了，我就不用再去择腾了。dogear可以自订阅多个Feed源，然后在管理页面去设置一个时间，让dogear每天定时将订阅内容发送到你的Kindle上，只要每天在定时发送的这个时间后开一次Kindle的WIFI(对于3G版的，因为流量亚马逊要收费，请慎重)就OK了，注意<strong>添加一下&#64;dogear.mobi这个email地址到你Kindle受信任的邮件表里 …</strong></li></ol>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/12/enjoy-read-feeds-in-kindle.html#2010/12/enjoy-read-feeds-in-kindle">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/12/google-buzz-top-8-defects.html#2010/12/google-buzz-top-8-defects">历数Google Buzz八宗罪</a></h2>
-    <p>
-          Posted on Fri 31 December 2010 in <a href="http://feilong.me/category/za-tan.html">杂谈</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/google.html">Google</a>,              <a href="http://feilong.me/tag/buzz.html">buzz</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>Buzz在2010各大网站、机构评出的失败的产品列表中均排名前列，原因很简单，Buzz从2月推出至今一直问题不断，特别是开始的隐私泄漏问题和最近的掉评论问题，让很多用户无法忍受，虽然我是Buzz的忠忠忠忠忠实粉丝，但骂你一顿是必须的，恨Buzz你不是李刚啊！下面历数一下Buzz推出以来大大小小、莫名其妙、让人头疼的八宗罪（七宗罪再加一等，最后一等就是这掉评论了）。</p>
-<p><img alt="image0" class="size-full wp-image-211 aligncenter" src="/static/2010/12/googlebuzz.jpg" style="width: 460px; height: 250px;" /></p>
-<ol class="arabic simple">
-<li><strong>隐私泄漏</strong>问题，Buzz刚推出时最为人诟病的就是隐私泄漏问题，如泄漏邮件地址和常联系的人的信息。</li>
-<li><strong>掉fo问题</strong>，不用多说，掉fo的同学应该深有体会。</li>
-<li><strong>关联恶魔</strong>，Buzz的这个功能很强大，但是被用户滥用了，被人关联刷屏的感觉相信很多人体验过，在Mute功能没出来之前，关联了GR和Twitter的同学们几乎是过街老鼠人人喊打。</li>
-<li>掉帖子问题，如果你的账号之前没有绑定手机，而这时你已经开始使用Buzz了，后面哪次登录Buzz时Google要你加入手机信息，而你一旦你绑定手机后，对不起，Buzz当你是一个新号，以前所有的帖子在Buzz里都找不到了，只有你的邮件里会留点残骸。深恶而痛绝之，我的飞龙里至今fo了两个一模一样的五花马。</li>
-<li>转帖问题，Buzz转帖尊重原帖，这是对的，但却不尊重中间转的人，再转的人的帖子里只有原帖和原作者信息，没有中间转的那位的一点信息，中转的那位的再创作也就没了。举例，A发原帖，B转A的贴，C转B转A的贴，C转的贴里根本跟没B什么事 …</li></ol>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/12/google-buzz-top-8-defects.html#2010/12/google-buzz-top-8-defects">    Continue reading
 </a>
   </div>
 </article>
