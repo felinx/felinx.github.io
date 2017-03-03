@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="Supervisord是用Python实现的一款非常实用的进程管理工具，类似于monit(关于monit见我的博客:用monit监控系统关键进程)，monit和supervisord的一个比较大的差异是supervisord管理的进程必须由supervisord来启动，monit可以管理已经在运行的程序；supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon off让nginx以非daemon方式启动。 Supervisord安装 Supervisord可以通过sudo easy_install supervisor安装，当然也可以通过Supervisord官网下载后setup.py install安装。 Supervisord配置 Supervisord默认的配置文件路径为/etc/supervisord.conf，通过文本编辑器修改这个文件，下面是一个示例的配置文件： ;/etc/supervisord.conf [unix_http_server] file = /var/run/supervisor.sock chmod = 0777 chown= root:felinx [inet_http_server] # Web管理界面设定 port=9001 username = admin …" />
 <meta name="keywords" content="Python, supervisord">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="用Supervisord管理Python进程"/>
 <meta property="og:description" content="Supervisord是用Python实现的一款非常实用的进程管理工具，类似于monit(关于monit见我的博客:用monit监控系统关键进程)，monit和supervisord的一个比较大的差异是supervisord管理的进程必须由supervisord来启动，monit可以管理已经在运行的程序；supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon off让nginx以非daemon方式启动。 Supervisord安装 Supervisord可以通过sudo easy_install supervisor安装，当然也可以通过Supervisord官网下载后setup.py install安装。 Supervisord配置 Supervisord默认的配置文件路径为/etc/supervisord.conf，通过文本编辑器修改这个文件，下面是一个示例的配置文件： ;/etc/supervisord.conf [unix_http_server] file = /var/run/supervisor.sock chmod = 0777 chown= root:felinx [inet_http_server] # Web管理界面设定 port=9001 username = admin …"/>
 <meta property="og:locale" content="en_US"/>
@@ -48,16 +48,16 @@
 <meta property="article:tag" content="supervisord"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; 用Supervisord管理Python进程</title>
+  <title>飞龙札记 &ndash; 用Supervisord管理Python进程</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -218,7 +218,7 @@ update，根据最新的配置文件，启动新配置或有改动的进程，�
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -253,7 +253,7 @@ update，根据最新的配置文件，启动新配置或有改动的进程，�
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"

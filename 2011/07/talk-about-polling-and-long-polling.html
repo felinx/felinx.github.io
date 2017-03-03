@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="说明：此博客源自我在python-cn邮件群组中对网友关于Comet的问题的回答，特整理下供更多需要了解的人参考。 轮询(Polling)是指不管服务器端有没有更新，客户端(通常是指浏览器)都定时的发送请求进行查询，轮询的结果可能是服务器端有新的更新过来，也可能什么也没有，只是返回个空的信息。不管结果如何，客户端处理完后到下一个定时时间点将继续下一轮的轮询。 推送或叫长连接(Long-Polling)的服务其客户端是不做轮询的，客户端在发起一次请求后立即挂起，一直到服务器端有更新的时候，服务器才会主动推送信息到客户端。 在服务器端有更新并推送信息过来之前这个周期内，客户端不会有新的多余的请求发生，服务器端对此客户端也啥都不用干，只保留最基本的连接信息，一旦服务器有更新将推送给客户端，客户端将相应的做出处理，处理完后再重新发起下一轮请求。 举个例子说明下就很清楚了： 轮询模式，假设是客户端每2秒轮询一次，那么客户端每2秒就会发送一次请求，相应的服务器端每2秒就要响应这个客户端的一次请求。而实际上服务器端可能1秒钟后就有更新，也可能1分钟后才有更新。对于1秒钟就有更新的，客户端至少会有1秒钟的延时；而1分钟后才有更新的，只有最后一次查询有意义，这一分钟内的轮询其实都是没有必要的，服务器端和客户端均有资源的浪费。 推送模式，客户端发送一次请求后马上挂起等待服务器端响应，可能1秒，也可能10秒钟，也可能1分钟。如果服务器端是1秒就有更新，那么到1秒钟时客户端马上就收到更新了，如果是1分钟才有更新，那么整个一分钟客户端也只请求一次，服务器也只会相应一次 …" />
 <meta name="keywords" content="Polling, Long-Polling">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="浅析轮询(Polling)和推送(Long-Polling)服务"/>
 <meta property="og:description" content="说明：此博客源自我在python-cn邮件群组中对网友关于Comet的问题的回答，特整理下供更多需要了解的人参考。 轮询(Polling)是指不管服务器端有没有更新，客户端(通常是指浏览器)都定时的发送请求进行查询，轮询的结果可能是服务器端有新的更新过来，也可能什么也没有，只是返回个空的信息。不管结果如何，客户端处理完后到下一个定时时间点将继续下一轮的轮询。 推送或叫长连接(Long-Polling)的服务其客户端是不做轮询的，客户端在发起一次请求后立即挂起，一直到服务器端有更新的时候，服务器才会主动推送信息到客户端。 在服务器端有更新并推送信息过来之前这个周期内，客户端不会有新的多余的请求发生，服务器端对此客户端也啥都不用干，只保留最基本的连接信息，一旦服务器有更新将推送给客户端，客户端将相应的做出处理，处理完后再重新发起下一轮请求。 举个例子说明下就很清楚了： 轮询模式，假设是客户端每2秒轮询一次，那么客户端每2秒就会发送一次请求，相应的服务器端每2秒就要响应这个客户端的一次请求。而实际上服务器端可能1秒钟后就有更新，也可能1分钟后才有更新。对于1秒钟就有更新的，客户端至少会有1秒钟的延时；而1分钟后才有更新的，只有最后一次查询有意义，这一分钟内的轮询其实都是没有必要的，服务器端和客户端均有资源的浪费。 推送模式，客户端发送一次请求后马上挂起等待服务器端响应，可能1秒，也可能10秒钟，也可能1分钟。如果服务器端是1秒就有更新，那么到1秒钟时客户端马上就收到更新了，如果是1分钟才有更新，那么整个一分钟客户端也只请求一次，服务器也只会相应一次 …"/>
 <meta property="og:locale" content="en_US"/>
@@ -48,16 +48,16 @@
 <meta property="article:tag" content="Long-Polling"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; 浅析轮询(Polling)和推送(Long-Polling)服务</title>
+  <title>飞龙札记 &ndash; 浅析轮询(Polling)和推送(Long-Polling)服务</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -142,7 +142,7 @@
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -177,7 +177,7 @@
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"

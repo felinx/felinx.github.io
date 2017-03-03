@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="GAE的Hosting站点 appspot.com在国内被墙，因此架设在GAE上的运用没法直接访问，需要曲线救国，其中一招比较有效的方式即是通过nginx反向代理来实现，不过这个要求你在国外有一个可用的nginx。下面以tornadoweb.cn为例讲述如何用nginx配置反向代理(注：tornadoweb.cn为tornadoweb.org的镜像站点，原站就是在GAE上，因此国内无法直接访问)。关于nginx的基本配置部分请参考我在poweredsites上的博客how-to-setup-nginx，本文只讨论如何配置tornadoweb.cn这个站点，配置说明详见配置中的注释。 server { # 监听80端口，通常可以省略。 listen 80; # 要配置的站点域名，即用来曲线访问GAE上的原站点的域名。 server_name www.tornadoweb.cn; # Ben老大要求tornadoweb.cn有说明是镜像站点以区别于原站tornadoweb.org， # 因此我走巧将头上的LOGO采用修改过的本地文件，在原logo上加了mirror的声明 location /static/tornado.png { # LOGO文件tornado.png所在文件夹目录 root /mnt/ebs …" />
 <meta name="keywords" content="nginx, 反向代理">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="nginx反向代理配置(附：tornadoweb.cn的nginx配置)"/>
 <meta property="og:description" content="GAE的Hosting站点 appspot.com在国内被墙，因此架设在GAE上的运用没法直接访问，需要曲线救国，其中一招比较有效的方式即是通过nginx反向代理来实现，不过这个要求你在国外有一个可用的nginx。下面以tornadoweb.cn为例讲述如何用nginx配置反向代理(注：tornadoweb.cn为tornadoweb.org的镜像站点，原站就是在GAE上，因此国内无法直接访问)。关于nginx的基本配置部分请参考我在poweredsites上的博客how-to-setup-nginx，本文只讨论如何配置tornadoweb.cn这个站点，配置说明详见配置中的注释。 server { # 监听80端口，通常可以省略。 listen 80; # 要配置的站点域名，即用来曲线访问GAE上的原站点的域名。 server_name www.tornadoweb.cn; # Ben老大要求tornadoweb.cn有说明是镜像站点以区别于原站tornadoweb.org， # 因此我走巧将头上的LOGO采用修改过的本地文件，在原logo上加了mirror的声明 location /static/tornado.png { # LOGO文件tornado.png所在文件夹目录 root /mnt/ebs …"/>
 <meta property="og:locale" content="en_US"/>
@@ -48,16 +48,16 @@
 <meta property="article:tag" content="反向代理"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; nginx反向代理配置(附：tornadoweb.cn的nginx配置)</title>
+  <title>飞龙札记 &ndash; nginx反向代理配置(附：tornadoweb.cn的nginx配置)</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -178,7 +178,7 @@ server {
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -213,7 +213,7 @@ server {
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"

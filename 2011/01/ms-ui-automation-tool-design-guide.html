@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="说明：以下内容是根据2010年我在公司的一次关于UI Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。 在没有MSUIA（Microsoft UI Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active Accessibility）、Win32 API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows 程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:) 在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。 UIA名词解释 Elements 在UIA里 …" />
 <meta name="keywords" content="UIAutomation, 自动化测试">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="基于UI Automation的自动化测试工具设计指南"/>
 <meta property="og:description" content="说明：以下内容是根据2010年我在公司的一次关于UI Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。 在没有MSUIA（Microsoft UI Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active Accessibility）、Win32 API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows 程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:) 在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。 UIA名词解释 Elements 在UIA里 …"/>
 <meta property="og:locale" content="en_US"/>
@@ -48,16 +48,16 @@
 <meta property="article:tag" content="自动化测试"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; 基于UI Automation的自动化测试工具设计指南</title>
+  <title>飞龙札记 &ndash; 基于UI Automation的自动化测试工具设计指南</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -279,7 +279,7 @@ words的简单组合，再加上一些测试结果的验证就OK了。</li>
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -314,7 +314,7 @@ words的简单组合，再加上一些测试结果的验证就OK了。</li>
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"

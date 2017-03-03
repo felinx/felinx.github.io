@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="WordPress的3.0.4 修复了一个严重的安全漏洞，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。 但是，同样的等我跑去升级围观网的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？ 飞龙札记和围观网是运行在两台不同的服务器上，但都是用nginx proxy到后台的PHP fastcgi进程进行处理的，服务器的配置基本一致，而两个网站用的WordPress文件是一样的，所以首先就可以排除WordPress版本和服务器配置的差异引起的不同。 两个网站的差别主要体现在主题和插件，这些虽然牵涉到WordPress的设置但是跟WordPress本身及插件升级根本没关系，所以也基本可以排除由WordPres设置差异造成两者升级差异的可能性。 而要求输入FTP信息，目的其实是为了下载WordPress升级文件。两个站一个可以自己下，另一个则要提供FTP账户信息，由此看来应该是文件夹权限问题造成的，仔细对比了一下飞龙札记和围观网的代码文件夹权限，发现飞龙札记的代码文件夹所有者和fastcgi进程的用户是同一个，而围观网的则是两个不同的用户。将围观网的代码文件夹所有者改成fastcgi的进程用户（sudo chown -R fastcgi-username /home/local/weiguan），问题解决，围观网自动升级不再需要输入FTP信息了 …" />
 <meta name="keywords" content="Wordpress">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="免输入FTP信息自动升级WordPress"/>
 <meta property="og:description" content="WordPress的3.0.4 修复了一个严重的安全漏洞，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。 但是，同样的等我跑去升级围观网的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？ 飞龙札记和围观网是运行在两台不同的服务器上，但都是用nginx proxy到后台的PHP fastcgi进程进行处理的，服务器的配置基本一致，而两个网站用的WordPress文件是一样的，所以首先就可以排除WordPress版本和服务器配置的差异引起的不同。 两个网站的差别主要体现在主题和插件，这些虽然牵涉到WordPress的设置但是跟WordPress本身及插件升级根本没关系，所以也基本可以排除由WordPres设置差异造成两者升级差异的可能性。 而要求输入FTP信息，目的其实是为了下载WordPress升级文件。两个站一个可以自己下，另一个则要提供FTP账户信息，由此看来应该是文件夹权限问题造成的，仔细对比了一下飞龙札记和围观网的代码文件夹权限，发现飞龙札记的代码文件夹所有者和fastcgi进程的用户是同一个，而围观网的则是两个不同的用户。将围观网的代码文件夹所有者改成fastcgi的进程用户（sudo chown -R fastcgi-username /home/local/weiguan），问题解决，围观网自动升级不再需要输入FTP信息了 …"/>
 <meta property="og:locale" content="en_US"/>
@@ -47,16 +47,16 @@
 <meta property="article:tag" content="Wordpress"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; 免输入FTP信息自动升级WordPress</title>
+  <title>飞龙札记 &ndash; 免输入FTP信息自动升级WordPress</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -146,7 +146,7 @@ style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; ov
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -181,7 +181,7 @@ style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; ov
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"

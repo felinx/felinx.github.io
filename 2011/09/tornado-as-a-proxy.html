@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如http://www.tornadoweb.cn用的就是nginx的代理功能做的tornadoweb官网的镜像。 最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运用需要调用到另一平台产品(Platform)的API。对于这个系统来说，可选的一种实现方式方式是APP同时跟Server&Platform两者交互；另一种则在Server端封装掉Platform的API，APP只和Server交互。显然后一种方式的系统架构会清晰些，APP编程时也就相对简单。那么如何在Server端封装Platform的API呢，我首先考虑到的就是用代理的方式来实现。碰巧最近Tornado邮件群组里有人在讨论using Tornado as a proxy，贴主提到的运用场景跟我这碰到的场景非常的相似，我把原帖的代码做了些整理和简化，源代码如下： # -*- coding: utf-8 -*- # # Copyright(c) 2011 Felinx Lee & http://feilong.me/ # # Licensed under the Apache License, Version …" />
 <meta name="keywords" content="">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="用Tornado实现简单的在线代理"/>
 <meta property="og:description" content="实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如http://www.tornadoweb.cn用的就是nginx的代理功能做的tornadoweb官网的镜像。 最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运用需要调用到另一平台产品(Platform)的API。对于这个系统来说，可选的一种实现方式方式是APP同时跟Server&Platform两者交互；另一种则在Server端封装掉Platform的API，APP只和Server交互。显然后一种方式的系统架构会清晰些，APP编程时也就相对简单。那么如何在Server端封装Platform的API呢，我首先考虑到的就是用代理的方式来实现。碰巧最近Tornado邮件群组里有人在讨论using Tornado as a proxy，贴主提到的运用场景跟我这碰到的场景非常的相似，我把原帖的代码做了些整理和简化，源代码如下： # -*- coding: utf-8 -*- # # Copyright(c) 2011 Felinx Lee & http://feilong.me/ # # Licensed under the Apache License, Version …"/>
 <meta property="og:locale" content="en_US"/>
@@ -46,16 +46,16 @@
 <meta property="article:section" content="Python"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; 用Tornado实现简单的在线代理</title>
+  <title>飞龙札记 &ndash; 用Tornado实现简单的在线代理</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -241,7 +241,7 @@ API)。</p>
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -276,7 +276,7 @@ API)。</p>
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"

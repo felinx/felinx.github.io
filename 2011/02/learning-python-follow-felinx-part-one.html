@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家讨论、拍砖、献花！ 我将主要结合Tornado的源码来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。 为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为： Tornado的代码规范且质量很高； 代码总量比较小，比较容易掌握； 飞龙对Tornado多多少少有点研究。 注：Tornado(要翻墙)是friendfeed.com（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web server，同时又是一个类web.py的web框架，关于Tornado web框架部分的讨论见我的博客“ 浅谈Python web框架”相应的部分，对于Tornado的web server的性能，可以参考Tornado官方主页和http://nichol.as/benchmark-of-python-web-servers的介绍。 看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:) 系统兼容 …" />
 <meta name="keywords" content="Python">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="Python兼容性编程"/>
 <meta property="og:description" content="鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家讨论、拍砖、献花！ 我将主要结合Tornado的源码来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。 为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为： Tornado的代码规范且质量很高； 代码总量比较小，比较容易掌握； 飞龙对Tornado多多少少有点研究。 注：Tornado(要翻墙)是friendfeed.com（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web server，同时又是一个类web.py的web框架，关于Tornado web框架部分的讨论见我的博客“ 浅谈Python web框架”相应的部分，对于Tornado的web server的性能，可以参考Tornado官方主页和http://nichol.as/benchmark-of-python-web-servers的介绍。 看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:) 系统兼容 …"/>
 <meta property="og:locale" content="en_US"/>
@@ -47,16 +47,16 @@
 <meta property="article:tag" content="Python"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; Python兼容性编程</title>
+  <title>飞龙札记 &ndash; Python兼容性编程</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -286,7 +286,7 @@ __future__里引入的特性都将成为未来版本里实事上的标准，但�
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -321,7 +321,7 @@ __future__里引入的特性都将成为未来版本里实事上的标准，但�
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"

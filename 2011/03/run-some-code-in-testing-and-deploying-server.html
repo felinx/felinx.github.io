@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="通常在开发测试和生产环境下，程序的配置和系统环境等会有所差异，比如最常见的调试DEBUG选项本地一般是开的，而在生产环境这个肯定是要关闭的。手动维护两套配置显然是不明智的，下面介绍一点小技巧，让你可以轻松实现一套代码同时跑在开发测试和生产环境下。 下面以Django为例(Tornado、Pylons等类似) 首先需要判断当前环境是开发环境还是生产环境，常见的方式是检测机器名。 import platform if platform.node() == "FELINX": # FELINX is the name of felinx' EC2 server. DEBUG = False else: DEBUG = True 不清楚机器名的话，可以通过hostname命令来查询和修改，下面是修改的命令。 sudo hostname xxx 这样在开发环境和生产环境的DEBUG选项就不一样了，接下来对有需要区别对待的配置或代码就可以通过检测DEBUG来进行选择了，比如在http://www.chinapy.org的settings_local.py中有这么一段代码： if DEBUG …" />
 <meta name="keywords" content="Python, tips">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="如何在开发测试和生产环境下跑同一套Python代码"/>
 <meta property="og:description" content="通常在开发测试和生产环境下，程序的配置和系统环境等会有所差异，比如最常见的调试DEBUG选项本地一般是开的，而在生产环境这个肯定是要关闭的。手动维护两套配置显然是不明智的，下面介绍一点小技巧，让你可以轻松实现一套代码同时跑在开发测试和生产环境下。 下面以Django为例(Tornado、Pylons等类似) 首先需要判断当前环境是开发环境还是生产环境，常见的方式是检测机器名。 import platform if platform.node() == "FELINX": # FELINX is the name of felinx' EC2 server. DEBUG = False else: DEBUG = True 不清楚机器名的话，可以通过hostname命令来查询和修改，下面是修改的命令。 sudo hostname xxx 这样在开发环境和生产环境的DEBUG选项就不一样了，接下来对有需要区别对待的配置或代码就可以通过检测DEBUG来进行选择了，比如在http://www.chinapy.org的settings_local.py中有这么一段代码： if DEBUG …"/>
 <meta property="og:locale" content="en_US"/>
@@ -48,16 +48,16 @@
 <meta property="article:tag" content="tips"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; 如何在开发测试和生产环境下跑同一套Python代码</title>
+  <title>飞龙札记 &ndash; 如何在开发测试和生产环境下跑同一套Python代码</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -153,7 +153,7 @@
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -188,7 +188,7 @@
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"

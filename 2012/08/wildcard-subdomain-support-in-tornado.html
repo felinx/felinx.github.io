@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙 Atom">
+    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -34,7 +34,7 @@
 <meta name="author" content="飞龙" />
 <meta name="description" content="其实Tornado对子域名和泛域名(除了特别说明外，以下子域名和泛域名均简称为泛域名)的支持并不是什么新鲜事，两年多前我用Tornado写的开源网站 http://poweredsites.org 就有了对泛域名的支持，但是Tornado的官方文档里并没有明确对此功能进行说明，虽然源代码里是有注释的，终是有点隐晦，这不，近日mywaiting同学就遇到了这个问题，我应邀特撰此博文，分享下我对此的一点点经验。 通常，用Tornado添加url映射路由表是直接传handlers给Application这种方式的，比如官方的chatdemo： class Application(tornado.web.Application): def __init__(self): handlers = [ (r"/", MainHandler), (r"/auth/login", AuthLoginHandler), (r"/auth/logout", AuthLogoutHandler), (r"/a/message/new", MessageNewHandler), (r"/a/message/updates", MessageUpdatesHandler), ] settings = dict …" />
 <meta name="keywords" content="Tornado, 泛域名">
-<meta property="og:site_name" content="飞龙"/>
+<meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="Tornado对子域名和泛域名的支持"/>
 <meta property="og:description" content="其实Tornado对子域名和泛域名(除了特别说明外，以下子域名和泛域名均简称为泛域名)的支持并不是什么新鲜事，两年多前我用Tornado写的开源网站 http://poweredsites.org 就有了对泛域名的支持，但是Tornado的官方文档里并没有明确对此功能进行说明，虽然源代码里是有注释的，终是有点隐晦，这不，近日mywaiting同学就遇到了这个问题，我应邀特撰此博文，分享下我对此的一点点经验。 通常，用Tornado添加url映射路由表是直接传handlers给Application这种方式的，比如官方的chatdemo： class Application(tornado.web.Application): def __init__(self): handlers = [ (r"/", MainHandler), (r"/auth/login", AuthLoginHandler), (r"/auth/logout", AuthLogoutHandler), (r"/a/message/new", MessageNewHandler), (r"/a/message/updates", MessageUpdatesHandler), ] settings = dict …"/>
 <meta property="og:locale" content="en_US"/>
@@ -48,16 +48,16 @@
 <meta property="article:tag" content="泛域名"/>
 <meta property="og:image" content="/static/feilong.jpg">
 
-  <title>飞龙 &ndash; Tornado对子域名和泛域名的支持</title>
+  <title>飞龙札记 &ndash; Tornado对子域名和泛域名的支持</title>
 
 </head>
 <body>
   <aside>
     <div>
       <a href="http://feilong.me">
-        <img src="/static/feilong.jpg" alt="飞龙" title="飞龙">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙</a></h1>
+      <h1><a href="http://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
@@ -210,7 +210,7 @@
 
     <footer>
 <p>
-  &copy; felinx 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p><p>
@@ -245,7 +245,7 @@
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " 飞龙 ",
+  "name": " 飞龙札记 ",
   "url" : "http://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"
