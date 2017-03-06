@@ -68,7 +68,7 @@ SITEMAP = {
     },
     'changefreqs': {
         'articles': 'monthly',
-        'indexes': 'daily',
+        'indexes': 'weekly',
         'pages': 'monthly',
     }
 }
@@ -76,7 +76,7 @@ SITEMAP = {
 DISQUS_SITENAME = "feilong"
 GOOGLE_ANALYTICS = "UA-9694421-8"
 
-STATIC_PATHS = ['static', 'CNAME', '.gitignore']
+STATIC_PATHS = ['static', 'CNAME', '.gitignore', 'robots.txt']
 
 # EXTRA_PATH_METADATA = {
 #     'extra/custom.css': {'path': 'static/custom.css'},
