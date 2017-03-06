@@ -87,6 +87,34 @@
 
 <article>
   <header>
+    <h2><a href="http://feilong.me/2011/09/tornado-as-a-proxy.html#2011/09/tornado-as-a-proxy">用Tornado实现简单的在线代理</a></h2>
+    <p>
+          Posted on Sat 10 September 2011 in <a href="http://feilong.me/category/python.html">Python</a>
+
+
+
+        &#8226; 2 min read
+    </p>
+  </header>
+  <div>
+      <p>实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如<a class="reference external" href="http://www.tornadoweb.cn">http://www.tornadoweb.cn</a>用的就是nginx的代理功能做的tornadoweb官网的镜像。</p>
+<p>最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运用需要调用到另一平台产品(Platform)的API。对于这个系统来说，可选的一种实现方式方式是APP同时跟Server&amp;Platform两者交互；另一种则在Server端封装掉Platform的API，APP只和Server交互。显然后一种方式的系统架构会清晰些，APP编程时也就相对简单。那么如何在Server端封装Platform的API呢，我首先考虑到的就是用代理的方式来实现。碰巧最近Tornado邮件群组里有人在讨论<a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/4c1ffaa0a0667650?pli=1">using
+Tornado as a
+proxy</a>，贴主提到的运用场景跟我这碰到的场景非常的相似，我把原帖的代码做了些整理和简化，源代码如下：</p>
+<pre class="literal-block">
+# -*- coding: utf-8 -*-
+#
+# Copyright(c) 2011 Felinx Lee &amp; http://feilong.me/
+#
+# Licensed under the Apache License, Version …</pre>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/09/tornado-as-a-proxy.html#2011/09/tornado-as-a-proxy">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://feilong.me/2011/09/join-shanda-innovations.html#2011/09/join-shanda-innovations">9月1日入职盛大创新院</a></h2>
     <p>
           Posted on Thu 01 September 2011 in <a href="http://feilong.me/category/za-tan.html">杂谈</a>
@@ -368,31 +396,6 @@ server {
 
       <br>
       <a class="btn" href="http://feilong.me/2011/05/where-to-submit-sites-to-search-engines.html#2011/05/where-to-submit-sites-to-search-engines">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/05/tornadoweb-cn-mirror.html#2010/05/tornadoweb-cn-mirror">发布Tornado镜像站点tornadoweb.cn</a></h2>
-    <p>
-          Posted on Thu 19 May 2011 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>鉴于<a class="reference external" href="http://www.tornadoweb.org">Tornado官网</a>架设在GAE上，而GAE在国内被墙，如果不爬墙大家访问不了Tornado官网，这个让很多国内Tornado用户不爽，也影响了Tornado在国内的推广。而我手头一直持有<a class="reference external" href="http://www.tornadoweb.cn">tornadoweb.cn</a>和tornadoweb.com.cn两个域名，之前是想开发个Tornado的中文站的，但在目前闲置的情况下，还不如先做一个官方网站的镜像，故今天特配置了一下我EC2上的nginx，做了一个Tornado官方网站的镜像站点<a class="reference external" href="http://www.tornadoweb.cn">tornadoweb.cn</a>，以造福国内Tornado用户，以后国内用户就可以直接通过<a class="reference external" href="http://www.tornadoweb.cn/">tornadoweb.cn</a>查阅Tornado的文档了。</p>
-<p>此举已致信Tornado的Ben：</p>
-<p>Hi, Ben,</p>
-<p>I have tried to create a mirror
-site(<a class="reference external" href="http://www.tornadoweb.cn/">http://www.tornadoweb.cn</a>, just
-proxy the origin content) of <a class="reference external" href="http://tornadoweb.org/">tornadoweb.org</a>
-for Chinese …</p>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/05/tornadoweb-cn-mirror.html#2010/05/tornadoweb-cn-mirror">    Continue reading
 </a>
   </div>
 </article>

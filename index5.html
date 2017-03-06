@@ -87,6 +87,40 @@
 
 <article>
   <header>
+    <h2><a href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html#2011/01/ms-ui-automation-tool-design-guide">基于UI Automation的自动化测试工具设计指南</a></h2>
+    <p>
+          Posted on Thu 20 January 2011 in <a href="http://feilong.me/category/bian-cheng.html">编程</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://feilong.me/tag/uiautomation.html">UIAutomation</a>,              <a href="http://feilong.me/tag/zi-dong-hua-ce-shi.html">自动化测试</a>
+        &#8226; 1 min read
+    </p>
+  </header>
+  <div>
+      <p>说明：以下内容是根据2010年我在公司的一次关于UI
+Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI
+Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。</p>
+<p>在没有MSUIA（Microsoft UI
+Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active
+Accessibility）、Win32
+API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows
+程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:)</p>
+<p>在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。</p>
+<div class="section" id="uia">
+<h2><strong>UIA名词解释</strong></h2>
+<div class="section" id="elements">
+<h3>Elements</h3>
+<p>在UIA里 …</p></div></div>
+      <br>
+      <a class="btn" href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html#2011/01/ms-ui-automation-tool-design-guide">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://feilong.me/2011/01/vmware-pragmatic-tips.html#2011/01/vmware-pragmatic-tips">VMware几个实用技巧</a></h2>
     <p>
           Posted on Mon 17 January 2011 in <a href="http://feilong.me/category/it.html">IT</a>
@@ -364,34 +398,6 @@ Reader的怀抱。</p>
 要重点介绍的是这个，国人做的。其实在我发现这个网站以前，我是想自己做一个这样的网站的，域名都买好了叫feedkindle.com，不过dogear已经很成熟了，我就不用再去择腾了。dogear可以自订阅多个Feed源，然后在管理页面去设置一个时间，让dogear每天定时将订阅内容发送到你的Kindle上，只要每天在定时发送的这个时间后开一次Kindle的WIFI(对于3G版的，因为流量亚马逊要收费，请慎重)就OK了，注意<strong>添加一下&#64;dogear.mobi这个email地址到你Kindle受信任的邮件表里 …</strong></li></ol>
       <br>
       <a class="btn" href="http://feilong.me/2010/12/enjoy-read-feeds-in-kindle.html#2010/12/enjoy-read-feeds-in-kindle">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/12/google-buzz-top-8-defects.html#2010/12/google-buzz-top-8-defects">历数Google Buzz八宗罪</a></h2>
-    <p>
-          Posted on Fri 31 December 2010 in <a href="http://feilong.me/category/za-tan.html">杂谈</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/google.html">Google</a>,              <a href="http://feilong.me/tag/buzz.html">buzz</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>Buzz在2010各大网站、机构评出的失败的产品列表中均排名前列，原因很简单，Buzz从2月推出至今一直问题不断，特别是开始的隐私泄漏问题和最近的掉评论问题，让很多用户无法忍受，虽然我是Buzz的忠忠忠忠忠实粉丝，但骂你一顿是必须的，恨Buzz你不是李刚啊！下面历数一下Buzz推出以来大大小小、莫名其妙、让人头疼的八宗罪（七宗罪再加一等，最后一等就是这掉评论了）。</p>
-<p><img alt="image0" class="size-full wp-image-211 aligncenter" src="/static/2010/12/googlebuzz.jpg" style="width: 460px; height: 250px;" /></p>
-<ol class="arabic simple">
-<li><strong>隐私泄漏</strong>问题，Buzz刚推出时最为人诟病的就是隐私泄漏问题，如泄漏邮件地址和常联系的人的信息。</li>
-<li><strong>掉fo问题</strong>，不用多说，掉fo的同学应该深有体会。</li>
-<li><strong>关联恶魔</strong>，Buzz的这个功能很强大，但是被用户滥用了，被人关联刷屏的感觉相信很多人体验过，在Mute功能没出来之前，关联了GR和Twitter的同学们几乎是过街老鼠人人喊打。</li>
-<li>掉帖子问题，如果你的账号之前没有绑定手机，而这时你已经开始使用Buzz了，后面哪次登录Buzz时Google要你加入手机信息，而你一旦你绑定手机后，对不起，Buzz当你是一个新号，以前所有的帖子在Buzz里都找不到了，只有你的邮件里会留点残骸。深恶而痛绝之，我的飞龙里至今fo了两个一模一样的五花马。</li>
-<li>转帖问题，Buzz转帖尊重原帖，这是对的，但却不尊重中间转的人，再转的人的帖子里只有原帖和原作者信息，没有中间转的那位的一点信息，中转的那位的再创作也就没了。举例，A发原帖，B转A的贴，C转B转A的贴，C转的贴里根本跟没B什么事 …</li></ol>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/12/google-buzz-top-8-defects.html#2010/12/google-buzz-top-8-defects">    Continue reading
 </a>
   </div>
 </article>
