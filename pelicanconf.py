@@ -36,14 +36,13 @@ AUTHOR_FEED_RSS = None
 USE_FOLDER_AS_CATEGORY = False
 MAIN_MENU = True
 
-LINKS = (('About', '/about.html'),)
+# LINKS = (('About', '/about.html'),)
 
 SOCIAL = (
     ('github', 'https://github.com/felinx'),
     ('rss', '/feeds/all.atom.xml'))
 
-MENUITEMS = (('Archives', '/archives.html'),
-             ('Categories', '/categories.html'),
+MENUITEMS = (('Categories', '/categories.html'),
              ('Tags', '/tags.html'),)
 
 CC_LICENSE = {
@@ -53,8 +52,7 @@ CC_LICENSE = {
 }
 
 COPYRIGHT_YEAR = 2017
-
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 1000
 
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['sitemap', 'post_stats']
