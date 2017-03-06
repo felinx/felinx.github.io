@@ -90,7 +90,7 @@ Key才行，到WordPress.Com注册一个账号就有了。James同学开始没�
    User Email
    Setup <http://wordpress.org/extend/plugins/new-user-email-set-up/>`__\ 是用来自定义注册、找回密码等系统邮件内容的。
 
-希望上面的这些插件介绍能够对你有所帮助，助你打造一个属于自己的完美的WordPress博客。这里介绍的插件我都用过，如果有任何问题或疑问可以直接回帖或\ `联系飞龙 <http://feilong.me/contact>`__\ 。
+希望上面的这些插件介绍能够对你有所帮助，助你打造一个属于自己的完美的WordPress博客。这里介绍的插件我都用过，如果有任何问题或疑问可以直接回帖或\ `联系飞龙 <http://feilong.me/pages/contact>`__\ 。
 
 .. |image0| image:: http://www.gravatar.com/avatar.php?gravatar_id=f34dec9007a004876f7a6c47c100524d&size=20&rating=G
    :class: alignnone
