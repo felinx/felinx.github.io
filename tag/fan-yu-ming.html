@@ -55,8 +55,9 @@
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
+          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
 
-          <li><a href="/about.html" target="_blank">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +75,6 @@
       <a href="http://feilong.me">    Home
 </a>
 
-      <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
@@ -85,37 +85,12 @@
 
 
 
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2012/08/wildcard-subdomain-support-in-tornado.html#2012/08/wildcard-subdomain-support-in-tornado">Tornado对子域名和泛域名的支持</a></h2>
-    <p>
-          Posted on Mon 20 August 2012 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/tornado.html">Tornado</a>,              <a href="http://feilong.me/tag/fan-yu-ming.html">泛域名</a>
-        &#8226; 1 min read
-    </p>
-  </header>
+<article class="single">
   <div>
-      <p>其实Tornado对子域名和泛域名(除了特别说明外，以下子域名和泛域名均简称为泛域名)的支持并不是什么新鲜事，两年多前我用Tornado写的开源网站
-<a class="reference external" href="http://poweredsites.org">http://poweredsites.org</a>
-就有了对泛域名的支持，但是Tornado的官方文档里并没有明确对此功能进行说明，虽然源代码里是有注释的，终是有点隐晦，这不，近日mywaiting同学就遇到了这个问题，我应邀特撰此博文，分享下我对此的一点点经验。</p>
-<p>通常，用Tornado添加url映射路由表是直接传handlers给Application这种方式的，比如官方的chatdemo：</p>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Application</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">handlers</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
-            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/auth/login&quot;</span><span class="p">,</span> <span class="n">AuthLoginHandler</span><span class="p">),</span>
-            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/auth/logout&quot;</span><span class="p">,</span> <span class="n">AuthLogoutHandler</span><span class="p">),</span>
-            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/a/message/new&quot;</span><span class="p">,</span> <span class="n">MessageNewHandler</span><span class="p">),</span>
-            <span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/a/message/updates&quot;</span><span class="p">,</span> <span class="n">MessageUpdatesHandler</span><span class="p">),</span>
-        <span class="p">]</span>
-        <span class="n">settings</span> <span class="o">=</span> <span class="nb">dict …</span></pre></div>
-      <br>
-      <a class="btn" href="http://feilong.me/2012/08/wildcard-subdomain-support-in-tornado.html#2012/08/wildcard-subdomain-support-in-tornado">    Continue reading
-</a>
+    <dl>
+      <dt>Mon 20 August 2012</dt>
+      <dd><a href="http://feilong.me/2012/08/wildcard-subdomain-support-in-tornado.html">Tornado对子域名和泛域名的支持</a></dd>
+    </dl>
   </div>
 </article>
 

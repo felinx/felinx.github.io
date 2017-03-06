@@ -55,8 +55,9 @@
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
+          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
 
-          <li><a href="/about.html" target="_blank">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +75,6 @@
       <a href="http://feilong.me">    Home
 </a>
 
-      <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
@@ -85,47 +85,12 @@
 
 
 
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/02/monitor-core-processes-with-monit.html#2011/02/monitor-core-processes-with-monit">用monit监控系统关键进程</a></h2>
-    <p>
-          Posted on Thu 24 February 2011 in <a href="http://feilong.me/category/it.html">IT</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/monit.html">monit</a>
-        &#8226; 2 min read
-    </p>
-  </header>
+<article class="single">
   <div>
-      <p><a class="reference external" href="http://mmonit.com/monit/">monit</a>是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台，
-它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是<a class="reference external" href="http://supervisord.org/">supervisor</a>，后续会另外撰文介绍。</p>
-<p>下面分别介绍monit的安装、配置和启动。</p>
-<div class="section" id="id1">
-<h2>安装</h2>
-<p>在debian或ubuntu上安装monit非常方便，通过下面的命令</p>
-<pre class="literal-block">
-sudo apt-get install monit
-</pre>
-<p>即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。</p>
-<pre class="literal-block">
-./configure
-make
-make install
-</pre>
-<p>安装后，默认的配置文件为/etc/monit/monitrc。</p>
-</div>
-<div class="section" id="id2">
-<h2>配置</h2>
-<p>添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。</p>
-<pre class="literal-block">
-##
-## 飞龙札记 示例monit配置文件，说明：
-## 1. 域名以example.com为例 …</pre></div>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/02/monitor-core-processes-with-monit.html#2011/02/monitor-core-processes-with-monit">    Continue reading
-</a>
+    <dl>
+      <dt>Thu 24 February 2011</dt>
+      <dd><a href="http://feilong.me/2011/02/monitor-core-processes-with-monit.html">用monit监控系统关键进程</a></dd>
+    </dl>
   </div>
 </article>
 

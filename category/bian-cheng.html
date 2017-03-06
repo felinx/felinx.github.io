@@ -55,8 +55,9 @@
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
+          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
 
-          <li><a href="/about.html" target="_blank">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +75,6 @@
       <a href="http://feilong.me">    Home
 </a>
 
-      <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
@@ -85,68 +85,14 @@
 
 
 
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html#2011/01/ms-ui-automation-tool-design-guide">基于UI Automation的自动化测试工具设计指南</a></h2>
-    <p>
-          Posted on Thu 20 January 2011 in <a href="http://feilong.me/category/bian-cheng.html">编程</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/uiautomation.html">UIAutomation</a>,              <a href="http://feilong.me/tag/zi-dong-hua-ce-shi.html">自动化测试</a>
-        &#8226; 1 min read
-    </p>
-  </header>
+<article class="single">
   <div>
-      <p>说明：以下内容是根据2010年我在公司的一次关于UI
-Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI
-Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。</p>
-<p>在没有MSUIA（Microsoft UI
-Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active
-Accessibility）、Win32
-API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows
-程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:)</p>
-<p>在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。</p>
-<div class="section" id="uia">
-<h2><strong>UIA名词解释</strong></h2>
-<div class="section" id="elements">
-<h3>Elements</h3>
-<p>在UIA里 …</p></div></div>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html#2011/01/ms-ui-automation-tool-design-guide">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html#2010/12/auto-update-wordpress-without-ftp-auth">免输入FTP信息自动升级WordPress</a></h2>
-    <p>
-          Posted on Fri 31 December 2010 in <a href="http://feilong.me/category/bian-cheng.html">编程</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/wordpress.html">WordPress</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>WordPress的3.0.4
-修复了一个严重的<a class="reference external" href="http://cn.wordpress.org/2010/12/30/3-0-4-update/">安全漏洞</a>，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。</p>
-<p>但是，同样的等我跑去升级<a class="reference external" href="http://17weiguan.com">围观网</a>的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？</p>
-<ol class="arabic simple">
-<li>飞龙札记和围观网是运行在两台不同的服务器上，但都是用nginx
-proxy到后台的PHP
-fastcgi进程进行处理的，服务器的配置基本一致，而两个网站用的WordPress文件是一样的，所以首先就可以排除WordPress版本和服务器配置的差异引起的不同。</li>
-<li>两个网站的差别主要体现在主题和插件，这些虽然牵涉到WordPress的设置但是跟WordPress本身及插件升级根本没关系，所以也基本可以排除由WordPres设置差异造成两者升级差异的可能性。</li>
-<li>而要求输入FTP信息，目的其实是为了下载WordPress升级文件。两个站一个可以自己下，另一个则要提供FTP账户信息，由此看来应该是文件夹权限问题造成的，仔细对比了一下飞龙札记和围观网的代码文件夹权限，发现飞龙札记的代码文件夹所有者和fastcgi进程的用户是同一个，而围观网的则是两个不同的用户。将围观网的代码文件夹所有者改成fastcgi的进程用户（sudo
-chown -R fastcgi-username
-/home/local/weiguan），问题解决，围观网自动升级不再需要输入FTP信息了 …</li></ol>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html#2010/12/auto-update-wordpress-without-ftp-auth">    Continue reading
-</a>
+    <dl>
+      <dt>Thu 20 January 2011</dt>
+      <dd><a href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html">基于UI Automation的自动化测试工具设计指南</a></dd>
+      <dt>Fri 31 December 2010</dt>
+      <dd><a href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html">免输入FTP信息自动升级WordPress</a></dd>
+    </dl>
   </div>
 </article>
 

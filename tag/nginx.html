@@ -55,8 +55,9 @@
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
+          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
 
-          <li><a href="/about.html" target="_blank">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +75,6 @@
       <a href="http://feilong.me">    Home
 </a>
 
-      <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
@@ -85,38 +85,12 @@
 
 
 
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/06/nginx-reverse-proxy.html#2011/06/nginx-reverse-proxy">nginx反向代理配置(附：tornadoweb.cn的nginx配置)</a></h2>
-    <p>
-          Posted on Sat 11 June 2011 in <a href="http://feilong.me/category/it.html">IT</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/nginx.html">nginx</a>,              <a href="http://feilong.me/tag/fan-xiang-dai-li.html">反向代理</a>
-        &#8226; 1 min read
-    </p>
-  </header>
+<article class="single">
   <div>
-      <p>GAE的Hosting站点
-<a class="reference external" href="http://appspot.com/">appspot.com</a>在国内被墙，因此架设在GAE上的运用没法直接访问，需要曲线救国，其中一招比较有效的方式即是通过nginx反向代理来实现，不过这个要求你在国外有一个可用的nginx。下面以<a class="reference external" href="http://www.tornadoweb.cn">tornadoweb.cn</a>为例讲述如何用nginx配置反向代理(注：tornadoweb.cn为<a class="reference external" href="http://www.tornadoweb.org/">tornadoweb.org</a>的镜像站点，原站就是在GAE上，因此国内无法直接访问)。关于nginx的基本配置部分请参考我在poweredsites上的博客<a class="reference external" href="http://blog.poweredsites.org/entry/how-to-setup-nginx">how-to-setup-nginx</a>，本文只讨论如何配置tornadoweb.cn这个站点，配置说明详见配置中的注释。</p>
-<pre class="literal-block">
-server {
-　  # 监听80端口，通常可以省略。
-    listen   80;
-
-　  # 要配置的站点域名，即用来曲线访问GAE上的原站点的域名。
-    server_name  www.tornadoweb.cn;
-
-    # Ben老大要求tornadoweb.cn有说明是镜像站点以区别于原站tornadoweb.org，
-    # 因此我走巧将头上的LOGO采用修改过的本地文件，在原logo上加了mirror的声明
-    location /static/tornado.png {
-        # LOGO文件tornado.png所在文件夹目录
-        root /mnt/ebs …</pre>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/06/nginx-reverse-proxy.html#2011/06/nginx-reverse-proxy">    Continue reading
-</a>
+    <dl>
+      <dt>Sat 11 June 2011</dt>
+      <dd><a href="http://feilong.me/2011/06/nginx-reverse-proxy.html">nginx反向代理配置(附：tornadoweb.cn的nginx配置)</a></dd>
+    </dl>
   </div>
 </article>
 

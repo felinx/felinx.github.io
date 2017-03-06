@@ -55,8 +55,9 @@
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
+          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
 
-          <li><a href="/about.html" target="_blank">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +75,6 @@
       <a href="http://feilong.me">    Home
 </a>
 
-      <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
@@ -85,76 +85,14 @@
 
 
 
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/05/where-to-submit-sites-to-search-engines.html#2011/05/where-to-submit-sites-to-search-engines">[ZT]各大搜索引擎的网站登录入口地址大全</a></h2>
-    <p>
-          Posted on Mon 23 May 2011 in <a href="http://feilong.me/category/web.html">Web</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/tips.html">tips</a>
-        &#8226; 1 min read
-    </p>
-  </header>
+<article class="single">
   <div>
-      <div class="line-block">
-<div class="line"><strong>网站建设</strong>、<strong>网站推广</strong>必不可少的步骤之一<strong>，各大搜索引擎网站登录入口</strong>：</div>
-<div class="line"><a class="reference external" href="http://www.baidu.com/search/url_submit.html">百度网站登录入口</a></div>
-<div class="line"><a class="reference external" href="http://www.google.com/addurl/">Google网站登录入口</a></div>
-<div class="line"><a class="reference external" href="http://search.help.cn.yahoo.com/h4_4.html">Yahoo网站登录入口</a></div>
-<div class="line"><a class="reference external" href="http://cn.bing.com/webmaster/SubmitSitePage.aspx">Bing网站登录入口</a></div>
-<div class="line"><a class="reference external" href="http://www.dmoz.com/World/Chinese_Simplified">Dmoz网站登录入口</a></div>
-<div class="line"><a class="reference external" href="http://www.coodir.com/accounts/addsite.asp">Coodir网站目录登录入口</a></div>
-<div class="line"><a class="reference external" href="http://www.alexa.com/help/webmasters">Alexa网站登录入口</a></div>
-<div class="line"><a class="reference external" href="http://www.sogou.com/feedback/urlfeedback.php">搜狗网站收录提交入口</a></div>
-<div class="line"><a class="reference external" href="http://www.soso.com/help/usb/urlsubmit.shtml">Soso网站收录提交入口</a></div>
-<div class="line"><a class="reference external" href="http://tellbot.youdao.com/report">有道搜索网站登录入口</a></div>
-<div class="line"><a class="reference external" href="http://indexed.webmasterhome.cn/">搜索引擎收录查询</a></div>
-<div class="line"><a class="reference external" href="http://ads.zhongsou.com/register/page.jsp">中国搜索网站登录入口</a></div>
-<div class="line"><a class="reference external" href="http://www.freewebsubmission.com/">Freewebsubmission.com
-搜索引擎批量提交</a></div>
-</div>
-<p>因为这个会我经常用到，每次老是跑去搜索，纯转帖+mark一记，原帖见：<a class="reference external" href="http://www.webmasterhome.cn/seo/AddUrl.asp">http://www.webmasterhome.cn/seo/AddUrl.asp</a></p>
-
-      <br>
-      <a class="btn" href="http://feilong.me/2011/05/where-to-submit-sites-to-search-engines.html#2011/05/where-to-submit-sites-to-search-engines">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/03/run-some-code-in-testing-and-deploying-server.html#2011/03/run-some-code-in-testing-and-deploying-server">如何在开发测试和生产环境下跑同一套Python代码</a></h2>
-    <p>
-          Posted on Mon 14 March 2011 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/tips.html">tips</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>通常在开发测试和生产环境下，程序的配置和系统环境等会有所差异，比如最常见的调试DEBUG选项本地一般是开的，而在生产环境这个肯定是要关闭的。手动维护两套配置显然是不明智的，下面介绍一点小技巧，让你可以轻松实现一套代码同时跑在开发测试和生产环境下。</p>
-<p>下面以Django为例(Tornado、Pylons等类似)</p>
-<p>首先需要判断当前环境是开发环境还是生产环境，常见的方式是检测机器名。</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">platform</span>
-<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">node</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;FELINX&quot;</span><span class="p">:</span> <span class="c1"># FELINX is the name of felinx&#39; EC2 server.</span>
-    <span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">False</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">True</span>
-</pre></div>
-<p>不清楚机器名的话，可以通过hostname命令来查询和修改，下面是修改的命令。</p>
-<div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">hostname</span> <span class="n">xxx</span>
-</pre></div>
-<p>这样在开发环境和生产环境的DEBUG选项就不一样了，接下来对有需要区别对待的配置或代码就可以通过检测DEBUG来进行选择了，比如在<a class="reference external" href="http://www.chinapy.org">http://www.chinapy.org</a>的<a class="reference external" href="https://bitbucket.org/felinx/chinapy/src/tip/chinapy/settings_local.py">settings_local.py</a>中有这么一段代码：</p>
-<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">DEBUG …</span></pre></div>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/03/run-some-code-in-testing-and-deploying-server.html#2011/03/run-some-code-in-testing-and-deploying-server">    Continue reading
-</a>
+    <dl>
+      <dt>Mon 23 May 2011</dt>
+      <dd><a href="http://feilong.me/2011/05/where-to-submit-sites-to-search-engines.html">[ZT]各大搜索引擎的网站登录入口地址大全</a></dd>
+      <dt>Mon 14 March 2011</dt>
+      <dd><a href="http://feilong.me/2011/03/run-some-code-in-testing-and-deploying-server.html">如何在开发测试和生产环境下跑同一套Python代码</a></dd>
+    </dl>
   </div>
 </article>
 

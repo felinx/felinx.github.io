@@ -55,8 +55,9 @@
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
+          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
 
-          <li><a href="/about.html" target="_blank">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +75,6 @@
       <a href="http://feilong.me">    Home
 </a>
 
-      <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
@@ -85,39 +85,12 @@
 
 
 
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2012/06/interesting-python-closures.html#2012/06/interesting-python-closures">有趣的Python闭包(Closures)</a></h2>
-    <p>
-          Posted on Sun 03 June 2012 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/bi-bao.html">闭包</a>,              <a href="http://feilong.me/tag/closure.html">closure</a>
-        &#8226; 1 min read
-    </p>
-  </header>
+<article class="single">
   <div>
-      <p>写下这篇博客，起源于Tornado邮件群组的这个问题 <a class="reference external" href="http://groups.google.com/group/python-tornado/browse_thread/thread/d10165015eb293c1">how to use outer variable
-in inner
-method</a>，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="c1"># print a + 1</span>
-        <span class="c1"># b = a + 1</span>
-        <span class="c1"># a = 1</span>
-        <span class="k">print</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-
-    <span class="n">bar</span><span class="p">()</span>
-    <span class="k">print</span> <span class="n">a</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</pre></div>
-<p>在Python2.x上运行这个函数会报UnboundLocalError:&nbsp;local&nbsp;variable&nbsp;'a'&nbsp;referenced&nbsp;before&nbsp;assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP …</p>
-      <br>
-      <a class="btn" href="http://feilong.me/2012/06/interesting-python-closures.html#2012/06/interesting-python-closures">    Continue reading
-</a>
+    <dl>
+      <dt>Sun 03 June 2012</dt>
+      <dd><a href="http://feilong.me/2012/06/interesting-python-closures.html">有趣的Python闭包(Closures)</a></dd>
+    </dl>
   </div>
 </article>
 

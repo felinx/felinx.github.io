@@ -55,8 +55,9 @@
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
+          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
 
-          <li><a href="/about.html" target="_blank">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +75,6 @@
       <a href="http://feilong.me">    Home
 </a>
 
-      <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
@@ -85,89 +85,16 @@
 
 
 
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2017/03/blog-resurrection.html#2017/03/blog-resurrection">博客复活</a></h2>
-    <p>
-          Posted on Fri 03 March 2017 in <a href="http://feilong.me/category/za-tan.html">杂谈</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/za-tan.html">杂谈</a>,              <a href="http://feilong.me/tag/wordpress.html">WordPress</a>,              <a href="http://feilong.me/tag/pelican.html">Pelican</a>
-        &#8226; 1 min read
-    </p>
-  </header>
+<article class="single">
   <div>
-      <p>本博客最初于2010年用WordPress搭建开博，初期主要写Python相关的技术为主，逐步演变成变记录工作、生活、学习的碎碎念的地方。WordPress虽然强大但实在太慢，我的vps上还跑了一些站点和服务，后来访问站点经常卡死就想弃用，只一直在线挂着，之后转移到微信公共账号上写了一段时间，不大喜欢微信公共账号相对封闭的体系，陈浩在<a href="http://coolshell.cn/articles/17391.html">为什么我不在微信公众号上写文章</a>有相似的观点，微信公共号在2016年以后我也停更了，但是我用博客的方式记录的需求一直很强烈，受不了WordPress系统，今天我终于用用Python开发的<a href="https://github.com/getpelican/pelican">Pelican</a>静态博客系统和<a href="https://pages.github.com">Github Pages</a>替代了原来的WordPress，博客站点变得清爽和轻量级多了，因为是静态站点了访问速度非常快，重要的是以后的文章可以直接用markdown格式在sublime txt里写，然后提交到github用版本库管理起来，正式发布则只需要一句fabric指令，彻底告别臃肿的WordPress管理后台。</p>
-<p>Pelican可以直接导入WordPress站点的文章，迁移到Pelican我只花了少量时间来修复部分文章里面的标签、关键字和文档格式等，几乎是无缝迁移，这也是Pelican的强大之处，目前我已把原站点的所有文章迁移过来并保持了原链接不变。</p>
-<p>同时我也把原来在微信公共账号写的一些文章转成了markdown格式迁移了过来，将老的站点文章和微信公共账号的文章合二为一，从此本博客复活，或勤或懒我将继续保持更新。</p>
-<hr>
-<p>关于Pelican请参考：</p>
-<ul>
-<li><a href="http://www.wengweitao.com/shi-yong-pelican-github-pagesda-jian-ge-ren-bo-ke.html">使用Pelican + Github Pages搭建个人博客</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/">Pelican Documentation</a></li>
-<li><a href="http://russell.ballestrini.net/migrating-from-wordpress-to-pelican/">Migrating from WordPress to …</a></li></ul>
-      <br>
-      <a class="btn" href="http://feilong.me/2017/03/blog-resurrection.html#2017/03/blog-resurrection">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html#2010/12/auto-update-wordpress-without-ftp-auth">免输入FTP信息自动升级WordPress</a></h2>
-    <p>
-          Posted on Fri 31 December 2010 in <a href="http://feilong.me/category/bian-cheng.html">编程</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/wordpress.html">WordPress</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>WordPress的3.0.4
-修复了一个严重的<a class="reference external" href="http://cn.wordpress.org/2010/12/30/3-0-4-update/">安全漏洞</a>，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。</p>
-<p>但是，同样的等我跑去升级<a class="reference external" href="http://17weiguan.com">围观网</a>的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？</p>
-<ol class="arabic simple">
-<li>飞龙札记和围观网是运行在两台不同的服务器上，但都是用nginx
-proxy到后台的PHP
-fastcgi进程进行处理的，服务器的配置基本一致，而两个网站用的WordPress文件是一样的，所以首先就可以排除WordPress版本和服务器配置的差异引起的不同。</li>
-<li>两个网站的差别主要体现在主题和插件，这些虽然牵涉到WordPress的设置但是跟WordPress本身及插件升级根本没关系，所以也基本可以排除由WordPres设置差异造成两者升级差异的可能性。</li>
-<li>而要求输入FTP信息，目的其实是为了下载WordPress升级文件。两个站一个可以自己下，另一个则要提供FTP账户信息，由此看来应该是文件夹权限问题造成的，仔细对比了一下飞龙札记和围观网的代码文件夹权限，发现飞龙札记的代码文件夹所有者和fastcgi进程的用户是同一个，而围观网的则是两个不同的用户。将围观网的代码文件夹所有者改成fastcgi的进程用户（sudo
-chown -R fastcgi-username
-/home/local/weiguan），问题解决，围观网自动升级不再需要输入FTP信息了 …</li></ol>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html#2010/12/auto-update-wordpress-without-ftp-auth">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2010/12/recommended-wordpress-plugins.html#2010/12/recommended-wordpress-plugins">打造完美博客，WordPress插件推荐</a></h2>
-    <p>
-          Posted on Mon 27 December 2010 in <a href="http://feilong.me/category/web.html">Web</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/wordpress.html">WordPress</a>
-        &#8226; 1 min read
-    </p>
-  </header>
-  <div>
-      <p>拜<a class="reference external" href="http://netwiser.blogspot.com/">James</a>所托，今年给洋人写一个小的商用插件<a class="reference external" href="http://www.marketet.com/romi-calculator/">ROMI-Calculator</a>，为此研究了下WordPress，之后趁热打铁用WordPress搭建了<a class="reference external" href="http://17weiguan.com">围观网</a>，期间围观网经过两次改版，前后这么一择腾，可以说现在对WordPress算是小有了解了。</p>
-<p>WordPress是一款强大的博客平台，即使你不懂PHP、CSS、JavaScript，甚至连基本的HTML也一无所知，通过WordPress，只要挑选一个自己喜欢的主题再加上一帮插件，你就可以打造一个完美的属于自己的博客网站。</p>
-<p>不过，到目前为止WordPress网站上就有<strong>12,455</strong>插件，民间的更是不计其数，要在这成千上万的插件中找到强大实用的插件是件比较困难的事情，特别是对于刚接触WordPress的同学来说，更是头疼。</p>
-<p>我也是花了大量时间摸索这么头疼过来的，为了让后来人不再头疼，我这里分享一下我的经验，推荐一些“标配”的WordPress插件。若你发现这里介绍的某个插件的功能在你选择的主题里已经提供了且非常强大，你大可忽略这个插件，一些主题总是会根据自己的需要定制一些功能的。</p>
-<p>在说所有的插件之前，先说一下<a class="reference external" href="http://akismet.com/">**Akismet**</a>，Akismet可以说是必装的，Akismet是WordPress标配的的反垃圾留言插件，没有这个你的博客可能会被垃圾留言所淹没，Akismet总的来说效果不错，虽然有时候会有误判和漏判，但大多数情况下可以帮你拦截掉垃圾留言和评论，对于个别误判或漏判的手动处理一下就可以了。使用前需要先申请一个Akismet的API
-Key才行，到WordPress …</p>
-      <br>
-      <a class="btn" href="http://feilong.me/2010/12/recommended-wordpress-plugins.html#2010/12/recommended-wordpress-plugins">    Continue reading
-</a>
+    <dl>
+      <dt>Fri 03 March 2017</dt>
+      <dd><a href="http://feilong.me/2017/03/blog-resurrection.html">博客复活</a></dd>
+      <dt>Fri 31 December 2010</dt>
+      <dd><a href="http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html">免输入FTP信息自动升级WordPress</a></dd>
+      <dt>Mon 27 December 2010</dt>
+      <dd><a href="http://feilong.me/2010/12/recommended-wordpress-plugins.html">打造完美博客，WordPress插件推荐</a></dd>
+    </dl>
   </div>
 </article>
 

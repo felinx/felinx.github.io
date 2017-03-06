@@ -5,30 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://feilong.me/</loc>
-<lastmod>2017-03-06T11:58:39-00:00</lastmod>
+<lastmod>2017-03-06T15:01:57-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/archives.html</loc>
-<lastmod>2017-03-06T11:58:39-00:00</lastmod>
+<lastmod>2017-03-06T15:01:57-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/tags.html</loc>
-<lastmod>2017-03-06T11:58:39-00:00</lastmod>
+<lastmod>2017-03-06T15:01:57-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/categories.html</loc>
-<lastmod>2017-03-06T11:58:39-00:00</lastmod>
+<lastmod>2017-03-06T15:01:57-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/pages/about.html</loc>
+<lastmod>2010-12-25T04:29:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/pages/contact.html</loc>
+<lastmod>2010-12-25T19:15:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
 </url>
 
 <url>
@@ -410,20 +424,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://feilong.me/contact.html</loc>
-<lastmod>2010-12-25T19:15:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>http://feilong.me/about.html</loc>
-<lastmod>2010-12-25T04:29:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>http://feilong.me/category/bian-cheng.html</loc>
 <lastmod>2011-01-20T17:17:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
@@ -447,13 +447,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://feilong.me/category/jian-ping.html</loc>
 <lastmod>2017-03-03T18:40:00+08:06</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>http://feilong.me/category/misc.html</loc>
-<lastmod>2010-12-25T19:15:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>

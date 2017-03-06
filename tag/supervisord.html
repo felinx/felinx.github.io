@@ -55,8 +55,9 @@
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
+          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
 
-          <li><a href="/about.html" target="_blank">About</a></li>
         </ul>
       </nav>
 
@@ -74,7 +75,6 @@
       <a href="http://feilong.me">    Home
 </a>
 
-      <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
@@ -85,44 +85,12 @@
 
 
 
-<article>
-  <header>
-    <h2><a href="http://feilong.me/2011/03/monitor-processes-with-supervisord.html#2011/03/monitor-processes-with-supervisord">用Supervisord管理Python进程</a></h2>
-    <p>
-          Posted on Tue 29 March 2011 in <a href="http://feilong.me/category/python.html">Python</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://feilong.me/tag/python.html">Python</a>,              <a href="http://feilong.me/tag/supervisord.html">supervisord</a>
-        &#8226; 1 min read
-    </p>
-  </header>
+<article class="single">
   <div>
-      <p>Supervisord是用Python实现的一款非常实用的进程管理工具，类似于<a class="reference external" href="http://mmonit.com/monit/">monit</a>(关于monit见我的博客:<a class="reference external" href="http://feilong.me/2011/02/monitor-core-processes-with-monit">用monit监控系统关键进程</a>)，monit和supervisord的一个比较大的差异是supervisord管理的进程必须由supervisord来启动，monit可以管理已经在运行的程序；supervisord还要求管理的程序是非daemon程序，supervisord会帮你把它转成daemon程序，因此如果用supervisord来管理nginx的话，必须在nginx的配置文件里添加一行设置daemon
-off让nginx以非daemon方式启动。</p>
-<div class="section" id="supervisord">
-<h2>Supervisord安装</h2>
-<p>Supervisord可以通过<tt class="docutils literal">sudo easy_install supervisor</tt>安装，当然也可以通过<a class="reference external" href="http://supervisord.org/">Supervisord官网</a>下载后setup.py
-install安装。</p>
-</div>
-<div class="section" id="id1">
-<h2>Supervisord配置</h2>
-<p>Supervisord默认的配置文件路径为/etc/supervisord.conf，通过文本编辑器修改这个文件，下面是一个示例的配置文件：</p>
-<pre class="literal-block">
-;/etc/supervisord.conf
-[unix_http_server]
-file = /var/run/supervisor.sock
-chmod = 0777
-chown= root:felinx
-
-[inet_http_server]
-# Web管理界面设定
-port=9001
-username = admin …</pre></div>
-      <br>
-      <a class="btn" href="http://feilong.me/2011/03/monitor-processes-with-supervisord.html#2011/03/monitor-processes-with-supervisord">    Continue reading
-</a>
+    <dl>
+      <dt>Tue 29 March 2011</dt>
+      <dd><a href="http://feilong.me/2011/03/monitor-processes-with-supervisord.html">用Supervisord管理Python进程</a></dd>
+    </dl>
   </div>
 </article>
 
