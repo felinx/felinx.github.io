@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://feilong.me/</loc>
-<lastmod>2017-03-06T15:13:30-00:00</lastmod>
+<lastmod>2017-03-07T19:08:26-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/tags.html</loc>
-<lastmod>2017-03-06T15:13:30-00:00</lastmod>
+<lastmod>2017-03-07T19:08:26-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/categories.html</loc>
-<lastmod>2017-03-06T15:13:30-00:00</lastmod>
+<lastmod>2017-03-07T19:08:26-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -36,6 +36,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2010-12-25T19:15:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/2017/03/delete-contacts-on-wechat.html</loc>
+<lastmod>2017-03-06T15:40:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
@@ -467,7 +474,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://feilong.me/category/za-tan.html</loc>
-<lastmod>2017-03-03T17:40:00+08:06</lastmod>
+<lastmod>2017-03-06T15:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -566,6 +573,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://feilong.me/tag/google.html</loc>
 <lastmod>2011-02-10T11:32:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>http://feilong.me/tag/peng-you-quan.html</loc>
+<lastmod>2017-03-06T15:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -866,14 +880,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://feilong.me/tag/wei-xin.html</loc>
-<lastmod>2017-03-03T16:20:00+08:06</lastmod>
+<lastmod>2017-03-06T15:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/author/fei-long.html</loc>
-<lastmod>2017-03-03T18:40:00+08:06</lastmod>
+<lastmod>2017-03-06T15:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
