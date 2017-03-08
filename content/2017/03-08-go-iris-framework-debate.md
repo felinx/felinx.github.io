@@ -1,7 +1,7 @@
 Title: 从iris框架撕逼事件看开源
 Date: 2017-03-08 16:50
 Category: 编程
-Tags: github, 开源, Go, web framework
+Tags: Github, 开源, Go, web framework
 Slug: 2017/03/go-iris-framework-debate
 Authors: 飞龙
 
@@ -31,11 +31,11 @@ Authors: 飞龙
 > don't waste your breath @CaptainCodeman I gave the same advice in his repo and all he did was "locked and limited conversation to collaborators" then deleted his reddit account and edited his above comment to claim he doesn't have one.
 >
 > sorry everyone for the noise.
-- 一点值得学习的小插曲: robvdl指出大家不要死揪着url地址路由这点小点的性能不放，它根本不是Web应用的性能瓶颈所在。
+- 一点值得大家学习的小插曲: robvdl指出不要死揪着URL地址路由这一小点的性能不放，它根本不是Web应用的性能瓶颈所在。
 > This is something I don't really like so much about the Golang community, everyone seems to be obsessed about who has the fastest router. Who cares? Routing is only a tiny portion of the request time, once you start building real application logic on top, it wont matter anymore what router you chose, but the feature set becomes more important. Can we close this issue already... please?
-- kataras终于出现了，态度很好说了句感谢的话，结果却引来了另一个神转折，ar3s3ru嘲笑他英语垃圾(kataras是希腊人)，一股骂河南人的地域歧视贴气息扑面而来。
+- 关键人物iris作者kataras终于出现了，说了句带感谢的话，结果却引来了另一个神转折，ar3s3ru嘲笑他英语垃圾(kataras是希腊人)，一股骂河南人的地域歧视贴气息扑面而来。
 > @kataras I'm falling in love with your broken english
-- ar3s3ru也是找骂，raitucarp马上反击了它，到此此贴已彻底变味。
+- ar3s3ru也是没事找骂，raitucarp马上反击了它，到此此贴已彻底变味。
 > @ar3s3ru why in this f**ng day, native english speaker people or people that has perfect capability with their english skill, so rude with non native speaker? could you even speak russia? or chinese maybe? I would falling in love if you can speak them perfectly.
 
 回过头细看下文章开头iris和Gin的Github首页截图对比，就会发现一个非常有意思的现象，两个项目的commit、watch、star、fork数等大体相当，看更新频度项目都比较活跃，但贡献者(contributors)这一项就看出明显差异了，iris只有kataras一个贡献者，而Gin有95个贡献者，很明显Gin是一个真正意义上的社区开源项目，而iris可以认为只是kataras一个人在独舞。进一步挖掘发现iris被推荐好的Go项目的awesome-go给除名了，见[Remove iris from listing](https://github.com/avelino/awesome-go/pull/1135)，关键理由是作者对他人贡献的不尊重：
