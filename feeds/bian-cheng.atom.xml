@@ -40,15 +40,15 @@
 &lt;p&gt;sorry everyone for the noise.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;一点值得学习的小插曲: robvdl指出大家不要死揪着url地址路由这点小点的性能不放，它根本不是Web应用的性能瓶颈所在。&lt;blockquote&gt;
+&lt;li&gt;一点值得大家学习的小插曲: robvdl指出不要死揪着URL地址路由这一小点的性能不放，它根本不是Web应用的性能瓶颈所在。&lt;blockquote&gt;
 &lt;p&gt;This is something I don't really like so much about the Golang community, everyone seems to be obsessed about who has the fastest router. Who cares? Routing is only a tiny portion of the request time, once you start building real application logic on top, it wont matter anymore what router you chose, but the feature set becomes more important. Can we close this issue already... please?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;kataras终于出现了，态度很好说了句感谢的话，结果却引来了另一个神转折，ar3s3ru嘲笑他英语垃圾(kataras是希腊人)，一股骂河南人的地域歧视贴气息扑面而来。&lt;blockquote&gt;
+&lt;li&gt;关键人物iris作者kataras终于出现了，说了句带感谢的话，结果却引来了另一个神转折，ar3s3ru嘲笑他英语垃圾(kataras是希腊人)，一股骂河南人的地域歧视贴气息扑面而来。&lt;blockquote&gt;
 &lt;p&gt;@kataras I'm falling in love with your broken english&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;ar3s3ru也是找骂，raitucarp马上反击了它，到此此贴已彻底变味。&lt;blockquote&gt;
+&lt;li&gt;ar3s3ru也是没事找骂，raitucarp马上反击了它，到此此贴已彻底变味。&lt;blockquote&gt;
 &lt;p&gt;@ar3s3ru why in this f**ng day, native english speaker people or people that has perfect capability with their english skill, so rude with non native speaker? could you even speak russia? or chinese maybe? I would falling in love if you can speak them perfectly.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -64,7 +64,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;可问题出就出在他自己做着Open source的事却缺乏Open的心态，不虚心接受他人的建议和批评、不尊重他人的代码贡献，于己于项目都是非常不利的。虽然我看完了iris的官方文档觉得iris还不错，但真要我选Go的Web框架，我肯定不会选择iris。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;PS：iris号称自己是最快(fastest)，若在我朝按新广告法已是违规了。&lt;/p&gt;</content><category term="github"></category><category term="开源"></category><category term="Go"></category><category term="web framework"></category></entry><entry><title>基于UI Automation的自动化测试工具设计指南</title><link href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html" rel="alternate"></link><published>2011-01-20T17:17:00+08:00</published><updated>2011-01-20T17:17:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-20:/2011/01/ms-ui-automation-tool-design-guide.html</id><summary type="html">&lt;p&gt;说明：以下内容是根据2010年我在公司的一次关于UI
+&lt;p&gt;PS：iris号称自己是最快(fastest)，若在我朝按新广告法已是违规了。&lt;/p&gt;</content><category term="Github"></category><category term="开源"></category><category term="Go"></category><category term="web framework"></category></entry><entry><title>基于UI Automation的自动化测试工具设计指南</title><link href="http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html" rel="alternate"></link><published>2011-01-20T17:17:00+08:00</published><updated>2011-01-20T17:17:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-20:/2011/01/ms-ui-automation-tool-design-guide.html</id><summary type="html">&lt;p&gt;说明：以下内容是根据2010年我在公司的一次关于UI
 Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI
 Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。&lt;/p&gt;
 &lt;p&gt;在没有MSUIA（Microsoft UI

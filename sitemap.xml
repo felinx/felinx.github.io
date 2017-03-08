@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://feilong.me/</loc>
-<lastmod>2017-03-08T17:56:44-00:00</lastmod>
+<lastmod>2017-03-08T18:08:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/tags.html</loc>
-<lastmod>2017-03-08T17:56:44-00:00</lastmod>
+<lastmod>2017-03-08T18:08:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>http://feilong.me/categories.html</loc>
-<lastmod>2017-03-08T17:56:44-00:00</lastmod>
+<lastmod>2017-03-08T18:08:50-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>

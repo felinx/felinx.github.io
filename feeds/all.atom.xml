@@ -40,15 +40,15 @@
 &lt;p&gt;sorry everyone for the noise.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;一点值得学习的小插曲: robvdl指出大家不要死揪着url地址路由这点小点的性能不放，它根本不是Web应用的性能瓶颈所在。&lt;blockquote&gt;
+&lt;li&gt;一点值得大家学习的小插曲: robvdl指出不要死揪着URL地址路由这一小点的性能不放，它根本不是Web应用的性能瓶颈所在。&lt;blockquote&gt;
 &lt;p&gt;This is something I don't really like so much about the Golang community, everyone seems to be obsessed about who has the fastest router. Who cares? Routing is only a tiny portion of the request time, once you start building real application logic on top, it wont matter anymore what router you chose, but the feature set becomes more important. Can we close this issue already... please?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;kataras终于出现了，态度很好说了句感谢的话，结果却引来了另一个神转折，ar3s3ru嘲笑他英语垃圾(kataras是希腊人)，一股骂河南人的地域歧视贴气息扑面而来。&lt;blockquote&gt;
+&lt;li&gt;关键人物iris作者kataras终于出现了，说了句带感谢的话，结果却引来了另一个神转折，ar3s3ru嘲笑他英语垃圾(kataras是希腊人)，一股骂河南人的地域歧视贴气息扑面而来。&lt;blockquote&gt;
 &lt;p&gt;@kataras I'm falling in love with your broken english&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;ar3s3ru也是找骂，raitucarp马上反击了它，到此此贴已彻底变味。&lt;blockquote&gt;
+&lt;li&gt;ar3s3ru也是没事找骂，raitucarp马上反击了它，到此此贴已彻底变味。&lt;blockquote&gt;
 &lt;p&gt;@ar3s3ru why in this f**ng day, native english speaker people or people that has perfect capability with their english skill, so rude with non native speaker? could you even speak russia? or chinese maybe? I would falling in love if you can speak them perfectly.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
@@ -64,7 +64,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;可问题出就出在他自己做着Open source的事却缺乏Open的心态，不虚心接受他人的建议和批评、不尊重他人的代码贡献，于己于项目都是非常不利的。虽然我看完了iris的官方文档觉得iris还不错，但真要我选Go的Web框架，我肯定不会选择iris。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;PS：iris号称自己是最快(fastest)，若在我朝按新广告法已是违规了。&lt;/p&gt;</content><category term="github"></category><category term="开源"></category><category term="Go"></category><category term="web framework"></category></entry><entry><title>果断清理了一批微信好友</title><link href="http://feilong.me/2017/03/delete-contacts-on-wechat.html" rel="alternate"></link><published>2017-03-06T15:40:00+08:00</published><updated>2017-03-06T15:40:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-06:/2017/03/delete-contacts-on-wechat.html</id><summary type="html">&lt;p&gt;最近一段时间发现自己越来越少打开微信朋友圈，甚至出现几天没开的情况，这在以前是件不敢想象的事情，虽然说不看朋友圈身上并没有掉块肉，但的确有时会漏掉一些亲朋好友的重要动态。现在的朋友圈早已不是之前的朋友圈，里面充斥着各种不感兴趣、不相关的内容，信息获取效率大大降低，这也是为什么点进朋友圈去看的欲望都快没了。&lt;/p&gt;
+&lt;p&gt;PS：iris号称自己是最快(fastest)，若在我朝按新广告法已是违规了。&lt;/p&gt;</content><category term="Github"></category><category term="开源"></category><category term="Go"></category><category term="web framework"></category></entry><entry><title>果断清理了一批微信好友</title><link href="http://feilong.me/2017/03/delete-contacts-on-wechat.html" rel="alternate"></link><published>2017-03-06T15:40:00+08:00</published><updated>2017-03-06T15:40:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-06:/2017/03/delete-contacts-on-wechat.html</id><summary type="html">&lt;p&gt;最近一段时间发现自己越来越少打开微信朋友圈，甚至出现几天没开的情况，这在以前是件不敢想象的事情，虽然说不看朋友圈身上并没有掉块肉，但的确有时会漏掉一些亲朋好友的重要动态。现在的朋友圈早已不是之前的朋友圈，里面充斥着各种不感兴趣、不相关的内容，信息获取效率大大降低，这也是为什么点进朋友圈去看的欲望都快没了。&lt;/p&gt;
 &lt;p&gt;今天看到《社交红利》的作者徐志斌在知乎问题&lt;a href="https://www.zhihu.com/question/56721329/answer/150180612"&gt;微信删除联系人和拉黑时心理个是什么？？&lt;/a&gt;中的回答触动了我，不看微信通讯录不知道，一看着实吓一跳，我居然加了超过800好友，很多人看昵称根本记不起是谁，还有一些好友一句话都没说过，可能只是某些场合互加了好友而已。这些没联系的联系人一直就这样保留着没删，总认为或许哪天会需要去联系，而实际上从来就没再联系过，打个不恰当的比喻就像家里各角落藏的一些不用的东西一样，你总觉得哪天能用上，实际上除了藏在那布满灰尘外毫无用处，只会类似的“垃圾”越积越多，要找真正需要的东西的时候它们就成了阻碍，朋友圈的情形何尝不是如此啊，不及时的删除不必要的好友、屏蔽一些人不感兴趣的人的动态，通过朋友圈获取信息的效率就大打折扣。&lt;/p&gt;
 &lt;p&gt;在下手清理掉了200微信好友和屏蔽一些人的动态后，再刷朋友圈顿觉神清气爽，朋友圈早该好好清理清理了，而且要持续的清理。&lt;/p&gt;
 &lt;p&gt;PS：还剩600人是不是还是有点多？Path最初的50好友上限对朋友圈而言想想也挺科学。&lt;/p&gt;</summary><content type="html">&lt;p&gt;最近一段时间发现自己越来越少打开微信朋友圈，甚至出现几天没开的情况，这在以前是件不敢想象的事情，虽然说不看朋友圈身上并没有掉块肉，但的确有时会漏掉一些亲朋好友的重要动态。现在的朋友圈早已不是之前的朋友圈，里面充斥着各种不感兴趣、不相关的内容，信息获取效率大大降低，这也是为什么点进朋友圈去看的欲望都快没了。&lt;/p&gt;
