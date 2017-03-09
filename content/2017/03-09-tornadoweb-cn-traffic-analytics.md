@@ -1,4 +1,4 @@
-Title: 国内堪忧的Tornado用户群
+Title: 可叹的tornadoweb.cn用户群
 Date: 2017-03-09 17:50
 Category: Python
 Tags: Tornado
@@ -18,10 +18,10 @@ Authors: 飞龙
 
 我又细追了下其它来源的链接(Referrals)，其中来自51cto的[第一篇：Python高性能Web框架Tornado原理剖析](http://3060674.blog.51cto.com/3050674/1683295)和来自csdn的[windows下安装tornado](http://blog.csdn.net/fjx1173865548/article/details/54023325)非常有趣：
 
-一个把tornadoweb.cn当做官方网站
+一个把tornadoweb.cn当做官方网站：
 ![tornadoweb cn as org](/static/2017/03-09-tornadoweb-cn-as-org.jpg)
 
-另一个把tornadoweb.cn当下载来源站
+另一个把tornadoweb.cn当下载来源站：
 ![tornadoweb cn download](/static/2017/03-09-tornadoweb-cn-download.jpg)
 
-看到这，有没有一股Xcode Ghost事件的既视感？虽然tornadoweb.cn是正儿八经的网站，上面给的下载地址也是Tornado官方的下载地址，但是Xcode Ghost事件中的受害开发者就是这么轻易相信非官方渠道站点，下了被种了病毒的Xcode版本的。我们就不能从Xcode Ghost事件中长点记性么？
+看到这，有没有一股Xcode Ghost事件的既视感？虽然tornadoweb.cn是正儿八经的网站，上面给的下载地址也是Tornado官方的下载地址，但是Xcode Ghost事件中的受害开发者就是这么轻易相信非官方渠道站点，下了被种了病毒的Xcode版本的，我们就不能从Xcode Ghost事件中长点记性么？
