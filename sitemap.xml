@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/</loc>
-<lastmod>2017-03-08T18:36:06-00:00</lastmod>
+<lastmod>2017-03-09T19:05:44-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/tags.html</loc>
-<lastmod>2017-03-08T18:36:06-00:00</lastmod>
+<lastmod>2017-03-09T19:05:44-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/categories.html</loc>
-<lastmod>2017-03-08T18:36:06-00:00</lastmod>
+<lastmod>2017-03-09T19:05:44-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -36,6 +36,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2010-12-25T19:15:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2017/03/tornadoweb-cn-traffic-analytics.html</loc>
+<lastmod>2017-03-09T17:50:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
@@ -460,7 +467,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/category/python.html</loc>
-<lastmod>2013-08-14T23:50:00+08:06</lastmod>
+<lastmod>2017-03-09T17:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -733,7 +740,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/tag/tornado.html</loc>
-<lastmod>2012-10-22T11:56:00+08:06</lastmod>
+<lastmod>2017-03-09T17:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -915,7 +922,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/author/fei-long.html</loc>
-<lastmod>2017-03-08T16:50:00+08:06</lastmod>
+<lastmod>2017-03-09T17:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
