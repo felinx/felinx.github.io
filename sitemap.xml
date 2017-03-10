@@ -4,924 +4,924 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://feilong.me/</loc>
-<lastmod>2017-03-09T19:23:18-00:00</lastmod>
+<loc>http://feilong.me/</loc>
+<lastmod>2017-03-10T10:32:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tags.html</loc>
-<lastmod>2017-03-09T19:23:18-00:00</lastmod>
+<loc>http://feilong.me/tags.html</loc>
+<lastmod>2017-03-10T10:32:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/categories.html</loc>
-<lastmod>2017-03-09T19:23:18-00:00</lastmod>
+<loc>http://feilong.me/categories.html</loc>
+<lastmod>2017-03-10T10:32:46-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/pages/about.html</loc>
+<loc>http://feilong.me/pages/about.html</loc>
 <lastmod>2010-12-25T04:29:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/pages/contact.html</loc>
+<loc>http://feilong.me/pages/contact.html</loc>
 <lastmod>2010-12-25T19:15:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2017/03/tornadoweb-cn-traffic-analytics.html</loc>
+<loc>http://feilong.me/2017/03/tornadoweb-cn-traffic-analytics.html</loc>
 <lastmod>2017-03-09T17:50:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2017/03/go-iris-framework-debate.html</loc>
+<loc>http://feilong.me/2017/03/go-iris-framework-debate.html</loc>
 <lastmod>2017-03-08T16:50:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2017/03/delete-contacts-on-wechat.html</loc>
+<loc>http://feilong.me/2017/03/delete-contacts-on-wechat.html</loc>
 <lastmod>2017-03-06T15:40:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2017/03/comment-mogujie-meilishuo.html</loc>
+<loc>http://feilong.me/2017/03/comment-mogujie-meilishuo.html</loc>
 <lastmod>2017-03-03T18:40:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2017/03/blog-resurrection.html</loc>
+<loc>http://feilong.me/2017/03/blog-resurrection.html</loc>
 <lastmod>2017-03-03T17:40:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2017/03/dxy-robbin-email.html</loc>
+<loc>http://feilong.me/2017/03/dxy-robbin-email.html</loc>
 <lastmod>2017-03-02T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2016/04/you-are-not-couch.html</loc>
+<loc>http://feilong.me/2016/04/you-are-not-couch.html</loc>
 <lastmod>2016-04-02T22:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2015/12/aolai-product-philosophy.html</loc>
+<loc>http://feilong.me/2015/12/aolai-product-philosophy.html</loc>
 <lastmod>2015-12-07T22:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2015/11/siguozhanji-feedback-email.html</loc>
+<loc>http://feilong.me/2015/11/siguozhanji-feedback-email.html</loc>
 <lastmod>2015-11-23T10:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2015/08/growth-hacker.html</loc>
+<loc>http://feilong.me/2015/08/growth-hacker.html</loc>
 <lastmod>2015-08-08T10:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2015/08/mani-company-gene.html</loc>
+<loc>http://feilong.me/2015/08/mani-company-gene.html</loc>
 <lastmod>2015-08-05T10:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2015/08/why-do-perfect.html</loc>
+<loc>http://feilong.me/2015/08/why-do-perfect.html</loc>
 <lastmod>2015-08-03T10:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2015/07/you-can-do-better.html</loc>
+<loc>http://feilong.me/2015/07/you-can-do-better.html</loc>
 <lastmod>2015-07-23T10:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2015/07/why-use-bagua-avatar.html</loc>
+<loc>http://feilong.me/2015/07/why-use-bagua-avatar.html</loc>
 <lastmod>2015-07-22T10:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2015/07/write-in-offical-account.html</loc>
+<loc>http://feilong.me/2015/07/write-in-offical-account.html</loc>
 <lastmod>2017-03-03T16:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2014/08/no-gyou-no-game.html</loc>
+<loc>http://feilong.me/2014/08/no-gyou-no-game.html</loc>
 <lastmod>2014-08-02T18:15:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2013/08/siguozhanji-boss-fight-robot.html</loc>
+<loc>http://feilong.me/2013/08/siguozhanji-boss-fight-robot.html</loc>
 <lastmod>2013-08-14T23:50:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2013/05/nsq-realtime-message-processing-system.html</loc>
+<loc>http://feilong.me/2013/05/nsq-realtime-message-processing-system.html</loc>
 <lastmod>2013-05-18T18:43:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2013/02/load-testing-with-multi-mechanize.html</loc>
+<loc>http://feilong.me/2013/02/load-testing-with-multi-mechanize.html</loc>
 <lastmod>2013-02-19T19:21:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2012/10/developing-restful-api-with-tornado.html</loc>
+<loc>http://feilong.me/2012/10/developing-restful-api-with-tornado.html</loc>
 <lastmod>2012-10-22T11:56:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2012/08/wildcard-subdomain-support-in-tornado.html</loc>
+<loc>http://feilong.me/2012/08/wildcard-subdomain-support-in-tornado.html</loc>
 <lastmod>2012-08-20T12:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2012/06/interesting-python-closures.html</loc>
+<loc>http://feilong.me/2012/06/interesting-python-closures.html</loc>
 <lastmod>2012-06-03T13:23:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2012/06/things-have-been-stolen-in-those-years.html</loc>
+<loc>http://feilong.me/2012/06/things-have-been-stolen-in-those-years.html</loc>
 <lastmod>2012-06-03T10:18:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/09/tornado-as-a-proxy.html</loc>
+<loc>http://feilong.me/2011/09/tornado-as-a-proxy.html</loc>
 <lastmod>2011-09-10T23:13:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/09/join-shanda-innovations.html</loc>
+<loc>http://feilong.me/2011/09/join-shanda-innovations.html</loc>
 <lastmod>2011-09-01T07:34:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/08/four-years-work-at-autodesk.html</loc>
+<loc>http://feilong.me/2011/08/four-years-work-at-autodesk.html</loc>
 <lastmod>2011-08-31T11:24:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/08/how-to-ask-for-help.html</loc>
+<loc>http://feilong.me/2011/08/how-to-ask-for-help.html</loc>
 <lastmod>2011-08-30T17:56:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/08/talk-about-reading-books.html</loc>
+<loc>http://feilong.me/2011/08/talk-about-reading-books.html</loc>
 <lastmod>2011-08-30T16:36:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/08/talk-about-python-web-in-july-python-salon.html</loc>
+<loc>http://feilong.me/2011/08/talk-about-python-web-in-july-python-salon.html</loc>
 <lastmod>2011-08-03T13:30:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/07/talk-about-polling-and-long-polling.html</loc>
+<loc>http://feilong.me/2011/07/talk-about-polling-and-long-polling.html</loc>
 <lastmod>2011-07-13T13:42:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/06/tornadoweb-cn-documentation.html</loc>
+<loc>http://feilong.me/2011/06/tornadoweb-cn-documentation.html</loc>
 <lastmod>2011-06-20T15:14:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/06/nginx-reverse-proxy.html</loc>
+<loc>http://feilong.me/2011/06/nginx-reverse-proxy.html</loc>
 <lastmod>2011-06-11T11:41:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/05/where-to-submit-sites-to-search-engines.html</loc>
+<loc>http://feilong.me/2011/05/where-to-submit-sites-to-search-engines.html</loc>
 <lastmod>2011-05-23T17:41:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2010/05/tornadoweb-cn-mirror.html</loc>
+<loc>http://feilong.me/2010/05/tornadoweb-cn-mirror.html</loc>
 <lastmod>2011-05-19T15:06:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/05/just-a-joke-python-jobs.html</loc>
+<loc>http://feilong.me/2011/05/just-a-joke-python-jobs.html</loc>
 <lastmod>2011-05-06T08:51:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/03/monitor-processes-with-supervisord.html</loc>
+<loc>http://feilong.me/2011/03/monitor-processes-with-supervisord.html</loc>
 <lastmod>2011-03-29T11:51:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/03/pycon2011-videos-sharing.html</loc>
+<loc>http://feilong.me/2011/03/pycon2011-videos-sharing.html</loc>
 <lastmod>2011-03-21T10:58:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/03/run-some-code-in-testing-and-deploying-server.html</loc>
+<loc>http://feilong.me/2011/03/run-some-code-in-testing-and-deploying-server.html</loc>
 <lastmod>2011-03-14T13:27:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/03/amazon-aws-ec2-hardware-failure.html</loc>
+<loc>http://feilong.me/2011/03/amazon-aws-ec2-hardware-failure.html</loc>
 <lastmod>2011-03-06T12:44:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/02/monitor-core-processes-with-monit.html</loc>
+<loc>http://feilong.me/2011/02/monitor-core-processes-with-monit.html</loc>
 <lastmod>2011-02-24T17:36:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/02/learning-python-follow-felinx-part-one.html</loc>
+<loc>http://feilong.me/2011/02/learning-python-follow-felinx-part-one.html</loc>
 <lastmod>2011-02-21T18:17:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/02/quick-find-your-oldest-buzz.html</loc>
+<loc>http://feilong.me/2011/02/quick-find-your-oldest-buzz.html</loc>
 <lastmod>2011-02-10T11:32:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/talk-about-python-web-framework.html</loc>
+<loc>http://feilong.me/2011/01/talk-about-python-web-framework.html</loc>
 <lastmod>2011-01-25T19:01:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html</loc>
+<loc>http://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html</loc>
 <lastmod>2011-01-20T17:17:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/vmware-pragmatic-tips.html</loc>
+<loc>http://feilong.me/2011/01/vmware-pragmatic-tips.html</loc>
 <lastmod>2011-01-17T13:41:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/pep-3333-accepted.html</loc>
+<loc>http://feilong.me/2011/01/pep-3333-accepted.html</loc>
 <lastmod>2011-01-14T08:47:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/recommended-entries-for-you-to-master-python.html</loc>
+<loc>http://feilong.me/2011/01/recommended-entries-for-you-to-master-python.html</loc>
 <lastmod>2011-01-12T12:02:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/python-wins-tiobe-2010-pro-lang-award.html</loc>
+<loc>http://feilong.me/2011/01/python-wins-tiobe-2010-pro-lang-award.html</loc>
 <lastmod>2011-01-10T18:36:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/something-about-domain-registration.html</loc>
+<loc>http://feilong.me/2011/01/something-about-domain-registration.html</loc>
 <lastmod>2011-01-10T14:04:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/solve-kindle-cn-encoding-problem.html</loc>
+<loc>http://feilong.me/2011/01/solve-kindle-cn-encoding-problem.html</loc>
 <lastmod>2011-01-08T11:46:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2011/01/amazon-aws-ec2-guide.html</loc>
+<loc>http://feilong.me/2011/01/amazon-aws-ec2-guide.html</loc>
 <lastmod>2011-01-01T21:54:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html</loc>
+<loc>http://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html</loc>
 <lastmod>2010-12-31T21:04:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2010/12/enjoy-read-feeds-in-kindle.html</loc>
+<loc>http://feilong.me/2010/12/enjoy-read-feeds-in-kindle.html</loc>
 <lastmod>2010-12-31T13:09:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2010/12/google-buzz-top-8-defects.html</loc>
+<loc>http://feilong.me/2010/12/google-buzz-top-8-defects.html</loc>
 <lastmod>2010-12-31T12:14:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2010/12/felinx-rejected-by-python-cn.html</loc>
+<loc>http://feilong.me/2010/12/felinx-rejected-by-python-cn.html</loc>
 <lastmod>2010-12-27T23:51:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2010/12/recommended-wordpress-plugins.html</loc>
+<loc>http://feilong.me/2010/12/recommended-wordpress-plugins.html</loc>
 <lastmod>2010-12-27T16:28:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2010/12/start-blogging.html</loc>
+<loc>http://feilong.me/2010/12/start-blogging.html</loc>
 <lastmod>2010-12-26T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/category/bian-cheng.html</loc>
+<loc>http://feilong.me/category/bian-cheng.html</loc>
 <lastmod>2017-03-08T16:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/category/du-shu.html</loc>
+<loc>http://feilong.me/category/du-shu.html</loc>
 <lastmod>2015-08-08T10:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/category/it.html</loc>
+<loc>http://feilong.me/category/it.html</loc>
 <lastmod>2011-07-13T13:42:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/category/jian-ping.html</loc>
+<loc>http://feilong.me/category/jian-ping.html</loc>
 <lastmod>2017-03-03T18:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/category/python.html</loc>
+<loc>http://feilong.me/category/python.html</loc>
 <lastmod>2017-03-09T17:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/category/web.html</loc>
+<loc>http://feilong.me/category/web.html</loc>
 <lastmod>2011-05-23T17:41:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/category/you-xi.html</loc>
+<loc>http://feilong.me/category/you-xi.html</loc>
 <lastmod>2015-11-23T10:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/category/za-tan.html</loc>
+<loc>http://feilong.me/category/za-tan.html</loc>
 <lastmod>2017-03-06T15:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/web-framework.html</loc>
+<loc>http://feilong.me/tag/web-framework.html</loc>
 <lastmod>2017-03-08T16:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/kai-yuan.html</loc>
+<loc>http://feilong.me/tag/kai-yuan.html</loc>
 <lastmod>2017-03-08T16:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/gong-gong-zhang-hao.html</loc>
+<loc>http://feilong.me/tag/gong-gong-zhang-hao.html</loc>
 <lastmod>2017-03-03T16:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/xiao-xi-xi-tong.html</loc>
+<loc>http://feilong.me/tag/xiao-xi-xi-tong.html</loc>
 <lastmod>2013-05-18T18:43:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/python-cn.html</loc>
+<loc>http://feilong.me/tag/python-cn.html</loc>
 <lastmod>2010-12-27T23:51:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/autodesk.html</loc>
+<loc>http://feilong.me/tag/autodesk.html</loc>
 <lastmod>2011-08-31T11:24:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/pelican.html</loc>
+<loc>http://feilong.me/tag/pelican.html</loc>
 <lastmod>2017-03-03T17:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/la-ji-you-jian.html</loc>
+<loc>http://feilong.me/tag/la-ji-you-jian.html</loc>
 <lastmod>2017-03-02T10:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/chan-pin.html</loc>
+<loc>http://feilong.me/tag/chan-pin.html</loc>
 <lastmod>2015-12-07T22:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/yu-ming.html</loc>
+<loc>http://feilong.me/tag/yu-ming.html</loc>
 <lastmod>2011-01-10T14:04:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/bian-cheng.html</loc>
+<loc>http://feilong.me/tag/bian-cheng.html</loc>
 <lastmod>2011-05-06T08:51:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/pynsq.html</loc>
+<loc>http://feilong.me/tag/pynsq.html</loc>
 <lastmod>2013-05-18T18:43:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/you-xi.html</loc>
+<loc>http://feilong.me/tag/you-xi.html</loc>
 <lastmod>2014-08-02T18:15:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/google.html</loc>
+<loc>http://feilong.me/tag/google.html</loc>
 <lastmod>2011-02-10T11:32:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/peng-you-quan.html</loc>
+<loc>http://feilong.me/tag/peng-you-quan.html</loc>
 <lastmod>2017-03-06T15:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/go.html</loc>
+<loc>http://feilong.me/tag/go.html</loc>
 <lastmod>2017-03-08T16:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/nsq.html</loc>
+<loc>http://feilong.me/tag/nsq.html</loc>
 <lastmod>2013-05-18T18:43:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/zi-dong-hua-ce-shi.html</loc>
+<loc>http://feilong.me/tag/zi-dong-hua-ce-shi.html</loc>
 <lastmod>2011-01-20T17:17:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/pycon.html</loc>
+<loc>http://feilong.me/tag/pycon.html</loc>
 <lastmod>2011-03-21T10:58:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/monit.html</loc>
+<loc>http://feilong.me/tag/monit.html</loc>
 <lastmod>2011-02-24T17:36:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/chi.html</loc>
+<loc>http://feilong.me/tag/chi.html</loc>
 <lastmod>2015-12-07T22:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/fan-xiang-dai-li.html</loc>
+<loc>http://feilong.me/tag/fan-xiang-dai-li.html</loc>
 <lastmod>2011-06-11T11:41:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/multi-mechanize.html</loc>
+<loc>http://feilong.me/tag/multi-mechanize.html</loc>
 <lastmod>2013-02-19T19:21:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/pep.html</loc>
+<loc>http://feilong.me/tag/pep.html</loc>
 <lastmod>2011-01-14T08:47:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/yun-ying.html</loc>
+<loc>http://feilong.me/tag/yun-ying.html</loc>
 <lastmod>2015-11-23T10:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/sheng-da-chuang-xin-yuan.html</loc>
+<loc>http://feilong.me/tag/sheng-da-chuang-xin-yuan.html</loc>
 <lastmod>2011-09-01T07:34:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/python.html</loc>
+<loc>http://feilong.me/tag/python.html</loc>
 <lastmod>2011-08-03T13:30:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/wordpress.html</loc>
+<loc>http://feilong.me/tag/wordpress.html</loc>
 <lastmod>2017-03-03T17:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/iphone.html</loc>
+<loc>http://feilong.me/tag/iphone.html</loc>
 <lastmod>2012-06-03T10:18:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/xiao-tou.html</loc>
+<loc>http://feilong.me/tag/xiao-tou.html</loc>
 <lastmod>2012-06-03T10:18:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/bian-cheng-yu-yan.html</loc>
+<loc>http://feilong.me/tag/bian-cheng-yu-yan.html</loc>
 <lastmod>2011-01-10T18:36:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/yun-ji-suan.html</loc>
+<loc>http://feilong.me/tag/yun-ji-suan.html</loc>
 <lastmod>2011-01-01T21:54:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/long-polling.html</loc>
+<loc>http://feilong.me/tag/long-polling.html</loc>
 <lastmod>2011-07-13T13:42:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/uiautomation.html</loc>
+<loc>http://feilong.me/tag/uiautomation.html</loc>
 <lastmod>2011-01-20T17:17:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/supervisord.html</loc>
+<loc>http://feilong.me/tag/supervisord.html</loc>
 <lastmod>2011-03-29T11:51:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/tornado.html</loc>
+<loc>http://feilong.me/tag/tornado.html</loc>
 <lastmod>2017-03-09T17:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/aws.html</loc>
+<loc>http://feilong.me/tag/aws.html</loc>
 <lastmod>2011-03-06T12:44:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/si-guo-zhan-ji.html</loc>
+<loc>http://feilong.me/tag/si-guo-zhan-ji.html</loc>
 <lastmod>2015-11-23T10:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/zeng-chang-hei-ke.html</loc>
+<loc>http://feilong.me/tag/zeng-chang-hei-ke.html</loc>
 <lastmod>2015-08-08T10:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/mo-gu-jie.html</loc>
+<loc>http://feilong.me/tag/mo-gu-jie.html</loc>
 <lastmod>2017-03-03T18:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/chuang-ye.html</loc>
+<loc>http://feilong.me/tag/chuang-ye.html</loc>
 <lastmod>2015-08-08T10:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/tips.html</loc>
+<loc>http://feilong.me/tag/tips.html</loc>
 <lastmod>2011-05-23T17:41:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/zhao-pin.html</loc>
+<loc>http://feilong.me/tag/zhao-pin.html</loc>
 <lastmod>2017-03-02T10:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/ti-wen.html</loc>
+<loc>http://feilong.me/tag/ti-wen.html</loc>
 <lastmod>2011-08-30T17:56:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/za-tan.html</loc>
+<loc>http://feilong.me/tag/za-tan.html</loc>
 <lastmod>2017-03-03T17:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/closure.html</loc>
+<loc>http://feilong.me/tag/closure.html</loc>
 <lastmod>2012-06-03T13:23:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/github.html</loc>
+<loc>http://feilong.me/tag/github.html</loc>
 <lastmod>2017-03-08T16:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/vmware.html</loc>
+<loc>http://feilong.me/tag/vmware.html</loc>
 <lastmod>2011-01-17T13:41:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/nginx.html</loc>
+<loc>http://feilong.me/tag/nginx.html</loc>
 <lastmod>2011-06-11T11:41:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/you-jian-qun-zu.html</loc>
+<loc>http://feilong.me/tag/you-jian-qun-zu.html</loc>
 <lastmod>2010-12-27T23:51:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/restful.html</loc>
+<loc>http://feilong.me/tag/restful.html</loc>
 <lastmod>2012-10-22T11:56:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/mei-li-shuo.html</loc>
+<loc>http://feilong.me/tag/mei-li-shuo.html</loc>
 <lastmod>2017-03-03T18:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/gong-zuo.html</loc>
+<loc>http://feilong.me/tag/gong-zuo.html</loc>
 <lastmod>2011-09-01T07:34:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/django.html</loc>
+<loc>http://feilong.me/tag/django.html</loc>
 <lastmod>2011-01-25T19:01:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/bi-bao.html</loc>
+<loc>http://feilong.me/tag/bi-bao.html</loc>
 <lastmod>2012-06-03T13:23:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/du-shu.html</loc>
+<loc>http://feilong.me/tag/du-shu.html</loc>
 <lastmod>2015-08-08T10:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/fan-yu-ming.html</loc>
+<loc>http://feilong.me/tag/fan-yu-ming.html</loc>
 <lastmod>2012-08-20T12:42:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/polling.html</loc>
+<loc>http://feilong.me/tag/polling.html</loc>
 <lastmod>2011-07-13T13:42:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/buzz.html</loc>
+<loc>http://feilong.me/tag/buzz.html</loc>
 <lastmod>2011-02-10T11:32:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/kindle.html</loc>
+<loc>http://feilong.me/tag/kindle.html</loc>
 <lastmod>2011-01-08T11:46:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/wei-xin.html</loc>
+<loc>http://feilong.me/tag/wei-xin.html</loc>
 <lastmod>2017-03-06T15:40:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/author/fei-long.html</loc>
+<loc>http://feilong.me/author/fei-long.html</loc>
 <lastmod>2017-03-09T17:50:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
