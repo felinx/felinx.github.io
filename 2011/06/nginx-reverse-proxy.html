@@ -4,14 +4,14 @@
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet/less" type="text/css" href="http://feilong.me/theme/stylesheet/style.less">
+    <link rel="stylesheet/less" type="text/css" href="https://feilong.me/theme/stylesheet/style.less">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
 
-  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/pygments/friendly.min.css">
-  <link rel="stylesheet" type="text/css" href="http://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="https://feilong.me/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
+    <link href="https://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
 
 
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -38,11 +38,11 @@
 <meta property="og:title" content="nginx反向代理配置(附：tornadoweb.cn的nginx配置)"/>
 <meta property="og:description" content="GAE的Hosting站点 appspot.com在国内被墙，因此架设在GAE上的运用没法直接访问，需要曲线救国，其中一招比较有效的方式即是通过nginx反向代理来实现，不过这个要求你在国外有一个可用的nginx。下面以tornadoweb.cn为例讲述如何用nginx配置反向代理(注：tornadoweb.cn为tornadoweb.org的镜像站点，原站就是在GAE上，因此国内无法直接访问)。关于nginx的基本配置部分请参考我在poweredsites上的博客how-to-setup-nginx，本文只讨论如何配置tornadoweb.cn这个站点，配置说明详见配置中的注释。 server { # 监听80端口，通常可以省略。 listen 80; # 要配置的站点域名，即用来曲线访问GAE上的原站点的域名。 server_name www.tornadoweb.cn; # Ben老大要求tornadoweb.cn有说明是镜像站点以区别于原站tornadoweb.org， # 因此我走巧将头上的LOGO采用修改过的本地文件，在原logo上加了mirror的声明 location /static/tornado.png { # LOGO文件tornado.png所在文件夹目录 root /mnt/ebs …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://feilong.me/2011/06/nginx-reverse-proxy.html"/>
+<meta property="og:url" content="https://feilong.me/2011/06/nginx-reverse-proxy.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2011-06-11 11:41:00+08:00"/>
 <meta property="article:modified_time" content=""/>
-<meta property="article:author" content="http://feilong.me/author/fei-long.html">
+<meta property="article:author" content="https://feilong.me/author/fei-long.html">
 <meta property="article:section" content="IT"/>
 <meta property="article:tag" content="nginx"/>
 <meta property="article:tag" content="反向代理"/>
@@ -54,16 +54,16 @@
 <body>
   <aside>
     <div>
-      <a href="http://feilong.me">
+      <a href="https://feilong.me">
         <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
       </a>
-      <h1><a href="http://feilong.me">飞龙札记</a></h1>
+      <h1><a href="https://feilong.me">飞龙札记</a></h1>
 
 <p>Nice speech, but what are you going to do.</p>
       <nav>
         <ul class="list">
-          <li><a href="http://feilong.me/pages/about.html#about">about</a></li>
-          <li><a href="http://feilong.me/pages/contact.html#contact">contact</a></li>
+          <li><a href="https://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="https://feilong.me/pages/contact.html#contact">contact</a></li>
 
         </ul>
       </nav>
@@ -79,13 +79,13 @@
   <main>
 
     <nav>
-      <a href="http://feilong.me">    Home
+      <a href="https://feilong.me">    Home
 </a>
 
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
-      <a href="http://feilong.me/feeds/all.atom.xml">    Atom
+      <a href="https://feilong.me/feeds/all.atom.xml">    Atom
 </a>
 
     </nav>
@@ -94,7 +94,7 @@
   <header>
     <h1 id="2011/06/nginx-reverse-proxy">nginx反向代理配置(附：tornadoweb.cn的nginx配置)</h1>
     <p>
-          Posted on Sat 11 June 2011 in <a href="http://feilong.me/category/it.html">IT</a>
+          Posted on Sat 11 June 2011 in <a href="https://feilong.me/category/it.html">IT</a>
 
 
         &#8226; 1 min read
@@ -153,8 +153,8 @@ server {
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="http://feilong.me/tag/nginx.html">nginx</a>
-      <a href="http://feilong.me/tag/fan-xiang-dai-li.html">反向代理</a>
+      <a href="https://feilong.me/tag/nginx.html">nginx</a>
+      <a href="https://feilong.me/tag/fan-xiang-dai-li.html">反向代理</a>
     </p>
   </div>
 
@@ -214,7 +214,7 @@ server {
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " 飞龙札记 ",
-  "url" : "http://feilong.me",
+  "url" : "https://feilong.me",
   "image": "/static/feilong.jpg",
   "description": "飞龙札记 - felinx's blog"
 }
