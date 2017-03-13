@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙札记</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/all.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2017-03-09T17:50:00+08:00</updated><entry><title>可叹的tornadoweb.cn用户群</title><link href="http://feilong.me/2017/03/tornadoweb-cn-traffic-analytics.html" rel="alternate"></link><published>2017-03-09T17:50:00+08:00</published><updated>2017-03-09T17:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-09:/2017/03/tornadoweb-cn-traffic-analytics.html</id><summary type="html">&lt;p&gt;&lt;a href="http://www.tornadoweb.cn"&gt;tornadoweb.cn&lt;/a&gt;是我2011年搭建的&lt;a href="http://www.tornadoweb.org"&gt;Tornado&lt;/a&gt;中文站，主要是为传播Tornado web framework：&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙札记</title><link href="http://feilong.me/" rel="alternate"></link><link href="http://feilong.me/feeds/all.atom.xml" rel="self"></link><id>http://feilong.me/</id><updated>2017-03-13T12:50:00+08:00</updated><entry><title>Think different</title><link href="http://feilong.me/2017/03/think-different.html" rel="alternate"></link><published>2017-03-13T12:50:00+08:00</published><updated>2017-03-13T12:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-13:/2017/03/think-different.html</id><summary type="html">&lt;p&gt;今天知乎上看到&lt;a href="https://www.zhihu.com/question/56718735/answer/151232947"&gt;摩拜、ofo 等共享单车的发展，会对其他行业带来哪些影响？&lt;/a&gt;何明科的回答，他的观点独到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;说一个耸人听闻的吧：共享单车给了房地产商以及房主新的筹码，变现抬高了房价。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;概括下他的理由也很简单：共享单车的便利性让楼盘到地铁的“相对距离”变短了。&lt;/p&gt;
+&lt;p&gt;何的视角可以说另辟蹊径，不是从常规的自行车产业上下游相关如自行车厂商、配件厂商(锁)、修车从业人员、支付渠道公司、政府交警协警等来看，而是从看似八竿子打不着却又是民众关心的热门话题房地产来看，虽有强行扯上关系的嫌疑，但视角的不同得到的结论也自不同。&lt;/p&gt;
+&lt;p&gt;说到共享单车，关于单车的乱停乱放问题，红沙发的金老师的观点非常犀利：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="jins-opinion-about-mobike" src="/static/2017/03-13-jins-opinion-about-mobike.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;我们最常听到的是“国民素质差论”然后陷入美国的月亮是不是比中国的圆的口水战中，而金老师独从“城市非机动车停车用地资源的稀缺性”来看这个问题，认为对乱停乱放负主要责任的应是那些做共享单车的商业公司。&lt;/p&gt;
+&lt;p&gt;我们姑且不论上面两个观点的正确性，它们多少对我们有一些启发。不是说常规的视角看问题就不重要，而是说换一个姿势看世界，或许你会有意外的发现，不人云亦云、学会独立思考，这不正是苹果提倡的“Think different”口号吗？&lt;/p&gt;</summary><content type="html">&lt;p&gt;今天知乎上看到&lt;a href="https://www.zhihu.com/question/56718735/answer/151232947"&gt;摩拜、ofo 等共享单车的发展，会对其他行业带来哪些影响？&lt;/a&gt;何明科的回答，他的观点独到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;说一个耸人听闻的吧：共享单车给了房地产商以及房主新的筹码，变现抬高了房价。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;概括下他的理由也很简单：共享单车的便利性让楼盘到地铁的“相对距离”变短了。&lt;/p&gt;
+&lt;p&gt;何的视角可以说另辟蹊径，不是从常规的自行车产业上下游相关如自行车厂商、配件厂商(锁)、修车从业人员、支付渠道公司、政府交警协警等来看，而是从看似八竿子打不着却又是民众关心的热门话题房地产来看，虽有强行扯上关系的嫌疑，但视角的不同得到的结论也自不同。&lt;/p&gt;
+&lt;p&gt;说到共享单车，关于单车的乱停乱放问题，红沙发的金老师的观点非常犀利：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="jins-opinion-about-mobike" src="/static/2017/03-13-jins-opinion-about-mobike.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;我们最常听到的是“国民素质差论”然后陷入美国的月亮是不是比中国的圆的口水战中，而金老师独从“城市非机动车停车用地资源的稀缺性”来看这个问题，认为对乱停乱放负主要责任的应是那些做共享单车的商业公司。&lt;/p&gt;
+&lt;p&gt;我们姑且不论上面两个观点的正确性，它们多少对我们有一些启发。不是说常规的视角看问题就不重要，而是说换一个姿势看世界，或许你会有意外的发现，不人云亦云、学会独立思考，这不正是苹果提倡的“Think different”口号吗？&lt;/p&gt;</content><category term="共享单车"></category></entry><entry><title>可叹的tornadoweb.cn用户群</title><link href="http://feilong.me/2017/03/tornadoweb-cn-traffic-analytics.html" rel="alternate"></link><published>2017-03-09T17:50:00+08:00</published><updated>2017-03-09T17:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-09:/2017/03/tornadoweb-cn-traffic-analytics.html</id><summary type="html">&lt;p&gt;&lt;a href="http://www.tornadoweb.cn"&gt;tornadoweb.cn&lt;/a&gt;是我2011年搭建的&lt;a href="http://www.tornadoweb.org"&gt;Tornado&lt;/a&gt;中文站，主要是为传播Tornado web framework：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;当时Tornado官网&lt;a href="http://www.tornadoweb.org"&gt;tornadoweb.org&lt;/a&gt;放在GAE上，需要翻墙，我提供一个镜像站点给不翻墙的人用。&lt;/li&gt;
 &lt;li&gt;我找人中文翻译了Tornado 1.2版本的文档，供国人参考&lt;/li&gt;
