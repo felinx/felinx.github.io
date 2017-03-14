@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://feilong.me/sitemap.xml
+Sitemap: https://feilong.me/sitemap.xml
