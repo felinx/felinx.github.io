@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/</loc>
-<lastmod>2017-03-20T12:22:54-00:00</lastmod>
+<lastmod>2017-03-20T16:21:54-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/tags.html</loc>
-<lastmod>2017-03-20T12:22:54-00:00</lastmod>
+<lastmod>2017-03-20T16:21:54-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/categories.html</loc>
-<lastmod>2017-03-20T12:22:54-00:00</lastmod>
+<lastmod>2017-03-20T16:21:54-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -41,6 +41,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://feilong.me/2017/03/less-is-more.html</loc>
 <lastmod>2017-03-20T12:50:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2017/03/forbidden-headphone.html</loc>
+<lastmod>2017-03-18T16:30:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -851,6 +858,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://feilong.me/tag/gou-tong.html</loc>
+<lastmod>2017-03-18T16:30:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://feilong.me/tag/nginx.html</loc>
 <lastmod>2011-06-11T11:41:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
@@ -880,7 +894,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/tag/gong-zuo.html</loc>
-<lastmod>2011-09-01T07:34:00+08:06</lastmod>
+<lastmod>2017-03-18T16:30:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
