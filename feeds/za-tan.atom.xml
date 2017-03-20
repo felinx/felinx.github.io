@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙札记 - 杂谈</title><link href="https://feilong.me/" rel="alternate"></link><link href="https://feilong.me/feeds/za-tan.atom.xml" rel="self"></link><id>https://feilong.me/</id><updated>2017-03-13T12:50:00+08:00</updated><entry><title>Think different</title><link href="https://feilong.me/2017/03/think-different.html" rel="alternate"></link><published>2017-03-13T12:50:00+08:00</published><updated>2017-03-13T12:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-13:/2017/03/think-different.html</id><summary type="html">&lt;p&gt;今天知乎上看到&lt;a href="https://www.zhihu.com/question/56718735/answer/151232947"&gt;摩拜、ofo 等共享单车的发展，会对其他行业带来哪些影响？&lt;/a&gt;何明科的回答，他的观点独到：&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙札记 - 杂谈</title><link href="https://feilong.me/" rel="alternate"></link><link href="https://feilong.me/feeds/za-tan.atom.xml" rel="self"></link><id>https://feilong.me/</id><updated>2017-03-20T12:50:00+08:00</updated><entry><title>Less is more</title><link href="https://feilong.me/2017/03/less-is-more.html" rel="alternate"></link><published>2017-03-20T12:50:00+08:00</published><updated>2017-03-20T12:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-20:/2017/03/less-is-more.html</id><summary type="html">&lt;p&gt;如果老子会说英语，那么“Less is more”一定出于其口，老子在《道德经》中早就有云“曲则全，枉则直，洼则盈，敝则新，少则得，多则惑”，真乃字字珠玑。&lt;/p&gt;
+&lt;p&gt;相比于上一个时代的全键盘手机，iPhone只有一个Home键是诠释“Less is more”最好的一个例子：
+&lt;img alt="blackberry" src="/static/2017/03-20-blackberry.jpg"&gt; 
+&lt;img alt="iphone" src="/static/2017/03-20-iphone.png"&gt;  &lt;/p&gt;
+&lt;p&gt;Golang的发明人之一Rob Pike则更进一步说&lt;a href="https://commandcenter.blogspot.jp/2012/06/less-is-exponentially-more.html"&gt;“Less is exponentially more”&lt;/a&gt;并拿Go举例说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I made a list of significant simplifications in Go over C and C++:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;regular syntax (don't need a symbol table to …&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;如果老子会说英语，那么“Less is more”一定出于其口，老子在《道德经》中早就有云“曲则全，枉则直，洼则盈，敝则新，少则得，多则惑”，真乃字字珠玑。&lt;/p&gt;
+&lt;p&gt;相比于上一个时代的全键盘手机，iPhone只有一个Home键是诠释“Less is more”最好的一个例子：
+&lt;img alt="blackberry" src="/static/2017/03-20-blackberry.jpg"&gt; 
+&lt;img alt="iphone" src="/static/2017/03-20-iphone.png"&gt;  &lt;/p&gt;
+&lt;p&gt;Golang的发明人之一Rob Pike则更进一步说&lt;a href="https://commandcenter.blogspot.jp/2012/06/less-is-exponentially-more.html"&gt;“Less is exponentially more”&lt;/a&gt;并拿Go举例说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I made a list of significant simplifications in Go over C and C++:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;regular syntax (don't need a symbol table to parse)&lt;/li&gt;
+&lt;li&gt;garbage collection (only)&lt;/li&gt;
+&lt;li&gt;no header files&lt;/li&gt;
+&lt;li&gt;explicit dependencies&lt;/li&gt;
+&lt;li&gt;no circular dependencies&lt;/li&gt;
+&lt;li&gt;constants are just numbers&lt;/li&gt;
+&lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And yet, with that long list of simplifications and missing pieces, Go is, I believe, more expressive than C or C++. &lt;strong&gt;Less can be more.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;相比于C/C++，Go砍和简化了很多feature，Go却可以做的更好，而C++却一直在堆feature、堆复杂度中，或许C++已经掉进了复杂复杂再复杂的死胡同里出不来了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In the span of an hour at that talk we heard about something like 35 new features that were being planned. In fact there were many more, but only 35 were described in the talk. Some of the features were minor, of course, but the ones in the talk were at least significant enough to call out. Some were very subtle and hard to understand, like rvalue references, while others are especially C++-like, such as variadic templates, and some others are just crazy, like user-defined literals.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以致于C++人士会说“没有generic types是什么鬼？”。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Early in the rollout of Go I was told by someone that he could not imagine working in a language without generic types. As I have reported elsewhere, I found that an odd remark.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;“做加法容易，做减法难”，在iPhone出来之前很难想象手机完全可以没有那么多键(九宫格键盘或全键盘)，深谙“Less is more”这也正是乔布斯牛掰之处。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;题外话：Rob Pike表示本意是想开发Go作为C++的替代语音的，没想到吸引来的却是一大帮Python/Ruby程序员，难怪身边不少Pythoneer都在玩Go，是该学点Go了！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"What was the biggest surprise you encountered rolling out Go?" I knew the answer instantly: Although we expected C++ programmers to see Go as an alternative, instead most Go programmers come from languages like Python and Ruby. Very few come from C++.&lt;/p&gt;
+&lt;/blockquote&gt;</content><category term="Go"></category></entry><entry><title>Think different</title><link href="https://feilong.me/2017/03/think-different.html" rel="alternate"></link><published>2017-03-13T12:50:00+08:00</published><updated>2017-03-13T12:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-13:/2017/03/think-different.html</id><summary type="html">&lt;p&gt;今天知乎上看到&lt;a href="https://www.zhihu.com/question/56718735/answer/151232947"&gt;摩拜、ofo 等共享单车的发展，会对其他行业带来哪些影响？&lt;/a&gt;何明科的回答，他的观点独到：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;说一个耸人听闻的吧：共享单车给了房地产商以及房主新的筹码，变现抬高了房价。&lt;/p&gt;
 &lt;/blockquote&gt;

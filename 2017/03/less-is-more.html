@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="https://feilong.me/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://feilong.me/theme/pygments/friendly.min.css">
+  <link rel="stylesheet" type="text/css" href="https://feilong.me/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://feilong.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="飞龙札记 Atom">
+
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="author" content="飞龙" />
+<meta name="description" content="如果老子会说英语，那么“Less is more”一定出于其口，老子在《道德经》中早就有云“曲则全，枉则直，洼则盈，敝则新，少则得，多则惑”，真乃字字珠玑。 相比于上一个时代的全键盘手机，iPhone只有一个Home键是诠释“Less is more”最好的一个例子： Golang的发明人之一Rob Pike则更进一步说“Less is exponentially more”并拿Go举例说： I made a list of significant simplifications in Go over C and C++: regular syntax (don't need a symbol table to …" />
+<meta name="keywords" content="Go">
+<meta property="og:site_name" content="飞龙札记"/>
+<meta property="og:title" content="Less is more"/>
+<meta property="og:description" content="如果老子会说英语，那么“Less is more”一定出于其口，老子在《道德经》中早就有云“曲则全，枉则直，洼则盈，敝则新，少则得，多则惑”，真乃字字珠玑。 相比于上一个时代的全键盘手机，iPhone只有一个Home键是诠释“Less is more”最好的一个例子： Golang的发明人之一Rob Pike则更进一步说“Less is exponentially more”并拿Go举例说： I made a list of significant simplifications in Go over C and C++: regular syntax (don't need a symbol table to …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://feilong.me/2017/03/less-is-more.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-03-20 12:50:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://feilong.me/author/fei-long.html">
+<meta property="article:section" content="杂谈"/>
+<meta property="article:tag" content="Go"/>
+<meta property="og:image" content="/static/feilong.jpg">
+
+  <title>飞龙札记 &ndash; Less is more</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://feilong.me">
+        <img src="/static/feilong.jpg" alt="飞龙札记" title="飞龙札记">
+      </a>
+      <h1><a href="https://feilong.me">飞龙札记</a></h1>
+
+<p>Less is more</p>
+      <nav>
+        <ul class="list">
+          <li><a href="https://feilong.me/pages/about.html#about">about</a></li>
+          <li><a href="https://feilong.me/pages/contact.html#contact">contact</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-github" href="https://github.com/felinx" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://feilong.me">    Home
+</a>
+
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="https://feilong.me/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="2017/03/less-is-more">Less is more</h1>
+    <p>
+          Posted on Mon 20 March 2017 in <a href="https://feilong.me/category/za-tan.html">杂谈</a>
+
+
+        &#8226; 1 min read
+    </p>
+  </header>
+
+
+  <div>
+    <p>如果老子会说英语，那么“Less is more”一定出于其口，老子在《道德经》中早就有云“曲则全，枉则直，洼则盈，敝则新，少则得，多则惑”，真乃字字珠玑。</p>
+<p>相比于上一个时代的全键盘手机，iPhone只有一个Home键是诠释“Less is more”最好的一个例子：
+<img alt="blackberry" src="/static/2017/03-20-blackberry.jpg"> 
+<img alt="iphone" src="/static/2017/03-20-iphone.png">  </p>
+<p>Golang的发明人之一Rob Pike则更进一步说<a href="https://commandcenter.blogspot.jp/2012/06/less-is-exponentially-more.html">“Less is exponentially more”</a>并拿Go举例说：</p>
+<blockquote>
+<p>I made a list of significant simplifications in Go over C and C++:</p>
+<ul>
+<li>regular syntax (don't need a symbol table to parse)</li>
+<li>garbage collection (only)</li>
+<li>no header files</li>
+<li>explicit dependencies</li>
+<li>no circular dependencies</li>
+<li>constants are just numbers</li>
+<li>...</li>
+</ul>
+<p>And yet, with that long list of simplifications and missing pieces, Go is, I believe, more expressive than C or C++. <strong>Less can be more.</strong></p>
+</blockquote>
+<p>相比于C/C++，Go砍和简化了很多feature，Go却可以做的更好，而C++却一直在堆feature、堆复杂度中，或许C++已经掉进了复杂复杂再复杂的死胡同里出不来了。</p>
+<blockquote>
+<p>In the span of an hour at that talk we heard about something like 35 new features that were being planned. In fact there were many more, but only 35 were described in the talk. Some of the features were minor, of course, but the ones in the talk were at least significant enough to call out. Some were very subtle and hard to understand, like rvalue references, while others are especially C++-like, such as variadic templates, and some others are just crazy, like user-defined literals.</p>
+</blockquote>
+<p>以致于C++人士会说“没有generic types是什么鬼？”。</p>
+<blockquote>
+<p>Early in the rollout of Go I was told by someone that he could not imagine working in a language without generic types. As I have reported elsewhere, I found that an odd remark.</p>
+</blockquote>
+<p>“做加法容易，做减法难”，在iPhone出来之前很难想象手机完全可以没有那么多键(九宫格键盘或全键盘)，深谙“Less is more”这也正是乔布斯牛掰之处。</p>
+<hr>
+<p>题外话：Rob Pike表示本意是想开发Go作为C++的替代语音的，没想到吸引来的却是一大帮Python/Ruby程序员，难怪身边不少Pythoneer都在玩Go，是该学点Go了！</p>
+<blockquote>
+<p>"What was the biggest surprise you encountered rolling out Go?" I knew the answer instantly: Although we expected C++ programmers to see Go as an alternative, instead most Go programmers come from languages like Python and Ruby. Very few come from C++.</p>
+</blockquote>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://feilong.me/tag/go.html">Go</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'feilong';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>
+  &copy; 飞龙 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9694421-8', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " 飞龙札记 ",
+  "url" : "https://feilong.me",
+  "image": "/static/feilong.jpg",
+  "description": "飞龙札记 - felinx's blog"
+}
+</script>
+  
+</body>
+</html>
