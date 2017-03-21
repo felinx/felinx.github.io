@@ -87,4 +87,5 @@ Python <http://scotdoyle.com/python-epoll-howto.html>`__
    example <http://artifex.org/~hblanks/talks/2011/pep20_by_example.py.txt>`__
 -  `Google Python
    Guide <http://google-styleguide.googlecode.com/svn/trunk/pyguide.html>`__
+- `Hidden features of Python <http://stackoverflow.com/questions/101268/hidden-features-of-python>`__
 -  待补充..，欢迎大家推荐。
