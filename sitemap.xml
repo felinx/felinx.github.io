@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/</loc>
-<lastmod>2017-03-21T13:35:49-00:00</lastmod>
+<lastmod>2017-03-21T18:19:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/tags.html</loc>
-<lastmod>2017-03-21T13:35:49-00:00</lastmod>
+<lastmod>2017-03-21T18:19:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/categories.html</loc>
-<lastmod>2017-03-21T13:35:49-00:00</lastmod>
+<lastmod>2017-03-21T18:19:29-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -102,7 +102,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://feilong.me/2016/04/you-are-not-couch.html</loc>
+<loc>https://feilong.me/2016/04/you-are-not-coach.html</loc>
 <lastmod>2016-04-02T22:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
