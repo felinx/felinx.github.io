@@ -37,6 +37,6 @@ Golang的发明人之一Rob Pike则更进一步说[“Less is exponentially more
 “做加法容易，做减法难”，在iPhone出来之前很难想象手机完全可以没有那么多键(九宫格键盘或全键盘)，深谙“Less is more”这也正是乔布斯牛掰之处。
 
 ---
-题外话：Rob Pike表示本意是想开发Go作为C++的替代语音的，没想到吸引来的却是一大帮Python/Ruby程序员，难怪身边不少Pythoneer都在玩Go，是该学点Go了！
+题外话：Rob Pike表示本意是想开发Go作为C++的替代语言的，没想到吸引来的却是一大帮Python/Ruby程序员，难怪身边不少Pythoneer都在玩Go，是该学点Go了！
 
 > "What was the biggest surprise you encountered rolling out Go?" I knew the answer instantly: Although we expected C++ programmers to see Go as an alternative, instead most Go programmers come from languages like Python and Ruby. Very few come from C++.
