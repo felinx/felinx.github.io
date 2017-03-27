@@ -53,7 +53,7 @@ CC_LICENSE = {
 }
 
 COPYRIGHT_YEAR = 2017
-DEFAULT_PAGINATION = 1000
+DEFAULT_PAGINATION = 50
 
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['sitemap', 'post_stats']
