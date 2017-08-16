@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/</loc>
-<lastmod>2017-08-11T19:22:41-00:00</lastmod>
+<lastmod>2017-08-16T10:03:16-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/tags.html</loc>
-<lastmod>2017-08-11T19:22:41-00:00</lastmod>
+<lastmod>2017-08-16T10:03:16-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/categories.html</loc>
-<lastmod>2017-08-11T19:22:41-00:00</lastmod>
+<lastmod>2017-08-16T10:03:16-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -36,6 +36,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2010-12-25T19:15:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2017/08/play-then-gain.html</loc>
+<lastmod>2017-08-15T17:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
@@ -544,7 +551,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/category/za-tan.html</loc>
-<lastmod>2017-08-11T17:00:00+08:06</lastmod>
+<lastmod>2017-08-15T17:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -607,7 +614,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/tag/chan-pin.html</loc>
-<lastmod>2015-12-07T22:00:00+08:06</lastmod>
+<lastmod>2017-08-15T17:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1020,7 +1027,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/author/fei-long.html</loc>
-<lastmod>2017-08-11T17:00:00+08:06</lastmod>
+<lastmod>2017-08-15T17:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
