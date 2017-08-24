@@ -11,14 +11,14 @@ NSQ是由知名短链接服务商\ `bitly <https://bitly.com>`__\ 用Go语言开
 
 以下是我准备在5.22的上海GDG活动中做的有关NSQ的主题演讲的slideshare，看不到的同学请下载后面的pdf版本，关于nsq更详细的介绍就看我5.22日的主题分享了。
 
+分享过程视频 \ `NSQ & Python Worker视频 <http://video.tudou.com/v/XMjIyMjI3MDk5Ng==.html>`__
+
+因为是支支用手机录的屏幕比较晃，大家凑合下。另外更正讲解过程中的一个口误，不是Go的作者之一follow了我的nsqworker项目而是nsq的主要作者。
+
 `Nsq & python
 worker <http://www.slideshare.net/FelinxLee/nsq-python-worker>`__ from
 `Felinx Lee <http://www.slideshare.net/FelinxLee>`__
 
-
-分享过程视频，因为是支支用手机录的屏幕比较晃，大家凑合下。另外更正讲解过程中的一个口误，不是Go的作者之一follow了我的nsqworker项目而是nsq的主要作者。
-
-PDF版本 \ `NSQ & Python
-Worker </static/2013/05/NSQ-Python-Worker.pdf>`__
+PDF版本 \ `NSQ-Python-Worker.pdf PDF </static/2013/05/NSQ-Python-Worker.pdf>`__
 
 PPT提到的我写的nsqworker的项目地址见：\ https://github.com/felinx/nsqworker
