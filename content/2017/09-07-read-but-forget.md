@@ -1,10 +1,10 @@
-Title: 过目就忘
+Title: 读书过目就忘，怎么办？
 Date: 2017-09-07 14:00
 Category: 杂谈
 Tags: 读书
 Slug: 2017/09/read-but-forget
 Authors: 飞龙
-Status: draft
+Status: published
 
 两年前一位朋友给我推荐了知乎日报的“瞎扯 - 如何正确的吐槽”，这个瞎扯的画风是这样的：
 

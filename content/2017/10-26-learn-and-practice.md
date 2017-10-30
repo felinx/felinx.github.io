@@ -1,10 +1,10 @@
-Title: 学而时习之
+Title: “学而时习之”何解？
 Date: 2017-10-26 12:00
 Category: 国学
 Tags: 论语
 Slug: 2017/10/10-26-learn-and-practice
 Authors: 飞龙
-Status: draft
+Status: published
 
 《论语》开篇第一句“学而时习之”，我们小时从课文上学到的解释是“学习并时常复习”，这个解释有其科学依据：
 
