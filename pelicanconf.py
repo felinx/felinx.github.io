@@ -43,8 +43,10 @@ SOCIAL = (
     ('github', 'https://github.com/felinx'),
     ('rss', '/feeds/all.atom.xml'))
 
+
 MENUITEMS = (('Categories', '/categories.html'),
-             ('Tags', '/tags.html'),)
+             ('Tags', '/tags.html'),
+             ('Notes', 'https://note.feilong.me/'),)
 
 CC_LICENSE = {
     'name': 'CC BY-SA',
