@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/</loc>
-<lastmod>2017-10-30T10:25:51-00:00</lastmod>
+<lastmod>2017-11-14T18:23:41-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/tags.html</loc>
-<lastmod>2017-10-30T10:25:51-00:00</lastmod>
+<lastmod>2017-11-14T18:23:41-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/categories.html</loc>
-<lastmod>2017-10-30T10:25:51-00:00</lastmod>
+<lastmod>2017-11-14T18:23:41-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -39,14 +39,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://feilong.me/2017/10/10-26-learn-and-practice.html</loc>
+<loc>https://feilong.me/2017/11/pdf2imgpdf-pdf2img-img2pdf.html</loc>
+<lastmod>2017-11-14T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2017/10/learn-and-practice.html</loc>
 <lastmod>2017-10-26T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/2017/09/09-11-good-habit.html</loc>
+<loc>https://feilong.me/2017/09/good-habit.html</loc>
 <lastmod>2017-09-11T22:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -565,7 +572,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/category/python.html</loc>
-<lastmod>2017-03-09T17:50:00+08:06</lastmod>
+<lastmod>2017-11-14T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -690,6 +697,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://feilong.me/tag/img2pdf.html</loc>
+<lastmod>2017-11-14T12:00:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://feilong.me/tag/google.html</loc>
 <lastmod>2011-02-10T11:32:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
@@ -699,6 +713,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://feilong.me/tag/peng-you-quan.html</loc>
 <lastmod>2017-03-06T15:40:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/long-polling.html</loc>
+<lastmod>2011-07-13T13:42:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -734,6 +755,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://feilong.me/tag/monit.html</loc>
 <lastmod>2011-02-24T17:36:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/pdf2imgpdf.html</loc>
+<lastmod>2017-11-14T12:00:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/tips.html</loc>
+<lastmod>2011-05-23T17:41:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -830,8 +865,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://feilong.me/tag/long-polling.html</loc>
-<lastmod>2011-07-13T13:42:00+08:06</lastmod>
+<loc>https://feilong.me/tag/luan-ma.html</loc>
+<lastmod>2017-11-14T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -914,8 +949,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://feilong.me/tag/tips.html</loc>
-<lastmod>2011-05-23T17:41:00+08:06</lastmod>
+<loc>https://feilong.me/tag/pdf.html</loc>
+<lastmod>2017-11-14T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1055,7 +1090,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/tag/kindle.html</loc>
-<lastmod>2011-01-08T11:46:00+08:06</lastmod>
+<lastmod>2017-11-14T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1069,7 +1104,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/author/fei-long.html</loc>
-<lastmod>2017-10-26T12:00:00+08:06</lastmod>
+<lastmod>2017-11-14T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
