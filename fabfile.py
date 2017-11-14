@@ -13,7 +13,9 @@ DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
 production = 'felinx@dev:60022'
-dest_path = '/home/felinx/sites/feilongnotes'
+preview_path = '/home/felinx/sites/feilong_preview'
+dest_path = '/home/felinx/sites/feilong_blog'
+
 
 # Rackspace Cloud Files configuration settings
 env.cloudfiles_username = 'my_rackspace_username'
@@ -87,6 +89,19 @@ def preview():
     """Publish to preview server via rsync"""
     local('pelican -s publishconf-preview.py')
     project.rsync_project(
+        remote_dir=preview_path,
+        exclude=".DS_Store",
+        local_dir=DEPLOY_PATH.rstrip('/') + '/',
+        delete=True,
+        extra_opts='-c',
+    )
+
+
+@hosts(production)
+def publish():
+    """Publish to preview server via rsync"""
+    local('pelican -s publishconf-preview.py')
+    project.rsync_project(
         remote_dir=dest_path,
         exclude=".DS_Store",
         local_dir=DEPLOY_PATH.rstrip('/') + '/',
@@ -95,7 +110,7 @@ def preview():
     )
 
 
-def publish():
+def togit():
     """Publish to GitHub Pages"""
     rebuild()
     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
