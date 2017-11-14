@@ -2,7 +2,7 @@ Title: “学而时习之”何解？
 Date: 2017-10-26 12:00
 Category: 国学
 Tags: 论语
-Slug: 2017/10/10-26-learn-and-practice
+Slug: 2017/10/learn-and-practice
 Authors: 飞龙
 Status: published
 
