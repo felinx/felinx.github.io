@@ -100,7 +100,7 @@ def preview():
 @hosts(production)
 def publish():
     """Publish to preview server via rsync"""
-    local('pelican -s publishconf-preview.py')
+    local('pelican -s publishconf.py')
     project.rsync_project(
         remote_dir=dest_path,
         exclude=".DS_Store",
