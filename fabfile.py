@@ -12,7 +12,7 @@ env.deploy_path = 'output'
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
-production = 'felinx@dev:60022'
+production = 'felinx@dev:22'
 preview_path = '/home/felinx/sites/feilong_preview'
 dest_path = '/home/felinx/sites/feilong_blog'
 
