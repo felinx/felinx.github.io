@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh_cn">
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -32,11 +32,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <meta name="author" content="飞龙" />
-<meta name="description" content="说明：以下内容是根据2010年我在公司的一次关于UI Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。 在没有MSUIA（Microsoft UI Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active Accessibility）、Win32 API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows 程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:) 在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。 UIA名词解释 Elements 在UIA里 …" />
+<meta name="description" content="说明：以下内容是根据2010年我在公司的一次关于UI Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代 …" />
 <meta name="keywords" content="UIAutomation, 自动化测试">
 <meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="基于UI Automation的自动化测试工具设计指南"/>
-<meta property="og:description" content="说明：以下内容是根据2010年我在公司的一次关于UI Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。 在没有MSUIA（Microsoft UI Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active Accessibility）、Win32 API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows 程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:) 在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。 UIA名词解释 Elements 在UIA里 …"/>
+<meta property="og:description" content="说明：以下内容是根据2010年我在公司的一次关于UI Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代 …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html"/>
 <meta property="og:type" content="article"/>
@@ -138,7 +138,7 @@ patterns）了，比如：一个TextBox的ValuePattern可以用来获取TextBox�
 <p>当UI控件有什么变动的时候，可能会触发一些事件（比如：弹出HelpText），如果有Client订阅了这个事件则会收到事件的通知。</p>
 </div>
 </div>
-<div class="section" id="id1">
+<div class="section" id="uia-1">
 <h2><strong>UIA的架构</strong></h2>
 <p><img alt="image0" src="/static/2011/01/UI_Automation.jpg" style="width: 804px; height: 452px;" /></p>
 <p>上图左边那部分叫Client，本文指的是UI自动化测试工具，右边叫Application，指的是被测运用程序。Client和Application在启动的时候都会载入UI
@@ -179,9 +179,9 @@ OrCondition、NotCondition等）也可以是属性条件（PropertyCondition）<
 </ul>
 <p>下面是一个最简单的示例，在RootElement桌面下查找子结点里Name属性是“Simple
 App”的一个控件，因为是在桌面的子结点（一级），它会是一个Application:</p>
-<div class="highlight"><pre><span></span><span class="n">Condition</span> <span class="n">winNameCond</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PropertyCondition</span><span class="p">(</span><span class="n">AutomationElement</span><span class="p">.</span><span class="n">NameProperty</span><span class="p">,</span> <span class="s">&quot;Simple App&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><span class="n">Condition</span><span class="w"> </span><span class="n">winNameCond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PropertyCondition</span><span class="p">(</span><span class="n">AutomationElement</span><span class="p">.</span><span class="n">NameProperty</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Simple App&quot;</span><span class="p">);</span>
 
-<span class="n">AutomationElement</span> <span class="n">app</span> <span class="p">=</span> <span class="n">AutomationElement</span><span class="p">.</span><span class="n">RootElement</span><span class="p">.</span><span class="n">FindFirst</span><span class="p">(</span><span class="n">TreeScope</span><span class="p">.</span><span class="n">Children</span><span class="p">,</span> <span class="n">winNameCond</span><span class="p">)</span>
+<span class="n">AutomationElement</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AutomationElement</span><span class="p">.</span><span class="n">RootElement</span><span class="p">.</span><span class="n">FindFirst</span><span class="p">(</span><span class="n">TreeScope</span><span class="p">.</span><span class="n">Children</span><span class="p">,</span><span class="w"> </span><span class="n">winNameCond</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -189,18 +189,18 @@ App”的一个控件，因为是在桌面的子结点（一级），它会是�
 <h2><strong>控件操作（Control manipulation）</strong></h2>
 <p>通过上面的Find
 Controls找到一个控件后，接下来就是如何操作它实现UI自动化的问题了，比如：点击一个Button，选择一个TreeViewItem等等。下面是一个已做好封装的UITextBox这个控件类里获取TextBox的文字的参考实现：</p>
-<div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="nf">GetText</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetText</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="kt">object</span> <span class="n">o</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">object</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">Element</span><span class="p">.</span><span class="n">TryGetCurrentPattern</span><span class="p">(</span><span class="n">ValuePattern</span><span class="p">.</span><span class="n">Pattern</span><span class="p">,</span> <span class="k">out</span> <span class="n">o</span><span class="p">))</span>
-    <span class="p">{</span>
-        <span class="n">ValuePattern</span> <span class="n">pattern</span> <span class="p">=</span> <span class="n">o</span> <span class="k">as</span> <span class="n">ValuePattern</span><span class="p">;</span>
-        <span class="k">return</span> <span class="n">pattern</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">else</span>
-    <span class="p">{</span>
-        <span class="k">return</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="kt">object</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">object</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">Element</span><span class="p">.</span><span class="n">TryGetCurrentPattern</span><span class="p">(</span><span class="n">ValuePattern</span><span class="p">.</span><span class="n">Pattern</span><span class="p">,</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="n">o</span><span class="p">))</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ValuePattern</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">ValuePattern</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">pattern</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 <p>如上面的代码所示，控件操作有一个固定的模式，首先尝试获取控件的Control
@@ -210,7 +210,7 @@ Pattern就通过这个Pattern来操控控件，如果没有则需要自定义这
 <div class="section" id="ui">
 <h2><strong>UI自动化测试工具设计</strong></h2>
 <p>直接基于UIA来实现UI自动化不是不可以，但没有人会这么蛮干。为了获取一个Textbox里的文字这样简单的事情，得到处拷贝上面那段的代码，这是不可取的。所以针对上面说的两个核心的问题，我们需要在UIA上进行一些简化、封装（当然光有这两点是不够的，比如还需要提供一些Native的支持、UI同步、Log等功能，本文对此不做讨论）：</p>
-<div class="section" id="id2">
+<div class="section" id="section-1">
 <h3>简化、强化控件查找</h3>
 <ol class="arabic simple">
 <li>简化是指简化控件查找API，为了找一个控件就需要写一大堆的Code来定义这样那样的过滤条件（见控件查找部分的示例代码），如果能用一个简单的字符串就统一所有这些那就方便多了，很负责的说我们就是这么干的，Automation
@@ -219,7 +219,7 @@ ID、Name、ControlType、Point、Index、或逻辑、与逻辑、通配符、�
 Build-in的查找功能的过滤条件是比较简单的，功能也是非常有限的，比如没有对根据通配符、正则表达式来查找的支持，但是我们可以通过最基本的TreeWalker的API来扩展实现这样的查找功能。</li>
 </ol>
 </div>
-<div class="section" id="id3">
+<div class="section" id="section-2">
 <h3>封装控件的操控</h3>
 <p>封装常用控件的基本操作，如：Button的Click、TreeView的Expand和Collapse、Datagrid的操作等等，使控件的操作变成一个简单的API调用，可以考虑把UIA
 ControlType里定义的30几种控件中最常用的控件基本操作都实现了，这样写测试脚本的时候就很安逸了。一些产品中可能会使用一些非标的控件，对于这些自定义的控件，用标准控件的操控API可能不管用，通常通过下面两种方式来解决这个问题，一是继承标准控件，重写操控API的实现，如果能够实现的话；二是让开发人员改代码，尽量不要使用非标控件:)</p>

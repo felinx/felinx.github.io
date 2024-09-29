@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh_cn">
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -32,11 +32,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <meta name="author" content="飞龙" />
-<meta name="description" content="近日Buzz好友Kyle Hu同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。 1.VM快照管理 这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。 2.扩大硬盘容量 有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。 但是有时候可能必须要扩大某个已有的硬盘分区（比如原来D盘只有10G，现在必须把D盘扩大到20G），这个时候就需要用到vmware-vdiskmanager.exe（位于VMware安装路径根目录，如：C:\Program Files\VMware\VMware Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下： VMware Virtual Disk Manager - build 34685. Usage …" />
+<meta name="description" content="近日Buzz好友Kyle Hu同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。 1.VM快照管理 这个功能实在太常用，不用我多废 …" />
 <meta name="keywords" content="vmware">
 <meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="VMware几个实用技巧"/>
-<meta property="og:description" content="近日Buzz好友Kyle Hu同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。 1.VM快照管理 这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。 2.扩大硬盘容量 有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。 但是有时候可能必须要扩大某个已有的硬盘分区（比如原来D盘只有10G，现在必须把D盘扩大到20G），这个时候就需要用到vmware-vdiskmanager.exe（位于VMware安装路径根目录，如：C:\Program Files\VMware\VMware Workstation，有些安装版本可能不自带这个，如果没有就去下一个对应的版本吧），vmware-vdiskmanager.exe的帮助信息非常清楚，如下： VMware Virtual Disk Manager - build 34685. Usage …"/>
+<meta property="og:description" content="近日Buzz好友Kyle Hu同学刚碰到一个关于VM的问题（具体见第三条），借此机会整理一下自己使用VM的几个实用技巧与大家分享。 1.VM快照管理 这个功能实在太常用，不用我多废 …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://feilong.me/2011/01/vmware-pragmatic-tips.html"/>
 <meta property="og:type" content="article"/>
@@ -109,7 +109,7 @@ Hu</a>同学刚碰到一个关于VM的问题（具体见第三条），借此机
 <p>这个功能实在太常用，不用我多废话。这里只是提醒一下还没有用过快照的同学，赶紧的给自己的VM保存点快照吧，这样VM里的系统出了问题或是有其它需要很容易让你还原到原来的某个点，这功能可比Ghost的克隆、恢复真机系统要来的方便的多。快照唯一的毛病就是VM占用的空间大小会急剧增加，是实际增加的空间的好几倍，不知道VMware是怎么搞的。</p>
 <p><img alt="image0" class="size-full wp-image-181 aligncenter" src="/static/2011/01/vm-take-snapshot.jpg" style="width: 675px; height: 249px;" /></p>
 </div>
-<div class="section" id="id1">
+<div class="section" id="section-1">
 <h2>2.扩大硬盘容量</h2>
 <p>有时候你可能会遇到原先给定的VM的硬盘空间不够了，这个时候就需要扩大硬盘容量了，如果增加额外的一个硬盘（如下图）能满足需求那问题是比较简单的了。</p>
 <p><img alt="image1" class="size-full wp-image-182 aligncenter" src="/static/2011/01/vm-add-hd.jpg" style="width: 659px; height: 474px;" /></p>
@@ -163,7 +163,7 @@ vmware-vdiskmanager.exe -x 20Gb
 </pre>
 <p>对于Windows系统的VM来说，新增的这部分磁盘空间在VM里暂时是看不到的，需要到系统管理工具里的磁盘管理工具里去分配一下就OK了。</p>
 </div>
-<div class="section" id="id2">
+<div class="section" id="section-2">
 <h2>3.释放硬盘空间</h2>
 <p>VM用的时间一长，有个大毛病就是占用的文件空间越来越大，而实际使用的空间并没有那么多（比如Kyle
 Hu遇到的问题：VM分区大小是80GB，使用27GB，虚拟机文件夹为41.9GB，困惑！）。具体原因未明，我的理解可能是因为虚拟硬盘在占用某块空间后，即使这块空间后面被释放了（如：文件删除），VM占用的空间也不能完全缩回去。对于这种情况，如果硬盘吃紧心疼这些被吃掉的空间，就需要用到VM的disk
@@ -198,14 +198,14 @@ Tools的安装盘，VM是Windows系统的话进入光盘安装即可，如果是
 shrink了，做完disk
 shrink后VM的使用空间和VM文件实际占用的空间基本能保持一致了。</p>
 </div>
-<div class="section" id="id3">
+<div class="section" id="section-3">
 <h2>4.磁盘碎片整理</h2>
 <p>跟真机一样，VM使用时间一长，就会产生很多磁盘碎片，VM的性能会有所下降，这个时候可以通过VM的Defragment来整理磁盘碎片。</p>
 <p><img alt="image3" class="size-full wp-image-186 aligncenter" src="/static/2011/01/vm-defragment.jpg" style="width: 644px; height: 555px;" /></p>
 <p>磁盘碎片整理结合上面介绍的disk shrink来使用（在disk
 shrink之后）效果更佳。</p>
 </div>
-<div class="section" id="id4">
+<div class="section" id="vm-1">
 <h2>5.命令行启动VM</h2>
 <p>除了通过界面来操作VM，其实也是可以通过命令行来启动一个VM的（这个可能很少有人用到），比如下面的批处理命令能启动并全屏vm-40这个VM：</p>
 <blockquote>

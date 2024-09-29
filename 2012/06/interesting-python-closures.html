@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh_cn">
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -32,11 +32,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <meta name="author" content="飞龙" />
-<meta name="description" content="写下这篇博客，起源于Tornado邮件群组的这个问题 how to use outer variable in inner method，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子: def foo(): a = 1 def bar(): a = a + 1 # print a + 1 # b = a + 1 # a = 1 print id(a) bar() print a, id(a) 在Python2.x上运行这个函数会报UnboundLocalError: local variable 'a' referenced before assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP …" />
+<meta name="description" content="写下这篇博客，起源于Tornado邮件群组的这个问题 how to use outer variable in inner method，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣 …" />
 <meta name="keywords" content="闭包, closure">
 <meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="有趣的Python闭包(Closures)"/>
-<meta property="og:description" content="写下这篇博客，起源于Tornado邮件群组的这个问题 how to use outer variable in inner method，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣的例子来做些解析，简要的阐述下Python的闭包规则，首先看一个经典的例子: def foo(): a = 1 def bar(): a = a + 1 # print a + 1 # b = a + 1 # a = 1 print id(a) bar() print a, id(a) 在Python2.x上运行这个函数会报UnboundLocalError: local variable 'a' referenced before assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP …"/>
+<meta property="og:description" content="写下这篇博客，起源于Tornado邮件群组的这个问题 how to use outer variable in inner method，这里面老外的回答很有参考价值，关键点基本都说到了。我在这里用一些有趣 …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://feilong.me/2012/06/interesting-python-closures.html"/>
 <meta property="og:type" content="article"/>
@@ -113,10 +113,10 @@ method</a>，这里面老外的回答很有参考价值，关键点基本都说�
         <span class="c1"># print a + 1</span>
         <span class="c1"># b = a + 1</span>
         <span class="c1"># a = 1</span>
-        <span class="k">print</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
     <span class="n">bar</span><span class="p">()</span>
-    <span class="k">print</span> <span class="n">a</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="n">a</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 <p>在Python2.x上运行这个函数会报UnboundLocalError:&nbsp;local&nbsp;variable&nbsp;'a'&nbsp;referenced&nbsp;before&nbsp;assignment即本地变量在引用前未定义，如何来理解这个错误呢？PEP
 227里面介绍到，Python解析器在搜索一个变量的定义时是根据如下三级规则来查找的：</p>
@@ -148,7 +148,7 @@ xxx这种形式，Python解析器认为要在内部函数bar内创建一个新�
         <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
 
     <span class="n">bar</span><span class="p">()</span>
-    <span class="k">print</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </li>
 </ol>
@@ -158,12 +158,12 @@ a即可，即显式的指定a不是内部函数bar内的本地变量，这样就
 <p>在搜索Python闭包相关的材料中，我在StackOverflow上发现一个有趣的有关Python闭包的问题，有兴趣的可以思考思考做做看，结果应该是什么？你预期的结果是什么，若不一致，如果要得到你预期的结果应该怎么改？</p>
 <div class="highlight"><pre><span></span><span class="n">flist</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">i</span>
     <span class="n">flist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">flist</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 <p>扩展阅读：</p>
 <ol class="arabic simple">

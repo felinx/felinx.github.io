@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh_cn">
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -32,11 +32,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <meta name="author" content="飞龙" />
-<meta name="description" content="鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家讨论、拍砖、献花！ 我将主要结合Tornado的源码来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。 为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为： Tornado的代码规范且质量很高； 代码总量比较小，比较容易掌握； 飞龙对Tornado多多少少有点研究。 注：Tornado(要翻墙)是friendfeed.com（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web server，同时又是一个类web.py的web框架，关于Tornado web框架部分的讨论见我的博客“ 浅谈Python web框架”相应的部分，对于Tornado的web server的性能，可以参考Tornado官方主页和http://nichol.as/benchmark-of-python-web-servers的介绍。 看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:) 系统兼容 …" />
+<meta name="description" content="鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家讨论、拍砖、献花！ 我将主要结合Tornado的源码 …" />
 <meta name="keywords" content="Python">
 <meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="Python兼容性编程"/>
-<meta property="og:description" content="鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家讨论、拍砖、献花！ 我将主要结合Tornado的源码来讲解一些Python的编程技巧和相对较高级一点的Python知识，这样大家就可以看到活生生的实际运用而不是枯燥的理论。 为什么选择拿Tornado的源码来讲而不是其它的Python项目呢，主要是因为： Tornado的代码规范且质量很高； 代码总量比较小，比较容易掌握； 飞龙对Tornado多多少少有点研究。 注：Tornado(要翻墙)是friendfeed.com（已并入facebook）开源出来的一个高性能的异步非阻塞模式的Web server，同时又是一个类web.py的web框架，关于Tornado web框架部分的讨论见我的博客“ 浅谈Python web框架”相应的部分，对于Tornado的web server的性能，可以参考Tornado官方主页和http://nichol.as/benchmark-of-python-web-servers的介绍。 看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:) 系统兼容 …"/>
+<meta property="og:description" content="鉴于我前面的博客里，Python相关的文章最受欢迎，我决定再接再厉，多写一些跟Python相关的文章，把我琢磨Python的一点经验拿出来分享，算是抛个砖，欢迎大家讨论、拍砖、献花！ 我将主要结合Tornado的源码 …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://feilong.me/2011/02/learning-python-follow-felinx-part-one.html"/>
 <meta property="og:type" content="article"/>
@@ -116,7 +116,7 @@ web框架部分的讨论见我的博客“ <a class="reference external" href="h
 web框架</a>”相应的部分，对于Tornado的web
 server的性能，可以参考Tornado官方主页和<a class="reference external" href="http://nichol.as/benchmark-of-python-web-servers">http://nichol.as/benchmark-of-python-web-servers</a>的介绍。</p>
 <p>看了本篇标题，有些朋友可能会很好奇，啥不好讲为什么先讲兼容性这个话题？原因其实很简单，因为这部分的代码经常出现在Python文件的开头:)</p>
-<div class="section" id="id1">
+<div class="section" id="section-1">
 <h2>系统兼容</h2>
 <p>Python和许多具有虚拟机的语言一样，支持跨平台，基本可以一次编写到处运行，所以大部分时候大家不用考虑系统兼容性的问题，跟系统相关的能用Python现成的API的就用，不要自己去蛮干就行。比如文件路径的拼接，你别自己傻乎乎的去做字符串拼接，而是用已封装好的os.path.join来实现。</p>
 <p>如果你要实现的功能跟系统强相关或在不同的系统中实现是完全不一样的，那就需要考虑这个问题了，这个时候一般是把相关的API封装成一致，然后根据系统信息来选择不同的实现模块，Tornado示例代码如下（模块和代码行数见第一行注释，注：代码行可能会随着Tornado的升级而稍有变化，后面不再做特别说明）：</p>
@@ -154,10 +154,10 @@ server的性能，可以参考Tornado官方主页和<a class="reference external
 <p>其实就是在不同的操作系统上选择不同的poll实现，至于模块在不同操作系统是如何实现那是另一个问题了。</p>
 <p>通过这种方式可以有效的屏蔽不同系统下的编程差异，降低系统兼容性编程的复杂度。</p>
 </div>
-<div class="section" id="id2">
+<div class="section" id="section-2">
 <h2>向下兼容</h2>
 <p>软件版本都避免不了升级，版本一多就有了版本向下兼容的问题（特别的，Python3.x是不向下兼容Python2.x的），这个时候代码里就需要一些向下兼容的代码，主要表现有两种，下面分别介绍：</p>
-<div class="section" id="id3">
+<div class="section" id="python-1">
 <h3>兼容不同的Python版本</h3>
 <p>这类最常见的就是用try、import、except三者组成的黄金搭档，Tornado代码举例如下：</p>
 <div class="highlight"><pre><span></span><span class="c1"># tornado.escape line 24</span>
@@ -192,15 +192,15 @@ server的性能，可以参考Tornado官方主页和<a class="reference external
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">ssl</span> <span class="c1"># Python 2.6+</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-    <span class="n">ssl</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">ssl</span> <span class="o">=</span> <span class="kc">None</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">multiprocessing</span> <span class="c1"># Python 2.6+</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-    <span class="n">multiprocessing</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">multiprocessing</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 <p>然后后面一般会有针对性的处理，如：</p>
-<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">multiprocessing</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">multiprocessing</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
     <span class="c1"># do something</span>
 </pre></div>
 </div>
@@ -243,7 +243,7 @@ Tornado最早的版本就有一个AsyncHTTPClient实现，但是在中间又引�
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
+<div class="section" id="section-3">
 <h2>向上兼容</h2>
 <p>向上兼容这个可能少有人听过，但在Python这奇妙的世界里，还真有这事，这就是神秘的__future__模块，你可能看到过下面这样的代码：</p>
 <div class="highlight"><pre><span></span><span class="c1"># tornado.httpclient line 19</span>

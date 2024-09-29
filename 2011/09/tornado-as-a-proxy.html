@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh_cn">
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -32,11 +32,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <meta name="author" content="飞龙" />
-<meta name="description" content="实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如http://www.tornadoweb.cn用的就是nginx的代理功能做的tornadoweb官网的镜像。 最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运用需要调用到另一平台产品(Platform)的API。对于这个系统来说，可选的一种实现方式方式是APP同时跟Server&Platform两者交互；另一种则在Server端封装掉Platform的API，APP只和Server交互。显然后一种方式的系统架构会清晰些，APP编程时也就相对简单。那么如何在Server端封装Platform的API呢，我首先考虑到的就是用代理的方式来实现。碰巧最近Tornado邮件群组里有人在讨论using Tornado as a proxy，贴主提到的运用场景跟我这碰到的场景非常的相似，我把原帖的代码做了些整理和简化，源代码如下： # -*- coding: utf-8 -*- # # Copyright(c) 2011 Felinx Lee & http://feilong.me/ # # Licensed under the Apache License, Version …" />
+<meta name="description" content="实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如http://www.tornadoweb.cn用的就是nginx的代理功能做的tornadoweb官网的镜像。 最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运 …" />
 <meta name="keywords" content="">
 <meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="用Tornado实现简单的在线代理"/>
-<meta property="og:description" content="实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如http://www.tornadoweb.cn用的就是nginx的代理功能做的tornadoweb官网的镜像。 最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运用需要调用到另一平台产品(Platform)的API。对于这个系统来说，可选的一种实现方式方式是APP同时跟Server&Platform两者交互；另一种则在Server端封装掉Platform的API，APP只和Server交互。显然后一种方式的系统架构会清晰些，APP编程时也就相对简单。那么如何在Server端封装Platform的API呢，我首先考虑到的就是用代理的方式来实现。碰巧最近Tornado邮件群组里有人在讨论using Tornado as a proxy，贴主提到的运用场景跟我这碰到的场景非常的相似，我把原帖的代码做了些整理和简化，源代码如下： # -*- coding: utf-8 -*- # # Copyright(c) 2011 Felinx Lee & http://feilong.me/ # # Licensed under the Apache License, Version …"/>
+<meta property="og:description" content="实现代理的方式很多种，流行的web服务器也大都有代理的功能，比如http://www.tornadoweb.cn用的就是nginx的代理功能做的tornadoweb官网的镜像。 最近，我在开发一个移动运用(以下简称APP)的后台程序(Server)，该运 …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://feilong.me/2011/09/tornado-as-a-proxy.html"/>
 <meta property="og:type" content="article"/>

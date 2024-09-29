@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙札记 - 编程</title><link href="https://feilong.me/" rel="alternate"></link><link href="https://feilong.me/feeds/bian-cheng.atom.xml" rel="self"></link><id>https://feilong.me/</id><updated>2017-03-08T16:50:00+08:00</updated><entry><title>从iris框架撕逼事件看开源</title><link href="https://feilong.me/2017/03/go-iris-framework-debate.html" rel="alternate"></link><published>2017-03-08T16:50:00+08:00</published><updated>2017-03-08T16:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-08:/2017/03/go-iris-framework-debate.html</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/kataras/iris"&gt;iris&lt;/a&gt;是一个用Go语言写的Web框架(web framework)，我截了下Github上iris项目的首页如下图：&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>飞龙札记 - 编程</title><link href="https://feilong.me/" rel="alternate"></link><link href="https://feilong.me/feeds/bian-cheng.atom.xml" rel="self"></link><id>https://feilong.me/</id><updated>2017-03-08T16:50:00+08:00</updated><subtitle>Less is more</subtitle><entry><title>从iris框架撕逼事件看开源</title><link href="https://feilong.me/2017/03/go-iris-framework-debate.html" rel="alternate"></link><published>2017-03-08T16:50:00+08:00</published><updated>2017-03-08T16:50:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2017-03-08:/2017/03/go-iris-framework-debate.html</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/kataras/iris"&gt;iris&lt;/a&gt;是一个用Go语言写的Web框架(web framework)，我截了下Github上iris项目的首页如下图：&lt;/p&gt;
 &lt;p&gt;&lt;img alt="iris" src="/static/2017/03-08-iris.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;作者kataras号称iris是“The &lt;strong&gt;fastest&lt;/strong&gt; web framework for Go in (THIS) Earth”，我们来对比看一下另一个Go写的以快著称的Web框架&lt;a href="https://github.com/gin-gonic/gin"&gt;Gin&lt;/a&gt;，相对没那么狂:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="gin" src="/static/2017/03-08-gin.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;两个都宣称自己快，那到底谁最快呢？于是引出了下面这个帖子&lt;a href="https://github.com/gin-gonic/gin/issues/560"&gt;iris is faster&lt;/a&gt;，有人在Gin的地盘上说iris更快(注：帖子发生在2016年，它并不是一件新鲜事，只是因为本人刚关注Golang才发现)，这个帖子跟我们在技术社区里常看到的“PHP是最好的编程语言”的口水月经撕逼贴几乎如同一辙，但本帖细节非常精彩，我这里简单还原一下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;首先dcu说iris更快，建议Gin向iris学&lt;/li&gt;
-&lt;li&gt;接着Gin主要作者manucorporat说“拿出测试证据来”&lt;/li&gt;
-&lt;li&gt;CaptainCodeman给出一些测试结果供参考，但说这测试结果并不靠谱&lt;/li&gt;
-&lt;li&gt;Gin的另一贡献者appleboy说“show me the code”，让我看看哪里不靠谱&lt;/li&gt;
-&lt;li&gt;第一个转折点来了，CaptainCodeman说“妈蛋，新的iris版本下我的测试代码通不过 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/kataras/iris"&gt;iris&lt;/a&gt;是一个用Go语言写的Web框架(web framework)，我截了下Github上iris项目的首页如下图：&lt;/p&gt;
+&lt;p&gt;两个都宣称自 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/kataras/iris"&gt;iris&lt;/a&gt;是一个用Go语言写的Web框架(web framework)，我截了下Github上iris项目的首页如下图：&lt;/p&gt;
 &lt;p&gt;&lt;img alt="iris" src="/static/2017/03-08-iris.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;作者kataras号称iris是“The &lt;strong&gt;fastest&lt;/strong&gt; web framework for Go in (THIS) Earth”，我们来对比看一下另一个Go写的以快著称的Web框架&lt;a href="https://github.com/gin-gonic/gin"&gt;Gin&lt;/a&gt;，相对没那么狂:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="gin" src="/static/2017/03-08-gin.jpg"&gt;&lt;/p&gt;
@@ -64,20 +58,9 @@
 &lt;/blockquote&gt;
 &lt;p&gt;可问题出就出在他自己做着Open source的事却缺乏Open的心态，不虚心接受他人的建议和批评、不尊重他人的代码贡献，于己于项目都是非常不利的。虽然我看完了iris的官方文档觉得iris还不错，但真要我选Go的Web框架，我肯定不会选择iris。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;PS：iris号称自己是最快(fastest)，若在我朝按新广告法已是违规了。&lt;/p&gt;</content><category term="Github"></category><category term="开源"></category><category term="Go"></category><category term="web framework"></category></entry><entry><title>基于UI Automation的自动化测试工具设计指南</title><link href="https://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html" rel="alternate"></link><published>2011-01-20T17:17:00+08:00</published><updated>2011-01-20T17:17:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-20:/2011/01/ms-ui-automation-tool-design-guide.html</id><summary type="html">&lt;p&gt;说明：以下内容是根据2010年我在公司的一次关于UI
+&lt;p&gt;PS：iris号称自己是最快(fastest)，若在我朝按新广告法已是违规了。&lt;/p&gt;</content><category term="编程"></category><category term="Github"></category><category term="开源"></category><category term="Go"></category><category term="web framework"></category></entry><entry><title>基于UI Automation的自动化测试工具设计指南</title><link href="https://feilong.me/2011/01/ms-ui-automation-tool-design-guide.html" rel="alternate"></link><published>2011-01-20T17:17:00+08:00</published><updated>2011-01-20T17:17:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2011-01-20:/2011/01/ms-ui-automation-tool-design-guide.html</id><summary type="html">&lt;p&gt;说明：以下内容是根据2010年我在公司的一次关于UI
 Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI
-Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。&lt;/p&gt;
-&lt;p&gt;在没有MSUIA（Microsoft UI
-Automation，以下简称UIA）之前，大家只能通过MSAA（Microsoft Active
-Accessibility）、Win32
-API等Native的方式来操控Windows控件，要想自己写一个UI自动化测试工具是很难很难的，因此这一领域一直被大厂商所垄断，价格也贵得惊人，不是大的软件公司也是用不起这些工具的（除非盗版），比如QTP、Robot、SilkTest等商用工具。UIA定义了一套全新的、针对UI自动化的接口和模式，以往的Win32和MSAA设计出发点并不是为解决UI自动化（Win32旨在提供的通用开发接口，MSAA技术的初衷则是为了方便残疾人使用Windows
-程序），而UIA的设计目的（微软也需要一套技术、工具来自动化测试自己的产品）、以及新引入的模式和接口都完全是针对UI自动化测试的。UIA的出现，让草根UI自动化测试工具成为一种可能，看完本文你若有这样的需求就赶紧自己造一个吧:)&lt;/p&gt;
-&lt;p&gt;在继续介绍UIA之前，大家需要先熟悉UIA的几个名词术语。&lt;/p&gt;
-&lt;div class="section" id="uia"&gt;
-&lt;h2&gt;&lt;strong&gt;UIA名词解释&lt;/strong&gt;&lt;/h2&gt;
-&lt;div class="section" id="elements"&gt;
-&lt;h3&gt;Elements&lt;/h3&gt;
-&lt;p&gt;在UIA里 …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;说明：以下内容是根据2010年我在公司的一次关于UI
+Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;说明：以下内容是根据2010年我在公司的一次关于UI
 Automation的Workshop上的PPT整理而来，在公司我和几位同事基于UI
 Automation开发了一款非常强大的UI自动化测试工具，此工具已经在公司得到广泛运用（有十几个产品采用），用于替代昂贵的、且脚本很难维护的商用软件。此文只探讨UIA相关的一些通用技术和一点点UI自动化测试工具的设计经验，因为保密的需要，涉及到公司的这款测试工具部分此文不做介绍。&lt;/p&gt;
 &lt;p&gt;在没有MSUIA（Microsoft UI
@@ -112,7 +95,7 @@ patterns）了，比如：一个TextBox的ValuePattern可以用来获取TextBox�
 &lt;p&gt;当UI控件有什么变动的时候，可能会触发一些事件（比如：弹出HelpText），如果有Client订阅了这个事件则会收到事件的通知。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id1"&gt;
+&lt;div class="section" id="uia-1"&gt;
 &lt;h2&gt;&lt;strong&gt;UIA的架构&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="image0" src="/static/2011/01/UI_Automation.jpg" style="width: 804px; height: 452px;" /&gt;&lt;/p&gt;
 &lt;p&gt;上图左边那部分叫Client，本文指的是UI自动化测试工具，右边叫Application，指的是被测运用程序。Client和Application在启动的时候都会载入UI
@@ -153,9 +136,9 @@ OrCondition、NotCondition等）也可以是属性条件（PropertyCondition）&
 &lt;/ul&gt;
 &lt;p&gt;下面是一个最简单的示例，在RootElement桌面下查找子结点里Name属性是“Simple
 App”的一个控件，因为是在桌面的子结点（一级），它会是一个Application:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Condition&lt;/span&gt; &lt;span class="n"&gt;winNameCond&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;PropertyCondition&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AutomationElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NameProperty&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Simple App&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Condition&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;winNameCond&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PropertyCondition&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AutomationElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NameProperty&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Simple App&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-&lt;span class="n"&gt;AutomationElement&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AutomationElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RootElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FindFirst&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TreeScope&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Children&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;winNameCond&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;AutomationElement&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;AutomationElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RootElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FindFirst&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TreeScope&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Children&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;winNameCond&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -163,18 +146,18 @@ App”的一个控件，因为是在桌面的子结点（一级），它会是�
 &lt;h2&gt;&lt;strong&gt;控件操作（Control manipulation）&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;通过上面的Find
 Controls找到一个控件后，接下来就是如何操作它实现UI自动化的问题了，比如：点击一个Button，选择一个TreeViewItem等等。下面是一个已做好封装的UITextBox这个控件类里获取TextBox的文字的参考实现：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;virtual&lt;/span&gt; &lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="nf"&gt;GetText&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;virtual&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;GetText&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="kt"&gt;object&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Element&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TryGetCurrentPattern&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ValuePattern&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="k"&gt;out&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="n"&gt;ValuePattern&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ValuePattern&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Current&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="k"&gt;else&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Element&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TryGetCurrentPattern&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ValuePattern&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;out&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;ValuePattern&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;as&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ValuePattern&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Current&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Value&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;如上面的代码所示，控件操作有一个固定的模式，首先尝试获取控件的Control
@@ -184,7 +167,7 @@ Pattern就通过这个Pattern来操控控件，如果没有则需要自定义这
 &lt;div class="section" id="ui"&gt;
 &lt;h2&gt;&lt;strong&gt;UI自动化测试工具设计&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;直接基于UIA来实现UI自动化不是不可以，但没有人会这么蛮干。为了获取一个Textbox里的文字这样简单的事情，得到处拷贝上面那段的代码，这是不可取的。所以针对上面说的两个核心的问题，我们需要在UIA上进行一些简化、封装（当然光有这两点是不够的，比如还需要提供一些Native的支持、UI同步、Log等功能，本文对此不做讨论）：&lt;/p&gt;
-&lt;div class="section" id="id2"&gt;
+&lt;div class="section" id="section-1"&gt;
 &lt;h3&gt;简化、强化控件查找&lt;/h3&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;简化是指简化控件查找API，为了找一个控件就需要写一大堆的Code来定义这样那样的过滤条件（见控件查找部分的示例代码），如果能用一个简单的字符串就统一所有这些那就方便多了，很负责的说我们就是这么干的，Automation
@@ -193,7 +176,7 @@ ID、Name、ControlType、Point、Index、或逻辑、与逻辑、通配符、�
 Build-in的查找功能的过滤条件是比较简单的，功能也是非常有限的，比如没有对根据通配符、正则表达式来查找的支持，但是我们可以通过最基本的TreeWalker的API来扩展实现这样的查找功能。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-&lt;div class="section" id="id3"&gt;
+&lt;div class="section" id="section-2"&gt;
 &lt;h3&gt;封装控件的操控&lt;/h3&gt;
 &lt;p&gt;封装常用控件的基本操作，如：Button的Click、TreeView的Expand和Collapse、Datagrid的操作等等，使控件的操作变成一个简单的API调用，可以考虑把UIA
 ControlType里定义的30几种控件中最常用的控件基本操作都实现了，这样写测试脚本的时候就很安逸了。一些产品中可能会使用一些非标的控件，对于这些自定义的控件，用标准控件的操控API可能不管用，通常通过下面两种方式来解决这个问题，一是继承标准控件，重写操控API的实现，如果能够实现的话；二是让开发人员改代码，尽量不要使用非标控件:)&lt;/p&gt;
@@ -224,17 +207,8 @@ words的简单组合，再加上一些测试结果的验证就OK了。&lt;/li&gt
 &lt;li&gt;&lt;a class="reference external" href="http://blogs.msdn.com/b/lixiong/archive/2009/12/05/ui-automation-under-the-hood.aspx"&gt;http://blogs.msdn.com/b/lixiong/archive/2009/12/05/ui-automation-under-the-hood.aspx&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="UIAutomation"></category><category term="自动化测试"></category></entry><entry><title>免输入FTP信息自动升级WordPress</title><link href="https://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html" rel="alternate"></link><published>2010-12-31T21:04:00+08:00</published><updated>2010-12-31T21:04:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-31:/2010/12/auto-update-wordpress-without-ftp-auth.html</id><summary type="html">&lt;p&gt;WordPress的3.0.4
-修复了一个严重的&lt;a class="reference external" href="http://cn.wordpress.org/2010/12/30/3-0-4-update/"&gt;安全漏洞&lt;/a&gt;，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。&lt;/p&gt;
-&lt;p&gt;但是，同样的等我跑去升级&lt;a class="reference external" href="http://17weiguan.com"&gt;围观网&lt;/a&gt;的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？&lt;/p&gt;
-&lt;ol class="arabic simple"&gt;
-&lt;li&gt;飞龙札记和围观网是运行在两台不同的服务器上，但都是用nginx
-proxy到后台的PHP
-fastcgi进程进行处理的，服务器的配置基本一致，而两个网站用的WordPress文件是一样的，所以首先就可以排除WordPress版本和服务器配置的差异引起的不同。&lt;/li&gt;
-&lt;li&gt;两个网站的差别主要体现在主题和插件，这些虽然牵涉到WordPress的设置但是跟WordPress本身及插件升级根本没关系，所以也基本可以排除由WordPres设置差异造成两者升级差异的可能性。&lt;/li&gt;
-&lt;li&gt;而要求输入FTP信息，目的其实是为了下载WordPress升级文件。两个站一个可以自己下，另一个则要提供FTP账户信息，由此看来应该是文件夹权限问题造成的，仔细对比了一下飞龙札记和围观网的代码文件夹权限，发现飞龙札记的代码文件夹所有者和fastcgi进程的用户是同一个，而围观网的则是两个不同的用户。将围观网的代码文件夹所有者改成fastcgi的进程用户（sudo
-chown -R fastcgi-username
-/home/local/weiguan），问题解决，围观网自动升级不再需要输入FTP信息了 …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;WordPress的3.0.4
+</content><category term="编程"></category><category term="UIAutomation"></category><category term="自动化测试"></category></entry><entry><title>免输入FTP信息自动升级WordPress</title><link href="https://feilong.me/2010/12/auto-update-wordpress-without-ftp-auth.html" rel="alternate"></link><published>2010-12-31T21:04:00+08:00</published><updated>2010-12-31T21:04:00+08:00</updated><author><name>飞龙</name></author><id>tag:feilong.me,2010-12-31:/2010/12/auto-update-wordpress-without-ftp-auth.html</id><summary type="html">&lt;p&gt;WordPress的3.0.4
+修复了一个严重的&lt;a class="reference external" href="http://cn.wordpress.org/2010/12/30/3-0-4-update/"&gt;安全漏洞&lt;/a&gt;，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;WordPress的3.0.4
 修复了一个严重的&lt;a class="reference external" href="http://cn.wordpress.org/2010/12/30/3-0-4-update/"&gt;安全漏洞&lt;/a&gt;，所以赶紧着手升级飞龙札记的WordPress版本，在管理后台的“更新”页面点击“自动升级”很快就完成了自动更新，系统已成功升级到了3.04。&lt;/p&gt;
 &lt;p&gt;但是，同样的等我跑去升级&lt;a class="reference external" href="http://17weiguan.com"&gt;围观网&lt;/a&gt;的时候，却要求我输入FTP信息（主机、用户名、密码等），什么原因造成两者升级的不同呢？&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
@@ -250,4 +224,4 @@ chown -R fastcgi-username
 &lt;div id="_mcePaste"
 style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;"&gt;&lt;/p&gt;&lt;p class="r rubric" id="wordpress3-0-4"&gt;&lt;a class="reference external" href="http://geekfiles.altervista.org/zh/wordpress-3-0-4-risolve-un-grave-bug-di-sicurezza/"&gt;*WordPress*的*3.0.4*
 修复了一个严重的*安全漏洞*&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/div&gt;</content><category term="WordPress"></category></entry></feed>
+&lt;p&gt;&lt;/div&gt;</content><category term="编程"></category><category term="WordPress"></category></entry></feed>

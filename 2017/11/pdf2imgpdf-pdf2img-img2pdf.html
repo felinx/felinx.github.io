@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh_cn">
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -32,11 +32,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <meta name="author" content="飞龙" />
-<meta name="description" content="我平时用Kindle看书较多，遇到了一些PDF文件在Kindle上不能正常显示的问题，这类问题通常是因为PDF源文件里用了一些特殊字体或是一些扫描版的PDF，常见的现象是乱码或页面一片漆黑。 在Mac上有一个很讨巧的方法解决这个问题，用Mac自带的Preview的Export as PDF功能，将PDF源文件导出为一个新的PDF文件，Preview大致的原理就是将打开的Word、PPT、Excel、JPG、PNG、PDF等格式文件都视为或转为一页页的图片，然后以图片作为新的PDF的每一页的内容，因为是标准的图片所以到哪都能正确显示。但是，很不幸的是Preview在转换一些PDF文件的时候会无响应，搜索Preview export hang up或crash，发现吐槽这个问题的不止我一个，于是想用Python是否能解决下这个问题，参考了网上的一些实现，考察了多个库的实现方案后，找到了解决办法: 首先，将PDF转成一张张的图片 主要参考了Convert specified pages from a PDF to png，系统需要装imagemagick、ghostscript，Python需要wand、PyPDF2两个库： def pdf2img(src_pdf, pagenum=0 …" />
+<meta name="description" content="我平时用Kindle看书较多，遇到了一些PDF文件在Kindle上不能正常显示的问题，这类问题通常是因为PDF源文件里用了一些特殊字体或是一些扫描版的PDF，常见的现象是乱码或页面一片漆黑。 在Mac上有一个很讨巧的方法解决这个问题，用Mac自带的Preview的Export as PDF功能，将PDF源文件导出为一个新的PDF文件，Preview大致的原理就是将打开的Word、PPT、Excel、JPG、PNG、PDF等格式文件都视为或转为一页页的图片 …" />
 <meta name="keywords" content="PDF, pdf2imgpdf, img2pdf, Kindle, 乱码">
 <meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="解决Kindle上PDF不能正常显示的问题"/>
-<meta property="og:description" content="我平时用Kindle看书较多，遇到了一些PDF文件在Kindle上不能正常显示的问题，这类问题通常是因为PDF源文件里用了一些特殊字体或是一些扫描版的PDF，常见的现象是乱码或页面一片漆黑。 在Mac上有一个很讨巧的方法解决这个问题，用Mac自带的Preview的Export as PDF功能，将PDF源文件导出为一个新的PDF文件，Preview大致的原理就是将打开的Word、PPT、Excel、JPG、PNG、PDF等格式文件都视为或转为一页页的图片，然后以图片作为新的PDF的每一页的内容，因为是标准的图片所以到哪都能正确显示。但是，很不幸的是Preview在转换一些PDF文件的时候会无响应，搜索Preview export hang up或crash，发现吐槽这个问题的不止我一个，于是想用Python是否能解决下这个问题，参考了网上的一些实现，考察了多个库的实现方案后，找到了解决办法: 首先，将PDF转成一张张的图片 主要参考了Convert specified pages from a PDF to png，系统需要装imagemagick、ghostscript，Python需要wand、PyPDF2两个库： def pdf2img(src_pdf, pagenum=0 …"/>
+<meta property="og:description" content="我平时用Kindle看书较多，遇到了一些PDF文件在Kindle上不能正常显示的问题，这类问题通常是因为PDF源文件里用了一些特殊字体或是一些扫描版的PDF，常见的现象是乱码或页面一片漆黑。 在Mac上有一个很讨巧的方法解决这个问题，用Mac自带的Preview的Export as PDF功能，将PDF源文件导出为一个新的PDF文件，Preview大致的原理就是将打开的Word、PPT、Excel、JPG、PNG、PDF等格式文件都视为或转为一页页的图片 …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://feilong.me/2017/11/pdf2imgpdf-pdf2img-img2pdf.html"/>
 <meta property="og:type" content="article"/>
@@ -110,7 +110,7 @@
 <p>在Mac上有一个很讨巧的方法解决这个问题，用Mac自带的Preview的Export as PDF功能，将PDF源文件导出为一个新的PDF文件，Preview大致的原理就是将打开的Word、PPT、Excel、JPG、PNG、PDF等格式文件都视为或转为一页页的图片，然后以图片作为新的PDF的每一页的内容，因为是标准的图片所以到哪都能正确显示。但是，很不幸的是Preview在转换一些PDF文件的时候会无响应，搜索Preview export hang up或crash，发现吐槽这个问题的不止我一个，于是想用Python是否能解决下这个问题，参考了网上的一些实现，考察了多个库的实现方案后，找到了解决办法:</p>
 <h3>首先，将PDF转成一张张的图片</h3>
 <p>主要参考了<a href="https://gist.github.com/jrsmith3/9947838">Convert specified pages from a PDF to png</a>，系统需要装imagemagick、ghostscript，Python需要<a href="https://github.com/dahlia/wand">wand</a>、<a href="https://github.com/mstamy2/PyPDF2">PyPDF2</a>两个库：</p>
-<div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">pdf2img</span><span class="p">(</span><span class="n">src_pdf</span><span class="p">,</span> <span class="n">pagenum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;filename&quot;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">600</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">pdf2img</span><span class="p">(</span><span class="n">src_pdf</span><span class="p">,</span> <span class="n">pagenum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;filename&quot;</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="mi">600</span><span class="p">):</span>
         <span class="n">dst_pdf</span> <span class="o">=</span> <span class="n">PdfFileWriter</span><span class="p">()</span>
         <span class="n">dst_pdf</span><span class="o">.</span><span class="n">addPage</span><span class="p">(</span><span class="n">src_pdf</span><span class="o">.</span><span class="n">getPage</span><span class="p">(</span><span class="n">pagenum</span><span class="p">))</span>
 
@@ -118,11 +118,10 @@
         <span class="n">dst_pdf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">pdf_bytes</span><span class="p">)</span>
         <span class="n">pdf_bytes</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-        <span class="k">with</span> <span class="n">Image</span><span class="p">(</span><span class="nb">file</span><span class="o">=</span><span class="n">pdf_bytes</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="n">resolution</span><span class="p">)</span> <span class="k">as</span> <span class="n">img</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">Image</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">pdf_bytes</span><span class="p">,</span> <span class="n">resolution</span><span class="o">=</span><span class="n">resolution</span><span class="p">)</span> <span class="k">as</span> <span class="n">img</span><span class="p">:</span>
             <span class="n">img</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;png&quot;</span><span class="p">)</span>
             <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>其原理是用PyPDF2取出PDF的某一页，作为一个新的只有一页的PDF，写到一个BytesIO流中，再由wand库去读这个单页PDF中的内容生成一个图片文件，导出的图片和源PDF页面的内容一致，其中resolution的大小直接决定了导出的图片的画质，建议在300以上。</p>
 <p>这里很有意思的是，我在转页数比较多的PDF的时候，发现Python占用的内存疯长，用<a href="https://pypi.python.org/pypi/memory_profiler">memory_profiler</a>看了下，每转一个文件大概涨50M内存，问题出在<code>img.save</code>这一步，进一步发现是imagemagick的内存泄露，搜索imagemagick memory leak的问题也很多，这里就不再展开。</p>
@@ -135,7 +134,7 @@
 </ol>
 <p>对FPDF画质不满意，后来我又试了下<a href="https://pypi.python.org/pypi/img2pdf/0.2.4">img2pdf</a>，关键的就<code>img2pdf.convert(imgs, layout_fun=layout_fun)</code>这么一句，layout_fun是为了设置A4大小的PDF格式。</p>
 <p>简单的转一个PDF文件的代码如下：</p>
-<div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dest</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dest</span><span class="p">):</span>
         <span class="c1"># specify paper size (A4)</span>
         <span class="n">src</span> <span class="o">=</span> <span class="n">escape</span><span class="o">.</span><span class="n">to_unicode</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
         <span class="n">dest</span> <span class="o">=</span> <span class="n">escape</span><span class="o">.</span><span class="n">to_unicode</span><span class="p">(</span><span class="n">dest</span><span class="p">)</span>
@@ -148,7 +147,7 @@
 
         <span class="n">imgs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">dest</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">des_pdf</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">num_pages</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="n">num_pages</span><span class="p">):</span>
                 <span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;/tmp/page-</span><span class="si">%s</span><span class="s2">-</span><span class="si">%s</span><span class="s2">.png&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span><span class="o">.</span><span class="n">hex</span><span class="p">)</span>
                 <span class="n">imgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 
@@ -160,8 +159,7 @@
                 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 
         <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> converted to </span><span class="si">%s</span><span class="s2"> !&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dest</span><span class="p">))</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>相比FPDF，img2pdf更优：</p>
 <ol>

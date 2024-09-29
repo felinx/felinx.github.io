@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh_cn">
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -32,11 +32,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <meta name="author" content="飞龙" />
-<meta name="description" content="monit是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台， 它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是supervisor，后续会另外撰文介绍。 下面分别介绍monit的安装、配置和启动。 安装 在debian或ubuntu上安装monit非常方便，通过下面的命令 sudo apt-get install monit 即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。 ./configure make make install 安装后，默认的配置文件为/etc/monit/monitrc。 配置 添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。 ## ## 飞龙札记 示例monit配置文件，说明： ## 1. 域名以example.com为例 …" />
+<meta name="description" content="monit是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台， 它可以自动重启那些已经挂掉的程序，非常适合 …" />
 <meta name="keywords" content="monit">
 <meta property="og:site_name" content="飞龙札记"/>
 <meta property="og:title" content="用monit监控系统关键进程"/>
-<meta property="og:description" content="monit是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台， 它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是supervisor，后续会另外撰文介绍。 下面分别介绍monit的安装、配置和启动。 安装 在debian或ubuntu上安装monit非常方便，通过下面的命令 sudo apt-get install monit 即可，其它*nix上也很简单，下载源码走一遍安装三步就OK了。 ./configure make make install 安装后，默认的配置文件为/etc/monit/monitrc。 配置 添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。 ## ## 飞龙札记 示例monit配置文件，说明： ## 1. 域名以example.com为例 …"/>
+<meta property="og:description" content="monit是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台， 它可以自动重启那些已经挂掉的程序，非常适合 …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://feilong.me/2011/02/monitor-core-processes-with-monit.html"/>
 <meta property="og:type" content="article"/>
@@ -105,7 +105,7 @@
     <p><a class="reference external" href="http://mmonit.com/monit/">monit</a>是一款功能强大的系统状态、进程、文件、目录和设备的监控软件，用于*nix平台，
 它可以自动重启那些已经挂掉的程序，非常适合监控系统关键的进程和资源，如：nginx、apache、mysql和cpu占有率等。而监控管理Python进程，常用的是<a class="reference external" href="http://supervisord.org/">supervisor</a>，后续会另外撰文介绍。</p>
 <p>下面分别介绍monit的安装、配置和启动。</p>
-<div class="section" id="id1">
+<div class="section" id="section-1">
 <h2>安装</h2>
 <p>在debian或ubuntu上安装monit非常方便，通过下面的命令</p>
 <pre class="literal-block">
@@ -119,7 +119,7 @@ make install
 </pre>
 <p>安装后，默认的配置文件为/etc/monit/monitrc。</p>
 </div>
-<div class="section" id="id2">
+<div class="section" id="section-2">
 <h2>配置</h2>
 <p>添加需要监控的进程等信息至monit的配置文件，monit的配置详见下面的示例文件，为了便于理解，关键的配置我都给出了中文的注释。</p>
 <pre class="literal-block">
@@ -257,7 +257,7 @@ http这项设置才管用。</li>
 </ol>
 <p>当然monit除了管理进程之外，还可以监控文件、目录、设备等，本文不做讨论，具体配置方式可以去参考<a class="reference external" href="http://mmonit.com/monit/documentation/monit.html">monit的官方文档</a>。</p>
 </div>
-<div class="section" id="id3">
+<div class="section" id="section-3">
 <h2>启动、停止、重启</h2>
 <p>标准的start、stop、restart</p>
 <pre class="literal-block">
