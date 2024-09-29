@@ -5,21 +5,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/</loc>
-<lastmod>2018-08-15T18:52:04-00:00</lastmod>
+<lastmod>2024-09-29T23:03:01-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/tags.html</loc>
-<lastmod>2018-08-15T18:52:04-00:00</lastmod>
+<lastmod>2024-09-29T23:03:01-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/categories.html</loc>
-<lastmod>2018-08-15T18:52:04-00:00</lastmod>
+<lastmod>2024-09-29T23:03:01-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -36,6 +36,97 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2010-12-25T19:15:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2023/06/self-discipline.html</loc>
+<lastmod>2023-06-05T11:20:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2022/06/he-is-my-close-friend.html</loc>
+<lastmod>2022-06-09T11:20:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2021/12/wheel-of-history.html</loc>
+<lastmod>2021-12-30T09:20:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2021/03/not-better-than-your-friends.html</loc>
+<lastmod>2021-03-31T18:20:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2021/03/keep-differences.html</loc>
+<lastmod>2021-03-30T16:30:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2021/03/think-then-do.html</loc>
+<lastmod>2021-03-24T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2021/03/read-zztj.html</loc>
+<lastmod>2021-03-16T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2021/03/pianjian.html</loc>
+<lastmod>2021-03-06T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2021/03/what-to-do.html</loc>
+<lastmod>2021-03-05T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2021/03/maopian.html</loc>
+<lastmod>2021-03-04T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2020/06/laozi-wuwei.html</loc>
+<lastmod>2020-06-01T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2019/03/win-at-first.html</loc>
+<lastmod>2019-03-29T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/2018/11/do-not-be-evil.html</loc>
+<lastmod>2018-11-30T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
@@ -565,7 +656,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/category/guo-xue.html</loc>
-<lastmod>2017-10-26T12:00:00+08:06</lastmod>
+<lastmod>2021-03-04T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -607,7 +698,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/category/za-tan.html</loc>
-<lastmod>2018-06-28T12:00:00+08:06</lastmod>
+<lastmod>2023-06-05T11:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -662,8 +753,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://feilong.me/tag/la-ji-you-jian.html</loc>
-<lastmod>2017-03-02T10:20:00+08:06</lastmod>
+<loc>https://feilong.me/tag/wei-cheng.html</loc>
+<lastmod>2022-06-09T11:20:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/closure.html</loc>
+<lastmod>2012-06-03T13:23:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -692,6 +790,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://feilong.me/tag/chi-zhi.html</loc>
 <lastmod>2017-05-11T17:00:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/python.html</loc>
+<lastmod>2011-08-03T13:30:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -760,8 +865,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://feilong.me/tag/zhang-xin-zhe.html</loc>
+<lastmod>2023-06-05T11:20:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://feilong.me/tag/pycon.html</loc>
 <lastmod>2011-03-21T10:58:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/dian-ying.html</loc>
+<lastmod>2021-03-04T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -816,8 +935,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://feilong.me/tag/du-shu.html</loc>
-<lastmod>2018-06-28T12:00:00+08:06</lastmod>
+<loc>https://feilong.me/tag/lu-tu-zhi-bin.html</loc>
+<lastmod>2017-04-28T11:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -837,8 +956,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://feilong.me/tag/python.html</loc>
-<lastmod>2011-08-03T13:30:00+08:06</lastmod>
+<loc>https://feilong.me/tag/la-ji-you-jian.html</loc>
+<lastmod>2017-03-02T10:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -886,6 +1005,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://feilong.me/tag/sun-zi-bing-fa.html</loc>
+<lastmod>2019-03-29T12:00:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/li-shi.html</loc>
+<lastmod>2021-12-30T09:20:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://feilong.me/tag/uiautomation.html</loc>
 <lastmod>2011-01-20T17:17:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
@@ -921,8 +1054,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://feilong.me/tag/si-guo-zhan-ji.html</loc>
-<lastmod>2015-11-23T10:00:00+08:06</lastmod>
+<loc>https://feilong.me/tag/mao-pian.html</loc>
+<lastmod>2021-03-04T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -950,14 +1083,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/tag/chuang-ye.html</loc>
-<lastmod>2015-08-08T10:00:00+08:06</lastmod>
+<lastmod>2021-03-06T12:00:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/si-guo-zhan-ji.html</loc>
+<lastmod>2015-11-23T10:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://feilong.me/tag/lun-yu.html</loc>
-<lastmod>2017-10-26T12:00:00+08:06</lastmod>
+<lastmod>2021-03-31T18:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -992,14 +1132,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/tag/za-tan.html</loc>
-<lastmod>2018-05-29T12:00:00+08:06</lastmod>
+<lastmod>2021-03-31T18:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/closure.html</loc>
-<lastmod>2012-06-03T13:23:00+08:06</lastmod>
+<loc>https://feilong.me/tag/itpei-xun.html</loc>
+<lastmod>2018-11-30T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1076,14 +1216,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/tag/zi-zhi-tong-jian.html</loc>
-<lastmod>2018-06-28T12:00:00+08:06</lastmod>
+<lastmod>2021-03-16T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://feilong.me/tag/lu-tu-zhi-bin.html</loc>
-<lastmod>2017-04-28T11:00:00+08:06</lastmod>
+<loc>https://feilong.me/tag/du-shu.html</loc>
+<lastmod>2022-06-09T11:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1091,6 +1231,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://feilong.me/tag/fan-yu-ming.html</loc>
 <lastmod>2012-08-20T12:42:00+08:06</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://feilong.me/tag/dao-de-jing.html</loc>
+<lastmod>2020-06-01T12:00:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1125,7 +1272,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://feilong.me/author/fei-long.html</loc>
-<lastmod>2018-06-28T12:00:00+08:06</lastmod>
+<lastmod>2023-06-05T11:20:00+08:06</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
