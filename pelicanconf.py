@@ -19,7 +19,7 @@ ROBOTS = 'index, follow'
 THEME = 'pelican-themes/Flex'
 PATH = 'content'
 TIMEZONE = 'Asia/Shanghai'
-DEFAULT_LANG = 'zh'
+DEFAULT_LANG = 'zh_CN'
 OG_LOCALE = 'en_US'
 LOCALE = 'en_US'
 
@@ -29,7 +29,7 @@ DATE_FORMATS = {
 }
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
