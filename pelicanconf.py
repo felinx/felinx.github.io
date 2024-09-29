@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from datetime import datetime
 
 AUTHOR = "飞龙"
 SITEURL = "https://feilong.me"
@@ -45,8 +46,7 @@ SOCIAL = (
 
 
 MENUITEMS = (('Categories', '/categories.html'),
-             ('Tags', '/tags.html'),
-             ('Notes', 'https://note.feilong.me/'),)
+             ('Tags', '/tags.html'),)
 
 CC_LICENSE = {
     'name': 'CC BY-SA',
@@ -54,7 +54,7 @@ CC_LICENSE = {
     'slug': 'by-sa'
 }
 
-COPYRIGHT_YEAR = 2017
+COPYRIGHT_YEAR = datetime.now().year
 DEFAULT_PAGINATION = 50
 
 PLUGIN_PATHS = ['pelican-plugins']
